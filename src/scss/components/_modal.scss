@@ -1,0 +1,159 @@
+// modal
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &__bg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--white);
+
+    @media (max-width:720px) {
+      padding: 15px;
+    }
+  }
+
+  &__body {
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    padding: 40px;
+    width: 500px;
+    max-height: 100%;
+    background: rgba(1, 87, 123, 0.95);
+    overflow-y: auto;
+
+    @media (max-width:720px) {
+      padding: 40px 24px;
+      width: 400px;
+    }
+
+    @media (max-width:480px) {
+      width: min(100%, 320px);
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 48px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--white);
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus-visible {
+      outline: 2px solid transparent;
+    }
+
+    &:focus {
+      outline-color: var(--white);
+    }
+
+    &:hover {
+      outline-color: transparent;
+
+      & svg {
+        fill: var(--red);
+      }
+    }
+  }
+
+  &__logo-link {
+    margin-bottom: 48px;
+
+    @media (max-width:720px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__form-label {
+    display: inline-block;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__form-input {
+    padding: 10px 16px;
+    width: 100%;
+    height: 56px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+
+    &::placeholder {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+
+  &__form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+
+    @media (max-width:720px) {
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12px;
+    }
+  }
+
+  &__form-link {
+    padding: 8px;
+    width: 180px;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width:720px) {
+      width: 100%;
+    }
+  }
+
+  &__form-btn {
+    padding: 8px;
+    width: 180px;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width:720px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+footer.footer
+  .container.footer__container
+    .footer__subscribe(style="background-image: url(./images/subscribe-bg.webp);")
+      h3.third-title.footer__subscribe-title Подписывайтесь на наши социальные сети
+      .footer__subscribe-text И первым узнавайте о новых турах, акциях, скидках и подарках нашего клуба.
+      .footer__subscribe-links
+        a.link.footer__subscribe-link(href="https://t.me")
+          svg.footer__subscribe-link-icon
+            use(href="./images/sprite.svg#subscribe-telegram")
+          |Telegram
+        a.link.footer__subscribe-link(href="https://vk.com")
+          svg.footer__subscribe-link-icon
+            use(href="./images/sprite.svg#subscribe-vk")
+          |Vkontakte
+      .footer__subscribe-info При переходе в одну из указанных социальных сетей, вы автоматически соглашаетесь с&nbsp;
+        a.policy-link(href="#") политикой конфиденциальности
+    .footer__top
+      .footer__left
+        a.link.footer__logo-link(href="./index.html")
+          img.logo.footer__logo(src="./images/svg/logo.svg" alt="Логотип")
+        .footer__text В основе деятельности группы компаний RuDIVE лежат международные стандарты качества. Дайвинг-центры и школы работают по стандартам ISO, PADI и ГОСТ.
+        span.footer__subtitle.footer__left-subtitle Мессенджеры и соц сети
+        ul.list-reset.footer__social-list
+          for value, index in {'whatsapp' : 'wa.me', 'telegram' : 't.me', 'vk' : 'vk.com', 'instagram' : 'instagram.com'}
+            li
+              a.link.footer__social-link(href= "https://" + value)
+                svg.footer__social-icon
+                  use(href=`./images/sprite.svg#${index}`)
+      .footer__right
+        .footer__subtitle-block
+          .footer__right-subtitle Компания
+          .footer__right-subtitle Контакты
+        .footer__content-block
+          nav.footer__nav
+            ul.list-reset.footer__nav-list
+              for value, index in {'Обучение' : 'training', 'Туризм' : 'tourism', 'Дайвинг-центры' : 'centers', 'О нас' : 'about', 'Книги' : 'books', 'Подарки' : 'gifts', 'Наша команда' : 'team'}
+                li
+                  a.nav-link.footer__nav-link(href= "./" + value + ".html")= index
+            ul.list-reset.footer__nav-list
+              for value, index in {'Расписание поездок' : 'schedule', 'Цены на обучение' : 'price', 'Дайвинг в океанариумах' : 'oceanariums', 'Партнёры' : '#', 'Контакты и реквизиты' : 'contacts'}
+                li
+                  a.nav-link.footer__nav-link(href= "./" + value + ".html")= index
+          .footer__contacts-block
+            a.link.footer__phone(href="tel:+74959257799") +7 (495) 925-77-99
+            .footer__item
+              svg.footer__item-icon
+                use(href="./images/sprite.svg#pin")
+              p.footer__item-text ул. Нижняя Сыромятническая,центр дизайна ARTPLAY,здание 9, этаж 3, пространство № 335
+            .footer__item
+              svg.footer__item-icon
+                use(href="./images/sprite.svg#email")
+              a.link.footer__item-text(href="mailto:info@vent-servis.ru") info@vent-servis.ru
+            span.footer__subtitle Есть вопросы или предложения?
+            button.btn-reset.btn.footer__btn(type="button") Напишите нам
+    .footer__bottom
+      .footer__bottom-links
+        a.link.footer__bottom-text(href="#") Политика конфиденциальности
+        a.link.footer__bottom-text(href="#") Правила оказания услуг
+      .footer__payment
+        span.footer__bottom-text Способы оплаты
+        img.footer__payment-logos(src="./images/payment-logos.png" alt="Логотип платёжных систем")
+      .footer__development
+        span.footer__bottom-text Разработка сайта
+        img.footer__bottom-logo(src="./images/footer-logo.png" alt="Логотип")
+  button.btn-reset.footer__chat-btn(type="button")
+    picture
+      source(srcset="./images/chat.webp", type="image/webp")
+      img.footer__chat-btn-icon(src="./images/chat.png", alt="Чат")

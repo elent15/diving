@@ -1,0 +1,17 @@
+-
+  const heroLinks = [
+    {title: 'Как попробовать', href: '#'},
+    {title: 'Дайвинг в океанариумах', href: 'oceanariums'},
+    {title: 'Цены на обучение', href: 'price'},
+    {title: 'Расписание туров', href: 'schedule'},
+  ]
+
+section.hero(style="background-image: url(./images/hero-bg.webp);")
+  h1.visually-hidden ruDive
+  .hero__content
+    .hero__links
+      for link, index in heroLinks
+        if index == 0
+          a.link-btn.hero__link.hero__link--active(href=`./${link.href}.html`)= link.title
+        else
+          a.link-btn.hero__link(href=`./${link.href}.html`)= link.title

@@ -1,0 +1,40 @@
+<!-- модальное окно "Вход" -->
+-
+  const forms = [
+    {type: 'email', placeholder: 'E-mail'},
+    {type: 'password', placeholder: 'Пароль'},
+  ]
+.modal(id="modal-entrance")
+  .modal__bg
+    .modal__body
+      button.btn-reset.modal__close-btn(type="button")
+        svg
+          use(xlink:href="./images/sprite.svg#close")
+      a.link.modal__logo-link
+        img.logo(src="./images/svg/logo.svg" alt="Логотип")
+      form.modal__form
+        for item, index in forms
+          label.modal__form-label
+            if index == 0
+              input.input.modal__form-input.focus(type=item.type, placeholder=item.placeholder)
+            else
+              input.input.modal__form-input(type=item.type, placeholder=item.placeholder)
+        .modal__form-bottom
+          a.link-btn.modal__form-link.btn-js(href="#") Войти
+          button.btn-reset.btn.modal__form-btn(type="button", data-modal="modal-recovery") Забыли пароль?
+
+<!-- модальное окно "Забыли пароль?" -->
+.modal(id="modal-recovery")
+  .modal__bg
+    .modal__body
+      button.btn-reset.modal__close-btn(type="button")
+        svg
+          use(xlink:href="./images/sprite.svg#close")
+      a.link.modal__logo-link
+        img.logo(src="./images/svg/logo.svg" alt="Логотип")
+      form.modal__form
+        label.modal__form-label
+          input.input.modal__form-input.focus(type="email", placeholder="E-mail")
+        .modal__form-bottom
+          button.btn-reset.btn.modal__form-btn(type="button", data-modal="modal-entrance") Продолжить
+

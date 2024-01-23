@@ -1,0 +1,249 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    opacity: 0.2;
+    background: rgba(255, 255, 255, 0.50);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  &__logo-link {
+    margin-right: 44px;
+
+    @media (max-width:1470px) {
+      z-index: 100;
+    }
+  }
+
+  &__menu {
+    margin-right: 32px;
+
+    @media (max-width:1470px) {
+      display: none;
+    }
+
+    &--active {
+      display: none;
+
+      @media (max-width:1470px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        display: block;
+        margin-right: 0;
+        padding: 80px 20px 50px;
+        width: 50vw;
+        min-height: 100vh;
+        height: 100%;
+        background: rgba(1, 87, 123, 0.95);
+      }
+
+      @media (max-width:1100px) {
+        width: max(500px, 50vw);
+      }
+
+      @media (max-width:720px) {
+        width: 100vw;
+      }
+
+      @media (max-width:480px) {
+        padding-top: 60px;
+      }
+    }
+  }
+
+  &__menu-inner {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:1470px) {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 4px;
+      min-height: calc(100vh - 133px);
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    @media (max-width:480px) {
+      min-height: calc(100vh - 113px);
+    }
+  }
+
+  &__nav {
+    margin-right: 55px;
+
+    @media (max-width:1470px) {
+      margin: auto 0;
+      padding-top: 24px;
+      padding-bottom: 60px;
+    }
+
+    @media (max-width:720px) {
+      margin: auto 0;
+      padding-top: 24px;
+      padding-bottom: 36px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 615px;
+
+    @media (max-width:1470px) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+  }
+
+  &__nav-link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__rates {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-right: 41px;
+
+    @media (max-width:1470px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__rates-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__rates-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 6px;
+    width: 27px;
+    height: 27px;
+    background: rgba(255, 255, 255, 0.10);
+  }
+
+  &__rates-value {}
+
+  &__phone {
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width:1470px) {
+      gap: 13px;
+      font-size: 23px;
+    }
+  }
+
+  &__phone-icon {
+    width: 17px;
+    height: 18px;
+    flex-shrink: 0;
+
+    @media (max-width:1470px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__btn {
+    gap: 13px;
+    margin-right: 13px;
+    padding: 13px;
+    width: 121px;
+    min-height: 41px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width:1470px) {
+      margin-left: auto;
+      z-index: 100;
+    }
+
+    @media (max-width:480px) {
+      gap: 4px;
+      border-radius: 5px;
+      margin-right: 9px;
+      padding: 6px;
+      width: 75px;
+      min-height: 29px;
+      font-size: 10px;
+    }
+  }
+
+  &__btn-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    @media (max-width:480px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__theme-btn {
+    width: 41px;
+    height: 41px;
+
+    @media (max-width:1470px) {
+      z-index: 100;
+    }
+
+    @media (max-width:480px) {
+      border-radius: 5px;
+      width: 29px;
+      height: 29px;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+
+    @media (max-width:480px) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.burger {
+  @include burger
+}

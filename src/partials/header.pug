@@ -1,0 +1,33 @@
+header.header
+  .container.header__container
+    button.btn-reset.burger(type="button")
+      span.burger__line
+      span.burger__line
+      span.burger__line
+    a.link.header__logo-link(href="./index.html")
+      img.logo(src="./images/svg/logo.svg" alt="Логотип")
+    .header__menu
+      .header__menu-inner
+        nav.header__nav
+          ul.list-reset.header__nav-list
+            for value, index in {'Обучение' : 'training', 'Туризм' : 'tourism', 'Дайвинг-центры' : 'centers', 'О нас' : 'about', 'Контакты' : 'contacts'}
+              li
+                a.nav-link.header__nav-link(href= "./" + value + ".html")= index
+        .header__rates
+          .header__rates-item
+            span.header__rates-icon $
+            span.header__rates-value 94.81
+          .header__rates-item
+            span.header__rates-icon €
+            span.header__rates-value 101.26
+        a.link.header__phone(href="tel:+74959257799")
+          svg.header__phone-icon
+            use(href="./images/sprite.svg#phone-call")
+          |+7 (495) 925-77-99
+    button.btn-reset.btn.header__btn(type="button", data-modal="modal-entrance")
+      svg.header__btn-icon
+        use(href="./images/sprite.svg#user")
+      |Войти
+    button.btn-reset.btn.header__theme-btn(type="button")
+      svg.header__icon
+        use(href="./images/sprite.svg#sun")
