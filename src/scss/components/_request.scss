@@ -1,0 +1,52 @@
+.request {
+  &__title {
+    margin-bottom: 16px;
+    max-width: 1160px;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    @media (max-width:720px) {
+      font-size: 24px;
+    }
+
+    @media (max-width:480px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.70);
+      transition: background 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      background: var(--red);
+    }
+  }
+
+  &__text {
+    max-width: 1160px;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    @media (max-width:480px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

@@ -381,6 +381,7 @@
     width: 18px;
     height: 24px;
     flex-shrink: 0;
+    fill: var(--red);
   }
 
   &__item-text {
@@ -423,6 +424,10 @@
 
     &:focus {
       outline-color: var(--white);
+    }
+
+    &:hover {
+      outline-color: transparent;
     }
 
     @media (max-width:1470px) {
