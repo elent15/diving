@@ -2933,12 +2933,12 @@ p {
 }
 @media (max-width: 720px) {
   .centers__cards-block {
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 @media (max-width: 480px) {
   .centers__cards-block {
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
@@ -2970,6 +2970,11 @@ p {
 @media (max-width: 1100px) {
   .centers__card-img-block img {
     min-height: 228px;
+  }
+}
+@media (max-width: 720px) {
+  .centers__card-img-block img {
+    min-height: 145px;
   }
 }
 @media (max-width: 480px) {
