@@ -113,6 +113,15 @@ body {
   }
 }
 
+.wrapper__page-bg {
+  background-size: cover;
+}
+@media (max-width: 1470px) {
+  .wrapper__page-bg {
+    background-size: cover;
+  }
+}
+
 .main {
   position: relative;
   flex: 1 0 auto;
@@ -414,6 +423,11 @@ p {
 .page-third-title {
   font-weight: 700;
   line-height: 40px;
+}
+@media (max-width: 720px) {
+  .page-third-title {
+    line-height: normal;
+  }
 }
 @media (max-width: 480px) {
   .page-third-title {
@@ -1269,12 +1283,14 @@ p {
 }
 @media (max-width: 720px) {
   .tours__tab-card-img-block {
+    min-height: 208px;
     height: auto;
   }
 }
 @media (max-width: 480px) {
   .tours__tab-card-img-block {
     margin-bottom: 10px;
+    min-height: 130px;
   }
 }
 @media (max-width: 720px) {
@@ -1490,7 +1506,12 @@ p {
 }
 @media (max-width: 720px) {
   .reports__card {
-    min-height: auto;
+    min-height: 122px;
+  }
+}
+@media (max-width: 480px) {
+  .reports__card {
+    min-height: 77px;
   }
 }
 .reports__card:nth-child(3) {
@@ -1720,7 +1741,6 @@ p {
     width: min(334px, 100%);
     height: auto;
     bottom: 12px;
-    left: 21px;
   }
 }
 .info__card-text {
@@ -2074,7 +2094,7 @@ p {
   .blog__card-img-block {
     margin-bottom: 16px;
     width: 238px;
-    height: auto;
+    height: 168px;
   }
 }
 .blog__date-block {
@@ -2712,7 +2732,7 @@ p {
   line-height: normal;
 }
 
-.training-hero {
+.page-hero {
   display: flex;
   min-height: 100vh;
   height: auto;
@@ -2722,108 +2742,119 @@ p {
   background-color: var(--primary);
 }
 @media (max-width: 1100px) {
-  .training-hero {
+  .page-hero {
     background-position: right 33% center;
   }
 }
-.training-hero__container {
+.page-hero__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
-.training-hero__content {
+.page-hero__content {
   padding-top: 100px;
   padding-bottom: 100px;
   max-width: 676px;
 }
 @media (max-width: 1100px) {
-  .training-hero__content {
+  .page-hero__content {
     padding-top: 75px;
     padding-bottom: 75px;
   }
 }
 @media (max-width: 720px) {
-  .training-hero__content {
+  .page-hero__content {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
 @media (max-width: 480px) {
-  .training-hero__content {
+  .page-hero__content {
     padding-top: 25px;
   }
 }
-.training-hero__title {
+.page-hero__title {
   margin-bottom: 15px;
 }
-.training-hero__text {
+.page-hero__text {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
 }
 @media (max-width: 720px) {
-  .training-hero__text {
+  .page-hero__text {
     font-size: 16px;
     line-height: 24px;
   }
 }
 @media (max-width: 480px) {
-  .training-hero__text {
+  .page-hero__text {
     font-size: 14px;
     line-height: 20px;
   }
 }
 
-.training__container {
+.page-main-section__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
 @media (max-width: 1470px) {
-  .training__container {
+  .page-main-section__container {
     grid-template-columns: repeat(2, 446px);
     justify-content: center;
   }
 }
 @media (max-width: 1100px) {
-  .training__container {
+  .page-main-section__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
 }
 @media (max-width: 720px) {
-  .training__container {
+  .page-main-section__container {
     gap: 24px;
   }
 }
 @media (max-width: 480px) {
-  .training__container {
+  .page-main-section__container {
     gap: 16px;
   }
 }
-.training__card {
+.page-main-section__card {
   position: relative;
   min-height: 386px;
 }
 @media (max-width: 1100px) {
-  .training__card {
-    min-height: auto;
+  .page-main-section__card {
+    min-height: 285px;
     max-width: 446px;
+    width: 100%;
   }
-  .training__card:nth-child(2n+1) {
+  .page-main-section__card:nth-child(2n+1) {
     justify-self: flex-end;
   }
 }
-.training__card-img-block {
+@media (max-width: 720px) {
+  .page-main-section__card {
+    min-height: 184px;
+  }
+}
+@media (max-width: 480px) {
+  .page-main-section__card {
+    min-height: 118px;
+  }
+}
+.page-main-section__card-img-block {
   border-radius: 15px;
   width: 100%;
   min-height: 100%;
   background-color: var(--light-gray);
   overflow: hidden;
 }
-.training__card-bottom {
+.page-main-section__card-bottom {
   position: absolute;
   bottom: 40px;
   left: 24px;
@@ -2834,19 +2865,26 @@ p {
   gap: 50px;
 }
 @media (max-width: 1100px) {
-  .training__card-bottom {
+  .page-main-section__card-bottom {
     bottom: 24px;
   }
 }
 @media (max-width: 720px) {
-  .training__card-bottom {
+  .page-main-section__card-bottom {
     bottom: 16px;
     left: 16px;
     right: 16px;
     gap: 12px;
   }
 }
-.training__card-title-link {
+@media (max-width: 480px) {
+  .page-main-section__card-bottom {
+    left: 6px;
+    right: 6px;
+    justify-content: center;
+  }
+}
+.page-main-section__card-title-link {
   max-width: 186px;
   font-size: 20px;
   font-weight: 700;
@@ -2854,35 +2892,36 @@ p {
   text-align: left;
 }
 @media (max-width: 720px) {
-  .training__card-title-link {
-    font-size: 18px;
-    line-height: 24px;
+  .page-main-section__card-title-link {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 @media (max-width: 480px) {
-  .training__card-title-link {
+  .page-main-section__card-title-link {
     font-size: 14px;
     line-height: normal;
+    text-align: center;
   }
 }
-.training__card-link {
+.page-main-section__card-link {
   border-radius: 0;
   width: 29px;
   height: 29px;
   flex-shrink: 0;
 }
 @media (max-width: 720px) {
-  .training__card-link {
+  .page-main-section__card-link {
     width: 24px;
     height: 24px;
   }
 }
 @media (max-width: 480px) {
-  .training__card-link {
+  .page-main-section__card-link {
     display: none;
   }
 }
-.training__card-link svg {
+.page-main-section__card-link svg {
   width: 100%;
   height: 100%;
 }
@@ -2960,24 +2999,32 @@ p {
 }
 .centers__card-img-link {
   margin-bottom: 18px;
+  width: 100%;
 }
 .centers__card-img-block {
   border-radius: 15px;
+  min-width: 333px;
   width: 100%;
+  min-height: 228px;
   background-color: var(--light-gray);
   overflow: hidden;
 }
-@media (max-width: 1100px) {
-  .centers__card-img-block img {
-    min-height: 228px;
-  }
+.centers__card-img-block img {
+  min-height: 228px;
 }
 @media (max-width: 720px) {
+  .centers__card-img-block {
+    min-width: 100%;
+    min-height: 146px;
+  }
   .centers__card-img-block img {
-    min-height: 145px;
+    min-height: 146px;
   }
 }
 @media (max-width: 480px) {
+  .centers__card-img-block {
+    min-height: 94px;
+  }
   .centers__card-img-block img {
     min-height: 94px;
   }
@@ -3041,6 +3088,7 @@ p {
 @media (max-width: 720px) {
   .request__link {
     font-size: 24px;
+    line-height: normal;
   }
 }
 @media (max-width: 480px) {
@@ -3219,5 +3267,239 @@ p {
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+@media (max-width: 1470px) {
+  .tourism-hero {
+    background-position: right 15% center;
+  }
+}
+@media (max-width: 1100px) {
+  .tourism-hero {
+    background-position: right 20% center;
+  }
+}
+@media (max-width: 720px) {
+  .tourism-hero {
+    background-position: right 25% center;
+  }
+}
+@media (max-width: 480px) {
+  .tourism-hero {
+    background-position: center;
+  }
+}
+.tourism-hero__content {
+  max-width: 1094px;
+}
+
+.tourism__title {
+  margin-bottom: 16px;
+}
+.tourism__text {
+  margin-bottom: 66px;
+  max-width: 1164px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .tourism__text {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 720px) {
+  .tourism__text {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .tourism__text {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.tourism__card-title-link {
+  max-width: 273px;
+}
+
+.speciality__title {
+  margin-bottom: 16px;
+  max-width: 1160px;
+}
+.speciality__link {
+  position: relative;
+  display: inline-block;
+  border-radius: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+}
+@media (max-width: 720px) {
+  .speciality__link {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+@media (max-width: 480px) {
+  .speciality__link {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.speciality__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background 0.3s ease-in-out;
+}
+.speciality__link:hover::after {
+  background: var(--red);
+}
+.speciality__text {
+  max-width: 1160px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 480px) {
+  .speciality__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.tourism-registration__title {
+  max-width: 1145px;
+}
+
+.tourism-info__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 111px;
+}
+@media (max-width: 1470px) {
+  .tourism-info__container {
+    gap: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .tourism-info__container {
+    align-items: center;
+    flex-direction: column;
+    gap: 75px;
+  }
+}
+.tourism-info__cards-block {
+  width: 658px;
+}
+@media (max-width: 1470px) {
+  .tourism-info__cards-block {
+    max-width: 658px;
+    width: calc((100% - 36px) / 2);
+  }
+}
+@media (max-width: 1100px) {
+  .tourism-info__cards-block {
+    width: 100%;
+  }
+}
+.tourism-info__title {
+  position: relative;
+  margin-bottom: 32px;
+  padding-left: 120px;
+  font-size: 26px;
+  line-height: 32px;
+}
+@media (max-width: 720px) {
+  .tourism-info__title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+@media (max-width: 480px) {
+  .tourism-info__title {
+    margin-bottom: 16px;
+    padding-left: 80px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.tourism-info__title::after {
+  left: 0px;
+  width: 90px;
+}
+@media (max-width: 480px) {
+  .tourism-info__title::after {
+    width: 60px;
+  }
+}
+.tourism-info__title::before {
+  top: -100%;
+  border: 1px solid #dcdcdc;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  transform: none;
+}
+@media (max-width: 720px) {
+  .tourism-info__title::before {
+    top: -125%;
+  }
+}
+@media (max-width: 480px) {
+  .tourism-info__title::before {
+    top: -100%;
+    width: 26px;
+    height: 26px;
+  }
+}
+.tourism-info__card {
+  width: 100%;
+}
+.tourism-info__card-img-block {
+  border-radius: 10px;
+  margin-bottom: 47px;
+  min-height: 331px;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+@media (max-width: 1470px) {
+  .tourism-info__card-img-block {
+    min-height: 260px;
+  }
+}
+@media (max-width: 1100px) {
+  .tourism-info__card-img-block {
+    margin-bottom: 36px;
+    min-height: 331px;
+  }
+}
+@media (max-width: 720px) {
+  .tourism-info__card-img-block {
+    margin-bottom: 32px;
+    min-height: 227px;
+  }
+}
+@media (max-width: 480px) {
+  .tourism-info__card-img-block {
+    margin-bottom: 24px;
+    min-height: 146px;
+  }
+}
+.tourism-info__card-link {
+  border-radius: 5px;
+  width: 211px;
+  min-height: 54px;
+  background: var(--red);
 }
 /*# sourceMappingURL=main.css.map */

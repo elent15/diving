@@ -1,4 +1,4 @@
-.training {
+.page-main-section {
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -28,12 +28,21 @@
     min-height: 386px;
 
     @media (max-width:1100px) {
-      min-height: auto;
+      min-height: 285px;
       max-width: 446px;
+      width: 100%;
 
       &:nth-child(2n + 1) {
         justify-self: flex-end;
       }
+    }
+
+    @media (max-width:720px) {
+      min-height: 184px;
+    }
+
+    @media (max-width:480px) {
+      min-height: 118px;
     }
   }
 
@@ -65,6 +74,12 @@
       right: 16px;
       gap: 12px;
     }
+
+    @media (max-width:480px) {
+      left: 6px;
+      right: 6px;
+      justify-content: center;
+    }
   }
 
   &__card-title-link {
@@ -75,13 +90,14 @@
     text-align: left;
 
     @media (max-width:720px) {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 20px;
     }
 
     @media (max-width:480px) {
       font-size: 14px;
       line-height: normal;
+      text-align: center;
     }
   }
 

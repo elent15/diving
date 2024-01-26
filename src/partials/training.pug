@@ -7,16 +7,16 @@
     {title: 'Дайвинг в океанариумах', alt: 'Дайвинг в океанариумах', href: '#'},
     {title: 'Технический дайвинг', alt: 'Технический дайвинг', href: '#'},
   ]
-.training.section-top.training
-  .container.training__container
+.page-main-section.section-top
+  .container.page-main-section__container
     for card, index in trainingCards
-      .training__card
-        .training__card-img-block
+      .page-main-section__card
+        .page-main-section__card-img-block
           picture
             source(srcset=`./images/training-${index + 1}.webp`, type="image/webp")
             img(src=`./images/training-${index + 1}.jpg`, alt=card.alt)
-        .training__card-bottom
-          a.link.training__card-title-link(href=`./${card.href}.html`)= card.title
-          a.link.training__card-link(href=`./${card.href}.html`)
+        .page-main-section__card-bottom
+          a.link.page-main-section__card-title-link(href=`./${card.href}.html`)= card.title
+          a.link.page-main-section__card-link(href=`./${card.href}.html`)
             svg
-              use(href="./images/sprite.svg#training-link")
+              use(href="./images/sprite.svg#link")

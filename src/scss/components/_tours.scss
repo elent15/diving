@@ -185,11 +185,13 @@
     background-color: var(--light-gray);
 
     @media (max-width:720px) {
+      min-height: 208px;
       height: auto;
     }
 
     @media (max-width:480px) {
       margin-bottom: 10px;
+      min-height: 130px;
     }
   }
 

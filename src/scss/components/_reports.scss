@@ -136,7 +136,11 @@
     overflow: hidden;
 
     @media (max-width:720px) {
-      min-height: auto;
+      min-height: 122px;
+    }
+
+    @media (max-width:480px) {
+      min-height: 77px;
     }
 
     &:nth-child(3) {

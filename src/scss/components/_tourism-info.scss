@@ -1,0 +1,118 @@
+.tourism-info {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 111px;
+
+    @media (max-width:1470px) {
+      gap: 36px;
+    }
+
+    @media (max-width:1100px) {
+      align-items: center;
+      flex-direction: column;
+      gap: 75px;
+    }
+  }
+
+  &__cards-block {
+    width: 658px;
+
+    @media (max-width:1470px) {
+      max-width: 658px;
+      width: calc((100% - 36px) / 2);
+    }
+
+    @media (max-width:1100px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 120px;
+    font-size: 26px;
+    line-height: 32px;
+
+    @media (max-width:720px) {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: normal;
+    }
+
+    @media (max-width:480px) {
+      margin-bottom: 16px;
+      padding-left: 80px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &::after {
+      left: 0px;
+      width: 90px;
+
+      @media (max-width:480px) {
+        width: 60px;
+      }
+    }
+
+    &::before {
+      top: -100%;
+      border: 1px solid #dcdcdc;
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+      font-weight: 400;
+      transform: none;
+
+      @media (max-width:720px) {
+        top: -125%;
+      }
+
+      @media (max-width:480px) {
+        top: -100%;
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__card {
+    width: 100%;
+  }
+
+  &__card-img-block {
+    border-radius: 10px;
+    margin-bottom: 47px;
+    min-height: 331px;
+    background-color: var(--light-gray);
+    overflow: hidden;
+
+    @media (max-width:1470px) {
+      min-height: 260px;
+    }
+
+    @media (max-width:1100px) {
+      margin-bottom: 36px;
+      min-height: 331px;
+    }
+
+    @media (max-width:720px) {
+      margin-bottom: 32px;
+      min-height: 227px;
+    }
+
+    @media (max-width:480px) {
+      margin-bottom: 24px;
+      min-height: 146px;
+    }
+  }
+
+  &__card-link {
+    border-radius: 5px;
+    width: 211px;
+    min-height: 54px;
+    background: var(--red);
+  }
+}

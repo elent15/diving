@@ -48,6 +48,14 @@ body {
   }
 }
 
+.wrapper__page-bg {
+  background-size: cover;
+
+  @media (max-width:1470px) {
+    background-size: cover;
+  }
+}
+
 .main {
   position: relative;
   flex: 1 0 auto;
@@ -357,6 +365,10 @@ p {
 .page-third-title {
   font-weight: 700;
   line-height: 40px;
+
+  @media (max-width:720px) {
+    line-height: normal;
+  }
 
   @media (max-width:480px) {
     line-height: 26px;

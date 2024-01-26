@@ -72,27 +72,33 @@
 
   &__card-img-link {
     margin-bottom: 18px;
+    width: 100%;
   }
 
   &__card-img-block {
     border-radius: 15px;
+    min-width: 333px;
     width: 100%;
+    min-height: 228px;
     background-color: var(--light-gray);
     overflow: hidden;
 
-    @media (max-width:1100px) {
-      & img {
-        min-height: 228px;
-      }
+    & img {
+      min-height: 228px;
     }
 
     @media (max-width:720px) {
+      min-width: 100%;
+      min-height: 146px;
+
       & img {
-        min-height: 145px;
+        min-height: 146px;
       }
     }
 
     @media (max-width:480px) {
+      min-height: 94px;
+
       & img {
         min-height: 94px;
       }

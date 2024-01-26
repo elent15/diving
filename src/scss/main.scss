@@ -17,8 +17,15 @@
 
 // подключения компонентов страницы "Обучение" (training.html)
 @import "./components/breadcrumbs";
-@import "./components/training-hero";
-@import "./components/training";
+@import "./components/page-hero";
+@import "./components/page-main-section";
 @import "./components/centers";
 @import "./components/request";
 @import "./components/registration";
+
+// подключения компонентов страницы "Туризм" (tourism.html)
+@import "./components/tourism-hero";
+@import "./components/tourism";
+@import "./components/speciality";
+@import "./components/tourism-registration";
+@import "./components/tourism-info";
