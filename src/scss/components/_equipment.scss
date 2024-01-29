@@ -1,11 +1,11 @@
-.speciality {
+.equipment {
   &__title {
     margin-bottom: 16px;
-    max-width: 1160px;
+    max-width: 910px;
   }
 
   &__text {
-    max-width: 1160px;
+    max-width: 1350px;
     color: rgba(255, 255, 255, 0.70);
     font-size: 16px;
     font-weight: 400;
@@ -14,6 +14,14 @@
     @media (max-width:480px) {
       font-size: 14px;
       line-height: 20px;
+    }
+  }
+
+  &__paragraph + .equipment__paragraph {
+    margin-top: 16px;
+
+    @media (max-width:480px) {
+      margin-top: 12px;
     }
   }
 }

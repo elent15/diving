@@ -15,6 +15,7 @@
 * Главная страница [index.html](https://elent15.github.io/diving): табы, слайдеры, адаптивное видео
 * Страница "Обучение" [training.html](https://elent15.github.io/diving/training.html)
 * Страница "Туризм" [tourism.html](https://elent15.github.io/diving/tourism.html)
+* Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html)
 
 #### Gulp-сборка (Gulp 4)
 

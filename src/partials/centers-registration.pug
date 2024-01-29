@@ -1,0 +1,19 @@
+-
+  const registrationCards = [
+    {icon: 'pin', title: 'Приехать в офис по адресу:', text: 'Центр дизайна ARTPLAY (ул. Нижняя Сыромятническая, 10), здание 9, этаж 3, пространство № 335'},
+    {icon: 'call', title: 'Позвонить по телефону', text: '+7 (495) 925-77-99'},
+    {icon: 'email', title: 'Отправить e-mail', text: 'Отправить электронное письмо нашему менеджеру'},
+    {icon: 'press-button', title: 'Отправить заявку с сайта', text: 'Заполнить электронную форму прямо на нашем сайте'},
+    {icon: 'smartphone', title: 'Написать в соц сети', text: 'Написать о своих пожеланиях на наших страницах в социальных сетях Телеграм, Вконтакте.'},
+  ]
+section.section-bottom.registration.centers-registration
+  .container
+    h3.third-title.page-third-title.registration__title.centers-registration__title Записаться на обучение дайвингу / погружения можно следующими способами:
+    .registration__cards-block
+      for card in registrationCards
+        .registration__card
+          .registration__card-title
+            svg(class=`registration__${card.icon}`)
+              use(href=`./images/sprite.svg#${card.icon}`)
+            =card.title
+          .registration__card-text= card.text

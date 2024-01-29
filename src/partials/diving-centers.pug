@@ -1,0 +1,93 @@
+-
+  const centers = {
+    'Москва и Московская область': [
+      {
+        name: 'Центральный офис',
+        address: 'Москва, wентр дизайна ARTPLAY (ул. Нижняя Сыромятническая, 10), здание 9, этаж 3, пространство № 335',
+        text: 'В офисе сотрудники RuDIVE помогут решить любые вопросы, касающиеся путешествий, обучения дайвингу, приобретения лог-буков, учебников и книг на подводную тематику, получить свой дайвинг-сертификат.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=37.670483%2C55.752708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzY3MRJb0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDQkNGBMSIKDZSuFkIVxgJfQg%2C%2C&z=16.43'
+      },
+      {
+        name: 'Дайвинг-центр «Азовский»',
+        address: 'ул. Азовская, 24, Москва',
+        text: 'Современный 50-метровый бассейн на юге Москвы, с дайвинг-зоной глубиной 4 метра и учебной надголовной средой. Есть учебный класс. «Азовский» работает круглый год, без выходных. Курсы дайвинга для детей и взрослых, пробные погружения, программа по восстановлению навыков PADI Scuba Reactivate, занятия детского подводного клуба "Рудайверенок".',
+        src: 'https://yandex.ru/map-widget/v1/?ll=37.596552%2C55.646980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY1MzE3NxI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCQ0LfQvtCy0YHQutCw0Y8g0YPQu9C40YbQsCwgMjQiCg3fYhZCFYKWXkI%2C&z=16.43'
+      },
+      {
+        name: 'Дайвинг-центр «Лодочная»',
+        address: 'Лодочная ул., 43, Москва',
+        text: 'Дайвинг-центр на Лодочной работает в бассейне фитнес-клуба «World Class LITE Лодочная» в Южном Тушино на севере Москвы. Отличный 25-метровый бассейн с переменной глубиной — идеальное место для всех дайвинг-курсов, детских и взрослых. Когда-то этот бассейн принадлежал ДОСААФ СССР, и в нем тренировались сборная страны по подводному плаванию и водолазная школа Центрального морского клуба.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=37.460681%2C55.842145&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc3OTYzOBI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCb0L7QtNC-0YfQvdCw0Y8g0YPQu9C40YbQsCwgNDMiCg291xVCFVteX0I%2C&z=16.43'
+      },
+      {
+        name: 'Дайвинг-центр «Москвариум»',
+        address: 'Москва, ВДНХ, проспект Мира, д. 119, с23',
+        text: 'Москвариум является одним из крупнейших океанографических центров мира. Площадь комплекса составляет 53 тысячи квадратных метров, его аквариумы и бассейны вмещают 25 миллионов литров воды.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=37.618524%2C55.832940&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc3NDQ2NRI-0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINC_0YDQvtGB0L_QtdC60YIg0JzQuNGA0LAsIDExOdGBMjMiCg1deRZCFe5UX0I%2C&z=16.43'
+      },
+      {
+        name: 'Дайвинг-центр «Спас-Каменка»',
+        address: 'Подмосковье, Спас-Каменка, Дмитровский район',
+        text: 'Для дайвинга, обучения и отдыха на живописном озере создана отличная инфраструктура: платформы под водой и на воде, плавучие понтоны, дома для переодевания и отдыха, большой парк современного снаряжения и оборудования.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=37.456509%2C56.148097&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA2MDIzNBKPAdCg0L7RgdGB0LjRjywg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCU0LzQuNGC0YDQvtCy0YHQutC40Lkg0LPQvtGA0L7QtNGB0LrQvtC5INC-0LrRgNGD0LMsINC00LXRgNC10LLQvdGPINCh0L_QsNGBLdCa0LDQvNC10L3QutCwIgoN59UVQhVvmmBC&z=14.3'
+      }
+    ],
+    'В других городах': [
+      {
+        name: 'Дайвинг-центр «Мрия»',
+        address: 'Черное море, Крым, Ялта',
+        text: 'Дайвинг-центр «Мрия» расположен на территории одноименного курорта на южном берегу Крыма. Один из лучших пятизвездных и роскошных курортов в России с большим и разнообразным номерным фондом занимает огромную площадь в живописном месте между Ялтой и Форосом.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=34.172037%2C44.492660&mode=search&sll=34.071940%2C44.461412&sspn=0.443953%2C0.206506&text=%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B5%20%D0%BC%D0%BE%D1%80%D0%B5%2C%20%D0%9A%D1%80%D1%8B%D0%BC%2C%20%D0%AF%D0%BB%D1%82%D0%B0&z=14.3'
+      },
+      {
+        name: 'Дайвинг-центр «Монерон»',
+        address: 'Сахалинская обл., о.Монерон',
+        text: 'Дайвинг-центр RuDIVE «Монерон» гостеприимно открыт для дайверов на сказочно красивом острове Монерон. Этот феномен природы расположен к западу от южной оконечности острова Сахалин, от которого его отделяет маленький, но бурный Татарский пролив.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=141.235761%2C46.257437&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTc1MDUxMjQ0EoQB0KDQvtGB0YHQuNGPLCDQodCw0YXQsNC70LjQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQndC10LLQtdC70YzRgdC60LjQuSDQs9C-0YDQvtC00YHQutC-0Lkg0L7QutGA0YPQsywg0L7RgdGC0YDQvtCyINCc0L7QvdC10YDQvtC9IgoNazsNQxW_BDlC&z=12.94'
+      },
+      {
+        name: 'ТЦ  «Полярный круг»',
+        address: 'Полярный круг, Лоухский район, пос. Нильма',
+        text: 'На базе туристического центра "Полярный круг" проходят уникальные научные наблюдения и исследования по программам МГУ, в которых принимают участие и наши клиенты. Большинство инструкторов и тур-гидов имеют высшее университетское биологическое образование и огромный опыт погружений в северных морях.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=32.854049%2C66.435744&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzEyODAyOBK-AdCg0L7RgdGB0LjRjywg0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LXQu9C40Y8sINCb0L7Rg9GF0YHQutC40Lkg0YDQsNC50L7QvSwg0JzQsNC70LjQvdC-0LLQsNGA0LDQutC60YHQutC-0LUg0YHQtdC70YzRgdC60L7QtSDQv9C-0YHQtdC70LXQvdC40LUsINGB0YLQsNC90YbQuNGPINCf0L7Qu9GP0YDQvdGL0Lkg0JrRgNGD0LMiCg0LawNCFXDehEI%2C&z=15.09'
+      },
+      {
+        name: 'Дайвинг-центр «Северный полюс»',
+        address: 'Северный полюс, временная ледовая база',
+        text: 'Дайвинг-центр RuDIVE «Северный полюс» расположен на временной ледовой базе «Барнео» и имеет ярко выраженную сезонность: 2-3 недели в середине апреля каждый год.',
+        src: 'https://yandex.ru/map-widget/v1/?ll=0.087343%2C80.198329&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyNTIzODk5NTg5EgxBcmN0aWMgT2NlYW4iCg2JD08-FQvWokI%2C&z=4'
+      }
+    ]
+  };
+.section-top.diving-centers
+  .container
+    for center, key in centers
+      .diving-centers__block
+        .diving-centers__location
+          span.diving-centers__title= key
+          .diving-centers__location-list
+            ul.list-reset.diving-centers__location-list-inner
+              for item, index in center
+                if index == 1
+                  li.diving-centers__location-item.diving-centers__location-item--active
+                    button.btn-reset.transparent-btn.diving-centers__location-btn.diving-centers__location-btn--active(data-loc=`location-${index + 1}`, data-src=item.src)
+                      span.diving-centers__location-title= item.name
+                      span.diving-centers__location-address= item.address
+                else
+                  li.diving-centers__location-item
+                    button.btn-reset.transparent-btn.diving-centers__location-btn(data-loc=`location-${index + 1}`, data-src=item.src)
+                      span.diving-centers__location-title= item.name
+                      span.diving-centers__location-address= item.address
+        .diving-centers__map-block
+          .diving-centers__map
+        .diving-centers__about
+          for item, index in center
+            if index == 1
+              span.diving-centers__about-title.diving-centers__about-title--active(data-loc-title=`location-${index + 1}`)= item.name
+              .diving-centers__about-text.diving-centers__about-text--active(data-loc-text=`location-${index + 1}`)= item.text
+            else
+              span.diving-centers__about-title(data-loc-title=`location-${index + 1}`)= item.name
+              .diving-centers__about-text(data-loc-text=`location-${index + 1}`)= item.text
+          button.btn-reset.btn.diving-centers__about-btn.diving-centers__about-book Забронировать
+          button.btn-reset.btn.white-btn.diving-centers__about-btn.diving-centers__about-more Подробнее
+

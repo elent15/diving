@@ -327,6 +327,13 @@ p {
   }
 }
 
+.white-btn {
+  &:hover {
+    color: var(--white);
+    background: var(--red);
+  }
+}
+
 // titles
 .second-title {
   margin: 0;
@@ -520,4 +527,18 @@ p {
     color: var(--primary);
     transition: color 0.3s ease-in-out;
   }
+}
+
+// simplebar
+.simplebar-track.simplebar-vertical {
+  width: 5px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.simplebar-scrollbar:before {
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  opacity: 1;
+  background: var(--white);
 }
