@@ -1,3 +1,32 @@
+// accordion
+const accordion = () => {
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach(accordion => {
+    accordion.addEventListener('click', (el) => {
+      const self = el.currentTarget;
+      const trigger = self.querySelector('.accordion__trigger');
+      const content = self.querySelector('.accordion__content');
+
+      if (self.classList.contains('accordion')) {
+        self.classList.toggle('accordion--active');
+      }
+
+      if (self.classList.contains('accordion--active')) {
+        trigger.setAttribute('aria-expanded', true);
+        content.setAttribute('aria-hidden', false);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        trigger.setAttribute('aria-expanded', false);
+        content.setAttribute('aria-hidden', true);
+        content.style.maxHeight = null;
+      }
+    });
+  });
+}
+
+accordion();
+
 // burger-menu
 const burger = () => {
   const burger = document.querySelector('.burger');
@@ -50,7 +79,7 @@ const centers = () => {
   const centersBlock = Array.from(document.querySelectorAll('.diving-centers__block'));
 
   const insertIframe = (map, src) => {
-    map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" frameborder="0";" allowfullscreen></iframe>');
+    map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
     map.addEventListener('click', () => {
       map.querySelector('.diving-centers__map-iframe').style.pointerEvents = 'all';
     });
@@ -268,6 +297,66 @@ new Swiper('.blog__swiper', {
     },
     1471: {
       spaceBetween: 56,
+    }
+  }
+});
+
+new Swiper('.history__middle-swiper', {
+  keyboard: true,
+  navigation: {
+    nextEl: '.history__middle-swiper-button-next',
+    prevEl: '.history__middle-swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    481: {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    },
+    721: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+    1101: {
+      slidesPerView: 'auto',
+      spaceBetween: 26,
+    },
+    1471: {
+      slidesPerView: 4,
+      spaceBetween: 26,
+    }
+  }
+});
+
+new Swiper('.moskvarium__swiper', {
+  keyboard: true,
+  navigation: {
+    nextEl: '.moskvarium__swiper-button-next',
+    prevEl: '.moskvarium__swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    481: {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    },
+    721: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+    1101: {
+      slidesPerView: 'auto',
+      spaceBetween: 26,
+    },
+    1471: {
+      slidesPerView: 4,
+      spaceBetween: 26,
     }
   }
 });

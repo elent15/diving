@@ -53,8 +53,18 @@
   &__card {
     text-align: left;
 
+    &:not(:last-child) {
+      & .centers__card-img-block {
+        aspect-ratio: 333 / 228;
+      }
+    }
+
     &:last-child {
       grid-column: 1 / 5;
+
+      & .centers__card-img-block {
+        aspect-ratio: 719 / 179;
+      }
     }
 
     @media (max-width:1470px) {
@@ -77,32 +87,9 @@
 
   &__card-img-block {
     border-radius: 15px;
-    min-width: 333px;
     width: 100%;
-    min-height: 228px;
     background-color: var(--light-gray);
     overflow: hidden;
-
-    & img {
-      min-height: 228px;
-    }
-
-    @media (max-width:720px) {
-      min-width: 100%;
-      min-height: 146px;
-
-      & img {
-        min-height: 146px;
-      }
-    }
-
-    @media (max-width:480px) {
-      min-height: 94px;
-
-      & img {
-        min-height: 94px;
-      }
-    }
   }
 
   &__card-title-link {

@@ -1,0 +1,65 @@
+-
+  const blogSlides = [
+    {
+      date: 'Сегодня 15:25',
+      title: 'Отпуск в сентябре. Поехать на Мальдивы и Бали',
+      href: '#',
+    },
+    {
+      date: 'Сегодня 15:25',
+      title: 'Летние каникулы заканчиваются: успейте нырнуть с детьми в московских океанариумах',
+      href: '#',
+    },
+    {
+      title: 'Первая неделя семейного дайвинг-сафари была фееричной!',
+      date: 'Сегодня 15:25',
+      href: '#',
+    },
+    {
+      title: 'Пора думать про дайвинг-путешествия в ноябрьские праздники',
+      date: 'Сегодня 15:25',
+      href: '#',
+    },
+    {
+      date: 'Сегодня 15:25',
+      title: 'Отпуск в сентябре. Поехать на Мальдивы и Бали',
+      href: '#',
+    },
+  ]
+section.section-bottom.blog.about-blog
+  .container-fluid.blog__container-fluid
+    h3.third-title.numbered-title.blog__title.about-blog__title Новое в блоге
+    .swiper.blog__swiper
+      .blog__swiper-top
+        .blog__text С нами в клубе состоят как любители, так и профессионалы дайвинга России.
+        .blog__swiper-top-block
+          .blog__swiper-top-btns
+            button.btn-reset.swiper-button-prev.blog__swiper-button-prev(type="button")
+              svg.prev
+                use(href="./images/sprite.svg#next")
+              svg.prev-active
+                use(href="./images/sprite.svg#next-active")
+            button.btn-reset.swiper-button-next.blog__swiper-button-next(type="button")
+              svg.next
+                use(href="./images/sprite.svg#next")
+              svg.next-active
+                use(href="./images/sprite.svg#next-active")
+          a.link-btn.blog__link(href="#") Перейти в блог
+      .swiper-wrapper
+        for slide, index in blogSlides
+          .swiper-slide.blog__swiper-slide
+            .blog__card
+              .blog__card-img-block
+                picture
+                  source(srcset=`./images/blog-${index + 1}.webp`, type="image/webp")
+                  img(src=`./images/blog-${index + 1}.jpg`, alt="Фото")
+              .blog__date-block
+                svg.blog__calendar
+                  use(href="./images/sprite.svg#calendar")
+                span.blog__card-date= slide.date
+              .blog__card-title= slide.title
+              if index == 0
+                a.link-btn.blog__card-link.blog__card-link--active(href=`./${slide.href}.html`) Читать
+              else
+                a.link-btn.blog__card-link(href=`./${slide.href}.html`) Читать
+

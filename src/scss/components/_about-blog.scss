@@ -1,0 +1,8 @@
+.about-blog {
+  &__title {
+    position: relative;
+    &::before {
+      content: "0" counter(counter);
+    }
+  }
+}

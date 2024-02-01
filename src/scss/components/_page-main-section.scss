@@ -25,24 +25,15 @@
 
   &__card {
     position: relative;
-    min-height: 386px;
+    width: 100%;
+    aspect-ratio: 149 / 129;
 
     @media (max-width:1100px) {
-      min-height: 285px;
       max-width: 446px;
-      width: 100%;
 
       &:nth-child(2n + 1) {
         justify-self: flex-end;
       }
-    }
-
-    @media (max-width:720px) {
-      min-height: 184px;
-    }
-
-    @media (max-width:480px) {
-      min-height: 118px;
     }
   }
 

@@ -2,7 +2,7 @@ const centers = () => {
   const centersBlock = Array.from(document.querySelectorAll('.diving-centers__block'));
 
   const insertIframe = (map, src) => {
-    map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" frameborder="0";" allowfullscreen></iframe>');
+    map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
     map.addEventListener('click', () => {
       map.querySelector('.diving-centers__map-iframe').style.pointerEvents = 'all';
     });

@@ -6,7 +6,7 @@
 * Шаблонизатор Pug, методология БЭМ, препроцессор Sass в синтаксисе Scss
 * Валидная, адаптивная (до 320px), кроссбраузерная вёрстка
 * SVG-спрайт
-* Слайдеры (плагин swiper), табы (js)
+* Слайдеры (плагин swiper), табы (js), аккордеон (js)
 * Модальные окна: вход в личный кабинет, восстановление пароля
 * Стилизованы состояния hover и focus для ссылок, кнопок и полей для ввода данных
   
@@ -15,7 +15,8 @@
 * Главная страница [index.html](https://elent15.github.io/diving): табы, слайдеры, адаптивное видео
 * Страница "Обучение" [training.html](https://elent15.github.io/diving/training.html)
 * Страница "Туризм" [tourism.html](https://elent15.github.io/diving/tourism.html)
-* Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html)
+* Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html): кастомный скролл (плагин simplebar), яндекс карты
+* Страница "О нас" [about.html](https://elent15.github.io/diving/about.html): слайдеры, аккордеон
 
 #### Gulp-сборка (Gulp 4)
 

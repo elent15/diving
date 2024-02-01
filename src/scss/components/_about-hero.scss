@@ -1,0 +1,9 @@
+.about-hero {
+  @media (max-width:1100px) {
+    background-position: center;
+  }
+
+  &__content {
+    max-width: 855px;
+  }
+}

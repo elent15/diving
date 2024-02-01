@@ -1,0 +1,109 @@
+.moskvarium {
+  &__title {
+    margin-bottom: 21px;
+    max-width: 696px;
+  }
+
+  &__text {
+    margin-bottom: 56px;
+    max-width: 965px;
+
+    @media (max-width:1470px) {
+      margin-bottom: 48px;
+      max-width: 1355px;
+    }
+
+    @media (max-width:1100px) {
+      margin-bottom: 36px;
+    }
+
+    @media (max-width:480px)  {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__paragraph {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+
+    & + .moskvarium__paragraph {
+      margin-top: 25px;
+
+      @media (max-width:480px) {
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width:480px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__swiper-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+
+    @media (max-width:720px) {
+      gap: 32px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &__swiper {
+    max-width: 1317px;
+  }
+
+  &__swiper-slide {
+    @media (max-width:1470px) {
+      width: auto;
+    }
+  }
+
+  &__swiper-btns {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 77px;
+    height: 33px;
+
+    @media (max-width:480px) {
+      width: 67px;
+      height: 28px;
+    }
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    position: static;
+    margin: 0;
+    width: 33px;
+    height: 33px;
+
+    @media (max-width:480px) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__img-block {
+    border-radius: 15px;
+    width: 310px;
+    height: 203px;
+    background-color: var(--light-gray);
+    overflow: hidden;
+
+    @media (max-width:480px) {
+      width: 200px;
+      height: auto;
+      min-height: 131px;
+    }
+  }
+}
