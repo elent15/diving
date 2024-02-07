@@ -54,10 +54,6 @@ body {
 
 .wrapper__page-bg {
   background-size: cover;
-
-  @media (max-width:1470px) {
-    background-size: cover;
-  }
 }
 
 .wrapper__about-bg {
@@ -560,13 +556,11 @@ p {
 // simplebar
 .simplebar-track.simplebar-vertical {
   width: 5px;
-  background: rgba(255, 255, 255, 0.10);
 }
 
 .simplebar-scrollbar:before {
   left: 0;
   right: 0;
   border-radius: 0;
-  opacity: 1;
   background: var(--white);
 }

@@ -1,5 +1,10 @@
+// centers
 const centers = () => {
   const centersBlock = Array.from(document.querySelectorAll('.diving-centers__block'));
+  document.querySelectorAll('.diving-centers__location-list-inner').forEach(el => {
+    new SimpleBar(el, { autoHide: false });
+    styleScroll(el);
+  });
 
   const insertIframe = (map, src) => {
     map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
@@ -27,6 +32,9 @@ const centers = () => {
             const map = block.querySelector('.diving-centers__map');
             const src = `${el.dataset.src}`;
             insertIframe(map, src);
+            const aboutContent = block.querySelector('.diving-centers__about-text--active');
+            new SimpleBar(aboutContent, { autoHide: false });
+            styleScroll(aboutContent);
           }
 
           el.addEventListener('click', (e) => {
@@ -40,15 +48,23 @@ const centers = () => {
             if (!btn.classList.contains('diving-centers__location-btn--active')) {
               block.querySelector('.diving-centers__location-btn--active').classList.remove('diving-centers__location-btn--active');
               block.querySelector('.diving-centers__location-item--active').classList.remove('diving-centers__location-item--active');
-              block.querySelector('.diving-centers__about-title--active').classList.remove('diving-centers__about-title--active');
+              if (block.querySelector('.diving-centers__about-title--active')) {
+                block.querySelector('.diving-centers__about-title--active').classList.remove('diving-centers__about-title--active');
+              }
               block.querySelector('.diving-centers__about-text--active').classList.remove('diving-centers__about-text--active');
               map.innerHTML = "";
               btn.classList.add('diving-centers__location-btn--active');
-              title.classList.add('diving-centers__about-title--active');
+              if (title) {
+                title.classList.add('diving-centers__about-title--active');
+              }
               text.classList.add('diving-centers__about-text--active');
               item.classList.add('diving-centers__location-item--active');
               const src = `${btn.dataset.src}`;
               insertIframe(map, src);
+
+              const aboutContent = block.querySelector('.diving-centers__about-text--active');
+              new SimpleBar(aboutContent, { autoHide: false });
+              styleScroll(aboutContent);
             }
           });
         });

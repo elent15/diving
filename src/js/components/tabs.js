@@ -2,33 +2,28 @@
 const tabs = () => {
   const tabs = Array.from(document.querySelectorAll('.tabs'));
 
-  let btnActive;
-  let tabActive;
-
   tabs.forEach(tabs => {
     if (tabs) {
       tabs.addEventListener('click', (e) => {
+        setTimeout(scroll, 500);
         const tabsData = e.target.dataset.tab;
 
         if (tabsData) {
           const tabsBtn = Array.from(tabs.querySelectorAll('.tabs__btn'));
           const parent = e.target.closest('.tabs-block');
-          const tabsContent = Array.from(parent.querySelectorAll('.tab'));
-
-          btnActive = 'tours__btn--active';
-          tabActive = 'tours__tab--active';
+          const tabsContent = Array.from(parent.children);
 
           tabsBtn.forEach(btn => {
-            btn.classList.remove(btnActive);
+            btn.classList.remove('tabs__btn--active');
           });
 
-          tabs.querySelector(`[data-tab='${tabsData}']`).classList.add(btnActive);
+          tabs.querySelector(`[data-tab='${tabsData}']`).classList.add('tabs__btn--active');
 
           tabsContent.forEach(tab => {
-            tab.classList.remove(tabActive);
+            tab.classList.remove('tab--active');
           });
 
-          document.getElementById(`${tabsData}`).classList.add(tabActive);
+          document.getElementById(`${tabsData}`).classList.add('tab--active');
         }
       });
     }

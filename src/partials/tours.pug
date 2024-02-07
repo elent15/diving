@@ -24,11 +24,11 @@ section.section-top.tours.tabs-block
     .tours__tabs
       .tours__tabs-btns.tabs
         h3.third-title.numbered-title.tours__tabs-title
-          button.btn-reset.tabs__btn.tours__btn.tours__btn--active(type="button", data-tab="tours-tab-1") Горячие туры
+          button.btn-reset.tabs__btn.tabs__btn--active.tours__btn(type="button", data-tab="tours-tab-1") Горячие туры
         h3.third-title.numbered-title.tours__tabs-title
           button.btn-reset.tabs__btn.tours__btn(type="button", data-tab="tours-tab-2") Дайвинг курсы
-  .container
-    .tours__tab.tab.tours__tab--active#tours-tab-1
+  .tours__tab.tab.tab--active.tours__tab#tours-tab-1
+    .container.tours__tab-container
       for card, index in cardsTours
         .tours__tab-card
           .tours__tab-card-img-block
@@ -38,7 +38,8 @@ section.section-top.tours.tabs-block
             .tours__tab-card-sticker=card.date
           .tours__tab-card-title=card.title
       a.link-btn.tours__tabs-link(href="./schedule.html") Все туры
-    .tours__tab.tab#tours-tab-2
+  .tours__tab.tab#tours-tab-2
+    .container.tours__tab-container
       for card, index in cardsCourses
         .tours__tab-card
           .tours__tab-card-img-block

@@ -17,6 +17,7 @@
 * Страница "Туризм" [tourism.html](https://elent15.github.io/diving/tourism.html)
 * Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html): кастомный скролл (плагин simplebar), яндекс карты
 * Страница "О нас" [about.html](https://elent15.github.io/diving/about.html): слайдеры, аккордеон
+* Страница "Контакты" [contacts.html](https://elent15.github.io/diving/contacts.html): двухуровневые табы
 
 #### Gulp-сборка (Gulp 4)
 

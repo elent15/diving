@@ -1,0 +1,18 @@
+.page-hero-sm {
+  width: 100%;
+  min-height: 257px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 42px;
+    min-height: 257px;
+  }
+
+  &__title {}
+}

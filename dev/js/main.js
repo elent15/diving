@@ -75,8 +75,13 @@ const burger = () => {
 
 burger();
 
+// centers
 const centers = () => {
   const centersBlock = Array.from(document.querySelectorAll('.diving-centers__block'));
+  document.querySelectorAll('.diving-centers__location-list-inner').forEach(el => {
+    new SimpleBar(el, { autoHide: false });
+    styleScroll(el);
+  });
 
   const insertIframe = (map, src) => {
     map.insertAdjacentHTML('afterbegin', '<iframe class="diving-centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
@@ -104,6 +109,9 @@ const centers = () => {
             const map = block.querySelector('.diving-centers__map');
             const src = `${el.dataset.src}`;
             insertIframe(map, src);
+            const aboutContent = block.querySelector('.diving-centers__about-text--active');
+            new SimpleBar(aboutContent, { autoHide: false });
+            styleScroll(aboutContent);
           }
 
           el.addEventListener('click', (e) => {
@@ -117,15 +125,23 @@ const centers = () => {
             if (!btn.classList.contains('diving-centers__location-btn--active')) {
               block.querySelector('.diving-centers__location-btn--active').classList.remove('diving-centers__location-btn--active');
               block.querySelector('.diving-centers__location-item--active').classList.remove('diving-centers__location-item--active');
-              block.querySelector('.diving-centers__about-title--active').classList.remove('diving-centers__about-title--active');
+              if (block.querySelector('.diving-centers__about-title--active')) {
+                block.querySelector('.diving-centers__about-title--active').classList.remove('diving-centers__about-title--active');
+              }
               block.querySelector('.diving-centers__about-text--active').classList.remove('diving-centers__about-text--active');
               map.innerHTML = "";
               btn.classList.add('diving-centers__location-btn--active');
-              title.classList.add('diving-centers__about-title--active');
+              if (title) {
+                title.classList.add('diving-centers__about-title--active');
+              }
               text.classList.add('diving-centers__about-text--active');
               item.classList.add('diving-centers__location-item--active');
               const src = `${btn.dataset.src}`;
               insertIframe(map, src);
+
+              const aboutContent = block.querySelector('.diving-centers__about-text--active');
+              new SimpleBar(aboutContent, { autoHide: false });
+              styleScroll(aboutContent);
             }
           });
         });
@@ -238,27 +254,38 @@ const modal = () => {
 modal();
 
 // scroll-style
-const scroll = () => {
-  document.querySelectorAll('.diving-centers__location-list-inner').forEach(el => {
-    new SimpleBar(el);
-  });
+function styleScroll(el) {
+  const simplebar = el.querySelector('.simplebar-vertical');
+  const wrapper = el.querySelector('.simplebar-content-wrapper');
+  wrapper.setAttribute('tabindex', '-1');
 
+  if (simplebar.style.visibility == 'visible') {
+    wrapper.style.paddingRight = '23px';
+  } else if (simplebar.style.visibility == 'hidden') {
+    wrapper.style.paddingRight = '0px';
+  }
+}
+
+function scroll() {
   const listInner = Array.from(document.querySelectorAll('.diving-centers__location-list-inner'));
+  const aboutContent = Array.from(document.querySelectorAll('.diving-centers__about-text--active'));
 
   if (listInner) {
     listInner.forEach(el => {
-      const simplebar = el.querySelector('.simplebar-vertical');
-      const wrapper = el.querySelector('.simplebar-content-wrapper');
-      wrapper.setAttribute('tabindex', '-1');
+      styleScroll(el);
+    });
+  }
 
-      if (simplebar.style.visibility == 'visible') {
-        wrapper.style.paddingRight = '23px';
-      }
+  if (aboutContent) {
+    aboutContent.forEach(el => {
+      styleScroll(el);
     });
   }
 }
 
-window.addEventListener('resize', scroll());
+window.addEventListener('resize', () => {
+  setTimeout(scroll, 500);
+});
 
 // slider
 new Swiper('.reviews__swiper', {
@@ -365,33 +392,28 @@ new Swiper('.moskvarium__swiper', {
 const tabs = () => {
   const tabs = Array.from(document.querySelectorAll('.tabs'));
 
-  let btnActive;
-  let tabActive;
-
   tabs.forEach(tabs => {
     if (tabs) {
       tabs.addEventListener('click', (e) => {
+        setTimeout(scroll, 500);
         const tabsData = e.target.dataset.tab;
 
         if (tabsData) {
           const tabsBtn = Array.from(tabs.querySelectorAll('.tabs__btn'));
           const parent = e.target.closest('.tabs-block');
-          const tabsContent = Array.from(parent.querySelectorAll('.tab'));
-
-          btnActive = 'tours__btn--active';
-          tabActive = 'tours__tab--active';
+          const tabsContent = Array.from(parent.children);
 
           tabsBtn.forEach(btn => {
-            btn.classList.remove(btnActive);
+            btn.classList.remove('tabs__btn--active');
           });
 
-          tabs.querySelector(`[data-tab='${tabsData}']`).classList.add(btnActive);
+          tabs.querySelector(`[data-tab='${tabsData}']`).classList.add('tabs__btn--active');
 
           tabsContent.forEach(tab => {
-            tab.classList.remove(tabActive);
+            tab.classList.remove('tab--active');
           });
 
-          document.getElementById(`${tabsData}`).classList.add(tabActive);
+          document.getElementById(`${tabsData}`).classList.add('tab--active');
         }
       });
     }

@@ -100,41 +100,45 @@
     }
   }
 
-  &__btn--active {
-    color: var(--red);
-    outline-offset: 2px;
-    outline: 2px solid transparent;
-    transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
-
-    &:focus-visible {
+  &__btn {
+    &.tabs__btn--active {
+      color: var(--red);
+      outline-offset: 2px;
       outline: 2px solid transparent;
-    }
+      transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
 
-    &:focus {
-      outline-color: var(--red);
-    }
-
-    &:hover {
-      color: var(--white);
-      outline-color: transparent;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: calc(100% + 34px);
-      left: -18%;
-      display: block;
-      width: 136%;
-      height: 1px;
-      background-color: var(--red);
-
-      @media (max-width:720px) {
-        top: calc(100% + 24px);
+      &:focus-visible {
+        outline: 2px solid transparent;
       }
 
-      @media (max-width:480px) {
-        top: calc(100% + 13px);
+      &:focus {
+        outline-color: var(--red);
+      }
+
+      &:hover {
+        color: var(--white);
+        outline-color: transparent;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 34px);
+        left: -18%;
+        display: block;
+        width: 136%;
+        height: 1px;
+        background-color: var(--red);
+
+        @media (max-width:720px) {
+          top: calc(100% + 24px);
+        }
+
+        @media (max-width:480px) {
+          top: calc(100% + 12px);
+          left: 0;
+          width: 100%;
+        }
       }
     }
   }
@@ -143,7 +147,13 @@
     display: none;
   }
 
-  &__tab--active {
+  &__tab {
+    &.tab--active {
+      display: block;
+    }
+  }
+
+  &__tab-container {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
@@ -162,6 +172,10 @@
     @media (max-width:720px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 30px 24px;
+    }
+
+    @media (max-width:480px) {
+      gap: 24px 16px;
     }
   }
 
