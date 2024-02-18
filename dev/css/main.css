@@ -6031,6 +6031,16 @@ p {
     padding: 40px 0 48px;
   }
 }
+@media (max-width: 720px) {
+  .modal-certificate {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate {
+    width: 100%;
+  }
+}
 .modal-certificate__logo-link {
   margin-left: 40px;
 }
