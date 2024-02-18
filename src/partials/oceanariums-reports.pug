@@ -1,0 +1,34 @@
+-
+  const oceanariumsText = [
+    'Отпраздновать день рождения',
+    'Отметить 23 Февраля, 8 Марта и Новый год',
+    'Подарить яркое приключение на школьный выпускной',
+    'Сделать предложение руки и сердца по специальному сценарию',
+    'Организовать настоящую свадьбу',
+    'Придумать подарок шефу',
+    'Провести корпоративное мероприятие',
+    'Произвести фотосъемку и снять подводный фильм',
+    'Поиграть с детьми',
+    'Просто отдохнуть и перезагрузиться',
+  ]
+section.section.oceanariums-reports
+  .container
+    h3.third-title.page-third-title.oceanariums-reports__title Смотрите фоторепортажи <br>из Москвариума и Крокус Сити Океанариума
+    .oceanariums-reports__text Погружение в океанариуме может быть просто дайвингом для расслабления, приятным времяпровождением. А может быть приурочено к важному событию для дайвера. Особенный, неожиданный, выдающийся подарок — плавание с аквалангом. Подарите виновнику торжества сертификат на погружение в океанариуме, он действителен в течение года. В Москвариуме и Крокус Сити Океанариуме можно:
+    .oceanariums-reports__cards-block
+      for text, index in oceanariumsText
+        .oceanariums-reports__card
+          svg.oceanariums-reports__card-icon
+            use(href=`./images/sprite.svg#oceanariums-icon-${index + 1}`)
+          .oceanariums-reports__card-text= text
+    .oceanariums-reports__images
+      for index in [1, 2, 3]
+        .oceanariums-reports__img-block.oceanariums-reports__top-img-block
+          picture
+            source(srcset=`./images/oceanariums-${index}.webp`, type="image/webp")
+            img(src=`./images/oceanariums-${index}.jpg`, alt="Фото")
+      for index in [4, 5, 6, 7]
+        .oceanariums-reports__img-block.oceanariums-reports__bottom-img-block
+          picture
+            source(srcset=`./images/oceanariums-${index}.webp`, type="image/webp")
+            img(src=`./images/oceanariums-${index}.jpg`, alt="Фото")

@@ -568,7 +568,7 @@ p {
 
 .input {
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #000;
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -593,8 +593,62 @@ p {
   color: var(--red);
 }
 .input::placeholder {
-  color: var(--primary);
+  color: #7b7b7b;
   transition: color 0.3s ease-in-out;
+}
+
+.form-label-checkbox {
+  position: relative;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .form-label-checkbox {
+    line-height: 22px;
+  }
+}
+
+.form-input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.form-input-checkbox:focus + .form-checkbox {
+  outline-color: var(--white);
+}
+.form-input-checkbox:hover + .form-checkbox {
+  outline-color: transparent;
+}
+.form-input-checkbox:checked + .form-checkbox {
+  background-position: center center;
+  background-image: url("../images/svg/form-check-mark.svg");
+}
+
+.form-checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: none;
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  transition: outline-color 0.3s ease-in-out;
+}
+
+.form-label-checkbox-text {
+  display: inline-block;
+  padding-left: 40px;
+  user-select: none;
 }
 
 .simplebar-track.simplebar-vertical {
@@ -959,7 +1013,6 @@ p {
   width: 500px;
   max-height: 100%;
   background: rgba(1, 87, 123, 0.95);
-  overflow-y: auto;
 }
 @media (max-width: 720px) {
   .modal__body {
@@ -981,6 +1034,12 @@ p {
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: outline-color 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  .modal__close-btn {
+    width: 20px;
+    height: 20px;
+  }
 }
 .modal__close-btn svg {
   width: 100%;
@@ -1017,6 +1076,11 @@ p {
   margin-bottom: 24px;
   width: 100%;
 }
+@media (max-width: 1100px) {
+  .modal__form-label {
+    margin-bottom: 16px;
+  }
+}
 .modal__form-input {
   padding: 10px 16px;
   width: 100%;
@@ -1030,42 +1094,70 @@ p {
   font-weight: 400;
   line-height: 26px;
 }
+@media (max-width: 720px) {
+  .modal__form-input {
+    height: 52px;
+  }
+}
+.modal__form-textarea {
+  height: 150px;
+  resize: none;
+}
 .modal__form-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   margin-top: 24px;
   width: 100%;
 }
 @media (max-width: 720px) {
   .modal__form-bottom {
-    flex-direction: column;
     gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .modal__form-bottom {
+    flex-direction: column;
     margin-top: 12px;
   }
 }
 .modal__form-link {
   padding: 8px;
-  width: 180px;
-  min-height: 48px;
+  width: calc((100% - 24px) / 2);
+  min-height: 52px;
   font-size: 15px;
   font-weight: 500;
   line-height: normal;
+  background: var(--red);
 }
 @media (max-width: 720px) {
+  .modal__form-link {
+    width: calc((100% - 16px) / 2);
+    min-height: 48px;
+  }
+}
+@media (max-width: 480px) {
   .modal__form-link {
     width: 100%;
   }
 }
 .modal__form-btn {
   padding: 8px;
-  width: 180px;
-  min-height: 48px;
+  width: calc((100% - 24px) / 2);
+  min-height: 52px;
   font-size: 15px;
   font-weight: 500;
   line-height: normal;
+  background: var(--red);
 }
 @media (max-width: 720px) {
+  .modal__form-btn {
+    width: calc((100% - 16px) / 2);
+    min-height: 48px;
+  }
+}
+@media (max-width: 480px) {
   .modal__form-btn {
     width: 100%;
   }
@@ -4926,6 +5018,104 @@ p {
     margin-bottom: 24px;
   }
 }
+.deeds__accordion:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media (max-width: 480px) {
+  .deeds__accordion:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.deeds__trigger {
+  padding: 20px 25px;
+}
+.deeds__header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .deeds__header {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .deeds__header {
+    font-size: 16px;
+  }
+}
+.deeds__content {
+  padding: 0 25px;
+}
+.deeds__card {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 1470px) {
+  .deeds__card {
+    gap: 35px;
+  }
+}
+@media (max-width: 1100px) {
+  .deeds__card {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .deeds__card {
+    gap: 16px;
+  }
+}
+.deeds__card-img-block {
+  border-radius: 15px;
+  width: 477px;
+  aspect-ratio: 477/304;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+@media (max-width: 1470px) {
+  .deeds__card-img-block {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .deeds__card-img-block {
+    max-width: 477px;
+    width: 50%;
+  }
+}
+@media (max-width: 720px) {
+  .deeds__card-img-block {
+    width: 60%;
+  }
+}
+@media (max-width: 480px) {
+  .deeds__card-img-block {
+    width: 70%;
+  }
+}
+.deeds__card-text {
+  padding-top: 35px;
+  max-width: 770px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .deeds__card-text {
+    padding-top: 0;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .deeds__card-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 
 .accordion {
   border-radius: 10px;
@@ -4933,18 +5123,9 @@ p {
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
 }
-.accordion:not(:last-child) {
-  margin-bottom: 24px;
-}
-@media (max-width: 480px) {
-  .accordion:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
 .accordion__trigger {
   justify-content: space-between;
   gap: 50px;
-  padding: 20px 25px;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -4955,22 +5136,6 @@ p {
 }
 .accordion__trigger:hover .accordion__icon::after {
   background-color: var(--red);
-}
-.accordion__header {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 26px;
-}
-@media (max-width: 720px) {
-  .accordion__header {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-@media (max-width: 480px) {
-  .accordion__header {
-    font-size: 16px;
-  }
 }
 .accordion__icon {
   position: relative;
@@ -5008,7 +5173,6 @@ p {
 }
 .accordion__content {
   box-sizing: content-box;
-  padding: 0 25px;
   max-height: 0;
   will-change: max-height;
   opacity: 0;
@@ -5016,89 +5180,48 @@ p {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-.accordion__card {
-  display: flex;
-  gap: 50px;
-}
-@media (max-width: 1470px) {
-  .accordion__card {
-    gap: 35px;
-  }
-}
-@media (max-width: 1100px) {
-  .accordion__card {
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-@media (max-width: 480px) {
-  .accordion__card {
-    gap: 16px;
-  }
-}
-.accordion__card-img-block {
-  border-radius: 15px;
-  width: 477px;
-  aspect-ratio: 477/304;
-  background-color: var(--light-gray);
-  overflow: hidden;
-}
-@media (max-width: 1470px) {
-  .accordion__card-img-block {
-    flex-shrink: 0;
-  }
-}
-@media (max-width: 1100px) {
-  .accordion__card-img-block {
-    max-width: 477px;
-    width: 50%;
-  }
-}
-@media (max-width: 720px) {
-  .accordion__card-img-block {
-    width: 60%;
-  }
-}
-@media (max-width: 480px) {
-  .accordion__card-img-block {
-    width: 70%;
-  }
-}
-.accordion__card-text {
-  padding-top: 35px;
-  max-width: 770px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-@media (max-width: 1100px) {
-  .accordion__card-text {
-    padding-top: 0;
-    width: auto;
-  }
-}
-@media (max-width: 480px) {
-  .accordion__card-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
 .accordion--active .accordion__content {
   opacity: 1;
   visibility: visible;
-  padding-top: 41px;
-  padding-bottom: 46px;
-}
-@media (max-width: 1100px) {
-  .accordion--active .accordion__content {
-    padding-top: 20px;
-    padding-bottom: 24px;
-  }
 }
 .accordion--active .accordion__icon::after {
   opacity: 0;
   visibility: hidden;
+}
+.accordion--active .deeds__content {
+  padding-top: 41px;
+  padding-bottom: 46px;
+}
+@media (max-width: 1100px) {
+  .accordion--active .deeds__content {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+}
+.accordion--active .oceanariums-questions__content {
+  padding-top: 8px;
+  padding-bottom: 32px;
+}
+@media (max-width: 720px) {
+  .accordion--active .oceanariums-questions__content {
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .accordion--active .oceanariums-questions__content {
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .accordion--active .oceanariums-price__content {
+    padding-top: 8px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .accordion--active .oceanariums-price__content {
+    padding-bottom: 16px;
+  }
 }
 
 .about-blog__title {
@@ -5865,54 +5988,19 @@ p {
   }
 }
 .offer__form-label-checkbox {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 24px;
 }
-@media (max-width: 720px) {
+@media (max-width: 1100px) {
   .offer__form-label-checkbox {
     margin-bottom: 16px;
   }
 }
-.offer__form-input-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-.offer__form-input-checkbox:focus + .offer__form-checkbox {
-  outline-color: var(--white);
-}
-.offer__form-input-checkbox:hover + .offer__form-checkbox {
-  outline-color: transparent;
-}
-.offer__form-input-checkbox:checked + .offer__form-checkbox {
-  background-position: center center;
-  background-image: url("../images/svg/form-check-mark.svg");
-}
-.offer__form-checkbox {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: inline-block;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: none;
-  border-radius: 5px;
-  width: 26px;
-  height: 26px;
-  background: rgba(255, 255, 255, 0.2);
-  background-repeat: no-repeat;
-  cursor: pointer;
-  outline: 1px solid transparent;
-  outline-offset: 1px;
-  transition: outline-color 0.3s ease-in-out;
-}
-.offer__form-text {
-  display: inline-block;
-  padding-left: 40px;
-  user-select: none;
-}
-.offer__link {
-  line-height: 22px;
+@media (max-width: 720px) {
+  .offer__link {
+    line-height: 22px;
+  }
 }
 .offer__form-btn {
   padding: 12px;
@@ -5930,6 +6018,1188 @@ p {
 @media (max-width: 480px) {
   .offer__form-btn {
     min-height: 52px;
+  }
+}
+
+.modal-certificate {
+  padding: 50px 0;
+  max-width: 1220px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .modal-certificate {
+    padding: 40px 0 48px;
+  }
+}
+.modal-certificate__logo-link {
+  margin-left: 40px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__logo-link {
+    margin-left: 24px;
+  }
+}
+.modal-certificate__form-block {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__form-block {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.modal-certificate__form-block:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__form-block:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__form-block:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.modal-certificate__title {
+  margin-bottom: 24px;
+  font-weight: 800;
+  line-height: 32px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__title {
+    margin-bottom: 16px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__title {
+    line-height: 22px;
+  }
+}
+.modal-certificate__cards-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__cards-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__cards-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__cards-block {
+    grid-template-columns: 1fr;
+  }
+}
+.modal-certificate__card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 22px 30px 14px;
+  width: 100%;
+  outline-offset: 2px;
+  outline: 1px solid transparent;
+  transition: outline-color 0.3s ease-in-out;
+}
+.modal-certificate__card:focus-visible {
+  outline: 1px solid transparent;
+}
+.modal-certificate__card:focus {
+  outline-color: var(--white);
+}
+.modal-certificate__card:focus.modal-certificate__card--active {
+  outline-color: var(--red);
+}
+.modal-certificate__card:hover {
+  outline-color: transparent;
+}
+.modal-certificate__card:hover .modal-certificate__card-title {
+  color: var(--red);
+}
+.modal-certificate__card:hover.modal-certificate__card--active {
+  outline-color: transparent;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__card {
+    padding: 16px;
+  }
+}
+.modal-certificate__card--active {
+  border-color: var(--red);
+}
+.modal-certificate__card-img-block {
+  border-radius: 15px;
+  margin-bottom: 11px;
+  max-width: 204px;
+  width: 100%;
+  aspect-ratio: 204/154;
+  background-color: var(--light-gray);
+  overflow: hidden;
+  text-align: left;
+}
+@media (max-width: 720px) {
+  .modal-certificate__card-img-block {
+    margin: 0 auto;
+    margin-bottom: 11px;
+    max-width: 203px;
+  }
+}
+.modal-certificate__card-title {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  transition: color 0.3s ease-in-out;
+}
+.modal-certificate__label {
+  width: 100%;
+}
+.modal-certificate__input {
+  padding: 19px 30px;
+  width: 100%;
+  min-height: 58px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+@media (max-width: 720px) {
+  .modal-certificate__input {
+    padding: 12px;
+    min-height: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__input {
+    font-size: 14px;
+  }
+}
+.modal-certificate__textarea {
+  padding: 30px 35px;
+  width: 100%;
+  height: 165px;
+  resize: none;
+}
+@media (max-width: 720px) {
+  .modal-certificate__textarea {
+    padding: 12px;
+  }
+}
+.modal-certificate__form-btns {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 720px) {
+  .modal-certificate__form-btns {
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__form-btns {
+    gap: 16px 12px;
+    flex-wrap: wrap;
+  }
+}
+.modal-certificate__nominal-btn {
+  padding: 12px;
+  width: 140px;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.modal-certificate__nominal-btn--active {
+  background: var(--red);
+}
+@media (max-width: 720px) {
+  .modal-certificate__nominal-btn {
+    min-height: 44px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__nominal-btn {
+    width: calc((100% - 12px) / 2);
+  }
+}
+.modal-certificate__form-subblock {
+  width: calc((100% - 64px) / 3);
+}
+@media (max-width: 1470px) {
+  .modal-certificate__form-subblock {
+    width: calc((100% - 48px) / 3);
+  }
+}
+@media (max-width: 1100px) {
+  .modal-certificate__form-subblock {
+    width: calc((100% - 48px) / 2);
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__form-subblock {
+    width: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__form-subblock {
+    width: 100%;
+  }
+}
+.modal-certificate__form-address {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1470px) {
+  .modal-certificate__form-address {
+    gap: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__form-address {
+    gap: 24px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__form-address {
+    gap: 16px;
+  }
+}
+.modal-certificate__form-price {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1100px) {
+  .modal-certificate__form-price {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+}
+.modal-certificate__item {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media (max-width: 480px) {
+  .modal-certificate__item {
+    font-size: 14px;
+  }
+}
+.modal-certificate__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.modal-certificate__item-name {
+  display: inline-block;
+  margin-right: 144px;
+  width: 200px;
+}
+@media (max-width: 720px) {
+  .modal-certificate__item-name {
+    margin-right: 125px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__item-name {
+    margin-right: 4px;
+    width: 175px;
+  }
+}
+.modal-certificate__item-value {
+  display: inline-block;
+}
+.modal-certificate__bottom-form-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1100px) {
+  .modal-certificate__bottom-form-block {
+    gap: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .modal-certificate__link {
+    line-height: 22px;
+  }
+}
+.modal-certificate__form-btn {
+  border-radius: 5px;
+  padding: 16px;
+  width: 202px;
+  min-height: 52px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  background: var(--red);
+}
+@media (max-width: 720px) {
+  .modal-certificate__form-btn {
+    min-height: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-certificate__form-btn {
+    width: 100%;
+  }
+}
+
+.modal-book__logo-link {
+  margin-bottom: 24px;
+}
+.modal-book__title {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.modal-book__form {
+  width: 100%;
+}
+.modal-book__bottom-form-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+  .modal-book__link {
+    line-height: 22px;
+  }
+}
+.modal-book__form-btn {
+  border-radius: 5px;
+  padding: 16px;
+  width: 202px;
+  min-height: 52px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  background: var(--red);
+}
+@media (max-width: 720px) {
+  .modal-book__form-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+.oceanariums-hero {
+  position: relative;
+}
+.oceanariums-hero__video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.oceanariums-hero__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 100%;
+}
+@media (max-width: 1470px) {
+  .oceanariums-hero__content {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-hero__content {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-hero__content {
+    gap: 16px;
+  }
+}
+.oceanariums-hero__title {
+  margin-bottom: 0;
+}
+.oceanariums-hero__cards-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 378px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-hero__cards-block {
+    width: 338px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-hero__cards-block {
+    gap: 16px;
+    width: 296px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-hero__cards-block {
+    gap: 12px;
+    width: 252px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-hero__cards-block {
+    width: 212px;
+  }
+}
+.oceanariums-hero__card {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: calc((100% - 18px) / 2);
+  aspect-ratio: 180/114;
+  cursor: pointer;
+  overflow: hidden;
+}
+@media (max-width: 1100px) {
+  .oceanariums-hero__card {
+    width: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-hero__card {
+    width: calc((100% - 12px) / 2);
+  }
+}
+.oceanariums-hero__card--active {
+  border-color: var(--red);
+}
+.oceanariums-hero__play-btn {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50.8%;
+  width: 21px;
+  height: 21px;
+  outline-offset: 10px;
+  outline: 2px solid transparent;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out, outline-color 0.3s ease-in-out;
+}
+@media (max-width: 720px) {
+  .oceanariums-hero__play-btn {
+    width: 16px;
+    height: 16px;
+    outline-offset: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-hero__play-btn {
+    outline-offset: 6px;
+  }
+}
+.oceanariums-hero__play-btn svg {
+  width: 100%;
+  height: 100%;
+}
+.oceanariums-hero__play-btn:focus-visible {
+  outline-style: solid;
+}
+.oceanariums-hero__play-btn:focus {
+  outline-color: var(--white);
+}
+.oceanariums-hero__play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.oceanariums-advantages__title {
+  margin-bottom: 27px;
+  font-size: 26px;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .oceanariums-advantages__title {
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-advantages__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.oceanariums-advantages__text {
+  max-width: 1164px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+@media (max-width: 480px) {
+  .oceanariums-advantages__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.oceanariums-price__title {
+  margin-bottom: 52px;
+  max-width: 744px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-price__title {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-price__title {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__title {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__title {
+    margin-bottom: 16px;
+  }
+}
+.oceanariums-price__list {
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+@media (max-width: 720px) {
+  .oceanariums-price__list {
+    display: none;
+  }
+}
+.oceanariums-price__header-item {
+  padding-top: 26px;
+  padding-bottom: 25px;
+  background-color: var(--red);
+}
+.oceanariums-price__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+.oceanariums-price__item:not(:first-child) {
+  border-top: 2px solid var(--primary);
+}
+.oceanariums-price__item:not(:first-child):nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.oceanariums-price__item:not(:first-child):nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 720px) {
+  .oceanariums-price__item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .oceanariums-price__item:first-child {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__item {
+    gap: 15px;
+  }
+}
+.oceanariums-price__item-cell {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media (max-width: 1100px) {
+  .oceanariums-price__item-cell {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__item-cell {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.oceanariums-price__item-cell:first-child {
+  padding-left: 41px;
+  width: 420px;
+  text-align: left;
+}
+@media (max-width: 1100px) {
+  .oceanariums-price__item-cell:first-child {
+    padding-left: 20px;
+    width: 250px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__item-cell:first-child {
+    padding-left: 25px;
+    width: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__item-cell:first-child {
+    padding-left: 20px;
+    max-width: 290px;
+    width: auto;
+  }
+}
+.oceanariums-price__item-cell:nth-child(2), .oceanariums-price__item-cell:nth-child(3) {
+  width: 105px;
+}
+@media (max-width: 1100px) {
+  .oceanariums-price__item-cell:nth-child(2), .oceanariums-price__item-cell:nth-child(3) {
+    width: 90px;
+  }
+}
+.oceanariums-price__item-cell:last-child {
+  padding-right: 84px;
+  width: 330px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-price__item-cell:last-child {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-price__item-cell:last-child {
+    padding-right: 10px;
+    width: 230px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__item-cell:last-child {
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__item-cell:last-child {
+    min-width: 80px;
+    width: auto;
+  }
+}
+.oceanariums-price__accordion-list {
+  display: none;
+}
+@media (max-width: 720px) {
+  .oceanariums-price__accordion-list {
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__accordion:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__trigger {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__trigger {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__header {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-price__header {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-price__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.oceanariums-reports__title {
+  margin-bottom: 21px;
+  max-width: 692px;
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__title {
+    margin-bottom: 16px;
+  }
+}
+.oceanariums-reports__text {
+  margin-bottom: 60px;
+  max-width: 1164px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-reports__text {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-reports__text {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-reports__text {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__text {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.oceanariums-reports__cards-block {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 33px 30px;
+  margin-bottom: 75px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-reports__cards-block {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 32px;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-reports__cards-block {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-reports__cards-block {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__cards-block {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}
+.oceanariums-reports__card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 25px 18px;
+  width: 100%;
+  min-height: 197px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 1100px) {
+  .oceanariums-reports__card {
+    min-height: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__card {
+    min-height: 150px;
+  }
+}
+.oceanariums-reports__card-icon {
+  margin-bottom: 14px;
+  width: 51px;
+  height: 51px;
+}
+.oceanariums-reports__card-text {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+.oceanariums-reports__images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 36px 24px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-reports__images {
+    gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__images {
+    gap: 16px;
+  }
+}
+.oceanariums-reports__img-block {
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+.oceanariums-reports__img-block img {
+  width: 100%;
+}
+.oceanariums-reports__top-img-block {
+  width: 454px;
+  aspect-ratio: 454/321;
+}
+@media (max-width: 1470px) {
+  .oceanariums-reports__top-img-block {
+    width: min(454px, (100% - 48px) / 3);
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-reports__top-img-block {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__top-img-block {
+    margin: 0 auto;
+    width: min(342px, 100%);
+  }
+}
+.oceanariums-reports__bottom-img-block {
+  width: 342px;
+  aspect-ratio: 342/239;
+}
+@media (max-width: 1470px) {
+  .oceanariums-reports__bottom-img-block {
+    width: min(342px, (100% - 72px) / 4);
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-reports__bottom-img-block {
+    width: min(454px, (100% - 48px) / 3);
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-reports__bottom-img-block {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-reports__bottom-img-block {
+    margin: 0 auto;
+    width: min(342px, 100%);
+  }
+}
+
+.oceanariums-info__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 77px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-info__container {
+    gap: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-info__container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-info__container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.oceanariums-info__cards-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: calc((100% - 154px) / 3);
+}
+@media (max-width: 1470px) {
+  .oceanariums-info__cards-block {
+    width: calc((100% - 72px) / 3);
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-info__cards-block {
+    gap: 24px;
+    width: min(429px, (100% - 36px) / 2);
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-info__cards-block {
+    gap: 16px;
+    width: min(429px, 100%);
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-info__cards-block {
+    gap: 12px;
+  }
+}
+.oceanariums-info__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 401px;
+  min-height: 64px;
+  padding-left: 80px;
+  font-weight: 800;
+  line-height: 32px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-info__title {
+    min-height: 96px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-info__title {
+    min-height: 80px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-info__title {
+    min-height: 56px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-info__title {
+    min-height: 80px;
+  }
+}
+.oceanariums-info__title::before {
+  content: "0" counter(counter);
+}
+.oceanariums-info__title::after {
+  left: 0px;
+  width: 60px;
+}
+.oceanariums-info__title::before {
+  top: -25%;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  font-weight: 400;
+  transform: none;
+}
+@media (max-width: 1470px) {
+  .oceanariums-info__title::before {
+    top: 0;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-info__title::before {
+    top: -25%;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-info__title::before {
+    top: 0;
+  }
+}
+.oceanariums-info__card {
+  width: 100%;
+}
+.oceanariums-info__card-img-block {
+  border-radius: 10px;
+  margin-bottom: 47px;
+  width: 100%;
+  aspect-ratio: 428/285;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+.oceanariums-info__card-img-block img {
+  width: 100%;
+}
+@media (max-width: 1470px) {
+  .oceanariums-info__card-img-block {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-info__card-img-block {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-info__card-img-block {
+    margin-bottom: 24px;
+  }
+}
+.oceanariums-info__card-btn {
+  border-radius: 5px;
+  padding: 12px;
+  width: 178px;
+  min-height: 46px;
+  background: var(--red);
+}
+
+.oceanariums-questions__title {
+  margin-bottom: 43px;
+}
+@media (max-width: 1470px) {
+  .oceanariums-questions__title {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .oceanariums-questions__title {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__title {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__title {
+    margin-bottom: 16px;
+  }
+}
+.oceanariums-questions__accordion {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.oceanariums-questions__accordion:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__accordion:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.oceanariums-questions__trigger {
+  padding: 22px 25px 22px 29px;
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__trigger {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__trigger {
+    padding: 16px 25px;
+  }
+}
+.oceanariums-questions__header {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__header {
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__header {
+    font-size: 16px;
+  }
+}
+.oceanariums-questions__content {
+  padding-left: 29px;
+  padding-right: 48px;
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.oceanariums-questions__paragraph {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__paragraph {
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__paragraph {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.oceanariums-questions__paragraph + .oceanariums-questions__paragraph {
+  margin-top: 26px;
+}
+@media (max-width: 1100px) {
+  .oceanariums-questions__paragraph + .oceanariums-questions__paragraph {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__paragraph + .oceanariums-questions__paragraph {
+    margin-top: 12px;
+  }
+}
+.oceanariums-questions__btn {
+  margin-top: 24px;
+  padding: 12px;
+  width: 550px;
+  min-height: 56px;
+  background: var(--red);
+}
+@media (max-width: 1100px) {
+  .oceanariums-questions__btn {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .oceanariums-questions__btn {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .oceanariums-questions__btn {
+    margin-top: 12px;
   }
 }
 /*# sourceMappingURL=main.css.map */

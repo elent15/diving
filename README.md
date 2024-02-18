@@ -15,9 +15,10 @@
 * Главная страница [index.html](https://elent15.github.io/diving): табы, слайдеры, адаптивное видео
 * Страница "Обучение" [training.html](https://elent15.github.io/diving/training.html)
 * Страница "Туризм" [tourism.html](https://elent15.github.io/diving/tourism.html)
-* Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html): кастомный скролл (плагин simplebar), яндекс карты
+* Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html): кастомный скролл (плагин simplebar), яндекс карты, модальное окно "Забронировать"
 * Страница "О нас" [about.html](https://elent15.github.io/diving/about.html): слайдеры, аккордеон
 * Страница "Контакты" [contacts.html](https://elent15.github.io/diving/contacts.html): двухуровневые табы
+* Страница "Дайвинг в океанариумах" [oceanariums.html](https://elent15.github.io/diving/oceanariums.html): фоновое видео, аккордеон в секции "Вопросы и ответы", аккордеон в секции "Стоимость дайвинга" при ширине экрана меньше 720px, модальные окна "Купить" и "Забронировать"
 
 #### Gulp-сборка (Gulp 4)
 

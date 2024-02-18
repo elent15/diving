@@ -37,7 +37,6 @@
     width: 500px;
     max-height: 100%;
     background: rgba(1, 87, 123, 0.95);
-    overflow-y: auto;
 
     @media (max-width:720px) {
       padding: 40px 24px;
@@ -58,6 +57,11 @@
     outline-offset: 2px;
     outline: 2px solid transparent;
     transition: outline-color 0.3s ease-in-out;
+
+    @media (max-width:480px) {
+      width: 20px;
+      height: 20px;
+    }
 
     & svg {
       width: 100%;
@@ -100,6 +104,10 @@
     display: inline-block;
     margin-bottom: 24px;
     width: 100%;
+
+    @media (max-width:1100px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__form-input {
@@ -115,44 +123,69 @@
       font-weight: 400;
       line-height: 26px;
     }
+
+    @media (max-width:720px) {
+      height: 52px;
+    }
+  }
+
+  &__form-textarea {
+    height: 150px;
+    resize: none;
   }
 
   &__form-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
     margin-top: 24px;
     width: 100%;
 
     @media (max-width:720px) {
-      flex-direction: column;
       gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      flex-direction: column;
       margin-top: 12px;
     }
   }
 
   &__form-link {
     padding: 8px;
-    width: 180px;
-    min-height: 48px;
+    width: calc((100% - 24px) / 2);
+    min-height: 52px;
     font-size: 15px;
     font-weight: 500;
     line-height: normal;
+    background: var(--red);
 
     @media (max-width:720px) {
+      width: calc((100% - 16px) / 2);
+      min-height: 48px;
+    }
+
+    @media (max-width:480px) {
       width: 100%;
     }
   }
 
   &__form-btn {
     padding: 8px;
-    width: 180px;
-    min-height: 48px;
+    width: calc((100% - 24px) / 2);
+    min-height: 52px;
     font-size: 15px;
     font-weight: 500;
     line-height: normal;
+    background: var(--red);
 
     @media (max-width:720px) {
+      width: calc((100% - 16px) / 2);
+      min-height: 48px;
+    }
+
+    @media (max-width:480px) {
       width: 100%;
     }
   }

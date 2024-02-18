@@ -48,7 +48,7 @@
     </header><!-- модальное окно "Вход" -->
     <div class="modal" id="modal-entrance">
       <div class="modal__bg">
-        <div class="modal__body"><button class="btn-reset modal__close-btn" type="button"><svg>
+        <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
             </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
               alt="Логотип"></a>
@@ -64,7 +64,7 @@
     </div><!-- модальное окно "Забыли пароль?" -->
     <div class="modal" id="modal-recovery">
       <div class="modal__bg">
-        <div class="modal__body"><button class="btn-reset modal__close-btn" type="button"><svg>
+        <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
             </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
               alt="Логотип"></a>
@@ -629,13 +629,12 @@
                   <div class="offer__form-bottom">
                     <div class="offer__form-submit">Нажимая на кнопку "Отправить", я даю согласие на обработку
                       персональных данных (согласно Федеральному закону от 27 июля 2006 года № 152-ФЗ «О персональных
-                      данных»)</div><label class="offer__form-label offer__form-label-checkbox"><input
-                        class="offer__form-input-checkbox" type="checkbox"><span
-                        class="offer__form-checkbox"></span><span class="offer__form-text">Я согласен со всеми
-                        условиями&nbsp;<a class="policy-link offer__link" href="#">пользовательского
-                          соглашения</a>&nbsp;и&nbsp;<a class="policy-link offer__link" href="#">политики
-                          конфиденциальности</a></span></label><button class="btn-reset btn offer__form-btn"
-                      type="submit">Отправить</button>
+                      данных»)</div><label class="offer__form-label-checkbox form-label-checkbox"><input
+                        class="form-input-checkbox" type="checkbox"><span class="form-checkbox"></span><span
+                        class="form-label-checkbox-text">Я согласен со всеми условиями&nbsp;<a
+                          class="policy-link offer__link" href="#">пользовательского соглашения</a>&nbsp;и&nbsp;<a
+                          class="policy-link offer__link" href="#">политики конфиденциальности</a></span></label><button
+                      class="btn-reset btn offer__form-btn" type="submit">Отправить</button>
                   </div>
                 </form>
               </div>

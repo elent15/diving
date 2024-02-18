@@ -12,16 +12,16 @@ section.section.deeds
     h3.third-title.numbered-title.deeds__title Добрые дела
     ul.list-reset.accordion-list
       for ac, index in deedsAc
-        li.accordion
-          button.btn-reset.btn.accordion__trigger(aria-expanded="false")
-            span.accordion__header= ac.header
+        li.accordion.deeds__accordion
+          button.btn-reset.btn.accordion__trigger.deeds__trigger(aria-expanded="false")
+            span.accordion__header.deeds__header= ac.header
             span.accordion__icon
               span.accordion__icon-line
-          .accordion__content(aria-hidden="true")
-            .accordion__card
-              .accordion__card-img-block
+          .accordion__content.deeds__content(aria-hidden="true")
+            .deeds__card
+              .deeds__card-img-block
                 picture
                   source(srcset=`./images/deeds-${index + 1}.webp`, type="image/webp")
                   img(src=`./images/deeds-${index + 1}.jpg`, alt="Фото")
-              .accordion__card-text= ac.text
+              .deeds__card-text= ac.text
 

@@ -6,7 +6,7 @@
   ]
 .modal(id="modal-entrance")
   .modal__bg
-    .modal__body
+    .modal__body(data-simplebar)
       button.btn-reset.modal__close-btn(type="button")
         svg
           use(xlink:href="./images/sprite.svg#close")
@@ -26,7 +26,7 @@
 <!-- модальное окно "Забыли пароль?" -->
 .modal(id="modal-recovery")
   .modal__bg
-    .modal__body
+    .modal__body(data-simplebar)
       button.btn-reset.modal__close-btn(type="button")
         svg
           use(xlink:href="./images/sprite.svg#close")
@@ -37,4 +37,3 @@
           input.input.modal__form-input.focus(type="email", placeholder="E-mail")
         .modal__form-bottom
           button.btn-reset.btn.modal__form-btn(type="button", data-modal="modal-entrance") Продолжить
-

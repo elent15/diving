@@ -183,6 +183,68 @@ if (slider) {
 }
 
 
+const modalBook = () => {
+  const modalBookBtns = Array.from(document.querySelectorAll(`[data-modal='modal-book']`));
+  const modalBook = document.getElementById('modal-book');
+
+  if (modalBookBtns && modalBook) {
+    const modalTitle = modalBook.querySelector('.modal-book__title');
+
+    modalBookBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('moskvarium')) {
+          modalTitle.innerText = 'Заявка на погружение в «Москвариум»'
+        } else if (btn.classList.contains('crocus-city')) {
+          modalTitle.innerText = 'Заявка на погружение в «Крокус Сити Океанариум»'
+        }
+      });
+    });
+  }
+}
+
+modalBook();
+
+const modalCertificate = () => {
+  const btns = Array.from(document.querySelectorAll('.modal-certificate__card'));
+  const nominalBtns = Array.from(document.querySelectorAll('.modal-certificate__nominal-btn'));
+
+  if (btns) {
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!btn.classList.contains('modal-certificate__card--active')) {
+          btns.forEach(btn => {
+            btn.classList.remove('modal-certificate__card--active')
+          });
+          btn.classList.add('modal-certificate__card--active');
+        }
+      });
+    });
+  }
+
+  if (nominalBtns) {
+    nominalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!btn.classList.contains('modal-certificate__nominal-btn--active')) {
+          nominalBtns.forEach(btn => {
+            btn.classList.remove('modal-certificate__nominal-btn--active')
+          });
+          btn.classList.add('modal-certificate__nominal-btn--active');
+
+          const values = Array.from(document.querySelectorAll('.modal-certificate__item-value'));
+          const price = btn.innerText.slice(0, -1).replace(/\s/g, '');
+          const percent = values[1].innerText.slice(0, -1).trim();
+          const amount = price - price * percent / 100;
+
+          values[0].innerText = btn.innerText;
+          values[2].innerText = amount.toLocaleString() + ' ₽';
+        }
+      });
+    });
+  }
+}
+
+modalCertificate();
+
 // modal window
 const modal = () => {
   const btns = Array.from(document.querySelectorAll(`[data-modal]`));
@@ -422,6 +484,47 @@ const tabs = () => {
 }
 
 tabs();
+
+const videoBg = () => {
+  const heroCards = Array.from(document.querySelectorAll('.oceanariums-hero__card'));
+
+  if (heroCards) {
+    heroCards.forEach(card => {
+      const heroVideo = document.querySelector('.oceanariums-hero__video');
+      heroVideo.addEventListener('ended', (e) => {
+        e.target.load();
+        e.target.pause();
+      });
+
+      card.addEventListener('click', () => {
+        if (!card.classList.contains('oceanariums-hero__card--active')) {
+          heroCards.forEach(card => {
+            card.classList.remove('oceanariums-hero__card--active');
+          });
+          card.classList.add('oceanariums-hero__card--active');
+
+          if (heroVideo.getAttribute('src') === './resources/oceanariums-1.mp4') {
+            heroVideo.setAttribute('src', './resources/oceanariums-2.mp4');
+            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-2.webp');
+          } else {
+            heroVideo.setAttribute('src', './resources/oceanariums-1.mp4');
+            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-1.webp');
+          }
+        } else {
+          const heroVideo = document.querySelector('.oceanariums-hero__video');
+
+          if (heroVideo.paused) {
+            heroVideo.play();
+          } else {
+            heroVideo.pause();
+          }
+        }
+      });
+    });
+  }
+}
+
+videoBg();
 
 // video from youtube
 const video = () => {
