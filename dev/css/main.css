@@ -6033,6 +6033,7 @@ p {
 }
 @media (max-width: 720px) {
   .modal-certificate {
+    padding: 40px 0 48px;
     width: 100%;
   }
 }
