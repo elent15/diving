@@ -54,12 +54,32 @@ body {
 
 .wrapper__page-bg {
   background-size: cover;
+
+  @media (max-width:1470px) {
+    background-size: cover;
+  }
+
+  @media (max-width:1100px) {
+    background-size: cover;
+  }
+
+  @media (max-width:480px) {
+    background-size: cover;
+  }
 }
 
 .wrapper__about-bg {
   background-size: 100% calc(100% - 100vh);
 
   @media (max-width:1470px) {
+    background-size: auto calc(100% - 100vh);
+  }
+
+  @media (max-width:1100px) {
+    background-size: auto calc(100% - 100vh);
+  }
+
+  @media (max-width:480px) {
     background-size: auto calc(100% - 100vh);
   }
 }

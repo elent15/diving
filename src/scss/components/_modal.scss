@@ -132,6 +132,10 @@
   &__form-textarea {
     height: 150px;
     resize: none;
+
+    @media (max-width:720px) {
+      height: 150px;
+    }
   }
 
   &__form-bottom {
