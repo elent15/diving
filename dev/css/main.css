@@ -1022,7 +1022,7 @@ p {
 }
 @media (max-width: 480px) {
   .modal__body {
-    width: min(100%, 320px);
+    width: min(100%, 400px);
   }
 }
 .modal__close-btn {
@@ -5223,6 +5223,28 @@ p {
     padding-bottom: 16px;
   }
 }
+.accordion--active.prices__accordion {
+  border-color: var(--red);
+}
+.accordion--active .prices__content {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+@media (max-width: 1100px) {
+  .accordion--active .prices__content {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .accordion--active .prices__content {
+    padding-top: 16px;
+  }
+}
+.accordion--active .prices__header svg {
+  fill: var(--red);
+}
 
 .about-blog__title {
   position: relative;
@@ -7213,5 +7235,290 @@ p {
   .oceanariums-questions__btn {
     margin-top: 12px;
   }
+}
+
+.prices__accordion {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s ease-in-out;
+}
+.prices__accordion:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media (max-width: 1100px) {
+  .prices__accordion:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .prices__accordion:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.prices__trigger {
+  padding: 17px 21px;
+}
+@media (max-width: 480px) {
+  .prices__trigger {
+    padding: 17px 12px;
+    gap: 25px;
+  }
+}
+.prices__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 480px) {
+  .prices__header {
+    gap: 16px;
+  }
+}
+.prices__header svg {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  fill: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 480px) {
+  .prices__header svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+.prices__header-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .prices__header-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .prices__header-title {
+    font-size: 18px;
+  }
+}
+.prices__content {
+  padding-left: 55px;
+  padding-right: 45px;
+}
+@media (max-width: 1470px) {
+  .prices__content {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .prices__content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.prices__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1100px) {
+  .prices__card-top {
+    gap: 36px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+.prices__card-title {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .prices__card-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.prices__card-block {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+@media (max-width: 720px) {
+  .prices__card-block {
+    gap: 16px;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .prices__card-block {
+    flex-direction: column;
+  }
+}
+.prices__card-btn {
+  border-radius: 5px;
+  padding: 11px;
+  width: 210px;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .prices__card-btn {
+    width: 160px;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-btn {
+    width: min(210px, (100% - 16px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .prices__card-btn {
+    width: 100%;
+  }
+}
+.prices__card-btn--accent {
+  background: var(--red);
+}
+.prices__card-link {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 11px;
+  width: 210px;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  background: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 1100px) {
+  .prices__card-link {
+    width: 160px;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-link {
+    width: min(210px, (100% - 16px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .prices__card-link {
+    width: 100%;
+  }
+}
+.prices__card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 12px 22px 32px;
+  color: var(--white);
+}
+@media (max-width: 1470px) {
+  .prices__card-item {
+    padding: 22px 12px;
+  }
+}
+@media (max-width: 1100px) {
+  .prices__card-item {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 22px 12px 18px;
+  }
+}
+@media (max-width: 480px) {
+  .prices__card-item {
+    padding: 18px 12px 14px;
+    gap: 15px;
+  }
+}
+.prices__card-item:nth-child(odd) {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.prices__card-item-title {
+  max-width: 420px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media (max-width: 1100px) {
+  .prices__card-item-title {
+    max-width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-item-title {
+    font-size: 14px;
+  }
+}
+.prices__card-item-text {
+  max-width: 490px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 1100px) {
+  .prices__card-item-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-item-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.prices__card-item-price {
+  flex-shrink: 0;
+  width: 140px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .prices__card-item-price {
+    text-align: left;
+  }
+}
+@media (max-width: 720px) {
+  .prices__card-item-price {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .prices__card-item-price {
+    width: 130px;
+  }
+}
+.prices__card-item-btn {
+  flex-shrink: 0;
+  border-radius: 5px;
+  padding: 6px;
+  width: 95px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
 }
 /*# sourceMappingURL=main.css.map */
