@@ -1,8 +1,14 @@
 // scroll-style
+function outlineReset() {
+  const wrapper = document.querySelectorAll('.simplebar-content-wrapper');
+  wrapper.forEach(wrapper => wrapper.setAttribute('tabindex', '-1'));
+}
+
+setTimeout(outlineReset, 500);
+
 function styleScroll(el) {
   const simplebar = el.querySelector('.simplebar-vertical');
   const wrapper = el.querySelector('.simplebar-content-wrapper');
-  wrapper.setAttribute('tabindex', '-1');
 
   if (simplebar.style.visibility == 'visible') {
     wrapper.style.paddingRight = '23px';

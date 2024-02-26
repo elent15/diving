@@ -277,9 +277,12 @@
         <div class="container-fluid reports__container-fluid">
           <div class="reports__btns">
             <ul class="list-reset reports__list">
-              <li><button class="btn-reset btn reports__btn reports__btn--active" type="button">Все</button></li>
-              <li><button class="btn-reset btn reports__btn" type="button">Фото</button></li>
-              <li><button class="btn-reset btn reports__btn" type="button">Видео</button></li>
+              <li><button class="btn-reset btn reports__btn reports__btn--active" type="button"
+                  data-tab="reports-list-all">Все</button></li>
+              <li><button class="btn-reset btn reports__btn" type="button" data-tab="reports-list-tab-1">Фото</button>
+              </li>
+              <li><button class="btn-reset btn reports__btn" type="button" data-tab="reports-list-tab-2">Видео</button>
+              </li>
             </ul>
             <div class="swiper mobile-swiper reports__swiper" data-mobile="false">
               <div class="swiper-wrapper reports__swiper-wrapper">
@@ -298,14 +301,14 @@
           </div>
         </div>
         <div class="container">
-          <div class="reports__card-block">
-            <div class="reports__card">
+          <div class="reports__cards-block">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-2">
               <picture>
                 <source srcset="./images/reports-1.webp" type="image/webp"><img src="./images/reports-1.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card video">
+            <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-3">
               <div class="video__container">
                 <picture class="video__bg">
                   <source srcset="./images/reports-2.webp" type="image/webp"><img src="./images/reports-2.jpg"
@@ -320,19 +323,19 @@
                   </svg></button>
               </div>
             </div>
-            <div class="reports__card">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
                 <source srcset="./images/reports-3.webp" type="image/webp"><img src="./images/reports-3.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-4">
               <picture>
                 <source srcset="./images/reports-4.webp" type="image/webp"><img src="./images/reports-4.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card video">
+            <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-5">
               <div class="video__container">
                 <picture class="video__bg">
                   <source srcset="./images/reports-5.webp" type="image/webp"><img src="./images/reports-5.jpg"
@@ -347,13 +350,13 @@
                   </svg></button>
               </div>
             </div>
-            <div class="reports__card">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-3">
               <picture>
                 <source srcset="./images/reports-6.webp" type="image/webp"><img src="./images/reports-6.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card video">
+            <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-2">
               <div class="video__container">
                 <picture class="video__bg">
                   <source srcset="./images/reports-7.webp" type="image/webp"><img src="./images/reports-7.jpg"
@@ -368,19 +371,115 @@
                   </svg></button>
               </div>
             </div>
-            <div class="reports__card">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
                 <source srcset="./images/reports-8.webp" type="image/webp"><img src="./images/reports-8.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card">
+            <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-5">
               <picture>
                 <source srcset="./images/reports-9.webp" type="image/webp"><img src="./images/reports-9.jpg"
                   alt="Дайвинг">
               </picture>
             </div>
-            <div class="reports__card video">
+            <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-1">
+              <div class="video__container">
+                <picture class="video__bg">
+                  <source srcset="./images/reports-10.webp" type="image/webp"><img src="./images/reports-10.jpg"
+                    alt="Дайвинг">
+                </picture>
+                <div class="video__body">
+                  <div class="video__content"
+                    data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
+                  </div>
+                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                    <use href="./images/sprite.svg#pleer"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-2">
+              <picture>
+                <source srcset="./images/reports-1.webp" type="image/webp"><img src="./images/reports-1.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-3">
+              <div class="video__container">
+                <picture class="video__bg">
+                  <source srcset="./images/reports-2.webp" type="image/webp"><img src="./images/reports-2.jpg"
+                    alt="Дайвинг">
+                </picture>
+                <div class="video__body">
+                  <div class="video__content"
+                    data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
+                  </div>
+                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                    <use href="./images/sprite.svg#pleer"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-1">
+              <picture>
+                <source srcset="./images/reports-3.webp" type="image/webp"><img src="./images/reports-3.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-4">
+              <picture>
+                <source srcset="./images/reports-4.webp" type="image/webp"><img src="./images/reports-4.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-5">
+              <div class="video__container">
+                <picture class="video__bg">
+                  <source srcset="./images/reports-5.webp" type="image/webp"><img src="./images/reports-5.jpg"
+                    alt="Дайвинг">
+                </picture>
+                <div class="video__body">
+                  <div class="video__content"
+                    data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
+                  </div>
+                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                    <use href="./images/sprite.svg#pleer"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-3">
+              <picture>
+                <source srcset="./images/reports-6.webp" type="image/webp"><img src="./images/reports-6.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-2">
+              <div class="video__container">
+                <picture class="video__bg">
+                  <source srcset="./images/reports-7.webp" type="image/webp"><img src="./images/reports-7.jpg"
+                    alt="Дайвинг">
+                </picture>
+                <div class="video__body">
+                  <div class="video__content"
+                    data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
+                  </div>
+                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                    <use href="./images/sprite.svg#pleer"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-1">
+              <picture>
+                <source srcset="./images/reports-8.webp" type="image/webp"><img src="./images/reports-8.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-5">
+              <picture>
+                <source srcset="./images/reports-9.webp" type="image/webp"><img src="./images/reports-9.jpg"
+                  alt="Дайвинг">
+              </picture>
+            </div>
+            <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-1">
               <div class="video__container">
                 <picture class="video__bg">
                   <source srcset="./images/reports-10.webp" type="image/webp"><img src="./images/reports-10.jpg"

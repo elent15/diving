@@ -1,0 +1,49 @@
+-
+  const bonusTable = {
+    '0': [
+      'Сумма на дисконтном счете', '500 $', '2 000 $', '9 000 $', '20 000 $', '40 000 $'
+    ],
+    '1': [
+      'Уровень дисконта', 'Стандарт', 'Бронза', 'Серебро', 'Золото', 'Платина'
+    ],
+    '2': [
+      'Скидка на обучение', '2%', '4%', '6%', '8%', '10%'
+    ],
+    '3': [
+      'Скидка на поездки', '1%', '2%', '3%', '4%', '5%'
+    ],
+  }
+.section-bottom.bonus
+  .container
+    h3.third-title.bonus__title Дисконтно-бонусная система RuDIVE
+    .bonus__text
+      .bonus__paragraph Дисконтная 5-уровневая накопительная система группы RuDIVE успешно работает уже много лет. Суммы, оплаченные за курсы, клубные, индивидуальные и семейные туры в дайвинг-центрах RuDIVE, фиксируются на персональном накопительном счете.
+      .bonus__paragraph По достижении определенной суммы, автоматизированная система присваивает новый уровень скидки на услуги группы RuDIVE*. Соотношение уплаченных сумм, дисконтного уровня и размера скидки отражено в таблице.
+    ul.list-reset.bonus__list
+      li.bonus__item.bonus__header-item
+        for value in bonusTable[0]
+          span.bonus__item-cell.bonus__item-header-cell= value
+      for index in [1, 2, 3]
+        li.bonus__item
+          for value in bonusTable[index]
+            span.bonus__item-cell= value
+    ul.list-reset.accordion-list.bonus__accordion-list
+      for index in [1, 2, 3, 4, 5]
+        li.accordion.bonus__accordion
+          button.btn-reset.btn.accordion__trigger.bonus__trigger(aria-expanded="false")
+            span.accordion__header.bonus__header= bonusTable[1][0]
+              |:
+              |
+              = bonusTable[1][index]
+            span.accordion__icon
+              span.accordion__icon-line
+          .accordion__content.bonus__content(aria-hidden="true")
+            ul.list-reset
+              for count in [0, 2, 3]
+                li.bonus__item
+                  span.bonus__item-cell.bonus__item-header-cell= bonusTable[count][0]
+                  span.bonus__item-cell= bonusTable[count][index]
+    .bonus__text
+      .bonus__paragraph С 1 сентября 2021 г. при достижении высшего уровня дисконта «Платина» в дополнение к максимальным скидкам начинается накопление бонусных баллов: 1% от всех оплат за туристические услуги и курсы поступает на персональный накопительный счет в виде бонусов (в рублях). При накоплении на счету суммы, составляющей стоимость места в клубной поездке или учебного курса, клиенту может предоставляться премиальное место в данной поездке при наличии мест, или проводиться желаемый учебный курс.Состояние персонального счета, скидки и накопленные баллы можно отслеживать в личном кабинете на сайте www.dive.ru, для чего нужно зарегистрироваться. Для этого сообщите любому менеджеру RuDIVE о своем желании завести личный кабинет, и вам придет письмо со ссылкой, логином и паролем для регистрации.**
+      .bonus__paragraph.bonus__paragraph--bold *Скидки не распространяются на пробные погружения (PADI Discover Scuba Diving), разовые занятия, на ремонт и аренду дайвинг-оборудования, погружения в океанариумах, книги, учебные материалы и дайвинг-сертификаты.
+      .bonus__paragraph.bonus__paragraph--bold **Информация актуализируется после оформления заявки

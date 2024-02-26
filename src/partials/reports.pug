@@ -1,15 +1,49 @@
 -
   const reportsCards = [
-    {src: "./images/reports-1", type: "image"},
-    {src: "./images/reports-2", type: "video", dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1"},
-    {src: "./images/reports-3", type: "image"},
-    {src: "./images/reports-4", type: "image"},
-    {src: "./images/reports-5", type: "video", dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1"},
-    {src: "./images/reports-6", type: "image"},
-    {src: "./images/reports-7", type: "video", dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1"},
-    {src: "./images/reports-8", type: "image"},
-    {src: "./images/reports-9", type: "image"},
-    {src: "./images/reports-10", type: "video", dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1"}
+    {src: "./images/reports-1", type: "image", dataValue: "reports-tab-2"},
+    {src: "./images/reports-2", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-3",
+    },
+    {src: "./images/reports-3", type: "image", dataValue: "reports-tab-1"},
+    {src: "./images/reports-4", type: "image", dataValue: "reports-tab-4"},
+    {src: "./images/reports-5", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-5",
+    },
+    {src: "./images/reports-6", type: "image", dataValue: "reports-tab-3"},
+    {src: "./images/reports-7", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-2",
+    },
+    {src: "./images/reports-8", type: "image", dataValue: "reports-tab-1"},
+    {src: "./images/reports-9", type: "image", dataValue: "reports-tab-5"},
+    {src: "./images/reports-10", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-1",
+    },
+    {src: "./images/reports-1", type: "image", dataValue: "reports-tab-2"},
+    {src: "./images/reports-2", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-3",
+    },
+    {src: "./images/reports-3", type: "image", dataValue: "reports-tab-1"},
+    {src: "./images/reports-4", type: "image", dataValue: "reports-tab-4"},
+    {src: "./images/reports-5", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-5",
+    },
+    {src: "./images/reports-6", type: "image", dataValue: "reports-tab-3"},
+    {src: "./images/reports-7", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-2",
+    },
+    {src: "./images/reports-8", type: "image", dataValue: "reports-tab-1"},
+    {src: "./images/reports-9", type: "image", dataValue: "reports-tab-5"},
+    {src: "./images/reports-10", type: "video",
+      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataValue: "reports-tab-1",
+    }
   ]
 section.section.reports
   .container
@@ -21,24 +55,40 @@ section.section.reports
         for item, index in ['Все', 'Фото', 'Видео']
           li
             if index == 0
-              button.btn-reset.btn.reports__btn.reports__btn--active(type="button")= item
+              button.btn-reset.btn.reports__btn.reports__btn--active(type="button", data-tab='reports-list-all')= item
             else
-              button.btn-reset.btn.reports__btn(type="button")= item
+              button.btn-reset.btn.reports__btn(type="button", data-tab=`reports-list-tab-${index}`)= item
       .swiper.mobile-swiper.reports__swiper(data-mobile="false")
         .swiper-wrapper.reports__swiper-wrapper
           for value, index in ['Путешествия к большим животным', 'Дайвинг сафари', 'Экотуризм', 'Дайвинг в России', 'Корпоративные программы']
             .swiper-slide.reports__swiper-slide
               button.btn-reset.btn.reports__btn(type="button", data-tab=`reports-tab-${index + 1}`)= value
   .container
-    .reports__card-block
-      for card in reportsCards
-        if card.type == "image"
-          .reports__card
+    .reports__cards-block
+      for card, index in reportsCards
+        if card.type == "image" && index < 10
+          .reports__card(data-tab-value=`reports-list-tab-1 ${card.dataValue}`)
             picture
               source(srcset=`${card.src}.webp`, type="image/webp")
               img(src=`${card.src}.jpg`, alt="Дайвинг")
-        else
-          .reports__card.video
+        else if card.type == "image" && index >= 10
+          .reports__card.none(data-tab-value=`reports-list-tab-1 ${card.dataValue}`)
+            picture
+              source(srcset=`${card.src}.webp`, type="image/webp")
+              img(src=`${card.src}.jpg`, alt="Дайвинг")
+        else if card.type == "video" && index < 10
+          .reports__card.video(data-tab-value=`reports-list-tab-2 ${card.dataValue}`)
+            .video__container
+              picture.video__bg
+                source(srcset=`${card.src}.webp`, type="image/webp")
+                img(src=`${card.src}.jpg`, alt="Дайвинг")
+              .video__body
+                .video__content(data-src=card.dataSrc)
+              button.btn-reset.video__play-btn(type="button")
+                svg
+                  use(href="./images/sprite.svg#pleer")
+        else if card.type == "video" && index >= 10
+          .reports__card.video.none(data-tab-value=`reports-list-tab-2 ${card.dataValue}`)
             .video__container
               picture.video__bg
                 source(srcset=`${card.src}.webp`, type="image/webp")
