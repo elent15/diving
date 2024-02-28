@@ -242,8 +242,7 @@
   &__card-content-bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 40px;
     color: var(--white);
     font-size: 14px;
     font-weight: 400;
@@ -251,7 +250,6 @@
 
     @media (max-width:1470px) {
       flex-wrap: wrap;
-      justify-content: initial;
       gap: 12px 24px;
     }
 

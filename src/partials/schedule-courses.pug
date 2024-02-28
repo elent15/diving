@@ -1,0 +1,238 @@
+-
+  const coursesTabs = [
+    {
+      title: 'Расписание занятий',
+      class: 'tabs__btn--active'
+    },
+    {
+      title: 'Курсы PADI в поездках',
+    },
+    {
+      title: 'Дайвинг-курсы в Москве',
+    },
+  ];
+
+  const coursesCards = [
+    {
+      classTab: 'tab--active',
+      block: [
+        {
+          title: 'Junior Open Water Diver (с 10 лет)', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Divemaster', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+          btnClass: 'schedule__card-btn--active'
+        },
+        {
+          title: 'Enriched Air Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Junior Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Emergency First Response', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Обучение идеальной плавучести', price: 'от 1 900 $',
+          date: 'Вт. 27 феврвля 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр на Лодочной', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Ice Diver. Полный курс', price: 'от 1 900 $',
+          date: 'Сб. 2 марта 2024 | 09:00 - 14:00',
+          center: 'Дайвинг-центр «Cпас-Каменка»', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Emergency First Response', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Обучение идеальной плавучести', price: 'от 1 900 $',
+          date: 'Чт. 7 марта 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр на Лодочной', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Ice Diver. Полный курс', price: 'от 1 900 $',
+          date: 'Сб. 9 марта 2024 | 09:00 - 14:00',
+          center: 'Дайвинг-центр «Cпас-Каменка»', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+      ]
+    },
+    {
+      block: [
+        {
+          title: 'Advanced Open Water Diver', price: 'от 3 100 $',
+          date: '06 марта - 17 марта 2024',
+          center: 'Индийский океан, Мальдивы', instructor: 'Ирина Квасова',
+        },
+        {
+          title: 'Open Water Diver (открытая вода)', price: 'от 1 400 $',
+          date: '13 марта - 24 марта 2024',
+          center: 'Тихий океан, Индонезия', instructor: 'Екатерина Кусачёва',
+          btnClass: 'schedule__card-btn--active'
+        },
+        {
+          title: 'Open Water Diver (открытая вода)', price: 'от 2 500 $',
+          date: '05 апреля – 14 апреля 2024',
+          center: 'Филиппины, остров Бусуанга', instructor: 'Наталья Бараночникова',
+        },
+        {
+          title: 'Open Water Diver (открытая вода)', price: 'от 1 400 $',
+          date: '27 апреля – 04 мая 2024',
+          center: 'Красное море, Египет', instructor: 'Андрей Павлов',
+        },
+        {
+          title: 'Junior Advanced Open Water Diver', price: 'от 1 900 $',
+          date: '29 июня – 06 июля 2024',
+          center: 'Красное море, Египет', instructor: 'Алексей Побожаков',
+        },
+        {
+          title: 'Junior Rescue Diver', price: 'от 1 900 $',
+          date: '29 июня – 06 июля 2024',
+          center: 'Красное море, Египет', instructor: 'Алексей Побожаков',
+          cardClass: 'none'
+        },
+        {
+          title: 'Underwater Navigator', price: 'от 1 900 $',
+          date: '29 июня – 06 июля 2024',
+          center: 'Красное море, Египет', instructor: 'Алексей Побожаков',
+          cardClass: 'none'
+        },
+        {
+          title: 'Advanced Open Water Diver', price: 'от 3 100 $',
+          date: '14 июня – 25 июля 2024',
+          center: 'Индийский океан, Мальдивы', instructor: 'Ирина Квасова',
+          cardClass: 'none'
+        },
+        {
+          title: 'Open Water Diver (открытая вода)', price: 'от 1 400 $',
+          date: '04 августа – 14 августа 2024',
+          center: 'Тихий океан, Индонезия', instructor: 'Екатерина Кусачёва',
+          cardClass: 'none'
+        },
+        {
+          title: 'Open Water Diver (открытая вода)', price: 'от 2 500 $',
+          date: '09 августа – 17 августа 2024',
+          center: 'Филиппины, остров Бусуанга', instructor: 'Наталья Бараночникова',
+          cardClass: 'none'
+        },
+      ]
+    },
+    {
+      block: [
+        {
+          title: 'Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Лодочная"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+          btnClass: 'schedule__card-btn--active'
+        },
+        {
+          title: 'Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Лодочная"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Junior Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: '"Крокус Сити Океанариум"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: '"Крокус Сити Океанариум"', instructor: 'Инструктор RuDIVE',
+        },
+        {
+          title: 'Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Junior Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: '"Крокус Сити Океанариум"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Junior Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Лодочная"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: '"Крокус Сити Океанариум"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+        {
+          title: 'Advanced Open Water Diver', price: 'от 1 900 $',
+          date: 'Пн. 30 октября 2024 | 10:00 - 14:00',
+          center: 'Дайвинг-центр "Азовский"', instructor: 'Инструктор RuDIVE',
+          cardClass: 'none'
+        },
+      ]
+    },
+  ]
+
+.section.schedule.schedule-courses
+  .container
+    .schedule__text
+      .schedule__paragraph Обучение дайвингу — это первый и главный шаг к новым ощущениям, которые можно получить только при погружении под воду. Курсы проводятся по Российским государственным и международным стандартам PADI и ISO. Наши инструкторы — опытные профессионалы и увлеченные энтузиасты, а выбор курсов — один из самых обширных в мире. Мы готовы «заразить» любовью к дайвингу каждого, кто стремится открыть для себя подводный мир озер, морей и океанов!
+    .tabs-block
+      ul.list-reset.tabs.schedule-courses__tabs
+        for tab, index in coursesTabs
+          li.schedule-courses__item
+            button.btn-reset.tabs__btn.schedule-courses__btn(type='button', data-tab=`courses-tab-${index + 1}`, class=tab.class)= tab.title
+      for item, index in coursesCards
+        .tab.schedule-courses__tab(id=`courses-tab-${index + 1}`, class=item.classTab)
+          .schedule__cards-block
+            for card, index in item.block
+              .schedule__card(class=card.cardClass)
+                .schedule__card-img-block
+                  picture
+                    source(srcset=`./images/schedule-${index + 1}.webp`, type="image/webp")
+                    img(src=`./images/schedule-${index + 1}.jpg`, alt="Фото")
+                .schedule__card-content
+                  .schedule__card-content-title= card.title
+                  .schedule__card-content-price
+                    svg
+                      use(href="./images/sprite.svg#wallet")
+                    = card.price
+                  .schedule__card-content-bottom
+                    .schedule__card-content-bottom-block
+                      svg
+                        use(href="./images/sprite.svg#schedule-calendar")
+                      = card.date
+                    .schedule__card-content-bottom-block
+                      svg
+                        use(href="./images/sprite.svg#water-waves")
+                      = card.center
+                    .schedule__card-content-bottom-block
+                      svg
+                        use(href="./images/sprite.svg#tour-guide")
+                      = card.instructor
+                .schedule__card-btns
+                  button.btn-reset.btn.white-btn.schedule__card-btn(type="button" data-modal='modal-reg-training', class=card.btnClass) Записаться
+                  a.link-btn.schedule__card-link(href='#') Подробнее

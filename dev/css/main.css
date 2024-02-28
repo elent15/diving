@@ -7783,8 +7783,7 @@ p {
 .schedule__card-content-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 40px;
   color: var(--white);
   font-size: 14px;
   font-weight: 400;
@@ -7793,7 +7792,6 @@ p {
 @media (max-width: 1470px) {
   .schedule__card-content-bottom {
     flex-wrap: wrap;
-    justify-content: initial;
     gap: 12px 24px;
   }
 }
@@ -7983,6 +7981,352 @@ p {
 .select__item:hover {
   color: var(--red);
   outline-color: transparent;
+}
+
+.bonus__title {
+  margin-bottom: 26px;
+}
+.bonus__text {
+  color: #e8e8e8;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .bonus__text {
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .bonus__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.bonus__text:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (max-width: 1470px) {
+  .bonus__text:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__text:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__text:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.bonus__paragraph + .bonus__paragraph {
+  margin-top: 26px;
+}
+@media (max-width: 1470px) {
+  .bonus__paragraph + .bonus__paragraph {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__paragraph + .bonus__paragraph {
+    margin-top: 16px;
+  }
+}
+.bonus__paragraph--bold {
+  font-style: italic;
+  font-weight: 500;
+}
+.bonus__list {
+  border-radius: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+@media (max-width: 1470px) {
+  .bonus__list {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__list {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__list {
+    display: none;
+  }
+}
+.bonus__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 65px;
+  padding: 17px 41px 15px;
+}
+@media (max-width: 1470px) {
+  .bonus__item {
+    gap: 48px;
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__item {
+    gap: 16px;
+    padding: 16px 10px;
+  }
+}
+.bonus__item:not(:first-child):nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bonus__item:not(:first-child):nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 720px) {
+  .bonus__item {
+    padding: 16px 25px;
+  }
+  .bonus__item:first-child {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+@media (max-width: 480px) {
+  .bonus__item {
+    padding: 16px 10px 16px 20px;
+  }
+}
+.bonus__header-item {
+  padding: 21px 41px 18px;
+  background-color: var(--red);
+}
+@media (max-width: 1470px) {
+  .bonus__header-item {
+    padding: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__header-item {
+    padding: 16px 10px;
+  }
+}
+.bonus__item-cell {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.bonus__item-cell:first-child {
+  width: 600px;
+  text-align: left;
+}
+@media (max-width: 1470px) {
+  .bonus__item-cell:first-child {
+    width: 365px;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__item-cell:first-child {
+    width: 200px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__item-cell:first-child {
+    width: 80%;
+    text-wrap: balance;
+  }
+}
+.bonus__item-cell:not(:first-child) {
+  width: 85px;
+}
+@media (max-width: 1100px) {
+  .bonus__item-cell:not(:first-child) {
+    width: 75px;
+  }
+}
+@media (max-width: 480px) {
+  .bonus__item-cell:not(:first-child) {
+    flex-shrink: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 1100px) {
+  .bonus__item-cell {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .bonus__item-cell {
+    line-height: 22px;
+  }
+}
+.bonus__item-header-cell {
+  font-weight: 700;
+}
+.bonus__accordion-list {
+  display: none;
+}
+@media (max-width: 720px) {
+  .bonus__accordion-list {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__accordion:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__trigger {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 480px) {
+  .bonus__trigger {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__header {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
+@media (max-width: 720px) {
+  .bonus__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.schedule-courses__tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 64px;
+  max-width: 1440px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .schedule-courses__tabs {
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 720px) {
+  .schedule-courses__tabs {
+    margin-bottom: 36px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .schedule-courses__tabs {
+    flex-direction: column;
+  }
+}
+.schedule-courses__tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 720px) {
+  .schedule-courses__tabs::after {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .schedule-courses__item {
+    width: calc((100vw - 66px) / 2);
+  }
+  .schedule-courses__item:last-child {
+    width: calc(100vw - 30px);
+  }
+}
+@media (max-width: 480px) {
+  .schedule-courses__item {
+    width: 100%;
+  }
+}
+.schedule-courses__btn {
+  position: relative;
+  padding-bottom: 14px;
+  width: 100%;
+  min-height: 52px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+  transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
+}
+.schedule-courses__btn:focus-visible {
+  outline: 2px solid transparent;
+}
+.schedule-courses__btn:focus {
+  outline-color: var(--white);
+}
+.schedule-courses__btn:hover {
+  color: var(--red);
+  outline-color: transparent;
+}
+@media (max-width: 1100px) {
+  .schedule-courses__btn {
+    padding-bottom: 8px;
+    min-height: 48px;
+  }
+}
+@media (max-width: 720px) {
+  .schedule-courses__btn {
+    padding-bottom: 3px;
+    min-height: 36px;
+    text-align: left;
+  }
+  .schedule-courses__btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+@media (max-width: 480px) {
+  .schedule-courses__btn {
+    min-height: 32px;
+  }
+}
+.schedule-courses__btn.tabs__btn--active {
+  color: var(--white);
+}
+.schedule-courses__btn.tabs__btn--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--red);
+}
+.schedule-courses__btn.tabs__btn--active:hover {
+  color: var(--red);
+}
+.schedule-courses__tab {
+  display: none;
+}
+.schedule-courses__tab.tab--active {
+  display: block;
 }
 
 .bonus__title {

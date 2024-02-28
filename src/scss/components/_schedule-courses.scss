@@ -1,0 +1,133 @@
+.schedule-courses {
+  &__tabs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    margin-bottom: 64px;
+    max-width: 1440px;
+    width: 100%;
+
+    @media (max-width:1100px) {
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width:720px) {
+      margin-bottom: 36px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      flex-direction: column;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+
+      @media (max-width:720px) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    @media (max-width:720px) {
+      width: calc((100vw - 66px) / 2);
+
+      &:last-child {
+        width: calc(100vw - 30px);
+      }
+    }
+
+    @media (max-width:480px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding-bottom: 14px;
+    width: 100%;
+    min-height: 52px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+    transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline: 2px solid transparent;
+    }
+
+    &:focus {
+      outline-color: var(--white);
+    }
+
+    &:hover {
+      color: var(--red);
+      outline-color: transparent;
+    }
+
+    @media (max-width:1100px) {
+      padding-bottom: 8px;
+      min-height: 48px;
+    }
+
+    @media (max-width:720px) {
+      padding-bottom: 3px;
+      min-height: 36px;
+      text-align: left;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    @media (max-width:480px) {
+      min-height: 32px;
+    }
+
+    &.tabs__btn--active {
+      color: var(--white);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--red);
+      }
+
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &.tab--active {
+      display: block;
+    }
+  }
+}
