@@ -1,0 +1,52 @@
+-
+  const booksForm = [
+    {
+      title: 'Кому отправить подарок',
+      type: 'text',
+      placeholder: 'ФИО',
+    },
+    {
+      type: 'tel',
+      placeholder: 'Контактный телефон',
+    },
+    {
+      title: 'Способ отправки',
+      type: 'email',
+      placeholder: 'E-mail',
+    },
+    {
+      title: 'Способ оплаты',
+      type: 'text',
+      placeholder: 'Банковская карта',
+    },
+  ]
+
+form.books__form
+  .books__form-block.books__form-block--address
+    for block in booksForm
+      .books__form-subblock
+        if block.title
+          h4.fourth-title.books__form-title= block.title
+          label.books__form-label
+            input.input.books__form-input(type=block.type placeholder=block.placeholder)
+        else
+          label.books__form-label
+            input.input.books__form-input(type=block.type placeholder=block.placeholder)
+  .books__form-block.books__form-block--price
+    h4.fourth-title.books__form-title Стоимость книги
+    ul.list-reset.books__form-list
+      for value, index in {'Стоимость книги:' : '13 400 ₽', 'Скидка:' : '10 %', 'К оплате:' : '12 060 ₽'}
+        li.books__form-item
+          span.books__form-item-name= index
+          span.books__form-item-value= value
+  .books__form-block.books__form-bottom-block
+    label.form-label-checkbox
+      input.form-input-checkbox.books__form-input-checkbox(type="checkbox")
+      span.form-checkbox.books__form-checkbox
+      span.form-label-checkbox-text.books__form-checkbox-text Нажимая "Оплатить", я соглашаюсь с&nbsp;
+        a.policy-link.books__form-link(href="#") правилами
+        |
+        |и
+        |
+        a.policy-link.books__form-link(href="#") офертой
+    button.btn-reset.btn.books__form-btn(type='submit') Оплатить

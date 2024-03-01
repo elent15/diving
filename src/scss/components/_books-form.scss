@@ -1,0 +1,218 @@
+.books {
+  &__form {
+    max-width: 1055px;
+  }
+
+  &__form-block {
+    width: 100%;
+
+    &--address {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      align-items: flex-end;
+      gap: 45px 32px;
+      margin-bottom: 63px;
+
+      @media (max-width:1470px) {
+        gap: 32px 24px;
+        margin-bottom: 48px;
+      }
+
+      @media (max-width:1100px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+      }
+
+      @media (max-width:720px) {
+        gap: 24px 16px;
+        margin-bottom: 36px;
+      }
+
+      @media (max-width:480px) {
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+    }
+
+    &--price {
+      border-radius: 10px;
+      margin-bottom: 41px;
+      padding: 50px 40px;
+      background: rgba(255, 255, 255, 0.1);
+
+      @media (max-width:1470px) {
+        margin-bottom: 32px;
+      }
+
+      @media (max-width:1100px) {
+        margin-bottom: 24px;
+      }
+
+      @media (max-width:720px) {
+        padding: 32px 24px;
+      }
+    }
+  }
+
+  &__form-subblock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    @media (max-width:1100px) {
+      gap: 16px;
+    }
+
+    @media (max-width:720px) {
+      gap: 12px;
+    }
+  }
+
+  &__form-title {
+    font-weight: 800;
+    line-height: 32px;
+
+    @media (max-width:720px) {
+      line-height: 26px;
+    }
+
+    @media (max-width:480px) {
+      line-height: 22px;
+    }
+  }
+
+  &__form-label {
+    display: block;
+    width: 100%;
+  }
+
+  &__form-input {
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 100%;
+    height: 58px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+
+    @media (max-width:720px) {
+      padding: 16px;
+      height: 52px;
+    }
+
+    &::placeholder {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+
+  &__form-list {
+    @media (max-width:720px) {
+      margin-top: 16px;
+    }
+  }
+
+  &__form-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 415px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+
+    @media (max-width:720px) {
+      line-height: 36px;
+    }
+  }
+
+  &__form-item-name {
+    width: 150px;
+  }
+
+  &__form-item-value {
+    width: 75px;
+    text-align: right;
+  }
+
+  &__form-bottom-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width:1100px) {
+      gap: 36px;
+    }
+
+    @media (max-width:720px) {
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-input-checkbox {
+    &:checked+.form-checkbox {
+      background-image: url("../images/svg/form-check-mark-dark.svg");
+    }
+  }
+
+  &__form-checkbox {
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    background: var(--white);
+    background-repeat: no-repeat;
+  }
+
+  &__form-checkbox-text {
+    padding-left: 37px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-wrap: balance;
+
+    @media (max-width:480px) {
+      line-height: 22px;
+    }
+  }
+
+  &__form-link {
+    text-decoration: none;
+
+    @media (max-width:480px) {
+      line-height: 22px;
+    }
+  }
+
+  &__form-btn {
+    flex-shrink: 0;
+    border-radius: 5px;
+    padding: 16px;
+    width: 202px;
+    min-height: 52px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    background: var(--red);
+
+    @media (max-width:720px) {
+      padding: 12px;
+      min-height: 48px;
+    }
+
+    @media (max-width:480px) {
+      width: 100%;
+    }
+  }
+}

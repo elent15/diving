@@ -600,7 +600,7 @@ p {
 
   &:checked+.form-checkbox {
     background-position: center center;
-    background-image: url("../images/svg/form-check-mark.svg");
+    background-image: url("../images/svg/form-check-mark-light.svg");
   }
 }
 
@@ -626,6 +626,7 @@ p {
 .form-label-checkbox-text {
   display: inline-block;
   padding-left: 40px;
+  cursor: pointer;
   user-select: none;
 }
 
