@@ -1,0 +1,11 @@
+mixin formAddress(address)
+  .form-block.form-block--address
+    for block in address
+      .form-block__subblock
+        if block.title
+          h4.fourth-title.form-block__title= block.title
+          label.form-block__label
+            input.input.form-block__input(type=block.type placeholder=block.placeholder)
+        else
+          label.form-block__label
+            input.input.form-block__input(type=block.type placeholder=block.placeholder)

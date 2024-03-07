@@ -55,6 +55,7 @@
 
 // подключения компонентов страницы "Дайвинг в океанариумах" (oceanariums.html)
 @import "./components/modal-certificate";
+@import "./components/form-block";
 @import "./components/modal-book";
 @import "./components/oceanariums-hero";
 @import "./components/oceanariums-advantages";
@@ -77,3 +78,7 @@
 // подключения компонентов страницы "Книги" (books.html)
 @import "./components/books";
 @import "./components/books-form";
+
+// подключения компонентов страницы "Подарки" (gifts.html)
+@import "./components/gifts";
+@import "./components/gifts-form";

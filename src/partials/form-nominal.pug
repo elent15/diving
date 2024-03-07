@@ -1,0 +1,5 @@
+.form-block
+  h4.fourth-title.form-block__title Выберите номинал сертификата
+  .form-block__btns
+    for value, index in {'10 000 ₽' : 'form-block__nominal-btn--active', '15 000 ₽' : '', '30 000 ₽': ''}
+      button.btn-reset.btn.form-block__nominal-btn(class=value, type='button')= index

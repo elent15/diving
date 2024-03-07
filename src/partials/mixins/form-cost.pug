@@ -1,0 +1,8 @@
+mixin formCost(cost, title)
+  .form-block.form-block--cost
+    h4.fourth-title.form-block__title= title
+    ul.list-reset.form-block__list
+      for item in cost
+        li.form-block__item
+          span.form-block__item-name= item.name
+          span.form-block__item-value= item.value

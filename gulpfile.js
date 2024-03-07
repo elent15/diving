@@ -121,6 +121,7 @@ function watching() {
   });
   watch('./src/*.pug', pug)
   watch('./src/partials/*.pug', pug)
+  watch('./src/partials/**/*.pug', pug)
   watch('./src/scss/**/*.scss', styles)
   watch('./src/js/**/*.js', scripts)
   watch(['./src/images/*', './src/images/svg/*'], images)

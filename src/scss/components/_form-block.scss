@@ -1,0 +1,261 @@
+.form-block {
+
+  &--address {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    align-items: flex-end;
+    gap: 45px 32px;
+
+    @media (max-width:1470px) {
+      gap: 32px 24px;
+    }
+
+    @media (max-width:1100px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width:720px) {
+      gap: 24px 16px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &--cost {
+    border-radius: 10px;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.1);
+
+    @media (max-width:1100px) {
+      padding: 30px;
+    }
+
+    @media (max-width:720px) {
+      padding: 24px 16px;
+    }
+  }
+
+  &--bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width:1100px) {
+      gap: 36px;
+    }
+
+    @media (max-width:720px) {
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 800;
+    line-height: 32px;
+
+    @media (max-width:1100px) {
+      margin-bottom: 16px;
+      line-height: 26px;
+    }
+
+    @media (max-width:720px) {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width:480px) {
+      line-height: 22px;
+    }
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 20px 30px;
+    width: 100%;
+    height: 58px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+
+    @media (max-width:720px) {
+      padding: 16px;
+      height: 52px;
+    }
+
+    &::placeholder {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+
+  &__textarea {
+    padding: 30px 38px;
+    width: 100%;
+    height: 165px;
+    resize: none;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+
+    @media (max-width:1100px) {
+      padding: 24px 30px;
+    }
+
+    @media (max-width:720px) {
+      padding: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width:720px) {
+      gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px 12px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nominal-btn {
+    border: 1px solid #bfbfbf;
+    padding: 12px;
+    width: 140px;
+    min-height: 50px;
+    color: #1f1f1f;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    background: var(--white);
+
+    &--active {
+      border: 1px solid var(--red);
+      color: var(--white);
+      background: var(--red);
+    }
+
+    @media (max-width:720px) {
+      width: min(140px, calc((100% - 32px) / 3));
+      min-height: 44px;
+    }
+
+    @media (max-width:480px) {
+      width: calc((100% - 12px) / 2);
+    }
+  }
+
+  &__subblock {
+    width: 100%;
+  }
+
+  &__list {}
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 415px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+
+    @media (max-width:720px) {
+      line-height: 36px;
+    }
+  }
+
+  &__item-name {
+    width: 220px;
+
+    @media (max-width:480px) {
+      width: auto;
+      font-size: 14px;
+    }
+  }
+
+  &__item-value {
+    width: 100px;
+    text-align: right;
+
+    @media (max-width:480px) {
+      width: auto;
+      font-size: 14px;
+    }
+  }
+
+  &__input-checkbox {
+    &:checked+.form-checkbox {
+      background-image: url("../images/svg/form-check-mark-dark.svg");
+    }
+  }
+
+  &__checkbox {
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    background: var(--white);
+    background-repeat: no-repeat;
+  }
+
+  &__checkbox-text {
+    padding-left: 37px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-wrap: balance;
+
+    @media (max-width:720px) {
+      line-height: 22px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    @media (max-width:720px) {
+      line-height: 22px;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    border-radius: 5px;
+    padding: 16px;
+    width: 202px;
+    min-height: 52px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    background: var(--red);
+
+    @media (max-width:720px) {
+      padding: 12px;
+      min-height: 48px;
+    }
+
+    @media (max-width:480px) {
+      width: 100%;
+    }
+  }
+}

@@ -23,6 +23,7 @@
 * Страница "Расписание клубных поездок" [schedule.html](https://elent15.github.io/diving/schedule.html): кастомные селекты, аккордеон в секции "Дисконтно-бонусная система" при ширине экрана меньше 720px, модальное окно "Забронировать"
 * Страница "Расписание курсов по дайвингу" [courses.html](https://elent15.github.io/diving/courses.html): табы, аккордеон в секции "Дисконтно-бонусная система" при ширине экрана меньше 720px, модальное окно "Записаться"
 * Страница "Книги" [books.html](https://elent15.github.io/diving/books.html)
+* Страница "Подарки" [gifts.html](https://elent15.github.io/diving/gifts.html)
 
 #### Gulp-сборка (Gulp 4)
 

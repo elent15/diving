@@ -1,0 +1,73 @@
+.gifts {
+  &__form {
+    max-width: 1069px;
+  }
+
+  &__form-block {
+    width: 100%;
+
+    &--textarea {
+      margin-bottom: 50px;
+
+      @media (max-width:1470px) {
+        margin-bottom: 42px;
+      }
+
+      @media (max-width:1100px) {
+        margin-bottom: 36px;
+      }
+
+      @media (max-width:720px) {
+        margin-bottom: 32px;
+      }
+
+      @media (max-width:480px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &--nominal {
+      margin-bottom: 43px;
+
+      @media (max-width:1470px) {
+        margin-bottom: 36px;
+      }
+
+      @media (max-width:720px) {
+        margin-bottom: 32px;
+      }
+
+      @media (max-width:480px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &--address {
+      margin-bottom: 63px;
+
+      @media (max-width:1470px) {
+        margin-bottom: 48px;
+      }
+
+      @media (max-width:720px) {
+        margin-bottom: 36px;
+      }
+
+      @media (max-width:480px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &--cost {
+      margin-bottom: 41px;
+
+      @media (max-width:1470px) {
+        margin-bottom: 32px;
+      }
+
+      @media (max-width:1100px) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

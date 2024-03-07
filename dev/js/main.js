@@ -27,49 +27,6 @@ const accordion = () => {
 
 accordion();
 
-function calculateSum(book) {
-
-  const textContent = book.querySelector('.books__card-price').textContent;
-  const price = parseInt(textContent.replace(/[^\d]/g, ''));
-  const percent = 10;
-  const amount = price - price * percent / 100;
-
-  return {
-    price,
-    amount
-  }
-}
-
-function showSum (booksValues, price, amount) {
-
-  booksValues[0].textContent = price.toLocaleString() + ' ₽';
-  booksValues[2].textContent = amount.toLocaleString() + ' ₽';
-}
-
-const books = () => {
-  const books = Array.from(document.querySelectorAll('.books__card'));
-  const booksValues = Array.from(document.querySelectorAll('.books__form-item-value'));
-
-  if (books) {
-    books.forEach(book => {
-      book.addEventListener('click', () => {
-
-        if (!book.classList.contains('books__card--active')) {
-          books.forEach(e => {
-            e.classList.remove('books__card--active')
-          });
-          book.classList.add('books__card--active');
-
-          const {price, amount} = calculateSum(book);
-          showSum(booksValues, price, amount);
-        }
-      });
-    });
-  }
-}
-
-books();
-
 // burger-menu
 const burger = () => {
   const burger = document.querySelector('.burger');
@@ -195,6 +152,105 @@ const centers = () => {
 
 centers();
 
+// form cost
+const calcValues = (values, btn) => {
+
+  const price = btn.textContent.slice(0, -1).replace(/\s/g, '');
+  const percent = values[1].textContent.slice(0, -1).trim();
+  const amount = price - price * percent / 100;
+
+  return amount;
+}
+
+const showValues = (values, btn, amount) => {
+
+  values[0].textContent = btn.textContent;
+  values[2].textContent = amount.toLocaleString() + ' ₽';
+}
+
+const cost = () => {
+  const nominalBtns = Array.from(document.querySelectorAll('.form-block__nominal-btn'));
+
+  if (nominalBtns.length) {
+    const nominalBtnsActive = document.querySelector('.form-block__nominal-btn--active');
+    const values = Array.from(document.querySelectorAll('.form-block__item-value'));
+
+    nominalBtnsActive.classList.remove('form-block__nominal-btn--active');
+    nominalBtns[0].classList.add('form-block__nominal-btn--active');
+
+    let amount = calcValues(values, nominalBtns[0]);
+    showValues(values, nominalBtns[0], amount);
+
+    nominalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!btn.classList.contains('form-block__nominal-btn--active')) {
+          nominalBtns.forEach(btn => {
+            btn.classList.remove('form-block__nominal-btn--active')
+          });
+          btn.classList.add('form-block__nominal-btn--active');
+
+          amount = calcValues(values, btn);
+          showValues(values, btn, amount);
+        }
+      });
+    });
+  }
+}
+
+cost();
+
+// gift card
+const calculateSum = (values, card) => {
+
+  const textContent = card.querySelector('.gift-card__price').textContent;
+  const price = parseInt(textContent.replace(/[^\d]/g, ''));
+  const percent = values[1].textContent.slice(0, -1).trim();
+  const amount = price - price * percent / 100;
+
+  return {
+    price,
+    amount
+  }
+}
+
+const showSum = (values, price, amount) => {
+
+  values[0].textContent = price.toLocaleString() + ' ₽';
+  values[2].textContent = amount.toLocaleString() + ' ₽';
+}
+
+const giftCards = () => {
+  const giftCards = Array.from(document.querySelectorAll('.gift-card'));
+  const formValues = Array.from(document.querySelectorAll('.form-block__item-value'));
+
+  if (giftCards.length) {
+
+    if (giftCards[1].querySelector('.gift-card__price')) {
+      let { price, amount } = calculateSum(formValues, giftCards[1]);
+      showSum(formValues, price, amount);
+    }
+
+    giftCards.forEach(card => {
+      card.addEventListener('click', () => {
+
+        if (!card.classList.contains('gift-card--active')) {
+          giftCards.forEach(e => {
+            e.classList.remove('gift-card--active')
+          });
+          card.classList.add('gift-card--active');
+
+          if (card.querySelector('.gift-card__price')) {
+            const { price, amount } = calculateSum(formValues, card);
+            showSum(formValues, price, amount);
+          }
+        }
+      });
+    });
+  }
+}
+
+giftCards();
+
 // mobile-slider
 const slider = document.querySelector('.mobile-swiper');
 const mediaQuery = window.matchMedia('(max-width: 1100px)')
@@ -247,52 +303,23 @@ const modalBook = () => {
 
 modalBook();
 
-const modalCertificate = () => {
-  const btns = Array.from(document.querySelectorAll('.modal-certificate__card'));
-  const nominalBtns = Array.from(document.querySelectorAll('.modal-certificate__nominal-btn'));
+// modal certificate
+function modalCertificate() {
+  const modalCertificate = document.querySelector('.modal-certificate');
 
-  if (btns) {
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (!btn.classList.contains('modal-certificate__card--active')) {
-          btns.forEach(btn => {
-            btn.classList.remove('modal-certificate__card--active')
-          });
-          btn.classList.add('modal-certificate__card--active');
-        }
-      });
-    });
-  }
+  if (modalCertificate) {
+    const modalCard = modalCertificate.querySelector('.gift-card--active');
+    const modalCardActive = Array.from(modalCertificate.querySelectorAll('.gift-card'))[1];
 
-  if (nominalBtns) {
-    nominalBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (!btn.classList.contains('modal-certificate__nominal-btn--active')) {
-          nominalBtns.forEach(btn => {
-            btn.classList.remove('modal-certificate__nominal-btn--active')
-          });
-          btn.classList.add('modal-certificate__nominal-btn--active');
-
-          const values = Array.from(document.querySelectorAll('.modal-certificate__item-value'));
-          const price = btn.innerText.slice(0, -1).replace(/\s/g, '');
-          const percent = values[1].innerText.slice(0, -1).trim();
-          const amount = price - price * percent / 100;
-
-          values[0].innerText = btn.innerText;
-          values[2].innerText = amount.toLocaleString() + ' ₽';
-        }
-      });
-    });
+    modalCard.classList.remove('gift-card--active');
+    modalCardActive.classList.add('gift-card--active');
   }
 }
-
-modalCertificate();
 
 // modal window
 const modal = () => {
   const btns = Array.from(document.querySelectorAll(`[data-modal]`));
   const modals = Array.from(document.querySelectorAll('.modal'));
-  const inputs = document.querySelectorAll('.modal__form-input');
   const body = document.body;
 
   function open(el) {
@@ -310,12 +337,6 @@ const modal = () => {
       focus.focus();
     }, 500)
 
-    modal.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', btn => {
-        btn.preventDefault();
-      });
-    });
-
     modalClose.classList.remove('modal__close-btn--active');
     modal.classList.add('modal--open');
     body.classList.add('stop-scroll');
@@ -327,6 +348,7 @@ const modal = () => {
     const modalBody = modal.querySelector('.modal__body');
     const modalClose = modal.querySelector('.modal__close-btn');
     const modalBtn = modal.querySelector('.btn-js');
+    const modalForm = modal.querySelector('form');
 
     const itsModalBody = target == modalBody || modalBody.contains(target);
     const itsModalClose = target == modalClose || modalClose.contains(target);
@@ -338,12 +360,12 @@ const modal = () => {
     if ((itsModalClose && modal.classList.contains('modal--open')) ||
       (!itsModalBody && modal.classList.contains('modal--open')) ||
       (itsModalBtn && modal.classList.contains('modal--open'))) {
+
       modalClose.classList.add('modal__close-btn--active');
       modal.classList.remove('modal--open');
       body.classList.remove('stop-scroll');
-      inputs.forEach(input => {
-        input.value = '';
-      });
+      modalForm.reset();
+      modalCertificate();
     }
   }
 
