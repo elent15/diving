@@ -1,42 +1,6 @@
 .schedule {
   &__text {
-    margin-bottom: 48px;
     color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-
-    @media (max-width:1470px) {
-      margin-bottom: 36px;
-    }
-
-    @media (max-width:1100px) {
-      margin-bottom: 32px;
-    }
-
-    @media (max-width:720px) {
-      margin-bottom: 24px;
-      line-height: 24px;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 22px;
-    }
-  }
-
-  &__paragraph {
-    &+.schedule__paragraph {
-      margin-top: 36px;
-
-      @media (max-width:1470px) {
-        margin-top: 24px;
-      }
-
-      @media (max-width:1100px) {
-        margin-top: 16px;
-      }
-    }
   }
 
   &__filters-block {

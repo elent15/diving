@@ -1,0 +1,30 @@
+-
+  const trainingCentersCards = [
+    {alt: 'Центр "Азовский"', title: 'Азовский', address: 'ул. Азовская 24', href: '#'},
+    {alt: 'Центр "Лодочная"', title: 'Лодочная', address: 'ул. Лодочная 43', href: '#'},
+    {alt: 'Центр "Москвариум"', title: 'Москвариум', address: 'Проспект Мира 119, стр. 23', href: '#'},
+    {alt: 'Центр "Крокус Сити"', title: 'Крокус Сити', address: '66-й км МКАД, Крокус-Сити', href: '#'},
+    {alt: 'Центр "Спас-Каменка"', title: 'Спас-Каменка', address: 'Дмитровский р-н, Моск.обл.', href: '#'},
+    {alt: 'Центр "Полярный круг"', title: 'Полярный круг', address: 'республика Карелия', href: '#'},
+    {alt: 'Центр "Мрия"', title: 'Мрия', address: 'республика Крым', href: '#'},
+    {alt: 'Центр "Монерон"', title: 'Монерон', address: 'Сахалинская обл., о. Монерон', href: '#'},
+    {alt: 'Центр "Северный полюс"', title: 'Северный полюс', address: 'Северный полюс', href: '#'},
+  ]
+section.section.training-centers
+  .container
+    h3.third-title.page-third-title.training-centers__title Обучение дайвингу проводится в собственных дайвинг-центрах RuDIVE
+    .training-centers__text в разных округах Москвы, в Подмосковье, Карелии, в Крыму и на Сахалине, а также в клубных поездках с турлидером-инструктором по всему миру.
+    .training-centers__cards-block
+      for card, index in trainingCentersCards
+          .training-centers__card
+            a.link.training-centers__card-img-link(href=`./${card.href}.html`)
+              .training-centers__card-img-block
+                picture
+                  source(srcset=`./images/training-centers-${index + 1}.webp`, type="image/webp")
+                  img(src=`./images/training-centers-${index + 1}.jpg`, alt=card.alt)
+            a.link.training-centers__card-title-link(href=`./${card.href}.html`)= card.title
+            .training-centers__address-block
+              svg
+                use(href="./images/sprite.svg#pin")
+              span.training-centers__card-address= card.address
+

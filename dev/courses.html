@@ -77,7 +77,18 @@
       </div>
     </div>
     <div class="wrapper__bg wrapper__page-bg" style="background-image: url(./images/page-bg.webp);"></div>
-    <main class="main"><!-- модальное окно "Запись на обучение" -->
+    <main class="main">
+      <section class="page-hero-sm" style="background-image: url(./images/page-hero-bg.webp);">
+        <div class="container page-hero-sm__container">
+          <div class="breadcrumbs">
+            <ul class="list-reset breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="link breadcrumbs__link" href="./index.html">Главная</a></li>
+              <li class="breadcrumbs__item">Расписание курсов по дайвингу</li>
+            </ul>
+          </div>
+          <h2 class="second-title page-hero-sm__title">Расписание курсов по дайвингу</h2>
+        </div>
+      </section><!-- модальное окно "Запись на обучение" -->
       <div class="modal" id="modal-reg-training">
         <div class="modal__bg">
           <div class="modal__body modal-book" data-simplebar><button class="btn-reset modal__close-btn"
@@ -104,37 +115,26 @@
           </div>
         </div>
       </div>
-      <section class="page-hero-sm" style="background-image: url(./images/page-hero-bg.webp);">
-        <div class="container page-hero-sm__container">
-          <div class="breadcrumbs">
-            <ul class="list-reset breadcrumbs__list">
-              <li class="breadcrumbs__item"><a class="link breadcrumbs__link" href="./index.html">Главная</a></li>
-              <li class="breadcrumbs__item">Расписание курсов по дайвингу</li>
-            </ul>
-          </div>
-          <h2 class="second-title page-hero-sm__title">Расписание курсов по дайвингу</h2>
-        </div>
-      </section>
       <div class="section schedule schedule-courses">
         <div class="container">
-          <div class="schedule__text">
-            <div class="schedule__paragraph">Обучение дайвингу — это первый и главный шаг к новым ощущениям, которые
-              можно получить только при погружении под воду. Курсы проводятся по Российским государственным и
-              международным стандартам PADI и ISO. Наши инструкторы — опытные профессионалы и увлеченные энтузиасты, а
-              выбор курсов — один из самых обширных в мире. Мы готовы «заразить» любовью к дайвингу каждого, кто
-              стремится открыть для себя подводный мир озер, морей и океанов!</div>
+          <div class="text schedule__text">
+            <p class="text__paragraph">Обучение дайвингу — это первый и главный шаг к новым ощущениям, которые можно
+              получить только при погружении под воду. Курсы проводятся по Российским государственным и международным
+              стандартам PADI и ISO. Наши инструкторы — опытные профессионалы и увлеченные энтузиасты, а выбор курсов —
+              один из самых обширных в мире. Мы готовы «заразить» любовью к дайвингу каждого, кто стремится открыть для
+              себя подводный мир озер, морей и океанов!</p>
           </div>
-          <div class="tabs-block">
+          <div class="tabs-block schedule-courses__tabs-block">
             <ul class="list-reset tabs schedule-courses__tabs">
               <li class="schedule-courses__item"><button
-                  class="btn-reset tabs__btn schedule-courses__btn tabs__btn--active" type="button"
-                  data-tab="courses-tab-1">Расписание занятий</button></li>
-              <li class="schedule-courses__item"><button class="btn-reset tabs__btn schedule-courses__btn" type="button"
-                  data-tab="courses-tab-2">Курсы PADI в поездках</button></li>
-              <li class="schedule-courses__item"><button class="btn-reset tabs__btn schedule-courses__btn" type="button"
-                  data-tab="courses-tab-3">Дайвинг-курсы в Москве</button></li>
+                  class="btn-reset btn tabs__btn tabs__btn--active schedule-courses__btn" type="button"
+                  data-tab="schedule-courses-tab-1">Расписание занятий</button></li>
+              <li class="schedule-courses__item"><button class="btn-reset btn tabs__btn schedule-courses__btn"
+                  type="button" data-tab="schedule-courses-tab-2">Курсы PADI в поездках</button></li>
+              <li class="schedule-courses__item"><button class="btn-reset btn tabs__btn schedule-courses__btn"
+                  type="button" data-tab="schedule-courses-tab-3">Дайвинг-курсы в Москве</button></li>
             </ul>
-            <div class="tab schedule-courses__tab tab--active" id="courses-tab-1">
+            <div class="tab schedule-courses__tab tab--active" id="schedule-courses-tab-1">
               <div class="schedule__cards-block">
                 <div class="schedule__card">
                   <div class="schedule__card-img-block">
@@ -419,7 +419,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab schedule-courses__tab" id="courses-tab-2">
+            <div class="tab schedule-courses__tab" id="schedule-courses-tab-2">
               <div class="schedule__cards-block">
                 <div class="schedule__card">
                   <div class="schedule__card-img-block">
@@ -704,7 +704,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab schedule-courses__tab" id="courses-tab-3">
+            <div class="tab schedule-courses__tab" id="schedule-courses-tab-3">
               <div class="schedule__cards-block">
                 <div class="schedule__card">
                   <div class="schedule__card-img-block">

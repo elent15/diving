@@ -24,6 +24,7 @@
 * Страница "Расписание курсов по дайвингу" [courses.html](https://elent15.github.io/diving/courses.html): табы, аккордеон в секции "Дисконтно-бонусная система" при ширине экрана меньше 720px, модальное окно "Записаться"
 * Страница "Книги" [books.html](https://elent15.github.io/diving/books.html)
 * Страница "Подарки" [gifts.html](https://elent15.github.io/diving/gifts.html)
+* Страница "Наша команда" [team.html](https://elent15.github.io/diving/team.html): табы
 
 #### Gulp-сборка (Gulp 4)
 

@@ -1,0 +1,13 @@
+mixin tabCards(name, item)
+  div(class=name + '__cards-block')
+    for card, index in item.cards
+      div(class=name + '__card')
+        div(class=name + '__card-img-block')
+          picture
+            source(srcset!=`./images/${item.title}-${index + 1}.webp`, type="image/webp")
+            img(src!=`./images/${item.title}-${index + 1}.jpg`, alt='Фото')
+        div(class=name + '__card-descr')
+          span(class=name + '__card-title')= card.title
+          div(class=name + '__card-text')= card.text
+        div(class=name + '__card-bottom')
+          a.link-btn(class=name + '__card-link' href='./specialist.html') Подробнее

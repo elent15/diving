@@ -18,8 +18,8 @@ function styleScroll(el) {
 }
 
 function scroll() {
-  const listInner = Array.from(document.querySelectorAll('.diving-centers__location-list-inner'));
-  const aboutContent = Array.from(document.querySelectorAll('.diving-centers__about-text--active'));
+  const listInner = Array.from(document.querySelectorAll('.centers__location-list-inner'));
+  const aboutContent = Array.from(document.querySelectorAll('.centers__about-text--active'));
 
   if (listInner) {
     listInner.forEach(el => {

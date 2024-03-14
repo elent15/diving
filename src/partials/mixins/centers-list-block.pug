@@ -1,0 +1,10 @@
+mixin centersListBlock(name, centers)
+  .centers__location(class=name + '__location')
+    span.centers__title= centers.title
+    .centers__location-list(class=name + '__location-list')
+      ul.list-reset.centers__location-list-inner
+        for center, index in centers.list
+          li.centers__location-item(class=center.classItem)
+            button.btn-reset.transparent-btn.centers__location-btn(class=name + '__location-btn' class=center.classBtn data-loc=`location-${index + 1}`, data-src=center.src)
+              span.centers__location-title= center.name
+              span.centers__location-address= center.address

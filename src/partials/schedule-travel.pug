@@ -1,4 +1,10 @@
+include ./mixins/text.pug
+
 -
+  const scheduleText = [
+    'Клубные поездки — групповые путешествия во главе с клубным турлидером под флагом RuDIVE. Мы заранее выбираем направление поездки, лучший сезон, яхту или отель с дайвинг-центром и рассчитываем программу, исходя из нашего многолетнего опыта в дайвинг-путешествиях по всему миру.',
+    'Плюсы поездок с клубом: выверенная программа, интересная компания, новые и старые друзья, участие турлидера — инструктора PADI, который обеспечивает безопасность, учебный процесс, клубную атмосферу, решение проблем на суше и под водой. Расписание клубных дайвинг-туров динамично меняется в силу новых идей и возможностей, в него постоянно добавляются новые поездки. Мы стараемся планировать расписание групповых туров на год вперед.'
+  ];
   const scheduleFilters = [
     {
       title: 'Вид тура', placeholder: 'Любой',
@@ -51,6 +57,7 @@
     {
       title: 'Дайвинг с дельфинами на Красном море', price: 'от 1 900 $', date: '29 июня - 6 июля',
       leader: 'Дмитрий Орлов', instructor: 'Дмитрий Орлов',
+      btnClass: 'schedule__card-btn--active',
     },
     {
       title: 'Дайвинг-сафари в Колумбии', price: 'от 18 000 $', date: '29 октября - 20 ноября',
@@ -67,29 +74,32 @@
     {
       title: 'Дайвинг с акулами в ЮАР', price: 'от 3 100 $', date: '15 июня - 25 июня',
       leader: 'Наталья Бараночникова', instructor: 'Наталья Бараночникова',
+      cardClass: 'none',
     },
     {
       title: 'Дайвинг в России на острове Монерон', price: 'от 340 000 руб.', date: '1 августа - 11 августа',
       leader: 'Наталья Бараночникова', instructor: 'Наталья Бараночникова',
+      cardClass: 'none',
     },
     {
       title: 'Дайвинг с акулами в Карибском море', price: 'от 4 000 $', date: '29 октября - 20 ноября',
       leader: 'Алексей Побожаков', instructor: 'Алексей Побожаков',
+      cardClass: 'none',
     },
     {
       title: 'Дайвинг с китами в Индийском океане', price: 'от 5 500 $', date: '1 мая - 16 мая',
       leader: 'Екатерина Кусачёва', instructor: 'Екатерина Кусачёва',
+      cardClass: 'none',
     },
     {
       title: 'Дейли-дайвинг в Океании', price: 'от 8 500 $', date: '14 сентября - 29 сентября',
       leader: 'Дмитрий Орлов', instructor: 'Дмитрий Орлов',
+      cardClass: 'none',
     },
   ]
 .section.schedule
   .container
-    .schedule__text
-      .schedule__paragraph Клубные поездки — групповые путешествия во главе с клубным турлидером под флагом RuDIVE. Мы заранее выбираем направление поездки, лучший сезон, яхту или отель с дайвинг-центром и рассчитываем программу, исходя из нашего многолетнего опыта в дайвинг-путешествиях по всему миру.
-      .schedule__paragraph Плюсы поездок с клубом: выверенная программа, интересная компания, новые и старые друзья, участие турлидера — инструктора PADI, который обеспечивает безопасность, учебный процесс, клубную атмосферу, решение проблем на суше и под водой. Расписание клубных дайвинг-туров динамично меняется в силу новых идей и возможностей, в него постоянно добавляются новые поездки. Мы стараемся планировать расписание групповых туров на год вперед.
+    +text('schedule', scheduleText)
     .schedule__filters-block
       for item, index in scheduleFilters
         .schedule__filter
@@ -106,96 +116,32 @@
       button.btn-reset.btn.schedule__filter-btn(type='button') Применить фильтр
     .schedule__cards-block
       for card, index in scheduleCards
-        if index === 1
-          .schedule__card
-            .schedule__card-img-block
-              picture
-                source(srcset=`./images/schedule-${index + 1}.webp`, type="image/webp")
-                img(src=`./images/schedule-${index + 1}.jpg`, alt="Фото")
-            .schedule__card-content
-              .schedule__card-content-title= card.title
-              .schedule__card-content-price
+        .schedule__card(class=card.cardClass)
+          .schedule__card-img-block
+            picture
+              source(srcset=`./images/schedule-${index + 1}.webp`, type="image/webp")
+              img(src=`./images/schedule-${index + 1}.jpg`, alt="Фото")
+          .schedule__card-content
+            .schedule__card-content-title= card.title
+            .schedule__card-content-price
+              svg
+                use(href="./images/sprite.svg#wallet")
+              = card.price
+            .schedule__card-content-bottom
+              .schedule__card-content-bottom-block
                 svg
-                  use(href="./images/sprite.svg#wallet")
-                = card.price
-              .schedule__card-content-bottom
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#schedule-calendar")
-                  =card.date
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#leader")
-                  |Турлидер:&nbsp;
-                  =card.leader
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#tour-guide")
-                  |Инструктор:&nbsp;
-                  =card.instructor
-            .schedule__card-btns
-              button.btn-reset.btn.white-btn.schedule__card-btn.schedule__card-btn--active(type="button", data-modal='modal-book') Забронировать
-              a.link-btn.schedule__card-link(href='#') Подробнее
-        else if index < 5
-          .schedule__card
-            .schedule__card-img-block
-              picture
-                source(srcset=`./images/schedule-${index + 1}.webp`, type="image/webp")
-                img(src=`./images/schedule-${index + 1}.jpg`, alt="Фото")
-            .schedule__card-content
-              .schedule__card-content-title= card.title
-              .schedule__card-content-price
+                  use(href="./images/sprite.svg#schedule-calendar")
+                =card.date
+              .schedule__card-content-bottom-block
                 svg
-                  use(href="./images/sprite.svg#wallet")
-                = card.price
-              .schedule__card-content-bottom
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#schedule-calendar")
-                  =card.date
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#leader")
-                  |Турлидер:&nbsp;
-                  =card.leader
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#tour-guide")
-                  |Инструктор:&nbsp;
-                  =card.instructor
-            .schedule__card-btns
-              button.btn-reset.btn.white-btn.schedule__card-btn(type="button", data-modal='modal-book') Забронировать
-              a.link-btn.schedule__card-link(href='#') Подробнее
-        else if index >= 5
-          .schedule__card.none
-            .schedule__card-img-block
-              picture
-                source(srcset=`./images/schedule-${index - 4}.webp`, type="image/webp")
-                img(src=`./images/schedule-${index - 4}.jpg`, alt="Фото")
-            .schedule__card-content
-              .schedule__card-content-title= card.title
-              .schedule__card-content-price
+                  use(href="./images/sprite.svg#leader")
+                |Турлидер:&nbsp;
+                =card.leader
+              .schedule__card-content-bottom-block
                 svg
-                  use(href="./images/sprite.svg#wallet")
-                = card.price
-              .schedule__card-content-bottom
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#schedule-calendar")
-                  =card.date
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#leader")
-                  |Турлидер:&nbsp;
-                  =card.leader
-                .schedule__card-content-bottom-block
-                  svg
-                    use(href="./images/sprite.svg#tour-guide")
-                  |Инструктор:&nbsp;
-                  =card.instructor
-            .schedule__card-btns
-              button.btn-reset.btn.white-btn.schedule__card-btn(type="button", data-modal='modal-book') Забронировать
-              a.link-btn.schedule__card-link(href='#') Подробнее
-
-
-
+                  use(href="./images/sprite.svg#tour-guide")
+                |Инструктор:&nbsp;
+                =card.instructor
+          .schedule__card-btns
+            button.btn-reset.btn.white-btn.schedule__card-btn(class=card.btnClass, type="button", data-modal='modal-book') Забронировать
+            a.link-btn.schedule__card-link(href='#') Подробнее

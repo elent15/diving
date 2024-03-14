@@ -19,7 +19,7 @@
 @import "./components/breadcrumbs";
 @import "./components/page-hero";
 @import "./components/page-main-section";
-@import "./components/centers";
+@import "./components/training-centers";
 @import "./components/request";
 @import "./components/registration";
 
@@ -32,6 +32,7 @@
 
 // подключения компонентов страницы "Дайвинг-центры" (centers.html)
 @import "./components/centers-hero";
+@import "./components/centers";
 @import "./components/diving-centers";
 @import "./components/equipment";
 @import "./components/centers-registration";
@@ -48,6 +49,7 @@
 
 // подключения компонентов страницы "Контакты" (contacts.html)
 @import "./components/page-hero-sm";
+@import "./components/contacts-tabs";
 @import "./components/contacts";
 @import "./components/contacts-offices";
 @import "./components/requisites";
@@ -82,3 +84,6 @@
 // подключения компонентов страницы "Подарки" (gifts.html)
 @import "./components/gifts";
 @import "./components/gifts-form";
+
+// подключения компонентов страницы "Наша команда" (team.html)
+@import "./components/team";

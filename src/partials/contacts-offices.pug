@@ -1,22 +1,28 @@
 -
   const contactsOffices = [
     {
-      name: 'Центральный офис RuDIVE',
-      address: 'г. Москва, ул. Нижняя Сыромятническая, 10. Центр дизайна ARTPLAY, здание 9, этаж 3, пространство № 335',
-      src: 'https://yandex.ru/map-widget/v1/?ll=37.670483%2C55.752708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzY3MRJb0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDQkNGBMSIKDZSuFkIVxgJfQg%2C%2C&z=16.43',
-    },
-    {
-      name: 'На Ленинском проспекте',
-      address: 'г. Москва, Ленинский проспект, д. 52, офис 27',
-      src: 'https://yandex.ru/map-widget/v1/?ll=37.563189%2C55.698980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MzU5NTU5MzM2EkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JvQtdC90LjQvdGB0LrQuNC5INC_0YDQvtGB0L_QtdC60YIsIDUyIgoNtUAWQhXCy15C&z=16.43',
-    },
-    {
-      name: 'Сервисный центр RuDIVE',
-      address: 'г. Москва, Сиреневый бульвар, дом 14 к. 3, комната 10',
-      src: 'https://yandex.ru/map-widget/v1/?ll=37.785431%2C55.801759&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc1MzAyNxJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LjRgNC10L3QtdCy0YvQuSDQsdGD0LvRjNCy0LDRgCwgMTTQujMiCg1HJBdCFQE1X0I%2C&z=16.43',
-    },
+      title: 'Офисы в Москве',
+      list: [
+        {
+          name: 'Центральный офис RuDIVE',
+          address: 'г. Москва, ул. Нижняя Сыромятническая, 10. Центр дизайна ARTPLAY, здание 9, этаж 3, пространство № 335',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.670483%2C55.752708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzY3MRJb0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDQkNGBMSIKDZSuFkIVxgJfQg%2C%2C&z=16.43',
+        },
+        {
+          classItem: 'centers__location-item--active',
+          classBtn: 'centers__location-btn--active',
+          name: 'На Ленинском проспекте',
+          address: 'г. Москва, Ленинский проспект, д. 52, офис 27',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.563189%2C55.698980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MzU5NTU5MzM2EkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JvQtdC90LjQvdGB0LrQuNC5INC_0YDQvtGB0L_QtdC60YIsIDUyIgoNtUAWQhXCy15C&z=16.43',
+        },
+        {
+          name: 'Сервисный центр RuDIVE',
+          address: 'г. Москва, Сиреневый бульвар, дом 14 к. 3, комната 10',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.785431%2C55.801759&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc1MzAyNxJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LjRgNC10L3QtdCy0YvQuSDQsdGD0LvRjNCy0LDRgCwgMTTQujMiCg1HJBdCFQE1X0I%2C&z=16.43',
+        },
+      ],
+    }
   ];
--
   const contactsAbout = [
     {
       route: [
@@ -40,7 +46,8 @@
         },
       ],
       time: 'Понедельник — пятница: 10:00-19:00 Суббота и воскресенье — выходные дни',
-      phone: '+7-499-110-90-80'
+      phone: '+7-499-110-90-80',
+      class: 'centers__about-text--active',
     },
     {
       route: [
@@ -62,41 +69,15 @@
     },
   ]
 
-.diving-centers.contacts-offices
-  .diving-centers__block.contacts-offices__block
-    .diving-centers__location.contacts-offices__location
-      span.diving-centers__title Офисы в Москве
-      .diving-centers__location-list.contacts-offices__location-list
-        ul.list-reset.diving-centers__location-list-inner
-          for item, index in contactsOffices
-            if index == 1
-              li.diving-centers__location-item.diving-centers__location-item--active
-                button.btn-reset.transparent-btn.diving-centers__location-btn.diving-centers__location-btn--active.contacts-offices__btn(data-loc=`location-${index + 1}`, data-src=item.src)
-                  span.diving-centers__location-title= item.name
-                  span.diving-centers__location-address= item.address
-            else
-              li.diving-centers__location-item
-                button.btn-reset.transparent-btn.diving-centers__location-btn.contacts-offices__btn(data-loc=`location-${index + 1}`, data-src=item.src)
-                  span.diving-centers__location-title= item.name
-                  span.diving-centers__location-address= item.address
-    .diving-centers__map-block.contacts-offices__map-block
-      .diving-centers__map
-    .diving-centers__about.contacts-offices__about
-      for item, index in contactsAbout
-        if index == 1
-          .diving-centers__about-text.contacts-offices__about-content.diving-centers__about-text--active(data-loc-text=`location-${index + 1}`)
-            for route in item.route
-              .contacts-offices__route
-                span.contacts-offices__about-title= route.title
-                span.contacts-offices__about-text= route.text
-            .contacts-offices__time
-              span.contacts-offices__about-title Часы работы:&nbsp;
-              span.contacts-offices__about-text= item.time
-            .contacts-offices__phone
-              span.contacts-offices__about-title Тел.:&nbsp;
-              span.contacts-offices__about-text= item.phone
-        else
-          .diving-centers__about-text.contacts-offices__about-content(data-loc-text=`location-${index + 1}`)
+.centers.contacts-offices
+  .centers__block.contacts-offices__block
+    for item in contactsOffices
+      +centersListBlock('contacts-offices', item)
+      .centers__map-block.contacts-offices__map-block
+        .centers__map
+      .centers__about.contacts-offices__about
+        for item, index in contactsAbout
+          .centers__about-text.contacts-offices__about-content(class=item.class data-loc-text=`location-${index + 1}`)
             for route in item.route
               .contacts-offices__route
                 span.contacts-offices__about-title= route.title

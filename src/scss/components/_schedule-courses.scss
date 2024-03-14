@@ -1,4 +1,5 @@
 .schedule-courses {
+
   &__tabs {
     position: relative;
     display: flex;
@@ -55,6 +56,8 @@
 
   &__btn {
     position: relative;
+    display: inline-block;
+    border-radius: 0;
     padding-bottom: 14px;
     width: 100%;
     min-height: 52px;
@@ -62,21 +65,10 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
-    outline-offset: 2px;
-    outline: 2px solid transparent;
-    transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
-
-    &:focus-visible {
-      outline: 2px solid transparent;
-    }
-
-    &:focus {
-      outline-color: var(--white);
-    }
+    background: transparent;
 
     &:hover {
-      color: var(--red);
-      outline-color: transparent;
+      background: transparent;
     }
 
     @media (max-width:1100px) {

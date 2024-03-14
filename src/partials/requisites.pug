@@ -1,145 +1,144 @@
 -
-  const requisites = {
-    '1': [
-      {
-        title: 'Полное наименование юридического лица',
-        value: 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ПОДВОДНЫЙ ЦЕНТР»',
-      },
-      {
-        title: 'ОГРН',
-        value: '1027724003669',
-      },
-      {
-        title: 'Дата регистрации',
-        value: '10 СЕНТЯБРЯ 2002 г.',
-      },
-      {
-        title: 'Наименование регистрирующего органа',
-        value: 'Межрайонная инспекция Федеральной налоговой службы №46 по г. Москве',
-      },
-      {
-        title: 'ИНН/КПП',
-        value: '7724246883 / 770901001',
-      },
-      {
-        title: 'ОКВЭД',
-        value: '92.6',
-      },
-      {
-        title: 'ОКПО',
-        value: '58740138',
-      },
-      {
-        title: 'Место нахождения',
-        value: '105120, г. Москва, ул. Нижняя Сыромятническая, д. 10, строение 9, офис 335',
-      },
-      {
-        title: 'Генеральный директор',
-        value: 'Орлов Дмитрий Валерьевич',
-      },
-      {
-        title: 'Главный бухгалтер',
-        value: 'Стрекалова Елена Александровна',
-      },
-      {
-        title: 'р/сч',
-        value: '40702810300000000719',
-      },
-      {
-        title: 'Банк',
-        value: 'ББР Банк (АО) г. Москва',
-      },
-      {
-        title: 'БИК',
-        value: '044525769',
-      },
-      {
-        title: 'к/сч',
-        value: '30101810745250000769',
-      },
-    ],
-    '2': [
-      {
-        title: 'Полное наименование юридического лица',
-        value: 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ДАЙВИНГ»',
-      },
-      {
-        title: 'ОГРН',
-        value: '1167746130441',
-      },
-      {
-        title: 'Дата регистрации',
-        value: '08 ФЕВРАЛЯ 2016 г.',
-      },
-      {
-        title: 'Наименование регистрирующего органа',
-        value: 'Межрайонная инспекция Федеральной налоговой службы №46 по г. Москве',
-      },
-      {
-        title: 'ИНН/КПП',
-        value: '7718296565 / 770901001',
-      },
-      {
-        title: 'ОКВЭД',
-        value: '79.12',
-      },
-      {
-        title: 'ОКПО',
-        value: '53741529',
-      },
-      {
-        title: 'Место нахождения',
-        value: '105120, г. Москва, ул. Нижняя Сыромятническая, д. 10, строение 9, офис 335',
-      },
-      {
-        title: 'Генеральный директор',
-        value: 'Орлов Дмитрий Валерьевич',
-      },
-      {
-        title: 'Главный бухгалтер',
-        value: 'Гладких Анастасия Владимировна',
-      },
-      {
-        title: 'р/сч',
-        value: '40702810400000002604',
-      },
-      {
-        title: 'Банк',
-        value: 'ББР Банк (АО) г. Москва',
-      },
-      {
-        title: 'БИК',
-        value: '044525769',
-      },
-      {
-        title: 'к/сч',
-        value: '30101810745250000769',
-      },
-    ],
-  }
-.tabs-block.contacts__tab-tabs-block.requisites
-  ul.list-reset.tabs.contacts__tab-tabs.requisites__tabs
-    for item, index in ['ООО Подводный центр', 'ООО Дайвинг']
-      if index == 0
-        li
-          button.btn-reset.contacts__tab-tabs-btn.tabs__btn.tabs__btn--active(data-tab=`requisites-tab-${index + 1}`)= item
-      else
-        li
-          button.btn-reset.contacts__tab-tabs-btn.tabs__btn(data-tab=`requisites-tab-${index + 1}`)= item
-  for value, key in requisites
-    if key == 1
-      .tab.tab--active.requisites__inner-tab(id=`requisites-tab-${key}`)
+  const requisitesTabs = [
+    {
+      title: 'ООО Подводный центр',
+      class: 'tabs__btn--active',
+    },
+    {
+      title: 'ООО Дайвинг',
+    },
+  ];
+  const requisitesTab = [
+    {
+      class: 'tab--active',
+      table: [
+        {
+          title: 'Полное наименование юридического лица',
+          value: 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ПОДВОДНЫЙ ЦЕНТР»',
+        },
+        {
+          title: 'ОГРН',
+          value: '1027724003669',
+        },
+        {
+          title: 'Дата регистрации',
+          value: '10 СЕНТЯБРЯ 2002 г.',
+        },
+        {
+          title: 'Наименование регистрирующего органа',
+          value: 'Межрайонная инспекция Федеральной налоговой службы №46 по г. Москве',
+        },
+        {
+          title: 'ИНН/КПП',
+          value: '7724246883 / 770901001',
+        },
+        {
+          title: 'ОКВЭД',
+          value: '92.6',
+        },
+        {
+          title: 'ОКПО',
+          value: '58740138',
+        },
+        {
+          title: 'Место нахождения',
+          value: '105120, г. Москва, ул. Нижняя Сыромятническая, д. 10, строение 9, офис 335',
+        },
+        {
+          title: 'Генеральный директор',
+          value: 'Орлов Дмитрий Валерьевич',
+        },
+        {
+          title: 'Главный бухгалтер',
+          value: 'Стрекалова Елена Александровна',
+        },
+        {
+          title: 'р/сч',
+          value: '40702810300000000719',
+        },
+        {
+          title: 'Банк',
+          value: 'ББР Банк (АО) г. Москва',
+        },
+        {
+          title: 'БИК',
+          value: '044525769',
+        },
+        {
+          title: 'к/сч',
+          value: '30101810745250000769',
+        },
+      ],
+    },
+    {
+      table: [
+        {
+          title: 'Полное наименование юридического лица',
+          value: 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ДАЙВИНГ»',
+        },
+        {
+          title: 'ОГРН',
+          value: '1167746130441',
+        },
+        {
+          title: 'Дата регистрации',
+          value: '08 ФЕВРАЛЯ 2016 г.',
+        },
+        {
+          title: 'Наименование регистрирующего органа',
+          value: 'Межрайонная инспекция Федеральной налоговой службы №46 по г. Москве',
+        },
+        {
+          title: 'ИНН/КПП',
+          value: '7718296565 / 770901001',
+        },
+        {
+          title: 'ОКВЭД',
+          value: '79.12',
+        },
+        {
+          title: 'ОКПО',
+          value: '53741529',
+        },
+        {
+          title: 'Место нахождения',
+          value: '105120, г. Москва, ул. Нижняя Сыромятническая, д. 10, строение 9, офис 335',
+        },
+        {
+          title: 'Генеральный директор',
+          value: 'Орлов Дмитрий Валерьевич',
+        },
+        {
+          title: 'Главный бухгалтер',
+          value: 'Гладких Анастасия Владимировна',
+        },
+        {
+          title: 'р/сч',
+          value: '40702810400000002604',
+        },
+        {
+          title: 'Банк',
+          value: 'ББР Банк (АО) г. Москва',
+        },
+        {
+          title: 'БИК',
+          value: '044525769',
+        },
+        {
+          title: 'к/сч',
+          value: '30101810745250000769',
+        },
+      ],
+    },
+  ];
+
+.requisites.contacts
+  +tabsBlock('contacts', 'requisites', requisitesTabs)
+    for tab, index in requisitesTab
+      .tab.requisites__inner-tab(class=tab.class id=`requisites-tab-${index + 1}`)
         table.requisites__table
           tbody.requisites__tbody
-            for item in value
-              tr.requisites__row
-                td.requisites__cell= item.title
-                td.requisites__cell= item.value
-    else
-      .tab.requisites__inner-tab(id=`requisites-tab-${key}`)
-        table.requisites__table
-          tbody.requisites__tbody
-            for item in value
+            for item in tab.table
               tr.requisites__row
                 td.requisites__cell= item.title
                 td.requisites__cell= item.value

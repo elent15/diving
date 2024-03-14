@@ -1,4 +1,19 @@
 -
+  const contactsTabs = [
+    {
+      title: 'Офисы и салоны',
+      class: 'tabs__btn--active',
+    },
+    {
+      title: 'Дайв-центры в Москве',
+    },
+    {
+      title: 'Подмосковье',
+    },
+    {
+      title: 'Карелия',
+    },
+  ];
   const contactsCards = [
     {
       title: 'ООО «ПОДВОДНЫЙ ЦЕНТР»',
@@ -20,54 +35,31 @@
     },
   ];
 
-.section-bottom.contacts
-  .container
-    .tabs-block.contacts__tabs-block
-      ul.list-reset.tabs.contacts__tabs
-        for item, index in ['Контакты', 'Реквизиты', 'Для поставщиков']
-          if index == 0
-            li.contacts__item
-              button.btn-reset.btn.contacts__btn.tabs__btn.tabs__btn--active(data-tab=`contacts-tab-${index + 1}`)= item
-          else
-            li.contacts__item
-              button.btn-reset.btn.contacts__btn.tabs__btn(data-tab=`contacts-tab-${index + 1}`)= item
-      .tab.contacts__tab.tab--active(id='contacts-tab-1')
-        .tabs-block.contacts__tab-tabs-block
-          ul.list-reset.tabs.contacts__tab-tabs
-            for item, index in ['Офисы и салоны', 'Дайв-центры в Москве', 'Подмосковье', 'Карелия']
-              if index == 0
-                li
-                  button.btn-reset.contacts__tab-tabs-btn.tabs__btn.tabs__btn--active(data-tab=`contacts-inner-tab-${index + 1}`)= item
-              else
-                li
-                  button.btn-reset.contacts__tab-tabs-btn.tabs__btn(data-tab=`contacts-inner-tab-${index + 1}`)= item
-          .tab.contacts__inner-tab.tab--active(id='contacts-inner-tab-1')
-            .contacts__inner-tab-block
-              for card, index in contactsCards
-                .contacts__inner-tab-card
-                  .contacts__inner-tab-card-content
-                    span.contacts__inner-tab-card-title= card.title
-                    .contacts__inner-tab-card-block
-                      svg.contacts__inner-tab-card-icon
-                        use(href="./images/sprite.svg#pin")
-                      span.contacts__inner-tab-card-text= card.address
-                    .contacts__inner-tab-card-block
-                      svg.contacts__inner-tab-card-icon
-                        use(href="./images/sprite.svg#call")
-                      span.contacts__inner-tab-card-text= card.phone
-                  .contacts__inner-tab-card-map-block
-                    .contacts__inner-tab-card-map
-                      iframe.contacts__inner-tab-card-map-iframe(src=card.src)
-            include ./contacts-offices.pug
-          .tab.contacts__inner-tab(id='contacts-inner-tab-2')
-            include ./contacts-centers-mosсow.pug
-          .tab.contacts__inner-tab(id='contacts-inner-tab-3')
-            include ./contacts-centers-region.pug
-          .tab.contacts__inner-tab(id='contacts-inner-tab-4')
-            include ./contacts-centers-karelia.pug
-      .tab.contacts__tab(id='contacts-tab-2')
-        include ./requisites.pug
-      .tab.contacts__tab(id='contacts-tab-3')
-        include ./offer.pug
+.contacts
+  +tabsBlock('contacts', 'contacts', contactsTabs)
+    .tab.contacts__inner-tab.tab--active(id='contacts-tab-1')
+      .contacts__inner-tab-block
+        for card, index in contactsCards
+          .contacts__inner-tab-card
+            .contacts__inner-tab-card-content
+              span.contacts__inner-tab-card-title= card.title
+              .contacts__inner-tab-card-block
+                svg.contacts__inner-tab-card-icon
+                  use(href="./images/sprite.svg#pin")
+                span.contacts__inner-tab-card-text= card.address
+              .contacts__inner-tab-card-block
+                svg.contacts__inner-tab-card-icon
+                  use(href="./images/sprite.svg#call")
+                span.contacts__inner-tab-card-text= card.phone
+            .contacts__inner-tab-card-map-block
+              .contacts__inner-tab-card-map
+                iframe.contacts__inner-tab-card-map-iframe(src=card.src)
+      include ./contacts-offices.pug
+    .tab.contacts__inner-tab(id='contacts-tab-2')
+      include ./contacts-centers-mosсow.pug
+    .tab.contacts__inner-tab(id='contacts-tab-3')
+      include ./contacts-centers-region.pug
+    .tab.contacts__inner-tab(id='contacts-tab-4')
+      include ./contacts-centers-karelia.pug
 
 

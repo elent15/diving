@@ -1,4 +1,10 @@
+include ./mixins/text.pug
+include ./mixins/tabs-block.pug
+
 -
+  const coursesText = [
+    'Обучение дайвингу — это первый и главный шаг к новым ощущениям, которые можно получить только при погружении под воду. Курсы проводятся по Российским государственным и международным стандартам PADI и ISO. Наши инструкторы — опытные профессионалы и увлеченные энтузиасты, а выбор курсов — один из самых обширных в мире. Мы готовы «заразить» любовью к дайвингу каждого, кто стремится открыть для себя подводный мир озер, морей и океанов!',
+  ];
   const coursesTabs = [
     {
       title: 'Расписание занятий',
@@ -11,7 +17,6 @@
       title: 'Дайвинг-курсы в Москве',
     },
   ];
-
   const coursesCards = [
     {
       classTab: 'tab--active',
@@ -194,19 +199,14 @@
         },
       ]
     },
-  ]
+  ];
 
 .section.schedule.schedule-courses
   .container
-    .schedule__text
-      .schedule__paragraph Обучение дайвингу — это первый и главный шаг к новым ощущениям, которые можно получить только при погружении под воду. Курсы проводятся по Российским государственным и международным стандартам PADI и ISO. Наши инструкторы — опытные профессионалы и увлеченные энтузиасты, а выбор курсов — один из самых обширных в мире. Мы готовы «заразить» любовью к дайвингу каждого, кто стремится открыть для себя подводный мир озер, морей и океанов!
-    .tabs-block
-      ul.list-reset.tabs.schedule-courses__tabs
-        for tab, index in coursesTabs
-          li.schedule-courses__item
-            button.btn-reset.tabs__btn.schedule-courses__btn(type='button', data-tab=`courses-tab-${index + 1}`, class=tab.class)= tab.title
+    +text('schedule', coursesText)
+    +tabsBlock('schedule-courses', 'schedule-courses', coursesTabs)
       for item, index in coursesCards
-        .tab.schedule-courses__tab(id=`courses-tab-${index + 1}`, class=item.classTab)
+        .tab.schedule-courses__tab(id=`schedule-courses-tab-${index + 1}`, class=item.classTab)
           .schedule__cards-block
             for card, index in item.block
               .schedule__card(class=card.cardClass)

@@ -34,16 +34,11 @@
     }
 
     @media (max-width:720px) {
-      padding: 16px 24px;
       height: 230px;
-    }
-
-    @media (max-width:480px) {
-      padding: 16px;
     }
   }
 
-  &__btn {
+  &__location-btn {
     padding: 12px 4px 12px 20px;
 
     @media (max-width:1470px) {
@@ -61,29 +56,7 @@
     }
 
     @media (max-width:720px) {
-      aspect-ratio: 690 / 300;
       height: auto;
-    }
-
-    @media (max-width:480px) {
-      min-height: 195px;
-    }
-
-    & .diving-centers__map-iframe {
-      height: 485px;
-
-      @media (max-width:1470px) {
-        height: 400px;
-      }
-
-      @media (max-width:720px) {
-        aspect-ratio: 690 / 300;
-        height: auto;
-      }
-
-      @media (max-width:480px) {
-        min-height: 195px;
-      }
     }
   }
 

@@ -1,0 +1,8 @@
+mixin tabsBlock(className, dataName, tabs)
+  .tabs-block(class=className + '__tabs-block')
+    ul.list-reset.tabs(class=className + '__tabs')
+      for item, index in tabs
+        li(class=className + '__item')
+          button.btn-reset.btn.tabs__btn(class=item.class class=className + '__btn' type='button' data-tab=dataName + `-tab-${index + 1}`)= item.title
+    if block
+      block
