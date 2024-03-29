@@ -87,3 +87,10 @@
 
 // подключения компонентов страницы "Наша команда" (team.html)
 @import "./components/team";
+
+// подключения компонентов страницы "Описание специалиста" (specialist.html)
+@import "./components/specialist";
+@import "./components/specialist-min";
+@import "./components/specialist-schedule";
+@import "./components/schedule-sm";
+@import "./components/form-reg";

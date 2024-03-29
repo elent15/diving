@@ -84,8 +84,6 @@
     }
   }
 
-  &__card-info {}
-
   &__card-author {
     display: block;
     margin-bottom: 1px;
@@ -125,6 +123,15 @@
     padding-right: max(15px, calc(100% - 1440px));
     min-height: 33px;
 
+    & .swiper-btns {
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      @media (max-width:720px) {
+        display: none;
+      }
+    }
+
     @media (max-width:720px) {
       margin-bottom: 32px;
       min-height: auto;
@@ -135,35 +142,14 @@
     }
   }
 
-  &__swiper-top-btns {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
-    @media (max-width:720px) {
-      display: none;
-    }
-  }
-
-  &__swiper-bottom-btns {
+  &__swiper-bottom {
     display: none;
 
     @media (max-width:720px) {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 11px;
       margin-top: 25px;
     }
-  }
-
-  &__swiper-button-prev,
-  &__swiper-button-next {
-    position: static;
-    margin: 0;
-    width: 33px;
-    height: 33px;
   }
 }

@@ -25,6 +25,7 @@
 * Страница "Книги" [books.html](https://elent15.github.io/diving/books.html)
 * Страница "Подарки" [gifts.html](https://elent15.github.io/diving/gifts.html)
 * Страница "Наша команда" [team.html](https://elent15.github.io/diving/team.html): табы
+* Страница "Описание специалиста" [specialist.html](https://elent15.github.io/diving/specialist.html): слайдер с горизонтальным превью
 
 #### Gulp-сборка (Gulp 4)
 

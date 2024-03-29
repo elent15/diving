@@ -1,3 +1,5 @@
+include ./mixins/slider-btns.pug
+
 -
   const reviewsSlides = [
     {
@@ -22,17 +24,7 @@ section.section.reviews
     .swiper.reviews__swiper
       .reviews__swiper-top
         .reviews__text С нами в клубе состоят как любители, так и профессионалы дайвинга России.
-        .reviews__swiper-top-btns
-          button.btn-reset.swiper-button-prev.reviews__swiper-button-prev(type="button")
-            svg.prev
-              use(href="./images/sprite.svg#next")
-            svg.prev-active
-              use(href="./images/sprite.svg#next-active")
-          button.btn-reset.swiper-button-next.reviews__swiper-button-next(type="button")
-            svg.next
-              use(href="./images/sprite.svg#next")
-            svg.next-active
-              use(href="./images/sprite.svg#next-active")
+        +sliderBtns('reviews')
       .swiper-wrapper
         for slide, index in reviewsSlides
           .swiper-slide.reviews__swiper-slide
@@ -47,14 +39,5 @@ section.section.reviews
                   span.reviews__card-author= slide.author
                   span.reviews__card-section Направление:&nbsp;
                   span.reviews__card-section.reviews__card-section-name= slide.section
-      .reviews__swiper-bottom-btns
-          button.btn-reset.swiper-button-prev.reviews__swiper-button-prev(type="button")
-            svg.prev
-              use(href="./images/sprite.svg#next")
-            svg.prev-active
-              use(href="./images/sprite.svg#next-active")
-          button.btn-reset.swiper-button-next.reviews__swiper-button-next(type="button")
-            svg.next
-              use(href="./images/sprite.svg#next")
-            svg.next-active
-              use(href="./images/sprite.svg#next-active")
+      .reviews__swiper-bottom
+        +sliderBtns('reviews')

@@ -1,0 +1,15 @@
+mixin slider(name, slides)
+  for slide, index in slides
+    .swiper-slide(class=name + '__swiper-slide')
+      div(class=name + '__card')
+        div(class=name + '__card-img-block')
+          picture
+            source(srcset=`./images/${name}-${index + 1}.webp`, type="image/webp")
+            img(src=`./images/${name}-${index + 1}.jpg`, alt="Фото")
+        if name == 'blog'
+          .blog__date-block
+            svg.blog__calendar
+              use(href="./images/sprite.svg#calendar")
+            span.blog__card-date= slide.date
+          .blog__card-title= slide.title
+          a.link-btn.blog__card-link(class=slide.class href=`./${slide.href}.html`) Читать

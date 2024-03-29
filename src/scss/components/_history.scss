@@ -47,26 +47,14 @@
   }
 
   &__text {
+    margin-bottom: 0;
     max-width: 100%;
+    color: var(--white);
+    font-size: 15px;
+    line-height: 25px;
 
     @media (max-width:1470px) {
       max-width: 1355px;
-    }
-  }
-
-  &__paragraph {
-    color: var(--white);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-
-    &+.history__paragraph {
-      margin-top: 24px;
-
-      @media (max-width:480px) {
-        margin-top: 16px;
-      }
     }
 
     @media (max-width:480px) {
@@ -76,23 +64,29 @@
   }
 
   &__bold-paragraph {
-    margin-top: 32px;
+    padding-top: 12px;
     max-width: 696px;
-    color: var(--white);
     font-size: 22px;
     font-weight: 700;
     line-height: 25px;
 
     @media (max-width:1470px) {
+      padding-top: 0;
       max-width: 100%;
+      font-size: 20px;
     }
 
     @media (max-width:1100px) {
-      margin-top: 24px;
+      max-width: 100%;
+      font-size: 18px;
+    }
+
+    @media (max-width:720px) {
+      max-width: 100%;
+      font-size: 16px;
     }
 
     @media (max-width:480px) {
-      margin-top: 16px;
       font-size: 14px;
       line-height: 22px;
     }
@@ -100,6 +94,7 @@
 
   &__right-images {
     display: grid;
+    grid-template-rows: repeat(2, 212px);
     grid-template-columns: 280px 334px;
     gap: 35px;
 
@@ -114,6 +109,7 @@
     }
 
     @media (max-width:720px) {
+      grid-template-rows: repeat(2, auto);
       grid-template-columns: calc((100% - 24px) * 0.43) auto;
       width: 451px;
       gap: 24px;
@@ -255,6 +251,10 @@
     margin-bottom: 28px;
     max-width: 696px;
 
+    @media (max-width:1470px) {
+      max-width: 1355px;
+    }
+
     @media (max-width:480px) {
       margin-bottom: 24px;
     }
@@ -283,7 +283,7 @@
     }
   }
 
-  &__middle-swiper-container {
+  &__swiper-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -298,43 +298,17 @@
     }
   }
 
-  &__middle-swiper {
+  &__swiper {
     max-width: 1317px;
   }
 
-  &__middle-swiper-slide {
+  &__swiper-slide {
     @media (max-width:1470px) {
       width: auto;
     }
   }
 
-  &__middle-swiper-btns {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    width: 77px;
-    height: 33px;
-
-    @media (max-width:480px) {
-      width: 67px;
-      height: 28px;
-    }
-  }
-
-  &__middle-swiper-button-prev,
-  &__middle-swiper-button-next {
-    position: static;
-    margin: 0;
-    width: 33px;
-    height: 33px;
-
-    @media (max-width:480px) {
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  &__middle-img-block {
+  &__card-img-block {
     border-radius: 15px;
     width: 310px;
     height: 203px;
@@ -347,8 +321,6 @@
       min-height: 131px;
     }
   }
-
-  &__bottom {}
 
   &__bottom-content {
     display: flex;

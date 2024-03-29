@@ -58,26 +58,12 @@
     gap: 35px;
     padding-top: 3px;
     padding-bottom: 3px;
-  }
 
-  &__swiper-top-btns {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    width: 77px;
-    height: 33px;
-
-    @media (max-width:1100px) {
-      display: none;
+    & .swiper-btns {
+      @media (max-width:1100px) {
+        display: none;
+      }
     }
-  }
-
-  &__swiper-button-prev,
-  &__swiper-button-next {
-    position: static;
-    margin: 0;
-    width: 33px;
-    height: 33px;
   }
 
   &__link {

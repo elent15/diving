@@ -1,0 +1,27 @@
+-
+  const formReg = [
+    {
+      label: 'Желаемая дата',
+      type: 'text',
+      placeholder: '31.01.2024',
+    },
+    {
+      label: 'Фамилия Имя',
+      type: 'text',
+      placeholder: 'Введите Ваше Имя и Фамилию',
+    },
+    {
+      label: 'Контактный телефон',
+      type: 'tel',
+      placeholder: '+7 (___) ___ - __ - __',
+    },
+  ];
+
+mixin formReg(title)
+  .form-reg
+    span.form-reg__title= title
+    span.form-reg__text Оставьте данные и менеджер Вам перезвонит
+    for item in formReg
+      label.form-reg__label= item.label
+        input.input.form-reg__input(type=item.type placeholder=item.placeholder)
+    button.btn-reset.btn.form-reg__btn(type='submit') Записаться

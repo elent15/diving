@@ -99,69 +99,80 @@
   &__cards-block {
     display: grid;
     gap: 34px;
+
+    @media (max-width:1470px) {
+      gap: 24px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
   }
 
   &__card {
-    display: flex;
+    display: grid;
     align-items: center;
-    gap: 46px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 245px 791px auto;
+    gap: 16px 46px;
     min-height: 226px;
     border-radius: 10px;
     padding: 20px 53px 20px 20px;
     background: rgba(255, 255, 255, 0.2);
 
     @media (max-width:1470px) {
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 24px;
+      grid-template-columns: 245px auto 210px;
+      gap: 16px 40px;
+      padding: 20px;
+    }
+
+    @media (max-width:1100px) {
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 245px auto;
+      gap: 16px 40px;
       padding: 20px;
     }
 
     @media (max-width:720px) {
-      flex-direction: column;
-      align-items: flex-start;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: 1fr;
     }
   }
 
   &__card-img-block {
+    grid-row: 1 / 3;
     border-radius: 10px;
     width: 245px;
     aspect-ratio: 245 / 186;
-    background-color: var(--light-gray);
     overflow: hidden;
 
     @media (max-width:720px) {
-      align-self: center;
+      grid-row: 1;
+      justify-self: center;
     }
   }
 
   &__card-content {
-    max-width: 791px;
+    grid-column: 2 / 3;
+    align-self: flex-end;
     width: 100%;
-
-    @media (max-width:1470px) {
-      max-width: 100%;
-      width: 55%;
-    }
-
-    @media (max-width:1100px) {
-      width: calc(100% - 24px - 245px);
-    }
-
-    @media (max-width:720px) {
-      width: 100%;
-    }
+    color: var(--white);
 
     & svg {
       flex-shrink: 0;
       width: 19px;
       height: 19px;
+      fill: var(--white);
+    }
+
+    @media (max-width:720px) {
+      grid-row: 2;
+      grid-column: 1;
     }
   }
 
   &__card-content-title {
     margin-bottom: 21px;
-    color: var(--white);
     font-size: 24px;
     font-weight: 500;
     line-height: 26px;
@@ -169,7 +180,6 @@
     @media (max-width:1100px) {
       margin-bottom: 16px;
       font-size: 22px;
-      text-wrap: balance;
     }
 
     @media (max-width:480px) {
@@ -186,18 +196,15 @@
     border-bottom: 1px solid rgba(236, 236, 236, 0.15);
     padding-top: 16px;
     padding-bottom: 12px;
-    margin-bottom: 16px;
-    color: var(--white);
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
 
-    & svg {
-      fill: var(--white);
+    @media (max-width:1470px) {
+      padding-top: 12px;
     }
 
     @media (max-width:1100px) {
-      padding-top: 12px;
       line-height: 24px;
     }
 
@@ -207,65 +214,71 @@
     }
   }
 
-  &__card-content-bottom {
+  &__card-bottom {
+    grid-column: 2 / 3;
+    align-self: flex-start;
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @media (max-width:1470px) {
+      flex-wrap: wrap;
+      gap: 12px 40px;
+    }
+
+    @media (max-width:1100px) {
+      gap: 12px 36px;
+    }
+
+    @media (max-width:720px) {
+      grid-row: 3;
+      grid-column: 1;
+    }
+  }
+
+  &__card-bottom-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--white);
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
 
-    @media (max-width:1470px) {
-      flex-wrap: wrap;
-      gap: 12px 24px;
-    }
-
-    @media (max-width:1100px) {
-      gap: 10px 24px;
-    }
-  }
-
-  &__card-content-bottom-block {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    @media (max-width:1470px) {
-      &:first-child {
-        width: 100%;
-      }
+    & svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
     }
   }
 
   &__card-btns {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
     display: flex;
     flex-direction: column;
     gap: 9px;
     margin-left: auto;
     width: 210px;
 
-    @media (max-width:1470px) {
-      margin-left: 0;
-      min-width: 165px;
-      width: 16%;
-      max-width: 210px;
-    }
-
     @media (max-width:1100px) {
+      grid-row: 3;
+      grid-column: 1 / 3;
       flex-direction: row;
       gap: 24px;
-      max-width: 100%;
-      width: 514px;
+      margin-top: 8px;
+      width: 100%;
     }
 
     @media (max-width:720px) {
+      grid-row: 4;
+      grid-column: 1;
       gap: 16px;
-      width: 100%;
     }
 
     @media (max-width:480px) {
       flex-direction: column;
+      gap: 12px;
     }
   }
 
@@ -301,7 +314,7 @@
   &__card-link {
     border: 1px solid #e6e6e6;
     border-radius: 5px;
-    padding: 12px;
+    padding: 10px 12px;
     width: 100%;
     min-height: 50px;
     color: var(--white);

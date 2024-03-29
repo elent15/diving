@@ -2,41 +2,23 @@
   &__title {
     margin-bottom: 21px;
     max-width: 696px;
+
+    @media (max-width:1470px) {
+      max-width: 1355px;
+    }
   }
 
   &__text {
-    margin-bottom: 56px;
     max-width: 965px;
+    color: var(--white);
+    font-size: 15px;
+    line-height: 25px;
 
     @media (max-width:1470px) {
-      margin-bottom: 48px;
       max-width: 1355px;
     }
 
-    @media (max-width:1100px) {
-      margin-bottom: 36px;
-    }
-
     @media (max-width:480px)  {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__paragraph {
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25px;
-
-    & + .moskvarium__paragraph {
-      margin-top: 25px;
-
-      @media (max-width:480px) {
-        margin-top: 16px;
-      }
-    }
-
-    @media (max-width:480px) {
       font-size: 14px;
       line-height: 22px;
     }
@@ -67,33 +49,7 @@
     }
   }
 
-  &__swiper-btns {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    width: 77px;
-    height: 33px;
-
-    @media (max-width:480px) {
-      width: 67px;
-      height: 28px;
-    }
-  }
-
-  &__swiper-button-prev,
-  &__swiper-button-next {
-    position: static;
-    margin: 0;
-    width: 33px;
-    height: 33px;
-
-    @media (max-width:480px) {
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  &__img-block {
+  &__card-img-block {
     border-radius: 15px;
     width: 310px;
     height: 203px;

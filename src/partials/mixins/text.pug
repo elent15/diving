@@ -2,3 +2,5 @@ mixin text(name, text)
   .text(class=name + '__text')
     for paragraph in text
       p.text__paragraph!= paragraph
+    if block
+      block

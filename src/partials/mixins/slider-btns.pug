@@ -1,0 +1,12 @@
+mixin sliderBtns(name)
+  .swiper-btns
+    button.btn-reset.swiper-button-prev(class=name + '-swiper-button-prev', type="button")
+      svg.prev
+        use(href="./images/sprite.svg#next")
+      svg.prev-active
+        use(href="./images/sprite.svg#next-active")
+    button.btn-reset.swiper-button-next(class=name + '-swiper-button-next', type="button")
+      svg.next
+        use(href="./images/sprite.svg#next")
+      svg.next-active
+        use(href="./images/sprite.svg#next-active")

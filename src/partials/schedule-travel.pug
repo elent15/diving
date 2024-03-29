@@ -1,4 +1,5 @@
 include ./mixins/text.pug
+include ./mixins/schedule-cards.pug
 
 -
   const scheduleText = [
@@ -51,52 +52,93 @@ include ./mixins/text.pug
   ];
   const scheduleCards = [
     {
-      title: 'Дайвинг с мантами и акулами на Мальдивах', price: 'от 1 900 $', date: '21 сентября - 1 октября',
-      leader: 'Екатерина Кусачёва', instructor: 'Екатерина Кусачёва',
+      title: 'Дайвинг с мантами и акулами на Мальдивах', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : '21 сентября - 1 октября',
+        'leader' : 'Турлидер: Екатерина Кусачёва',
+        'tour-guide' : 'Инструктор: Екатерина Кусачёва',
+      },
     },
     {
-      title: 'Дайвинг с дельфинами на Красном море', price: 'от 1 900 $', date: '29 июня - 6 июля',
-      leader: 'Дмитрий Орлов', instructor: 'Дмитрий Орлов',
+      title: 'Дайвинг с дельфинами на Красном море', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : '29 июня - 6 июля',
+        'leader' : 'Турлидер: Дмитрий Орлов',
+        'tour-guide' : 'Инструктор: Дмитрий Орлов',
+      },
       btnClass: 'schedule__card-btn--active',
     },
     {
-      title: 'Дайвинг-сафари в Колумбии', price: 'от 18 000 $', date: '29 октября - 20 ноября',
-      leader: 'Дмитрий Орлов', instructor: 'Дмитрий Орлов',
+      title: 'Дайвинг-сафари в Колумбии', price: 'от 18 000 $',
+      bottom: {
+        'schedule-calendar' : '29 октября - 20 ноября',
+        'leader' : 'Турлидер: Дмитрий Орлов',
+        'tour-guide' : 'Инструктор: Дмитрий Орлов',
+      },
     },
     {
-      title: 'Дайвинг с китами в Индийском океане', price: 'от 3 450 $', date: '11 мая - 19 мая',
-      leader: 'Ирина Квасова', instructor: 'Ирина Квасова',
+      title: 'Дайвинг с китами в Индийском океане', price: 'от 3 450 $',
+      bottom: {
+        'schedule-calendar' : '11 мая - 19 мая',
+        'leader' : 'Турлидер: Ирина Квасова',
+        'tour-guide' : 'Инструктор: Ирина Квасова',
+      },
     },
     {
-      title: 'Дайвинг-сафари на Красном море', price: 'от 1 350 $', date: '27 апреля - 4 мая',
-      leader: 'Андрей Павлов', instructor: 'Андрей Павлов',
+      title: 'Дайвинг-сафари на Красном море', price: 'от 1 350 $',
+      bottom: {
+        'schedule-calendar' : '27 апреля - 4 мая',
+        'leader' : 'Турлидер: Андрей Павлов',
+        'tour-guide' : 'Инструктор: Андрей Павлов',
+      },
     },
     {
-      title: 'Дайвинг с акулами в ЮАР', price: 'от 3 100 $', date: '15 июня - 25 июня',
-      leader: 'Наталья Бараночникова', instructor: 'Наталья Бараночникова',
+      title: 'Дайвинг с акулами в ЮАР', price: 'от 3 100 $',
+      bottom: {
+        'schedule-calendar' : '15 июня - 25 июня',
+        'leader' : 'Турлидер: Наталья Бараночникова',
+        'tour-guide' : 'Инструктор: Наталья Бараночникова',
+      },
       cardClass: 'none',
     },
     {
-      title: 'Дайвинг в России на острове Монерон', price: 'от 340 000 руб.', date: '1 августа - 11 августа',
-      leader: 'Наталья Бараночникова', instructor: 'Наталья Бараночникова',
+      title: 'Дайвинг в России на острове Монерон', price: 'от 340 000 руб.',
+      bottom: {
+        'schedule-calendar' : '1 августа - 11 августа',
+        'leader' : 'Турлидер: Наталья Бараночникова',
+        'tour-guide' : 'Инструктор: Наталья Бараночникова',
+      },
       cardClass: 'none',
     },
     {
-      title: 'Дайвинг с акулами в Карибском море', price: 'от 4 000 $', date: '29 октября - 20 ноября',
-      leader: 'Алексей Побожаков', instructor: 'Алексей Побожаков',
+      title: 'Дайвинг с акулами в Карибском море', price: 'от 4 000 $',
+      bottom: {
+        'schedule-calendar' : '29 октября - 20 ноября',
+        'leader' : 'Турлидер: Алексей Побожаков',
+        'tour-guide' : 'Инструктор: Алексей Побожаков',
+      },
       cardClass: 'none',
     },
     {
-      title: 'Дайвинг с китами в Индийском океане', price: 'от 5 500 $', date: '1 мая - 16 мая',
-      leader: 'Екатерина Кусачёва', instructor: 'Екатерина Кусачёва',
+      title: 'Дайвинг с китами в Индийском океане', price: 'от 5 500 $',
+      bottom: {
+        'schedule-calendar' : '1 мая - 16 мая',
+        'leader' : 'Турлидер: Екатерина Кусачёва',
+        'tour-guide' : 'Инструктор: Екатерина Кусачёва',
+      },
       cardClass: 'none',
     },
     {
-      title: 'Дейли-дайвинг в Океании', price: 'от 8 500 $', date: '14 сентября - 29 сентября',
-      leader: 'Дмитрий Орлов', instructor: 'Дмитрий Орлов',
+      title: 'Дейли-дайвинг в Океании', price: 'от 8 500 $',
+      bottom: {
+        'schedule-calendar' : '14 сентября - 29 сентября',
+        'leader' : 'Турлидер: Дмитрий Орлов',
+        'tour-guide' : 'Инструктор: Дмитрий Орлов',
+      },
       cardClass: 'none',
     },
   ]
+
 .section.schedule
   .container
     +text('schedule', scheduleText)
@@ -115,33 +157,4 @@ include ./mixins/text.pug
                   li.select__item(tabindex="0")= value
       button.btn-reset.btn.schedule__filter-btn(type='button') Применить фильтр
     .schedule__cards-block
-      for card, index in scheduleCards
-        .schedule__card(class=card.cardClass)
-          .schedule__card-img-block
-            picture
-              source(srcset=`./images/schedule-${index + 1}.webp`, type="image/webp")
-              img(src=`./images/schedule-${index + 1}.jpg`, alt="Фото")
-          .schedule__card-content
-            .schedule__card-content-title= card.title
-            .schedule__card-content-price
-              svg
-                use(href="./images/sprite.svg#wallet")
-              = card.price
-            .schedule__card-content-bottom
-              .schedule__card-content-bottom-block
-                svg
-                  use(href="./images/sprite.svg#schedule-calendar")
-                =card.date
-              .schedule__card-content-bottom-block
-                svg
-                  use(href="./images/sprite.svg#leader")
-                |Турлидер:&nbsp;
-                =card.leader
-              .schedule__card-content-bottom-block
-                svg
-                  use(href="./images/sprite.svg#tour-guide")
-                |Инструктор:&nbsp;
-                =card.instructor
-          .schedule__card-btns
-            button.btn-reset.btn.white-btn.schedule__card-btn(class=card.btnClass, type="button", data-modal='modal-book') Забронировать
-            a.link-btn.schedule__card-link(href='#') Подробнее
+      +scheduleCards('schedule', scheduleCards, 'Забронировать', 'modal-book')

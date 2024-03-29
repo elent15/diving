@@ -3,41 +3,23 @@
     margin-bottom: 27px;
     max-width: 696px;
 
+    @media (max-width:1470px) {
+      max-width: 1355px;
+    }
+
     @media (max-width:480px) {
       margin-bottom: 24px;
     }
   }
 
   &__text {
-    margin-bottom: 52px;
     max-width: 965px;
-
-    @media (max-width:1470px) {
-      margin-bottom: 48px;
-      max-width: 1355px;
-    }
-
-    @media (max-width:1100px) {
-      margin-bottom: 36px;
-    }
-
-    @media (max-width:480px) {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__paragraph {
     color: var(--white);
     font-size: 15px;
-    font-weight: 400;
     line-height: 25px;
 
-    &+.spas-kamenka__paragraph {
-      margin-top: 25px;
-
-      @media (max-width:480px) {
-        margin-top: 16px;
-      }
+    @media (max-width:1470px) {
+      max-width: 1355px;
     }
 
     @media (max-width:480px) {

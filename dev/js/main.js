@@ -486,8 +486,8 @@ new Swiper('.reviews__swiper', {
   slidesPerView: 'auto',
   keyboard: true,
   navigation: {
-    nextEl: '.reviews__swiper-button-next',
-    prevEl: '.reviews__swiper-button-prev',
+    nextEl: '.reviews-swiper-button-next',
+    prevEl: '.reviews-swiper-button-prev',
   },
   breakpoints: {
     320: {
@@ -506,8 +506,8 @@ new Swiper('.blog__swiper', {
   slidesPerView: 'auto',
   keyboard: true,
   navigation: {
-    nextEl: '.blog__swiper-button-next',
-    prevEl: '.blog__swiper-button-prev',
+    nextEl: '.blog-swiper-button-next',
+    prevEl: '.blog-swiper-button-prev',
   },
   breakpoints: {
     320: {
@@ -522,11 +522,11 @@ new Swiper('.blog__swiper', {
   }
 });
 
-new Swiper('.history__middle-swiper', {
+new Swiper('.history__swiper', {
   keyboard: true,
   navigation: {
-    nextEl: '.history__middle-swiper-button-next',
-    prevEl: '.history__middle-swiper-button-prev',
+    nextEl: '.history-swiper-button-next',
+    prevEl: '.history-swiper-button-prev',
   },
   breakpoints: {
     320: {
@@ -555,8 +555,8 @@ new Swiper('.history__middle-swiper', {
 new Swiper('.moskvarium__swiper', {
   keyboard: true,
   navigation: {
-    nextEl: '.moskvarium__swiper-button-next',
-    prevEl: '.moskvarium__swiper-button-prev',
+    nextEl: '.moskvarium-swiper-button-next',
+    prevEl: '.moskvarium-swiper-button-prev',
   },
   breakpoints: {
     320: {
@@ -580,6 +580,36 @@ new Swiper('.moskvarium__swiper', {
       spaceBetween: 26,
     }
   }
+});
+
+const swiper = new Swiper('.specialist-min__swiper', {
+  keyboard: true,
+  navigation: {
+    nextEl: '.specialist-min-swiper-button-next',
+    prevEl: '.specialist-min-swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+    },
+    481: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    1471: {
+      slidesPerView: 5,
+      spaceBetween: 18,
+    }
+  }
+});
+
+new Swiper(".specialist__swiper", {
+  keyboard: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper,
+  },
 });
 
 // tabs
