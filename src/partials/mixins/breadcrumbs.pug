@@ -1,0 +1,10 @@
+mixin breadcrumbs(links, lastItem)
+  .breadcrumbs
+    ul.list-reset.breadcrumbs__list
+      li.breadcrumbs__item
+        a.link.breadcrumbs__link(href="./index.html") Главная
+      if links
+        for link, href in links
+          li.breadcrumbs__item
+            a.link.breadcrumbs__link(href=`./${href}.html`)= link
+      li.breadcrumbs__item= lastItem

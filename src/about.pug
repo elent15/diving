@@ -1,26 +1,19 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport",
-    content="width=device-width, initial-scale=1.0")
-    title ruDive
-    link(rel="stylesheet" href="./css/vendor.css")
-    link(rel="stylesheet" href="./css/main.css")
-    script(defer src="./js/vendor.js")
-    script(defer src="./js/main.js")
-  body
-    .wrapper
-      include ./partials/header.pug
-      include ./partials/modal.pug
-      .wrapper__bg.wrapper__about-bg(style="background-image: url(./images/about-bg.webp);")
-      main.main
-        include ./partials/about-hero.pug
-        include ./partials/about.pug
-        include ./partials/office.pug
-        include ./partials/history.pug
-        include ./partials/spas-kamenka.pug
-        include ./partials/moskvarium.pug
-        include ./partials/deeds.pug
-        include ./partials/about-blog.pug
-      include ./partials/footer.pug
+extends ./partials/templates/page-lg.pug
+
+block bg
+  .wrapper__bg.wrapper__about-bg(style="background-image: url(./images/about-bg.webp);")
+
+block vars
+  - const name = 'about';
+  - const lastItem = 'О нас';
+  - const title = 'Мы страстно любим море, дайвинг и людей, обожаем путешествовать и познавать мир';
+  - const text = 'Это помогает нам правильно организовывать самые сложные погружения от Антарктиды до Северного полюса, разрабатывать новые программы путешествий в самые дикие уголки земного шара, запускать новые учебные программы.';
+
+block append main
+  include ./partials/about.pug
+  include ./partials/office.pug
+  include ./partials/history.pug
+  include ./partials/spas-kamenka.pug
+  include ./partials/moskvarium.pug
+  include ./partials/deeds.pug
+  include ./partials/about-blog.pug

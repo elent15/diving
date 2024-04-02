@@ -1,23 +1,13 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport",
-    content="width=device-width, initial-scale=1.0")
-    title ruDive
-    link(rel="stylesheet" href="./css/vendor.css")
-    link(rel="stylesheet" href="./css/main.css")
-    script(defer src="./js/vendor.js")
-    script(defer src="./js/main.js")
-  body
-    .wrapper
-      include ./partials/header.pug
-      include ./partials/modal.pug
-      .wrapper__bg.wrapper__page-bg(style="background-image: url(./images/page-bg.webp);")
-      main.main
-        include ./partials/training-hero.pug
-        include ./partials/training.pug
-        include ./partials/training-centers.pug
-        include ./partials/request.pug
-        include ./partials/registration.pug
-      include ./partials/footer.pug
+extends ./partials/templates/page-lg.pug
+
+block vars
+  - const name = 'training';
+  - const lastItem = 'Обучение';
+  - const title = 'Обучение';
+  - text = 'Группа RuDIVE (в прошлом — Подводный клуб МГУ) — известная международная школа дайвинга, имеет высокий статус PADI 5* IDC дайв-центра № 3564 и основана в 1996 г. Обучение в нашей школе дайвинга проходит по международным стандартам PADI, ISO и ГОСТ. Инструкторы — опытные профессионалы-энтузиасты. В школе преподают два PADI курс-директора, несколько мастер-инструкторов и кандидатов наук. Разнообразие курсов в нашем клубе — самое большое в мире, от начального уровня до тримикс-инструктора. Те, кто хочет только попробовать дайвинг, могут сделать пробное погружение в бассейне на Лодочной и в "Азовском", "Крокус Сити Океанариуме", "Москвариуме" или в Подмосковье.';
+
+block append main
+  include ./partials/training.pug
+  include ./partials/training-centers.pug
+  include ./partials/request.pug
+  include ./partials/registration.pug

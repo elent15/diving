@@ -1,9 +1,45 @@
 .schedule-sm {
-  width: 100%;
-  max-width: 965px;
+  &__title {
+    margin-bottom: 50px;
 
-  @media (max-width:1100px) {
-    max-width: 100%;
+    @media (max-width:1100px) {
+      margin-bottom: 36px;
+    }
+
+    @media (max-width:720px) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width:480px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 36px;
+
+    @media (max-width:1470px) {
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width:1100px) {
+      flex-direction: column;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &__cards {
+    width: 100%;
+    max-width: 965px;
+
+    @media (max-width:1100px) {
+      max-width: 100%;
+    }
   }
 
   &__card {

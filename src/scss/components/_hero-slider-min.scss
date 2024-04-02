@@ -1,0 +1,16 @@
+.hero-slider-min {
+  &__swiper {
+    & .swiper-slide {
+      width: auto;
+
+      &.swiper-slide-thumb-active {
+        display: none;
+      }
+
+      & img {
+        height: clamp(155px, 6.116rem + 7.94vw, 235px);
+        aspect-ratio: 346 / 235;
+      }
+    }
+  }
+}

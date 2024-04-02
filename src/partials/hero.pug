@@ -1,6 +1,6 @@
 -
   const heroLinks = [
-    {title: 'Как попробовать', href: '#'},
+    {title: 'Как попробовать', href: '#', class: 'hero__link--active'},
     {title: 'Дайвинг в океанариумах', href: 'oceanariums'},
     {title: 'Цены на обучение', href: 'prices'},
     {title: 'Расписание туров', href: 'schedule'},
@@ -11,7 +11,4 @@ section.hero(style="background-image: url(./images/hero-bg.webp);")
   .hero__content
     .hero__links
       for link, index in heroLinks
-        if index == 0
-          a.link-btn.hero__link.hero__link--active(href=`./${link.href}.html`)= link.title
-        else
-          a.link-btn.hero__link(href=`./${link.href}.html`)= link.title
+        a.link-btn.hero__link(class=link.class href=`./${link.href}.html`)= link.title

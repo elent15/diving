@@ -16,8 +16,8 @@
 * Страница "Обучение" [training.html](https://elent15.github.io/diving/training.html)
 * Страница "Туризм" [tourism.html](https://elent15.github.io/diving/tourism.html)
 * Страница "Дайвинг-центры" [centers.html](https://elent15.github.io/diving/centers.html): кастомный скролл (плагин simplebar), яндекс карты, модальное окно "Забронировать"
-* Страница "О нас" [about.html](https://elent15.github.io/diving/about.html): слайдеры, аккордеон
-* Страница "Контакты" [contacts.html](https://elent15.github.io/diving/contacts.html): двухуровневые табы
+* Страница "О нас" [about.html](https://elent15.github.io/diving/about.html): слайдеры, аккордеон, яндекс карта
+* Страница "Контакты" [contacts.html](https://elent15.github.io/diving/contacts.html): двухуровневые табы, яндекс карты
 * Страница "Дайвинг в океанариумах" [oceanariums.html](https://elent15.github.io/diving/oceanariums.html): фоновое видео, аккордеон в секции "Вопросы и ответы", аккордеон в секции "Стоимость дайвинга" при ширине экрана меньше 720px, модальные окна "Купить" и "Забронировать"
 * Страница "Цены на обучение" [prices.html](https://elent15.github.io/diving/prices.html): аккордеон, модальные окна "Купить" и "Записаться"
 * Страница "Расписание клубных поездок" [schedule.html](https://elent15.github.io/diving/schedule.html): кастомные селекты, аккордеон в секции "Дисконтно-бонусная система" при ширине экрана меньше 720px, модальное окно "Забронировать"
@@ -25,7 +25,8 @@
 * Страница "Книги" [books.html](https://elent15.github.io/diving/books.html)
 * Страница "Подарки" [gifts.html](https://elent15.github.io/diving/gifts.html)
 * Страница "Наша команда" [team.html](https://elent15.github.io/diving/team.html): табы
-* Страница "Описание специалиста" [specialist.html](https://elent15.github.io/diving/specialist.html): слайдер с горизонтальным превью
+* Страница "Описание специалиста" [specialist.html](https://elent15.github.io/diving/specialist.html): слайдер с горизонтальным превью, модальное окно "Записаться"
+* Страница "Карточка дайвинг-центра" [diving-center.html](https://elent15.github.io/diving/diving-center.html): слайдер с горизонтальным превью на главном экране, яндекс карта, модальное окно "Записаться"
 
 #### Gulp-сборка (Gulp 4)
 

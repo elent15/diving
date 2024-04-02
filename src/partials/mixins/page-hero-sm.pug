@@ -1,13 +1,7 @@
+include ./breadcrumbs.pug
+
 mixin pageHeroSm(links, lastItem, title)
-  section.page-hero-sm(style="background-image: url(./images/page-hero-bg.webp);")
+  section.page-hero-sm(style=`background-image: url(./images/page-hero-bg.webp);`)
     .container.page-hero-sm__container
-      .breadcrumbs
-        ul.list-reset.breadcrumbs__list
-          li.breadcrumbs__item
-            a.link.breadcrumbs__link(href="./index.html") Главная
-          if links
-            for link, href in links
-              li.breadcrumbs__item
-                a.link.breadcrumbs__link(href=`./${href}.html`)= link
-          li.breadcrumbs__item= lastItem
+      +breadcrumbs(links, lastItem)
       h2.second-title.page-hero-sm__title= title

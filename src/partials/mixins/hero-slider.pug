@@ -1,0 +1,25 @@
+include ./breadcrumbs.pug
+include ./slider.pug
+include ./slider-btns.pug
+
+mixin heroSlider(sliderName, sliderMinName, sliderNav, heroTitle)
+  section.page-hero.hero-slider(class=sliderName)
+    .swiper.hero-slider__swiper(class=sliderName + '__swiper')
+      .page-hero__container.hero-slider__container
+        .container.hero-slider__breadcrumbs
+          +breadcrumbs(links, lastItem)
+        .hero-slider__content-block
+          .container.hero-slider__content-container
+            .hero-slider__content
+              h3.third-title.page-hero__title.hero-slider__title(class=sliderName + '__title')= heroTitle
+              if block
+                block
+            if sliderNav
+              .hero-slider__btns
+                +sliderBtns(sliderName)
+      .swiper-wrapper
+        +slider(sliderName, [1, 2, 3, 4, 5, 6, 7])
+    .hero-slider-min(class=sliderMinName)
+      .swiper.hero-slider-min__swiper(class=sliderMinName + '__swiper')
+        .swiper-wrapper
+          +slider(sliderMinName, [1, 2, 3, 4, 5, 6, 7])

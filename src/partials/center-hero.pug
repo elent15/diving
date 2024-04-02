@@ -1,0 +1,29 @@
+include ./mixins/hero-slider.pug
+
+- const links = {'centers' : 'Дайвинг-центры'};
+- const lastItem = 'Азовский';
+- const heroTitle = 'Дайвинг центр «Азовский»';
+-
+  const dataBlocks = [
+    {
+      class: 'address',
+      text: 'Адрес: ул. Азовская, д. 24',
+    },
+    {
+      class: 'time',
+      text: 'с 11:00 до 21:00',
+    },
+    {
+      class: 'manager',
+      text: 'Менеджер дайв-центра <span class="center-hero__data-block-span">Сергей Бурыкин</span>',
+    },
+    {
+      class: 'phone',
+      text: '+7 (917) 594-54-89',
+    },
+  ];
+
++heroSlider('center-hero', 'center-hero-min', false, heroTitle)
+  .center-hero__data
+    for block in dataBlocks
+      .center-hero__data-block(class='center-hero__data-block--' + block.class)!= block.text

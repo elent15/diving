@@ -1,26 +1,19 @@
+include ./mixins/breadcrumbs.pug
+
+- const lastItem = 'Дайвинг в Океанариумах';
+
 section.page-hero.oceanariums-hero
   video.oceanariums-hero__video(src='./resources/oceanariums-1.mp4', autoplay, playsinline, poster='./images/oceanariums-hero-bg-1.webp')
   .container.page-hero__container.oceanariums-hero__container
-    .breadcrumbs
-      ul.list-reset.breadcrumbs__list
-        li.breadcrumbs__item
-          a.link.breadcrumbs__link(href="./index.html") Главная
-        li.breadcrumbs__item Дайвинг в Океанариумах
+    +breadcrumbs(links, lastItem)
     .page-hero__content.oceanariums-hero__content
       h2.second-title.page-hero__title.oceanariums-hero__title Дайвинг в океанариумах
       .oceanariums-hero__cards-block
-        .oceanariums-hero__card.oceanariums-hero__card--active
-          picture
-            source(srcset='./images/oceanariums-hero-1.webp', type="image/webp")
-            img(src='./images/oceanariums-hero-1.png', alt="Дайвинг в океанариуме")
-          button.btn-reset.oceanariums-hero__play-btn(type="button")
-            svg
-              use(href="./images/sprite.svg#pleer")
-        .oceanariums-hero__card
-          picture
-            source(srcset='./images/oceanariums-hero-2.webp', type="image/webp")
-            img(src='./images/oceanariums-hero-2.png', alt="Дайвинг в океанариуме")
-          button.btn-reset.oceanariums-hero__play-btn(type="button")
-            svg
-              use(href="./images/sprite.svg#pleer")
-
+        for index in [1 , 2]
+          .oceanariums-hero__card(class=(index == '1') ? 'oceanariums-hero__card--active' : '')
+            picture
+              source(srcset=`./images/oceanariums-hero-${index}.webp`, type="image/webp")
+              img(src=`./images/oceanariums-hero-${index}.png`, alt="Дайвинг в океанариуме")
+            button.btn-reset.oceanariums-hero__play-btn(type="button")
+              svg
+                use(href="./images/sprite.svg#pleer")

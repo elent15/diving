@@ -91,6 +91,13 @@
 // подключения компонентов страницы "Описание специалиста" (specialist.html)
 @import "./components/specialist";
 @import "./components/specialist-min";
-@import "./components/specialist-schedule";
 @import "./components/schedule-sm";
 @import "./components/form-reg";
+
+// подключения компонентов страницы "Карточка дайвинг-центра" (diving-center.html)
+@import "./components/center-hero";
+@import "./components/hero-slider";
+@import "./components/hero-slider-min";
+@import "./components/center-location";
+@import "./components/center-route";
+@import "./components/center-info";

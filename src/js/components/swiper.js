@@ -128,3 +128,21 @@ new Swiper(".specialist__swiper", {
     swiper: swiper,
   },
 });
+
+const centerHeroSwiper = new Swiper('.center-hero-min__swiper', {
+  keyboard: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+});
+
+new Swiper(".center-hero__swiper", {
+  keyboard: true,
+  spaceBetween: 0,
+  thumbs: {
+    swiper: centerHeroSwiper,
+  },
+  navigation: {
+    nextEl: '.center-hero-swiper-button-next',
+    prevEl: '.center-hero-swiper-button-prev',
+  },
+});

@@ -1,23 +1,13 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport",
-    content="width=device-width, initial-scale=1.0")
-    title ruDive
-    link(rel="stylesheet" href="./css/vendor.css")
-    link(rel="stylesheet" href="./css/main.css")
-    script(defer src="./js/vendor.js")
-    script(defer src="./js/main.js")
-  body
-    .wrapper
-      include ./partials/header.pug
-      include ./partials/modal.pug
-      .wrapper__bg.wrapper__page-bg(style="background-image: url(./images/page-bg.webp);")
-      main.main
-        include ./partials/modal-book.pug
-        include ./partials/centers-hero.pug
-        include ./partials/diving-centers.pug
-        include ./partials/equipment.pug
-        include ./partials/centers-registration.pug
-      include ./partials/footer.pug
+extends ./partials/templates/page-lg.pug
+
+block vars
+  - const name = 'centers';
+  - const lastItem = 'Дайвинг-центры';
+  - const title = 'Дайвинг-центры RuDIVE';
+  - text = 'имеют высокий международный статус PADI 5* IDC дайвинг-центров, под единым номером 3564 в реестре PADI. Обучение в дайв-центрах RuDIVE проходит по международным стандартам PADI, ISO и российским стандартам ГОСТ.';
+
+block append main
+  include ./partials/modal-book.pug
+  include ./partials/diving-centers.pug
+  include ./partials/equipment.pug
+  include ./partials/centers-registration.pug

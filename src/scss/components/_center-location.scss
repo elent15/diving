@@ -1,0 +1,27 @@
+.center-location {
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    max-width: 1366px;
+  }
+
+  &__map-block {
+    width: 100%;
+    min-height: 200px;
+    aspect-ratio: 1920 / 537;
+    background-color: var(--light-gray);
+  }
+
+  &__map {
+    height: 100%;
+  }
+
+  &__map-iframe {
+    position: relative;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
