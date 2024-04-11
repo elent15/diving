@@ -1,0 +1,29 @@
+.trip-hero {
+  &__content-block {
+    padding-top: 30px;
+    padding-bottom: 42px;
+
+    @media (max-width:720px) {
+      padding-bottom: 32px;
+    }
+
+    @media (max-width:480px) {
+      padding-top: 24px;
+    }
+  }
+
+  &__content {
+    max-width: 860px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

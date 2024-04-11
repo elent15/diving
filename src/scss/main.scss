@@ -44,6 +44,7 @@
 @import "./components/history";
 @import "./components/spas-kamenka";
 @import "./components/moskvarium";
+@import "./components/accordion";
 @import "./components/deeds";
 @import "./components/about-blog";
 
@@ -101,3 +102,10 @@
 @import "./components/center-location";
 @import "./components/center-route";
 @import "./components/center-info";
+
+// подключения компонентов страницы "Карточка поездки" (trip-card.html)
+@import "./components/trip-hero";
+@import "./components/trip-info";
+@import "./components/trip-program";
+@import "./components/characteristics";
+@import "./components/trip-courses";

@@ -27,6 +27,7 @@
 * Страница "Наша команда" [team.html](https://elent15.github.io/diving/team.html): табы
 * Страница "Описание специалиста" [specialist.html](https://elent15.github.io/diving/specialist.html): слайдер с горизонтальным превью, модальное окно "Записаться"
 * Страница "Карточка дайвинг-центра" [diving-center.html](https://elent15.github.io/diving/diving-center.html): слайдер с горизонтальным превью на главном экране, яндекс карта, модальное окно "Записаться"
+* Страница "Карточка поездки" [trip-card.html](https://elent15.github.io/diving/trip-card.html): слайдер с горизонтальным превью на главном экране, яндекс карта, аккордеон, модальное окно "Записаться"
 
 #### Gulp-сборка (Gulp 4)
 

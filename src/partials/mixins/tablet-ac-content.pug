@@ -1,0 +1,6 @@
+mixin tabletAcContent(name, body)
+  ul.list-reset
+    for value, key in body
+      li(class=name + '__item')
+        span(class=name + '__item-cell' class=name + '__item-header-cell')= key
+        span(class=name + '__item-cell')= value

@@ -43,6 +43,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 32px;
+
+    @media (max-width:720px) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 
   &__title {
@@ -58,7 +64,7 @@
   }
 
   &__btns {
-    margin-right: 320px;
+    margin-right: clamp(0px, -35.032rem + 50.96vw, 320px);
     pointer-events: all;
   }
 
@@ -68,7 +74,7 @@
     & img {
       width: 100%;
       height: calc(100vh - clamp(155px, 6.116rem + 7.94vw, 235px));
-      min-height: 320px;
+      min-height: 345px;
     }
   }
 }

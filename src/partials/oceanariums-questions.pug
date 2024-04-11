@@ -1,3 +1,5 @@
+include ./mixins/accordion.pug
+
 -
   const oceanariumsAc = [
     {
@@ -60,7 +62,17 @@
       header: 'Как оплатить погружение, если вы сертифицированный дайвер?',
       text: [
               'Сначала необходимо забронировать погружение, желательно за 1-2 недели до предполагаемой даты. Сделать это можно через онлайн формы: ',
-      ]
+      ],
+      buttons: [
+        {
+          class: 'moskvarium',
+          text: 'Забронировать погружение в Москвариуме'
+        },
+        {
+          class: 'crocus-city',
+          text: 'Забронировать погружение в Крокус Сити Океанариуме'
+        },
+      ],
     },
     {
       header: 'После оплаты на почту пришли медицинские формы. Что с ними делать?',
@@ -99,26 +111,9 @@
               'Под водой в бассейне или в Океанариуме / Москвариуме вы проведёте + / - 30 минут. Общее время примерно 1,5-2 часа.',
       ]
     },
-  ]
+  ];
+
 section.section-bottom.oceanariums-questions
   .container
     h3.third-title.page-third-title.oceanariums-questions__title Вопросы и ответы
-    ul.list-reset.accordion-list
-      for ac, index in oceanariumsAc
-        li.accordion.oceanariums-questions__accordion
-          button.btn-reset.btn.accordion__trigger.oceanariums-questions__trigger(aria-expanded="false")
-            span.accordion__header.oceanariums-questions__header= ac.header
-            span.accordion__icon
-              span.accordion__icon-line
-          if index !== 8
-            .accordion__content.oceanariums-questions__content(aria-hidden="true")
-              .oceanariums-questions__text
-                for text in ac.text
-                  .oceanariums-questions__paragraph= text
-          else if index == 8
-            .accordion__content.oceanariums-questions__content(aria-hidden="true")
-              .oceanariums-questions__text
-                for text in ac.text
-                  .oceanariums-questions__paragraph= text
-              button.btn-reset.btn.oceanariums-questions__btn.moskvarium(type='button', data-modal='modal-book') Забронировать погружение в Москвариуме
-              button.btn-reset.btn.oceanariums-questions__btn.crocus-city(type='button', data-modal='modal-book') Забронировать погружение в Крокус Сити Океанариуме
+    +accordion('oceanariums-questions', oceanariumsAc)

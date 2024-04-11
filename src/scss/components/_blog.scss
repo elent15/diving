@@ -127,6 +127,8 @@
   &__calendar {
     width: 15px;
     height: 15px;
+    fill: var(--white);
+    fill-opacity: 0.5;
 
     @media (max-width:480px) {
       width: 11px;

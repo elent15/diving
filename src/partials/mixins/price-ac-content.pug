@@ -1,0 +1,13 @@
+mixin priceAcContent(title, list)
+  .prices__content-top
+    span.prices__content-title= title
+    .prices__content-block
+      button.btn-reset.btn.prices__content-btn.prices__content-btn--accent(type='button', data-modal='modal-reg-training') Записаться
+      a.link-btn.prices__content-link(href='#') Подробнее
+  ul.list-reset.prices__content-list
+    for item in list
+      li.prices__content-item
+        .prices__content-item-title= item.title
+        .prices__content-item-text= item.text
+        .prices__content-item-price= item.price
+        button.btn-reset.btn.prices__content-item-btn(type='button', data-modal='modal-buy') Купить

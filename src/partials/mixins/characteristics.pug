@@ -1,0 +1,18 @@
+mixin characteristics(characteristics)
+  ul.list-reset.characteristics__list
+    for item in characteristics
+      li.characteristics__item
+        .characteristics__item-title
+          svg.characteristics__item-icon(class='characteristics__item-icon--' + item.icon)
+            use(href=`./images/sprite.svg#${item.icon}`)
+          = item.title
+        span.characteristics__item-text= item.text
+        if item.contacts
+          .characteristics__item-contacts
+            for link in item.contacts
+              a.link.characteristics__item-contacts-link(href=link.href)
+                svg
+                  use(href=`./images/sprite.svg#${link.icon}`)
+                =link.text
+  button.btn-reset.btn.characteristics__btn(type="button") Записаться
+

@@ -1,4 +1,10 @@
+include ./mixins/table.pug
+include ./mixins/accordion.pug
+
 -
+  const oceanariumsTableHeader = [
+    'Вид погружения', 'Будни 10:00–13:00', 'Будни 16:00–20:00', 'Выходные и праздничные дни 10:00–13:00, 16:00–20:00',
+  ];
   const oceanariumsTable = {
     '1': [
       'Погружение дайвинг-инструктора', '6 500 руб.', '7 500 руб.', '8 500 руб.'
@@ -19,30 +25,60 @@
     '6': [
       'Подводная съемка двух участников погружения дайвинг-инструктором RuDIVE', '6 000 руб.', '6 000 руб.', '6 000 руб.'
     ],
-  }
+  };
+  const oceanariumsPriceAc = [
+    {
+      header: 'Погружение дайвинг-инструктора',
+      body: {
+        'Будни 10:00–13:00' : '6 500 руб.',
+        'Будни 16:00–20:00' : '7 500 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '8 500 руб.',
+      },
+    },
+    {
+      header: 'Погружение сертифицированного дайвера',
+      body: {
+        'Будни 10:00–13:00' : '7 500 руб.',
+        'Будни 16:00–20:00' : '8 500 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '9 500 руб.',
+      },
+    },
+    {
+      header: 'Пакет из двух погружений для тех, кто ныряет впервые (8+ в Москвариуме, 14+ Крокус Сити Океанариуме): первое погружение в бассейне, второе – в океанариуме',
+      body: {
+        'Будни 10:00–13:00' : '11 400 руб.',
+        'Будни 16:00–20:00' : '12 400 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '13 400 руб.',
+      },
+    },
+    {
+      header: 'Разрешение на съемку собственной камерой для сертифицированного дайвера',
+      body: {
+        'Будни 10:00–13:00' : '2 000 руб.',
+        'Будни 16:00–20:00' : '2 000 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '2 000 руб.',
+      },
+    },
+    {
+      header: 'Подводная съемка вашего погружения дайвинг-инструктором RuDIVE',
+      body: {
+        'Будни 10:00–13:00' : '4 000 руб.',
+        'Будни 16:00–20:00' : '4 000 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '4 000 руб.',
+      },
+    },
+    {
+      header: 'Подводная съемка двух участников погружения дайвинг-инструктором RuDIVE',
+      body: {
+        'Будни 10:00–13:00' : '6 000 руб.',
+        'Будни 16:00–20:00' : '6 000 руб.',
+        'Выходные и праздничные дни 10:00–13:00, 16:00–20:00' : '6 000 руб.',
+      },
+    },
+  ];
 
 section.section.oceanariums-price
   .container
     h3.third-title.page-third-title.oceanariums-price__title Стоимость дайвинга <br>в «Крокус Сити Океанариуме» и «Москвариуме»
-    ul.list-reset.oceanariums-price__list
-      li.oceanariums-price__item.oceanariums-price__header-item
-        for value in ['Вид погружения', 'Будни 10:00–13:00', 'Будни 16:00–20:00', 'Выходные и праздничные дни 10:00–13:00, 16:00–20:00']
-          span.oceanariums-price__item-cell.oceanariums-price__item-header-cell= value
-      for row, key in oceanariumsTable
-        li.oceanariums-price__item
-          for value in row
-            .oceanariums-price__item-cell= value
-    ul.list-reset.accordion-list.oceanariums-price__accordion-list
-      for ac in oceanariumsTable
-        li.accordion.oceanariums-price__accordion
-          button.btn-reset.btn.accordion__trigger.oceanariums-price__trigger(aria-expanded="false")
-            span.accordion__header.oceanariums-price__header= ac[0]
-            span.accordion__icon
-              span.accordion__icon-line
-          .accordion__content.oceanariums-price__content(aria-hidden="true")
-            ul.list-reset
-              for value, index in ['Будни 10:00–13:00', 'Будни 16:00–20:00', 'Выходные и праздничные дни 10:00–13:00, 16:00–20:00']
-                li.oceanariums-price__item
-                  span.oceanariums-price__item-cell.oceanariums-price__item-header-cell= value
-                  span.oceanariums-price__item-cell= ac[`${index + 1}`]
-
+    +table('oceanariums-price', oceanariumsTableHeader, oceanariumsTable)
+    +accordion('oceanariums-price', oceanariumsPriceAc)

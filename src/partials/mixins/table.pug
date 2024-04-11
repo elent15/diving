@@ -1,0 +1,9 @@
+mixin table(name, tableHeader, table)
+  ul.list-reset(class=name + '__list')
+    li(class=name + '__item' class=name + '__header-item')
+      for value in tableHeader
+        span(class=name + '__item-cell' class=name + '__item-header-cell')= value
+    for row in table
+      li(class=name + '__item')
+        for value in row
+          span(class=name + '__item-cell')= value

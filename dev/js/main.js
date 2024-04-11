@@ -630,6 +630,24 @@ new Swiper(".center-hero__swiper", {
   },
 });
 
+const tripHeroSwiper = new Swiper('.trip-hero-min__swiper', {
+  keyboard: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+});
+
+new Swiper(".trip-hero__swiper", {
+  keyboard: true,
+  spaceBetween: 0,
+  thumbs: {
+    swiper: tripHeroSwiper,
+  },
+  navigation: {
+    nextEl: '.trip-hero-swiper-button-next',
+    prevEl: '.trip-hero-swiper-button-prev',
+  },
+});
+
 // tabs
 const tabs = () => {
   const tabs = Array.from(document.querySelectorAll('.tabs'));

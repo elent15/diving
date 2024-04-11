@@ -504,6 +504,11 @@ p {
         margin-bottom: 12px;
       }
     }
+
+    &--bold {
+      font-style: italic;
+      font-weight: 500;
+    }
   }
 
   &__link {

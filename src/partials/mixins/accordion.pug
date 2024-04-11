@@ -1,0 +1,36 @@
+include ./text.pug
+include ./price-ac-content.pug
+include ./tablet-ac-content.pug
+
+mixin accordion(name, accordion, headerIcon = false)
+  ul.list-reset.accordion-list(class=name + '__accordion-list')
+    for ac, index in accordion
+      li.accordion(class=name + '__accordion')
+        button.btn-reset.btn.accordion__trigger(class=name + '__trigger' aria-expanded="false")
+          span.accordion__header(class=name + '__header')
+            if ac.btnText
+              span.accordion__header-btn(class=name + '__header-btn')
+                = ac.btnText
+            if headerIcon
+              span.accordion__header-btn(class=name + '__header-btn')
+                svg
+                  use(href=`./images/sprite.svg#${name}-icon-${index + 1}`)
+            span.accordion__header-title= ac.header
+          span.accordion__icon
+            span.accordion__icon-line
+        .accordion__content(class=name + '__content' aria-hidden="true")
+          if name == 'deeds'
+            .deeds__img-block
+              picture
+                source(srcset=`./images/deeds-${index + 1}.webp`, type="image/webp")
+                img(src=`./images/deeds-${index + 1}.jpg`, alt="Фото")
+          if ac.text
+            +text(name, ac.text)
+            if name == 'oceanariums-questions'
+              if ac.buttons
+                for button in ac.buttons
+                  button.btn-reset.btn.oceanariums-questions__btn(class=button.class type='button', data-modal='modal-book')= button.text
+          if name == 'prices'
+            +priceAcContent(ac.title, ac.list)
+          if name == 'bonus' || name == 'oceanariums-price'
+            +tabletAcContent(name, ac.body)

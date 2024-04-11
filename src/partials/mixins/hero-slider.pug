@@ -8,9 +8,9 @@ mixin heroSlider(sliderName, sliderMinName, sliderNav, heroTitle)
       .page-hero__container.hero-slider__container
         .container.hero-slider__breadcrumbs
           +breadcrumbs(links, lastItem)
-        .hero-slider__content-block
+        .hero-slider__content-block(class=sliderName + '__content-block')
           .container.hero-slider__content-container
-            .hero-slider__content
+            .hero-slider__content(class=sliderName + '__content')
               h3.third-title.page-hero__title.hero-slider__title(class=sliderName + '__title')= heroTitle
               if block
                 block

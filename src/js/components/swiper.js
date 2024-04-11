@@ -146,3 +146,21 @@ new Swiper(".center-hero__swiper", {
     prevEl: '.center-hero-swiper-button-prev',
   },
 });
+
+const tripHeroSwiper = new Swiper('.trip-hero-min__swiper', {
+  keyboard: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+});
+
+new Swiper(".trip-hero__swiper", {
+  keyboard: true,
+  spaceBetween: 0,
+  thumbs: {
+    swiper: tripHeroSwiper,
+  },
+  navigation: {
+    nextEl: '.trip-hero-swiper-button-next',
+    prevEl: '.trip-hero-swiper-button-prev',
+  },
+});

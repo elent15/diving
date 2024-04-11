@@ -1,15 +1,52 @@
 -
   const tourismCards = [
-    {title: 'Клубные поездки с турлидером', alt: 'Клубные поездки', href: '#'},
-    {title: 'Индивидуальный туризм', alt: 'Индивидуальный туризм', href: '#'},
-    {title: 'Корпоративные программы', alt: 'Корпоративные программы', href: '#'},
-    {title: 'Дайвинг-сафари', alt: 'Дайвинг-сафари', href: '#'},
-    {title: 'Экотуризм', alt: 'Экотуризм', href: '#'},
-    {title: 'Путешествия к большим животным', alt: 'Путешествия к большим животным', href: '#'},
-    {title: 'Каталог путешествий', alt: 'Каталог путешествий', href: '#'},
-    {title: 'Наши направления', alt: 'Наши направления', href: '#'},
-    {title: 'Каталог яхт и курортов', alt: 'Каталог яхт и курортов', href: '#'},
-  ]
+    {
+      title: 'Клубные поездки с турлидером',
+      alt: 'Клубные поездки',
+      href: '#',
+    },
+    {
+      title: 'Индивидуальный туризм',
+      alt: 'Индивидуальный туризм',
+      href: '#',
+    },
+    {
+      title: 'Корпоративные программы',
+      alt: 'Корпоративные программы',
+      href: '#',
+    },
+    {
+      title: 'Дайвинг-сафари',
+      alt: 'Дайвинг-сафари',
+      href: '#',
+    },
+    {
+      title: 'Экотуризм',
+      alt: 'Экотуризм',
+      href: '#',
+    },
+    {
+      title: 'Путешествия к большим животным',
+      alt: 'Путешествия к большим животным',
+      href: '#',
+    },
+    {
+      title: 'Каталог путешествий',
+      alt: 'Каталог путешествий',
+      href: '#',
+    },
+    {
+      title: 'Наши направления',
+      alt: 'Наши направления',
+      href: '#',
+    },
+    {
+      title: 'Каталог яхт и курортов',
+      alt: 'Каталог яхт и курортов',
+      href: '#',
+    },
+  ];
+
 .page-main-section.tourism.section-top
   .container
     h3.third-title.page-third-title.tourism__title Выбираем стиль поездки
@@ -22,7 +59,7 @@
               source(srcset=`./images/tourism-${index + 1}.webp`, type="image/webp")
               img(src=`./images/tourism-${index + 1}.jpg`, alt=card.alt)
           .page-main-section__card-bottom
-            a.link.page-main-section__card-title-link.tourism__card-title-link(href=`./${card.href}.html`)= card.title
-            a.link.page-main-section__card-link(href=`./${card.href}.html`)
+            a.link.page-main-section__card-title-link.tourism__card-title-link(href=card.href)= card.title
+            a.link.page-main-section__card-link(href=card.href)
               svg
                 use(href="./images/sprite.svg#link")

@@ -17,10 +17,15 @@
   }
 
   &__trigger {
-    padding: 17px 21px;
+    padding: 16px 21px;
+    min-height: 78px;
+
+    @media (max-width:720px) {
+      min-height: auto;
+    }
 
     @media (max-width:480px) {
-      padding: 17px 12px;
+      padding: 16px 12px;
       gap: 25px;
     }
   }
@@ -29,25 +34,6 @@
     display: flex;
     align-items: center;
     gap: 20px;
-
-    @media (max-width:480px) {
-      gap: 16px;
-    }
-
-    & svg {
-      flex-shrink: 0;
-      width: 45px;
-      height: 45px;
-      fill: rgba(255, 255, 255, 0.1);
-
-      @media (max-width:480px) {
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-
-  &__header-title {
     font-size: 22px;
     font-weight: 500;
     line-height: 26px;
@@ -58,6 +44,25 @@
 
     @media (max-width:720px) {
       font-size: 18px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &__header-btn {
+    & svg {
+      flex-shrink: 0;
+      display: block;
+      width: 45px;
+      height: 45px;
+      fill: rgba(255, 255, 255, 0.1);
+
+      @media (max-width:480px) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -76,9 +81,7 @@
     }
   }
 
-  &__card {}
-
-  &__card-top {
+  &__content-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +100,7 @@
     }
   }
 
-  &__card-title {
+  &__content-title {
     color: var(--white);
     font-size: 20px;
     font-weight: 500;
@@ -113,7 +116,7 @@
     }
   }
 
-  &__card-block {
+  &__content-block {
     display: flex;
     align-items: center;
     gap: 19px;
@@ -128,7 +131,7 @@
     }
   }
 
-  &__card-btn {
+  &__content-btn {
     border-radius: 5px;
     padding: 11px;
     width: 210px;
@@ -154,7 +157,7 @@
     }
   }
 
-  &__card-link {
+  &__content-link {
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     padding: 11px;
@@ -178,9 +181,9 @@
     }
   }
 
-  &__card-list {}
+  &__content-list {}
 
-  &__card-item {
+  &__content-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,7 +212,7 @@
     }
   }
 
-  &__card-item-title {
+  &__content-item-title {
     max-width: 420px;
     width: 100%;
     font-size: 16px;
@@ -225,7 +228,7 @@
     }
   }
 
-  &__card-item-text {
+  &__content-item-text {
     max-width: 490px;
     width: 100%;
     font-size: 16px;
@@ -242,7 +245,7 @@
     }
   }
 
-  &__card-item-price {
+  &__content-item-price {
     flex-shrink: 0;
     width: 140px;
     font-size: 16px;
@@ -264,7 +267,7 @@
     }
   }
 
-  &__card-item-btn {
+  &__content-item-btn {
     flex-shrink: 0;
     border-radius: 5px;
     padding: 6px;

@@ -242,5 +242,5 @@
 }
 
 .burger {
-  @include burger
+  @include burger(1470px, 30px, 24px, var(--white), var(--red));
 }

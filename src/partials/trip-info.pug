@@ -1,0 +1,30 @@
+-
+  const tripCards = [
+    {
+      title: 'Берег Антарктиды',
+      text: 'Удивительные пейзажи на фоне ледников, посещение островов',
+    },
+    {
+      title: 'Пингвины в Антарктиде',
+      text: 'Наблюдение за пингвинами, тюленями и другим животным миром Антарктиды',
+    },
+    {
+      title: 'Горбатый кит в Антарктиде',
+      text: 'Погружения между айсбергов, встречи с горбатыми китами',
+    },
+  ];
+
+.trip-info
+  .trip-info__map-block
+    .trip-info__map
+      iframe.trip-info__map-iframe(src="https://yandex.ru/map-widget/v1/?ll=-68.297714%2C-54.819032&mode=search&sctx=ZAAAAAgBEAAaKAoSCVbVy%2B80HlHAEejewyXHYUvAEhIJrRVtjnOb2T8RySJNvAM8wz8iBgABAgMEBSgKOABA7rkHSAFqAnJ1nQHNzEw9oAEAqAEAvQH%2BK0Y1wgEFkJqjohqCAiLQsNC90YLQsNGA0LrRgtC40LTQsCBob3RlbCBtaWwgODEwigIAkgIFMTAwMDCaAgxkZXNrdG9wLW1hcHM%3D&sll=-68.297714%2C-54.819032&sspn=0.462805%2C0.173576&text=%D0%B0%D0%BD%D1%82%D0%B0%D1%80%D0%BA%D1%82%D0%B8%D0%B4%D0%B0%20hotel%20mil%20810&z=11.24", allowfullscreen)
+  .container
+    .trip-info__cards-block
+      for card, index in tripCards
+        .trip-info__card
+          .trip-info__card-img-block
+            picture
+              source(srcset=`./images/trip-info-${index + 1}.webp`, type='image/webp')
+              img(src=`./images/trip-info-${index + 1}.jpg`, alt="Антарктида")
+          .trip-info__card-title= card.title
+          p.trip-info__card-text= card.text

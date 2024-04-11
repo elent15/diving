@@ -1,0 +1,35 @@
+.trip-courses {
+  &__empty-block {
+    flex-shrink: 0;
+    width: clamp(350px, 5.046rem + 24.46vw, 440px);
+  }
+
+  &__btn {
+    border: 1px dashed var(--white);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 65px;
+    padding: 12px;
+    width: 210px;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+
+    @media (max-width:1100px) {
+      margin: 0 auto;
+      margin-top: 48px;
+    }
+
+    @media (max-width:480px) {
+      margin: 0 20px;
+      margin-top: 36px;
+      width: calc(100% - 40px);
+      min-height: 50px;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
