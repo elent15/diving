@@ -1,0 +1,33 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключения модальных окон
+@import "./components/modal/modal";
+@import "./components/modal/modal-certificate";
+@import "./components/modal/modal-book";
+
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение первого экрана страницы
+@import "./components/page-hero";
+
+// подключение аккордеона
+@import "./components/accordion";
+
+// подключения компонентов страницы "Дайвинг в океанариумах" (oceanariums.html)
+@import "./components/oceanariums/oceanariums-hero";
+@import "./components/oceanariums/oceanariums-advantages";
+@import "./components/oceanariums/oceanariums-price";
+@import "./components/oceanariums/oceanariums-reports";
+@import "./components/oceanariums/oceanariums-info";
+@import "./components/books/form-block";
+@import "./components/oceanariums/oceanariums-questions";

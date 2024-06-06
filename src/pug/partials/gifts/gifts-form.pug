@@ -1,0 +1,49 @@
+include ../../mixins/form-address.pug
+include ../../mixins/form-cost.pug
+
+-
+  const giftsAddress = [
+    {
+      title: 'Кому отправить',
+      type: 'text',
+      placeholder: 'ФИО',
+    },
+    {
+      type: 'tel',
+      placeholder: 'Контактный телефон',
+    },
+    {
+      title: 'Способ отправки',
+      type: 'email',
+      placeholder: 'E-mail',
+    },
+    {
+      title: 'Способ оплаты',
+      type: 'text',
+      placeholder: 'Банковская карта',
+    },
+  ];
+  const giftsCost = [
+    {
+      name: 'Стоимость подарка:',
+      value: ''
+    },
+    {
+      name: 'Скидка:',
+      value: '10 %'
+    },
+    {
+      name: 'К оплате:',
+      value: ''
+    }
+  ];
+
+form.gifts__form
+  .gifts__form-block.gifts__form-block--textarea
+    include ./form-textarea
+  .gifts__form-block.gifts__form-block--address
+    +formAddress(giftsAddress)
+  .gifts__form-block.gifts__form-block--cost
+    +formCost(giftsCost, 'Стоимость подарка')
+  .gifts__form-block.gifts__form-block--bottom
+    include ../books/form-bottom

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ruDive</title>
   <link rel="stylesheet" href="./css/vendor.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/about.css">
   <script defer src="./js/vendor.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
@@ -14,10 +14,10 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="container header__container"><button class="btn-reset burger" type="button"><span
+      <div class="container header__container"><button class="btn-reset burger" type="button" aria-label="Меню"><span
             class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button><a
-          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg"
-            alt="Логотип"></a>
+          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg" alt="Логотип"
+            width="103" height="65"></a>
         <div class="header__menu">
           <div class="header__menu-inner">
             <nav class="header__nav">
@@ -41,7 +41,8 @@
         </div><button class="btn-reset btn header__btn" type="button" data-modal="modal-entrance"><svg
             class="header__btn-icon">
             <use href="./images/sprite.svg#user"></use>
-          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button"><svg class="header__icon">
+          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button" aria-label="Тема"><svg
+            class="header__icon">
             <use href="./images/sprite.svg#sun"></use>
           </svg></button>
       </div>
@@ -50,8 +51,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label><label class="modal__form-label"><input
                 class="input modal__form-input" type="password" placeholder="Пароль"></label>
@@ -66,8 +67,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label>
             <div class="modal__form-bottom"><button class="btn-reset btn modal__form-btn" type="button"
@@ -76,9 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="wrapper__bg wrapper__about-bg" style="background-image: url(./images/about-bg.webp);"></div>
+    <div class="wrapper__bg wrapper__about-bg" style="background-image: url(./images/bg/about-bg.webp);"></div>
     <main class="main">
-      <section class="page-hero about-hero" style="background-image: url(./images/about-hero-bg.webp);">
+      <section class="page-hero about-hero" style="background-image: url(./images/about/about-hero-bg.webp);">
         <div class="container page-hero__container">
           <div class="breadcrumbs">
             <ul class="list-reset breadcrumbs__list">
@@ -103,7 +104,8 @@
             <div class="about__inner">
               <div class="about__img-block">
                 <picture>
-                  <source srcset="./images/about.webp" type="image/webp"><img src="./images/about.jpg" alt="Фото">
+                  <source srcset="./images/about/about.webp" type="image/webp"><img src="./images/about/about.jpg"
+                    alt="Фото" loading="lazy">
                 </picture>
               </div>
               <h2 class="second-title numbered-title about__title about__title--bottom">С годами дайвинг становится для
@@ -141,26 +143,35 @@
             <div class="office__inner-left">
               <div class="office__img-block">
                 <picture>
-                  <source srcset="./images/office-1.webp" type="image/webp"><img src="./images/office-1.jpg" alt="Фото">
+                  <source srcset="./images/about/office-1.webp" type="image/webp"><img src="./images/about/office-1.jpg"
+                    alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="office__img-block">
                 <picture>
-                  <source srcset="./images/office-2.webp" type="image/webp"><img src="./images/office-2.jpg" alt="Фото">
+                  <source srcset="./images/about/office-2.webp" type="image/webp"><img src="./images/about/office-2.jpg"
+                    alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="office__img-block">
                 <picture>
-                  <source srcset="./images/office-3.webp" type="image/webp"><img src="./images/office-3.jpg" alt="Фото">
+                  <source srcset="./images/about/office-3.webp" type="image/webp"><img src="./images/about/office-3.jpg"
+                    alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="office__img-block">
                 <picture>
-                  <source srcset="./images/office-4.webp" type="image/webp"><img src="./images/office-4.jpg" alt="Фото">
+                  <source srcset="./images/about/office-4.webp" type="image/webp"><img src="./images/about/office-4.jpg"
+                    alt="Фото" loading="lazy">
                 </picture>
               </div>
             </div>
             <div class="office__inner-right">
+              <div class="office__map-block">
+                <div class="office__map"><iframe class="office__map-iframe"
+                    src="https://yandex.ru/map-widget/v1/?ll=37.667734%2C55.752886&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzc4MxJZ0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDRgTkiCg3DqxZCFfQCX0I%2C&amp;z=16.43"
+                    allowfullscreen title="Яндекс Карта"></iframe></div>
+              </div>
               <ul class="list-reset office__list">
                 <li class="office__item">
                   <div class="office__item-title-block"><svg>
@@ -183,11 +194,6 @@
                     телефоне +7 (495) 925-77-99, вотсап: 8 (916) 805-77-99</span>
                 </li>
               </ul>
-              <div class="office__map-block">
-                <div class="office__map"><iframe class="office__map-iframe"
-                    src="https://yandex.ru/map-widget/v1/?ll=37.667734%2C55.752886&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzc4MxJZ0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDRgTkiCg3DqxZCFfQCX0I%2C&amp;z=16.43"
-                    allowfullscreen></iframe></div>
-              </div>
             </div>
           </div>
         </div>
@@ -196,78 +202,85 @@
         <div class="container">
           <h3 class="third-title numbered-title history__title">История группы компаний RuDIVE</h3>
           <div class="history__top">
-            <div class="text history__text">
-              <p class="text__paragraph">История группы компаний RuDIVE уходит корнями в восьмидесятые годы прошлого
-                века, когда ее создатели Дмитрий Орлов и Михаил Сафонов заканчивали школу и мечтали о погружениях с
-                аквалангом и путешествиях в дальние страны. Оба поступили на биологический факультет МГУ, на кафедру
-                зоологии беспозвоночных. В те времена эта кафедра была самой водолазной кафедрой страны, а ее выпускники
-                составляли костяк российского сообщества научных водолазов-биологов: их можно было встретить в
-                Баренцевом и Белом морях, на Дальнем Востоке и Камчатке, на Командорах и Курилах. На допотопном
-                советском оборудовании, в холодной воде и спартанских условиях, они умудрялись собирать уникальный
-                научный материал. После окончания водолазной школы при ЦМК ДОСААФ Дмитрий и Михаил стали водолазами 3
-                класса и получили право погружаться в советских научных экспедициях и на биологических станциях СССР.
-              </p>
-              <p class="history__bold-paragraph">В начале девяностых страна претерпевала экономические и политические
-                катаклизмы, российская наука задыхалась в нищете, многие коллеги уехали за рубеж или ушли в бизнес, а
-                группа молодых морских биологов упорно занималась наукой, зарабатывая на хлеб и на подводные экспедиции,
-                кто чем может.</p>
-            </div>
-            <div class="history__right-images">
-              <div class="history__right-vertical-img-block">
-                <picture>
-                  <source srcset="./images/history-top-1.webp" type="image/webp"><img src="./images/history-top-1.jpg"
-                    alt="Фото">
-                </picture>
+            <div class="history__top-inner">
+              <div class="history__right-images">
+                <div class="history__right-vertical-img-block">
+                  <picture>
+                    <source srcset="./images/about/history-top-1.webp" type="image/webp"><img
+                      src="./images/about/history-top-1.jpg" alt="Фото" loading="lazy">
+                  </picture>
+                </div>
+                <div class="history__right-horizontal-img-block">
+                  <picture>
+                    <source srcset="./images/about/history-top-2.webp" type="image/webp"><img
+                      src="./images/about/history-top-2.jpg" alt="Фото" loading="lazy">
+                  </picture>
+                </div>
+                <div class="history__right-horizontal-img-block">
+                  <picture>
+                    <source srcset="./images/about/history-top-3.webp" type="image/webp"><img
+                      src="./images/about/history-top-3.jpg" alt="Фото" loading="lazy">
+                  </picture>
+                </div>
               </div>
-              <div class="history__right-horizontal-img-block">
-                <picture>
-                  <source srcset="./images/history-top-2.webp" type="image/webp"><img src="./images/history-top-2.jpg"
-                    alt="Фото">
-                </picture>
-              </div>
-              <div class="history__right-horizontal-img-block">
-                <picture>
-                  <source srcset="./images/history-top-3.webp" type="image/webp"><img src="./images/history-top-3.jpg"
-                    alt="Фото">
-                </picture>
-              </div>
-            </div>
-            <div class="history__left-images">
-              <div class="history__left-vertical-img-block">
-                <picture>
-                  <source srcset="./images/history-top-4.webp" type="image/webp"><img src="./images/history-top-4.jpg"
-                    alt="Фото">
-                </picture>
-              </div>
-              <div class="history__left-vertical-img-block">
-                <picture>
-                  <source srcset="./images/history-top-5.webp" type="image/webp"><img src="./images/history-top-5.jpg"
-                    alt="Фото">
-                </picture>
-              </div>
-              <div class="history__left-horizontal-img-block">
-                <picture>
-                  <source srcset="./images/history-top-6.webp" type="image/webp"><img src="./images/history-top-6.jpg"
-                    alt="Фото">
-                </picture>
+              <div class="text history__text">
+                <p class="text__paragraph">История группы компаний RuDIVE уходит корнями в восьмидесятые годы прошлого
+                  века, когда ее создатели Дмитрий Орлов и Михаил Сафонов заканчивали школу и мечтали о погружениях с
+                  аквалангом и путешествиях в дальние страны. Оба поступили на биологический факультет МГУ, на кафедру
+                  зоологии беспозвоночных. В те времена эта кафедра была самой водолазной кафедрой страны, а ее
+                  выпускники составляли костяк российского сообщества научных водолазов-биологов: их можно было
+                  встретить в Баренцевом и Белом морях, на Дальнем Востоке и Камчатке, на Командорах и Курилах. На
+                  допотопном советском оборудовании, в холодной воде и спартанских условиях, они умудрялись собирать
+                  уникальный научный материал. После окончания водолазной школы при ЦМК ДОСААФ Дмитрий и Михаил стали
+                  водолазами 3 класса и получили право погружаться в советских научных экспедициях и на биологических
+                  станциях СССР.</p>
+                <p class="history__bold-paragraph">В начале девяностых страна претерпевала экономические и политические
+                  катаклизмы, российская наука задыхалась в нищете, многие коллеги уехали за рубеж или ушли в бизнес, а
+                  группа молодых морских биологов упорно занималась наукой, зарабатывая на хлеб и на подводные
+                  экспедиции, кто чем может.</p>
               </div>
             </div>
-            <div class="text history__text">
-              <p class="text__paragraph">После возвращения со службы в армии и открытия границ, Дмитрий Орлов активно
-                путешествует по миру и знакомится с дайвингом – новым для отечественных водолазов явлением. В начале
-                девяностых дайвинга, то есть подводного отдыха, в нашей стране еще не было: ныряли только боевые пловцы,
-                спортсмены ДОСААФ, ученые и водолазы. Понимание того, что плавать под водой может любой здоровый
-                человек, стало настоящим откровением. Именно тогда зародилось желание заниматься именно дайвингом и
-                сделать его доступным для всех, кто хочет увидеть красоту подводного мира своими глазами.</p>
-              <p class="text__paragraph">В 1994 году Дмитрий Орлов защищает кандидатскую диссертацию, а в 1995 г.
-                становится одним из первых в России дайвинг-инструкторов и начинает в свободное от занятий наукой и
-                преподаванием в МГУ время обучать дайвингу знакомых и коллег. В 1996 г. Михаил Сафонов защищает
-                кандидатскую диссертацию, а весной того же года товарищи решают создать подводный клуб. Вечером 12
-                апреля 1996 г. в одной из аудиторий биологического факультета, при поддержке университетского
-                руководства, состоялась скромная презентация Подводного клуба МГУ. Уже тогда были заложены отличительные
-                черты образования в группе RuDIVE: высокое качество обучения, строгое следование международным
-                стандартам, углубленное изучение морских животных и подводного мира, создание дружеской и веселой
-                атмосферы во время педагогического процесса.</p>
+            <div class="history__top-inner">
+              <div class="history__left-images">
+                <div class="history__left-vertical-images">
+                  <div class="history__left-vertical-img-block">
+                    <picture>
+                      <source srcset="./images/about/history-top-4.webp" type="image/webp"><img
+                        src="./images/about/history-top-4.jpg" alt="Фото" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="history__left-vertical-img-block">
+                    <picture>
+                      <source srcset="./images/about/history-top-5.webp" type="image/webp"><img
+                        src="./images/about/history-top-5.jpg" alt="Фото" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="history__left-horizontal-img-block">
+                    <picture>
+                      <source srcset="./images/about/history-top-6.webp" type="image/webp"><img
+                        src="./images/about/history-top-6.jpg" alt="Фото" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="text history__text">
+                <p class="text__paragraph">После возвращения со службы в армии и открытия границ, Дмитрий Орлов активно
+                  путешествует по миру и знакомится с дайвингом – новым для отечественных водолазов явлением. В начале
+                  девяностых дайвинга, то есть подводного отдыха, в нашей стране еще не было: ныряли только боевые
+                  пловцы, спортсмены ДОСААФ, ученые и водолазы. Понимание того, что плавать под водой может любой
+                  здоровый человек, стало настоящим откровением. Именно тогда зародилось желание заниматься именно
+                  дайвингом и сделать его доступным для всех, кто хочет увидеть красоту подводного мира своими глазами.
+                </p>
+                <p class="text__paragraph">В 1994 году Дмитрий Орлов защищает кандидатскую диссертацию, а в 1995 г.
+                  становится одним из первых в России дайвинг-инструкторов и начинает в свободное от занятий наукой и
+                  преподаванием в МГУ время обучать дайвингу знакомых и коллег. В 1996 г. Михаил Сафонов защищает
+                  кандидатскую диссертацию, а весной того же года товарищи решают создать подводный клуб. Вечером 12
+                  апреля 1996 г. в одной из аудиторий биологического факультета, при поддержке университетского
+                  руководства, состоялась скромная презентация Подводного клуба МГУ. Уже тогда были заложены
+                  отличительные черты образования в группе RuDIVE: высокое качество обучения, строгое следование
+                  международным стандартам, углубленное изучение морских животных и подводного мира, создание дружеской
+                  и веселой атмосферы во время педагогического процесса.</p>
+              </div>
             </div>
           </div>
           <div class="history__middle">
@@ -305,8 +318,8 @@
                     <div class="history__card">
                       <div class="history__card-img-block">
                         <picture>
-                          <source srcset="./images/history-1.webp" type="image/webp"><img src="./images/history-1.jpg"
-                            alt="Фото">
+                          <source srcset="./images/about/history-1.webp" type="image/webp"><img
+                            src="./images/about/history-1.jpg" alt="Фото" loading="lazy">
                         </picture>
                       </div>
                     </div>
@@ -315,8 +328,8 @@
                     <div class="history__card">
                       <div class="history__card-img-block">
                         <picture>
-                          <source srcset="./images/history-2.webp" type="image/webp"><img src="./images/history-2.jpg"
-                            alt="Фото">
+                          <source srcset="./images/about/history-2.webp" type="image/webp"><img
+                            src="./images/about/history-2.jpg" alt="Фото" loading="lazy">
                         </picture>
                       </div>
                     </div>
@@ -325,8 +338,8 @@
                     <div class="history__card">
                       <div class="history__card-img-block">
                         <picture>
-                          <source srcset="./images/history-3.webp" type="image/webp"><img src="./images/history-3.jpg"
-                            alt="Фото">
+                          <source srcset="./images/about/history-3.webp" type="image/webp"><img
+                            src="./images/about/history-3.jpg" alt="Фото" loading="lazy">
                         </picture>
                       </div>
                     </div>
@@ -335,8 +348,8 @@
                     <div class="history__card">
                       <div class="history__card-img-block">
                         <picture>
-                          <source srcset="./images/history-4.webp" type="image/webp"><img src="./images/history-4.jpg"
-                            alt="Фото">
+                          <source srcset="./images/about/history-4.webp" type="image/webp"><img
+                            src="./images/about/history-4.jpg" alt="Фото" loading="lazy">
                         </picture>
                       </div>
                     </div>
@@ -345,8 +358,8 @@
                     <div class="history__card">
                       <div class="history__card-img-block">
                         <picture>
-                          <source srcset="./images/history-5.webp" type="image/webp"><img src="./images/history-5.jpg"
-                            alt="Фото">
+                          <source srcset="./images/about/history-5.webp" type="image/webp"><img
+                            src="./images/about/history-5.jpg" alt="Фото" loading="lazy">
                         </picture>
                       </div>
                     </div>
@@ -370,8 +383,8 @@
             <div class="history__bottom-content">
               <div class="history__bottom-content-img-block">
                 <picture>
-                  <source srcset="./images/history-bottom-1.webp" type="image/webp"><img
-                    src="./images/history-bottom-1.jpg" alt="Фото">
+                  <source srcset="./images/about/history-bottom-1.webp" type="image/webp"><img
+                    src="./images/about/history-bottom-1.jpg" alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="history__bottom-text">
@@ -393,26 +406,26 @@
             <div class="history__bottom-images">
               <div class="history__bottom-img-block">
                 <picture>
-                  <source srcset="./images/history-bottom-2.webp" type="image/webp"><img
-                    src="./images/history-bottom-2.jpg" alt="Фото">
+                  <source srcset="./images/about/history-bottom-2.webp" type="image/webp"><img
+                    src="./images/about/history-bottom-2.jpg" alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="history__bottom-img-block">
                 <picture>
-                  <source srcset="./images/history-bottom-3.webp" type="image/webp"><img
-                    src="./images/history-bottom-3.jpg" alt="Фото">
+                  <source srcset="./images/about/history-bottom-3.webp" type="image/webp"><img
+                    src="./images/about/history-bottom-3.jpg" alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="history__bottom-img-block">
                 <picture>
-                  <source srcset="./images/history-bottom-4.webp" type="image/webp"><img
-                    src="./images/history-bottom-4.jpg" alt="Фото">
+                  <source srcset="./images/about/history-bottom-4.webp" type="image/webp"><img
+                    src="./images/about/history-bottom-4.jpg" alt="Фото" loading="lazy">
                 </picture>
               </div>
               <div class="history__bottom-img-block">
                 <picture>
-                  <source srcset="./images/history-bottom-5.webp" type="image/webp"><img
-                    src="./images/history-bottom-5.jpg" alt="Фото">
+                  <source srcset="./images/about/history-bottom-5.webp" type="image/webp"><img
+                    src="./images/about/history-bottom-5.jpg" alt="Фото" loading="lazy">
                 </picture>
               </div>
             </div>
@@ -436,20 +449,20 @@
           <div class="spas-kamenka__images">
             <div class="spas-kamenka__vertical-img-block">
               <picture>
-                <source srcset="./images/spas-kamenka-1.webp" type="image/webp"><img src="./images/spas-kamenka-1.jpg"
-                  alt="Фото">
+                <source srcset="./images/about/spas-kamenka-1.webp" type="image/webp"><img
+                  src="./images/about/spas-kamenka-1.jpg" alt="Фото" loading="lazy">
               </picture>
             </div>
             <div class="spas-kamenka__horizontal-img-block">
               <picture>
-                <source srcset="./images/spas-kamenka-2.webp" type="image/webp"><img src="./images/spas-kamenka-2.jpg"
-                  alt="Фото">
+                <source srcset="./images/about/spas-kamenka-2.webp" type="image/webp"><img
+                  src="./images/about/spas-kamenka-2.jpg" alt="Фото" loading="lazy">
               </picture>
             </div>
             <div class="spas-kamenka__horizontal-img-block">
               <picture>
-                <source srcset="./images/spas-kamenka-3.webp" type="image/webp"><img src="./images/spas-kamenka-3.jpg"
-                  alt="Фото">
+                <source srcset="./images/about/spas-kamenka-3.webp" type="image/webp"><img
+                  src="./images/about/spas-kamenka-3.jpg" alt="Фото" loading="lazy">
               </picture>
             </div>
           </div>
@@ -479,8 +492,8 @@
                   <div class="moskvarium__card">
                     <div class="moskvarium__card-img-block">
                       <picture>
-                        <source srcset="./images/moskvarium-1.webp" type="image/webp"><img
-                          src="./images/moskvarium-1.jpg" alt="Фото">
+                        <source srcset="./images/about/moskvarium-1.webp" type="image/webp"><img
+                          src="./images/about/moskvarium-1.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                   </div>
@@ -489,8 +502,8 @@
                   <div class="moskvarium__card">
                     <div class="moskvarium__card-img-block">
                       <picture>
-                        <source srcset="./images/moskvarium-2.webp" type="image/webp"><img
-                          src="./images/moskvarium-2.jpg" alt="Фото">
+                        <source srcset="./images/about/moskvarium-2.webp" type="image/webp"><img
+                          src="./images/about/moskvarium-2.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                   </div>
@@ -499,8 +512,8 @@
                   <div class="moskvarium__card">
                     <div class="moskvarium__card-img-block">
                       <picture>
-                        <source srcset="./images/moskvarium-3.webp" type="image/webp"><img
-                          src="./images/moskvarium-3.jpg" alt="Фото">
+                        <source srcset="./images/about/moskvarium-3.webp" type="image/webp"><img
+                          src="./images/about/moskvarium-3.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                   </div>
@@ -509,8 +522,8 @@
                   <div class="moskvarium__card">
                     <div class="moskvarium__card-img-block">
                       <picture>
-                        <source srcset="./images/moskvarium-4.webp" type="image/webp"><img
-                          src="./images/moskvarium-4.jpg" alt="Фото">
+                        <source srcset="./images/about/moskvarium-4.webp" type="image/webp"><img
+                          src="./images/about/moskvarium-4.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                   </div>
@@ -519,8 +532,8 @@
                   <div class="moskvarium__card">
                     <div class="moskvarium__card-img-block">
                       <picture>
-                        <source srcset="./images/moskvarium-5.webp" type="image/webp"><img
-                          src="./images/moskvarium-5.jpg" alt="Фото">
+                        <source srcset="./images/about/moskvarium-5.webp" type="image/webp"><img
+                          src="./images/about/moskvarium-5.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                   </div>
@@ -552,7 +565,8 @@
               <div class="accordion__content deeds__content" aria-hidden="true">
                 <div class="deeds__img-block">
                   <picture>
-                    <source srcset="./images/deeds-1.webp" type="image/webp"><img src="./images/deeds-1.jpg" alt="Фото">
+                    <source srcset="./images/about/deeds-1.webp" type="image/webp"><img src="./images/about/deeds-1.jpg"
+                      alt="Фото" loading="lazy">
                   </picture>
                 </div>
                 <div class="text deeds__text">
@@ -573,7 +587,8 @@
               <div class="accordion__content deeds__content" aria-hidden="true">
                 <div class="deeds__img-block">
                   <picture>
-                    <source srcset="./images/deeds-2.webp" type="image/webp"><img src="./images/deeds-2.jpg" alt="Фото">
+                    <source srcset="./images/about/deeds-2.webp" type="image/webp"><img src="./images/about/deeds-2.jpg"
+                      alt="Фото" loading="lazy">
                   </picture>
                 </div>
                 <div class="text deeds__text">
@@ -593,7 +608,8 @@
               <div class="accordion__content deeds__content" aria-hidden="true">
                 <div class="deeds__img-block">
                   <picture>
-                    <source srcset="./images/deeds-3.webp" type="image/webp"><img src="./images/deeds-3.jpg" alt="Фото">
+                    <source srcset="./images/about/deeds-3.webp" type="image/webp"><img src="./images/about/deeds-3.jpg"
+                      alt="Фото" loading="lazy">
                   </picture>
                 </div>
                 <div class="text deeds__text">
@@ -626,7 +642,7 @@
                       <use href="./images/sprite.svg#next"></use>
                     </svg><svg class="next-active">
                       <use href="./images/sprite.svg#next-active"></use>
-                    </svg></button></div><a class="link-btn blog__link" href="#">Перейти в блог</a>
+                    </svg></button></div><a class="link-btn blog__link" href="./about.html">Перейти в блог</a>
               </div>
             </div>
             <div class="swiper-wrapper">
@@ -634,70 +650,75 @@
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-1.webp" type="image/webp"><img src="./images/blog-1.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-1.webp" type="image/webp"><img src="./images/index/blog-1.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Отпуск в сентябре. Поехать на Мальдивы и Бали</div><a
-                    class="link-btn blog__card-link blog__card-link--active" href="./#!.html">Читать</a>
+                    class="link-btn blog__card-link blog__card-link--active" href="././about.html">Читать</a>
                 </div>
               </div>
               <div class="swiper-slide blog__swiper-slide">
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-2.webp" type="image/webp"><img src="./images/blog-2.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-2.webp" type="image/webp"><img src="./images/index/blog-2.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Летние каникулы заканчиваются: успейте нырнуть с детьми в московских
-                    океанариумах</div><a class="link-btn blog__card-link" href="./#!.html">Читать</a>
+                    океанариумах</div><a class="link-btn blog__card-link" href="././about.html">Читать</a>
                 </div>
               </div>
               <div class="swiper-slide blog__swiper-slide">
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-3.webp" type="image/webp"><img src="./images/blog-3.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-3.webp" type="image/webp"><img src="./images/index/blog-3.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Первая неделя семейного дайвинг-сафари была фееричной!</div><a
-                    class="link-btn blog__card-link" href="./#!.html">Читать</a>
+                    class="link-btn blog__card-link" href="././about.html">Читать</a>
                 </div>
               </div>
               <div class="swiper-slide blog__swiper-slide">
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-4.webp" type="image/webp"><img src="./images/blog-4.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-4.webp" type="image/webp"><img src="./images/index/blog-4.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Пора думать про дайвинг-путешествия в ноябрьские праздники</div><a
-                    class="link-btn blog__card-link" href="./#!.html">Читать</a>
+                    class="link-btn blog__card-link" href="././about.html">Читать</a>
                 </div>
               </div>
               <div class="swiper-slide blog__swiper-slide">
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-5.webp" type="image/webp"><img src="./images/blog-5.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-5.webp" type="image/webp"><img src="./images/index/blog-5.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Отпуск в сентябре. Поехать на Мальдивы и Бали</div><a
-                    class="link-btn blog__card-link" href="./#!.html">Читать</a>
+                    class="link-btn blog__card-link" href="././about.html">Читать</a>
                 </div>
               </div>
             </div>
@@ -707,7 +728,7 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__subscribe" style="background-image: url(./images/subscribe-bg.webp);">
+        <div class="footer__subscribe" style="background-image: url(./images/footer/subscribe-bg.webp);">
           <h3 class="third-title footer__subscribe-title">Подписывайтесь на наши социальные сети</h3>
           <div class="footer__subscribe-text">И первым узнавайте о новых турах, акциях, скидках и подарках нашего клуба.
           </div>
@@ -723,21 +744,25 @@
         </div>
         <div class="footer__top">
           <div class="footer__left"><a class="link footer__logo-link" href="./index.html"><img class="logo footer__logo"
-                src="./images/svg/logo.svg" alt="Логотип"></a>
+                src="./images/svg/logo.svg" alt="Логотип" width="103" height="65"></a>
             <div class="footer__text">В основе деятельности группы компаний RuDIVE лежат международные стандарты
               качества. Дайвинг-центры и школы работают по стандартам ISO, PADI и ГОСТ.</div><span
               class="footer__subtitle footer__left-subtitle">Мессенджеры и соц сети</span>
             <ul class="list-reset footer__social-list">
-              <li><a class="link footer__social-link" href="https://wa.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://wa.me" aria-label="whatsapp"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#whatsapp"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://t.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://t.me" aria-label="telegram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#telegram"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://vk.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://vk.com" aria-label="vk"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://instagram.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://instagram.com" aria-label="instagram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#instagram"></use>
                   </svg></a></li>
             </ul>
@@ -787,14 +812,16 @@
           <div class="footer__bottom-links"><a class="link footer__bottom-text" href="#">Политика
               конфиденциальности</a><a class="link footer__bottom-text" href="#">Правила оказания услуг</a></div>
           <div class="footer__payment"><span class="footer__bottom-text">Способы оплаты</span><img
-              class="footer__payment-logos" src="./images/payment-logos.png" alt="Логотип платёжных систем"></div>
+              class="footer__payment-logos" src="./images/footer/payment-logos.png" alt="Логотип платёжных систем">
+          </div>
           <div class="footer__development"><span class="footer__bottom-text">Разработка сайта</span><img
-              class="footer__bottom-logo" src="./images/footer-logo.png" alt="Логотип"></div>
+              class="footer__bottom-logo" src="./images/footer/footer-logo.png" alt="Логотип" width="121" height="20">
+          </div>
         </div>
       </div><button class="btn-reset footer__chat-btn" type="button">
         <picture>
-          <source srcset="./images/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
-            src="./images/chat.png" alt="Чат">
+          <source srcset="./images/footer/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
+            src="./images/footer/chat.png" alt="Чат" width="66" height="66" loading="lazy">
         </picture>
       </button>
     </footer>

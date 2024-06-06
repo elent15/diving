@@ -4,108 +4,17 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// общие подключения
 @import "./components/header";
-@import "./components/modal";
-@import "./components/hero";
-@import "./components/tours";
-@import "./components/reports";
-@import "./components/info";
-@import "./components/reviews";
-@import "./components/blog";
 @import "./components/footer";
 
-// подключения компонентов страницы "Обучение" (training.html)
-@import "./components/breadcrumbs";
-@import "./components/page-hero";
-@import "./components/page-main-section";
-@import "./components/training-centers";
-@import "./components/request";
-@import "./components/registration";
+// подключение модальных окон
+@import "./components/modal/modal";
 
-// подключения компонентов страницы "Туризм" (tourism.html)
-@import "./components/tourism-hero";
-@import "./components/tourism";
-@import "./components/speciality";
-@import "./components/tourism-registration";
-@import "./components/tourism-info";
-
-// подключения компонентов страницы "Дайвинг-центры" (centers.html)
-@import "./components/centers-hero";
-@import "./components/centers";
-@import "./components/diving-centers";
-@import "./components/equipment";
-@import "./components/centers-registration";
-
-// подключения компонентов страницы "О нас" (about.html)
-@import "./components/about-hero";
-@import "./components/about";
-@import "./components/office";
-@import "./components/history";
-@import "./components/spas-kamenka";
-@import "./components/moskvarium";
-@import "./components/accordion";
-@import "./components/deeds";
-@import "./components/about-blog";
-
-// подключения компонентов страницы "Контакты" (contacts.html)
-@import "./components/page-hero-sm";
-@import "./components/contacts-tabs";
-@import "./components/contacts";
-@import "./components/contacts-offices";
-@import "./components/requisites";
-@import "./components/offer";
-
-// подключения компонентов страницы "Дайвинг в океанариумах" (oceanariums.html)
-@import "./components/modal-certificate";
-@import "./components/form-block";
-@import "./components/modal-book";
-@import "./components/oceanariums-hero";
-@import "./components/oceanariums-advantages";
-@import "./components/oceanariums-price";
-@import "./components/oceanariums-reports";
-@import "./components/oceanariums-info";
-@import "./components/oceanariums-questions";
-
-// подключения компонентов страницы "Цены на обучение" (prices.html)
-@import "./components/prices";
-
-// подключения компонентов страницы "Расписание клубных поездок" (schedule.html)
-@import "./components/schedule";
-@import "./components/bonus";
-
-// подключения компонентов страницы "Расписание курсов по дайвингу" (courses.html)
-@import "./components/schedule-courses";
-@import "./components/bonus";
-
-// подключения компонентов страницы "Книги" (books.html)
-@import "./components/books";
-@import "./components/books-form";
-
-// подключения компонентов страницы "Подарки" (gifts.html)
-@import "./components/gifts";
-@import "./components/gifts-form";
-
-// подключения компонентов страницы "Наша команда" (team.html)
-@import "./components/team";
-
-// подключения компонентов страницы "Описание специалиста" (specialist.html)
-@import "./components/specialist";
-@import "./components/specialist-min";
-@import "./components/schedule-sm";
-@import "./components/form-reg";
-
-// подключения компонентов страницы "Карточка дайвинг-центра" (diving-center.html)
-@import "./components/center-hero";
-@import "./components/hero-slider";
-@import "./components/hero-slider-min";
-@import "./components/center-location";
-@import "./components/center-route";
-@import "./components/center-info";
-
-// подключения компонентов страницы "Карточка поездки" (trip-card.html)
-@import "./components/trip-hero";
-@import "./components/trip-info";
-@import "./components/trip-program";
-@import "./components/characteristics";
-@import "./components/trip-courses";
+// подключения компонентов главной страницы (index.html)
+@import "./components/index/hero";
+@import "./components/index/tours";
+@import "./components/index/reports";
+@import "./components/index/info";
+@import "./components/index/reviews";
+@import "./components/index/blog";

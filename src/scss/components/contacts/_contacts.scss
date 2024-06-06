@@ -1,0 +1,222 @@
+.contacts {
+  &__tabs-block {}
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 60px;
+    margin-bottom: 70px;
+
+    @media (max-width:1470px) {
+      gap: 36px;
+    }
+
+    @media (max-width:1100px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 24px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width:720px) {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 0px 16px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__item {}
+
+  &__btn {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 16px 80px 18px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    background: transparent;
+
+    @media (max-width:1470px) {
+      padding: 16px 48px;
+    }
+
+    &:hover {
+      background: transparent;
+
+      &::after {
+        background-color: var(--red);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &.tabs__btn--active {
+      color: var(--white);
+      outline: 2px solid transparent;
+      transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
+
+      &:focus {
+        outline-color: var(--red);
+      }
+
+      &:hover {
+        color: var(--red);
+        outline-color: transparent;
+      }
+
+      &::after {
+        background-color: var(--red);
+      }
+    }
+  }
+
+  &__inner-tab {
+    display: none;
+
+    &.tab--active {
+      display: block;
+    }
+  }
+
+  &__inner-tab-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+    margin-bottom: 60px;
+
+    @media (max-width:1470px) {
+      gap: 24px;
+    }
+
+    @media (max-width:1100px) {
+      flex-wrap: wrap;
+      gap: 32px 24px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width:720px) {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__inner-tab-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc((100% - 76px) / 3);
+    min-height: 434px;
+
+    @media (max-width:1470px) {
+      gap: 24px;
+      width: calc((100% - 48px) / 3);
+      min-height: auto;
+    }
+
+    @media (max-width:1100px) {
+      width: calc((100% - 24px) / 2);
+    }
+
+    @media (max-width:720px) {
+      width: 100%;
+    }
+  }
+
+  &__inner-tab-card-content {}
+
+  &__inner-tab-card-title {
+    display: inline-block;
+    margin-bottom: 23px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    @media (max-width:1100px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width:480px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__inner-tab-card-block {
+    display: flex;
+    gap: 12px;
+
+    &+.contacts__inner-tab-card-block {
+      margin-top: 14px;
+
+      @media (max-width:480px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__inner-tab-card-icon {
+    flex-shrink: 0;
+    width: 14px;
+    height: 22px;
+    fill: var(--white);
+  }
+
+  &__inner-tab-card-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__inner-tab-card-map-block {
+    margin-top: auto;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 453 / 269;
+    background-color: var(--light-gray);
+    overflow: hidden;
+
+    @media (max-width:1100px) {
+      min-height: 195px;
+      aspect-ratio: 523 / 250;
+    }
+
+    @media (max-width:720px) {
+      aspect-ratio: 690 / 250;
+      max-height: 250px;
+    }
+  }
+
+  &__inner-tab-card-map {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &__inner-tab-card-map-iframe {
+    width: 100%;
+    aspect-ratio: 453 / 269;
+
+    @media (max-width:1100px) {
+      aspect-ratio: 523 / 250;
+      min-height: 195px;
+    }
+
+    @media (max-width:720px) {
+      max-height: 250px;
+    }
+  }
+}

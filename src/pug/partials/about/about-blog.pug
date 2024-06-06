@@ -1,0 +1,45 @@
+include ../../mixins/slider.pug
+include ../../mixins/slider-btns.pug
+
+-
+  const aboutBlogSlides = [
+    {
+      date: 'Сегодня 15:25',
+      title: 'Отпуск в сентябре. Поехать на Мальдивы и Бали',
+      class: 'blog__card-link--active',
+      href: './about',
+    },
+    {
+      date: 'Сегодня 15:25',
+      title: 'Летние каникулы заканчиваются: успейте нырнуть с детьми в московских океанариумах',
+      href: './about',
+    },
+    {
+      title: 'Первая неделя семейного дайвинг-сафари была фееричной!',
+      date: 'Сегодня 15:25',
+      href: './about',
+    },
+    {
+      title: 'Пора думать про дайвинг-путешествия в ноябрьские праздники',
+      date: 'Сегодня 15:25',
+      href: './about',
+    },
+    {
+      date: 'Сегодня 15:25',
+      title: 'Отпуск в сентябре. Поехать на Мальдивы и Бали',
+      href: './about',
+    },
+  ];
+
+section.section-bottom.blog.about-blog
+  .container-fluid.blog__container-fluid
+    h3.third-title.numbered-title.blog__title.about-blog__title Новое в блоге
+    .swiper.blog__swiper
+      .blog__swiper-top
+        .blog__text С нами в клубе состоят как любители, так и профессионалы дайвинга России.
+        .blog__swiper-top-block
+          +sliderBtns('blog')
+          a.link-btn.blog__link(href="./about.html") Перейти в блог
+      .swiper-wrapper
+        +slider('index', 'blog', aboutBlogSlides)
+

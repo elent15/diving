@@ -1,0 +1,32 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключение аккордеона
+@import "./components/accordion";
+
+// подключения компонентов страницы "О нас" (about.html)
+@import "./components/about/about-hero";
+@import "./components/about/about";
+@import "./components/about/office";
+@import "./components/about/history";
+@import "./components/about/spas-kamenka";
+@import "./components/about/moskvarium";
+@import "./components/about/deeds";
+@import "./components/index/blog";
+@import "./components/about/about-blog";

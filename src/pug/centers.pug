@@ -1,0 +1,14 @@
+extends ./templates/page-lg.pug
+
+block vars
+  -
+    const name = 'centers';
+    const lastItem = 'Дайвинг-центры';
+    const title = 'Дайвинг-центры RuDIVE';
+    const text = 'имеют высокий международный статус PADI 5* IDC дайвинг-центров, под единым номером 3564 в реестре PADI. Обучение в дайв-центрах RuDIVE проходит по международным стандартам PADI, ISO и российским стандартам ГОСТ.';
+
+block append main
+  include ./partials/modal/modal-book.pug
+  include ./partials/centers/diving-centers.pug
+  include ./partials/centers/equipment.pug
+  include ./partials/centers/centers-registration.pug

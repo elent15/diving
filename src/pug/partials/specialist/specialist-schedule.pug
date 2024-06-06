@@ -1,0 +1,35 @@
+include ../../mixins/schedule-cards.pug
+include ../../mixins/form-reg.pug
+
+-
+  const specialistCards = [
+    {
+      title: 'Junior Open Water Diver (с 10 лет)', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+    {
+      title: 'Divemaster', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+    {
+      title: 'Enriched Air Diver', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+  ];
+
+.section-bottom.schedule-sm
+  .container
+    h3.third-title.schedule-sm__title Расписание путешествий с турлидером Дмитрием Орловым
+    .schedule-sm__block
+      .schedule-sm__cards-block
+        +scheduleCards('schedule-sm', specialistCards)
+      +formReg('Записаться к Дмитрию')

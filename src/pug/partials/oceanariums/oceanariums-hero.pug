@@ -1,0 +1,19 @@
+include ../../mixins/breadcrumbs.pug
+
+- const lastItem = 'Дайвинг в Океанариумах';
+
+section.page-hero.oceanariums-hero
+  video.oceanariums-hero__video(src='./resources/oceanariums-1.mp4', autoplay, playsinline, poster='./images/oceanariums/oceanariums-hero-bg-1.webp')
+  .container.page-hero__container.oceanariums-hero__container
+    +breadcrumbs(links, lastItem)
+    .page-hero__content.oceanariums-hero__content
+      h2.second-title.page-hero__title.oceanariums-hero__title Дайвинг в океанариумах
+      .oceanariums-hero__cards-block
+        for index in [1 , 2]
+          .oceanariums-hero__card(class=(index == '1') ? 'oceanariums-hero__card--active' : '')
+            picture
+              source(srcset=`./images/oceanariums/oceanariums-hero-${index}.webp`, type="image/webp")
+              img(src=`./images/oceanariums/oceanariums-hero-${index}.png`, alt="Дайвинг в океанариуме")
+            button.btn-reset.oceanariums-hero__play-btn(type="button" aria-label="Кнопка включения видео")
+              svg
+                use(href="./images/sprite.svg#pleer")

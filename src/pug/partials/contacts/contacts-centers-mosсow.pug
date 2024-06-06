@@ -1,0 +1,111 @@
+include ../../mixins/centers-list-block.pug
+
+-
+  const contactsCenters = [
+    {
+      title: 'Дайв-центры в Москве',
+      list: [
+        {
+          name: 'Дайвинг-центр «Азовский»',
+          address: 'г. Москва, ул. Азовская, 24',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.596552%2C55.646980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY1MzE3NxI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCQ0LfQvtCy0YHQutCw0Y8g0YPQu9C40YbQsCwgMjQiCg3fYhZCFYKWXkI%2C&z=16.43',
+        },
+        {
+          classItem: 'centers__location-item--active',
+          classBtn: 'centers__location-btn--active',
+          name: 'WorldClass Light. Лодочная',
+          address: 'г. Москва, ул. Лодочная, 43',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.460681%2C55.842145&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc3OTYzOBI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCb0L7QtNC-0YfQvdCw0Y8g0YPQu9C40YbQsCwgNDMiCg291xVCFVteX0I%2C&z=16.43',
+        },
+        {
+          name: 'Крокус Сити Океанариум',
+          address: 'г. Москва, 66-й км МКАД, Крокус-Сити',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.382901%2C55.826321&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NTI5OTA0NjAxEnzQoNC-0YHRgdC40Y8sINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC6LCDQttC40LvQvtC5INC60L7QvNC_0LvQtdC60YEg0JrRgNC-0LrRg9GBINCh0LjRgtC4IgoNIYgVQhU_T19C&z=16.09',
+        },
+        {
+          name: 'Москвариум',
+          address: 'г. Москва, ВДНХ, проспект Мира, д. 119, с23',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.618524%2C55.832940&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc3NDQ2NRI-0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINC_0YDQvtGB0L_QtdC60YIg0JzQuNGA0LAsIDExOdGBMjMiCg1deRZCFe5UX0I%2C&z=16.43',
+        },
+      ],
+    },
+  ];
+  const contactsMoscow = [
+    {
+      route: [
+        {
+          title: 'От станции метро "Севастопольская": ',
+          text: 'выход 11 — 640 метров пешком.',
+        },
+        {
+          title: 'С собой ',
+          text: 'нужно взять чистую сменную обувь для бассейна, плавки /купальник, можно маску. Погружения проводятся только в специальном арендном снаряжении.',
+        },
+      ],
+      time: 'Понедельник — пятница: С 11:00 до 21:00',
+      phone: '+7 (917) 594-54-89'
+    },
+    {
+      route: [
+        {
+          title: 'Общественным транспортом: ',
+          text: 'от м. Сходненская (последний вагон из центра, по переходу направо и по правой лестнице на улицу). Далее автобусом № 96 или «Т». Автобусом № 96 до остановки «Улица Фабрициуса», далее через дорогу по улице Лодочная до бассейна (ФИЗКУЛЬТ). Автобусом «Т» до остановки «Бассейн» (пятая по счету).',
+        },
+        {
+          title: 'С собой ',
+          text: 'нужно взять чистую сменную обувь для бассейна, плавки /купальник, можно маску. Погружения проводятся только в специальном арендном снаряжении.',
+        },
+      ],
+      time: 'По будням с 19:00 до 22:40, в выходные с 11:00 до 19:00',
+      phone: '+7-499-110-90-80',
+      class: 'centers__about-text--active',
+    },
+    {
+      route: [
+        {
+          title: 'Общественным транспортом: ',
+          text: 'от ст. м. «Мякинино», выход из последнего вагона (из центра), от метро пешком прямо по дороге около пяти минут.',
+        },
+        {
+          title: 'С собой ',
+          text: 'нужно взять чистую сменную обувь для бассейна, плавки /купальник, можно маску. Погружения проводятся только в специальном арендном снаряжении.',
+        },
+      ],
+      time: 'По будням кроме понедельника, по выходным и праздничным дням.',
+      phone: '+7 (495) 925-77-99'
+    },
+    {
+      route: [
+        {
+          title: 'Общественным транспортом: ',
+          text: 'от ст. м. «ВДНХ», выход из последнего вагона (из центра), от метро к центральному входу ВДНХ 7 минут пешком. От центрального входа выставки идите по главной аллее около 20 минут до павильона "Космос". "Москвариум" находится слева от ракеты «Восток».',
+        },
+        {
+          title: 'С собой ',
+          text: 'нужно взять чистую сменную обувь для бассейна, плавки /купальник, можно маску. Погружения проводятся только в специальном арендном снаряжении.',
+        },
+      ],
+      time: 'По вторникам, четвергам и субботам.',
+      phone: '+7 (916) 805-77-99'
+    },
+  ];
+
+.centers.contacts-offices
+  .centers__block.contacts-offices__block
+    for item in contactsCenters
+      +centersListBlock('contacts-offices', item)
+      .centers__map-block.contacts-offices__map-block
+        .centers__map
+      .centers__about.contacts-offices__about
+        for item, index in contactsMoscow
+          .centers__about-text.contacts-offices__about-content(class=item.class data-loc-text=`location-${index + 1}`)
+            for route in item.route
+              .contacts-offices__route
+                span.contacts-offices__about-title= route.title
+                span.contacts-offices__about-text= route.text
+            .contacts-offices__time
+              span.contacts-offices__about-title Часы работы:&nbsp;
+              span.contacts-offices__about-text= item.time
+            .contacts-offices__phone
+              span.contacts-offices__about-title Тел.:&nbsp;
+              span.contacts-offices__about-text= item.phone

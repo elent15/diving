@@ -1,0 +1,27 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключения компонентов страницы "Туризм" (tourism.html)
+@import "./components/tourism/tourism-hero";
+@import "./components/training/img-cards";
+@import "./components/tourism/tourism";
+@import "./components/tourism/speciality";
+@import "./components/training/registration";
+@import "./components/tourism/tourism-registration";
+@import "./components/tourism/tourism-info";

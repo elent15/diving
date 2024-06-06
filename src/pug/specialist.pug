@@ -1,0 +1,13 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'specialist';
+    const links = {'team' : 'Наша команда'};
+    const lastItem = 'Дмитрий Орлов';
+    const title = 'Дмитрий Орлов';
+
+block append main
+  include ./partials/modal/modal-reg-training.pug
+  include ./partials/specialist/specialist.pug
+  include ./partials/specialist/specialist-schedule.pug

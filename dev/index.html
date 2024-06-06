@@ -14,10 +14,10 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="container header__container"><button class="btn-reset burger" type="button"><span
+      <div class="container header__container"><button class="btn-reset burger" type="button" aria-label="Меню"><span
             class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button><a
-          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg"
-            alt="Логотип"></a>
+          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg" alt="Логотип"
+            width="103" height="65"></a>
         <div class="header__menu">
           <div class="header__menu-inner">
             <nav class="header__nav">
@@ -41,7 +41,8 @@
         </div><button class="btn-reset btn header__btn" type="button" data-modal="modal-entrance"><svg
             class="header__btn-icon">
             <use href="./images/sprite.svg#user"></use>
-          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button"><svg class="header__icon">
+          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button" aria-label="Тема"><svg
+            class="header__icon">
             <use href="./images/sprite.svg#sun"></use>
           </svg></button>
       </div>
@@ -50,8 +51,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label><label class="modal__form-label"><input
                 class="input modal__form-input" type="password" placeholder="Пароль"></label>
@@ -66,8 +67,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label>
             <div class="modal__form-bottom"><button class="btn-reset btn modal__form-btn" type="button"
@@ -76,9 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="wrapper__bg" style="background-image: url(./images/bg.webp);"></div>
+    <div class="wrapper__bg" style="background-image: url(./images/bg/bg.webp);"></div>
     <main class="main">
-      <section class="hero" style="background-image: url(./images/hero-bg.webp);">
+      <section class="hero" style="background-image: url(./images/index/hero-bg.webp);">
         <h1 class="visually-hidden">ruDive</h1>
         <div class="hero__content">
           <div class="hero__links"><a class="link-btn hero__link hero__link--active" href="./#.html">Как
@@ -99,171 +100,208 @@
             </div>
           </div>
         </div>
-        <div class="tours__tab tab tours__tab tab--active" id="tours-tab-1">
-          <div class="container tours__tab-container">
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-1.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-1.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">21 сентября — 1 октября</div>
+        <div class="tours__tab tab tab--active" id="tours-tab-1">
+          <div class="container">
+            <div class="tours__tab-container">
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-1.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-1.jpg">
+                    <source srcset="./images/index/tours-1.webp" type="image/webp"><img src="./images/index/tours-1.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">21 сентября — 1 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Дейли-дайвинг на Бали: в поисках мола-мола</div>
               </div>
-              <div class="tours__tab-card-title">Дейли-дайвинг на Бали: в поисках мола-мола</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-2.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-2.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">6 октября — 11 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-2.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-2.jpg">
+                    <source srcset="./images/index/tours-2.webp" type="image/webp"><img src="./images/index/tours-2.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">6 октября — 11 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Дайвинг на Голубом озере Церик-Кёль</div>
               </div>
-              <div class="tours__tab-card-title">Дайвинг на Голубом озере Церик-Кёль</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-3.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-3.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">28 октября – 5 ноября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-3.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-3.jpg">
+                    <source srcset="./images/index/tours-3.webp" type="image/webp"><img src="./images/index/tours-3.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">28 октября – 5 ноября</div>
+                </div>
+                <div class="tours__tab-card-title">Дайвинг с акулами и мантами на Мальдивах</div>
               </div>
-              <div class="tours__tab-card-title">Дайвинг с акулами и мантами на Мальдивах</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-4.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-4.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">4 ноября – 11 ноября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-4.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-4.jpg">
+                    <source srcset="./images/index/tours-4.webp" type="image/webp"><img src="./images/index/tours-4.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">4 ноября – 11 ноября</div>
+                </div>
+                <div class="tours__tab-card-title">Дайвинг-сафари в Египте: острова Бразерс</div>
               </div>
-              <div class="tours__tab-card-title">Дайвинг-сафари в Египте: острова Бразерс</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-5.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-5.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">6 ноября — 17 ноября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-5.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-5.jpg">
+                    <source srcset="./images/index/tours-5.webp" type="image/webp"><img src="./images/index/tours-5.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">6 ноября — 17 ноября</div>
+                </div>
+                <div class="tours__tab-card-title">Сеноты Юкатана, наземные экскурсии в городе майя</div>
               </div>
-              <div class="tours__tab-card-title">Сеноты Юкатана, наземные экскурсии в городе майя</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-6.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-6.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">18 ноября — 4 декабря</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-6.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-6.jpg">
+                    <source srcset="./images/index/tours-6.webp" type="image/webp"><img src="./images/index/tours-6.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">18 ноября — 4 декабря</div>
+                </div>
+                <div class="tours__tab-card-title">Наблюдения за королевскими и золотоволосыми пингвинами</div>
               </div>
-              <div class="tours__tab-card-title">Наблюдения за королевскими и золотоволосыми пингвинами</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-7.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-7.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">24 ноября – 3 декабря</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-7.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-7.jpg">
+                    <source srcset="./images/index/tours-7.webp" type="image/webp"><img src="./images/index/tours-7.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">24 ноября – 3 декабря</div>
+                </div>
+                <div class="tours__tab-card-title">Пуэрто Галера, остров Верде. Макромир. Ночные погружения</div>
               </div>
-              <div class="tours__tab-card-title">Пуэрто Галера, остров Верде. Макромир. Ночные погружения</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-8.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-8.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">2 декабря – 9 декабря</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-8.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-8.jpg">
+                    <source srcset="./images/index/tours-8.webp" type="image/webp"><img src="./images/index/tours-8.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">2 декабря – 9 декабря</div>
+                </div>
+                <div class="tours__tab-card-title">Морские нацпарки Рас Мохаммед и Тиран, рэк &quot;Тистлегорм&quot;
+                </div>
               </div>
-              <div class="tours__tab-card-title">Морские нацпарки Рас Мохаммед и Тиран, рэк &quot;Тистлегорм&quot;</div>
             </div><a class="link-btn tours__tabs-link" href="./schedule.html">Все туры</a>
           </div>
         </div>
-        <div class="tours__tab tab tours__tab" id="tours-tab-2">
-          <div class="container tours__tab-container">
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-1.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-1.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+        <div class="tours__tab tab" id="tours-tab-2">
+          <div class="container">
+            <div class="tours__tab-container">
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-1.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-1.jpg">
+                    <source srcset="./images/index/tours-1.webp" type="image/webp"><img src="./images/index/tours-1.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Junior Open Water Diver (с 10 лет)</div>
               </div>
-              <div class="tours__tab-card-title">Junior Open Water Diver (с 10 лет)</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-2.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-2.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-2.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-2.jpg">
+                    <source srcset="./images/index/tours-2.webp" type="image/webp"><img src="./images/index/tours-2.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Divemaster</div>
               </div>
-              <div class="tours__tab-card-title">Divemaster</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-3.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-3.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-3.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-3.jpg">
+                    <source srcset="./images/index/tours-3.webp" type="image/webp"><img src="./images/index/tours-3.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Enriched Air Diver</div>
               </div>
-              <div class="tours__tab-card-title">Enriched Air Diver</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-4.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-4.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-4.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-4.jpg">
+                    <source srcset="./images/index/tours-4.webp" type="image/webp"><img src="./images/index/tours-4.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Junior Advanced Open Water Diver</div>
               </div>
-              <div class="tours__tab-card-title">Junior Advanced Open Water Diver</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-5.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-5.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-5.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-5.jpg">
+                    <source srcset="./images/index/tours-5.webp" type="image/webp"><img src="./images/index/tours-5.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Emergency First Response</div>
               </div>
-              <div class="tours__tab-card-title">Emergency First Response</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-6.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-6.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-6.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-6.jpg">
+                    <source srcset="./images/index/tours-6.webp" type="image/webp"><img src="./images/index/tours-6.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Junior Open Water Diver (с 10 лет)</div>
               </div>
-              <div class="tours__tab-card-title">Junior Open Water Diver (с 10 лет)</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-7.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-7.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-7.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-7.jpg">
+                    <source srcset="./images/index/tours-7.webp" type="image/webp"><img src="./images/index/tours-7.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Divemaster</div>
               </div>
-              <div class="tours__tab-card-title">Divemaster</div>
-            </div>
-            <div class="tours__tab-card">
-              <div class="tours__tab-card-img-block">
-                <picture>
-                  <source srcset="./images/tours-8.webp" type="image/webp"><img class="tours__tab-card-img"
-                    src="./images/tours-8.jpg" alt="Дайвинг">
-                </picture>
-                <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+              <div class="tours__tab-card">
+                <div class="tours__tab-card-img-block">
+                  <picture>
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-8.webp" type="image/webp">
+                    <source media="(max-width:480px)" srcset="./images/index/tours-480-8.jpg">
+                    <source srcset="./images/index/tours-8.webp" type="image/webp"><img src="./images/index/tours-8.jpg"
+                      alt="Дайвинг" loading="lazy">
+                  </picture>
+                  <div class="tours__tab-card-sticker">Пн. 30 октября</div>
+                </div>
+                <div class="tours__tab-card-title">Enriched Air Diver</div>
               </div>
-              <div class="tours__tab-card-title">Enriched Air Diver</div>
             </div><a class="link-btn tours__tabs-link" href="./courses.html">Все курсы</a>
           </div>
         </div>
@@ -278,10 +316,10 @@
           <div class="reports__btns">
             <ul class="list-reset reports__list">
               <li><button class="btn-reset btn reports__btn reports__btn--active" type="button"
-                  data-tab="reports-list-all">Все</button></li>
-              <li><button class="btn-reset btn reports__btn" type="button" data-tab="reports-list-tab-1">Фото</button>
+                  data-type="reports-list-all">Все</button></li>
+              <li><button class="btn-reset btn reports__btn" type="button" data-type="reports-list-tab-1">Фото</button>
               </li>
-              <li><button class="btn-reset btn reports__btn" type="button" data-tab="reports-list-tab-2">Видео</button>
+              <li><button class="btn-reset btn reports__btn" type="button" data-type="reports-list-tab-2">Видео</button>
               </li>
             </ul>
             <div class="swiper mobile-swiper reports__swiper" data-mobile="false">
@@ -301,200 +339,201 @@
           </div>
         </div>
         <div class="container">
-          <div class="reports__cards-block">
+          <div class="reports__cards-block more-cards-block">
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-2">
               <picture>
-                <source srcset="./images/reports-1.webp" type="image/webp"><img src="./images/reports-1.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-1.webp" type="image/webp"><img src="./images/index/reports-1.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-3">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-2.webp" type="image/webp"><img src="./images/reports-2.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-2.webp" type="image/webp"><img
+                    src="./images/index/reports-2.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
-                <source srcset="./images/reports-3.webp" type="image/webp"><img src="./images/reports-3.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-3.webp" type="image/webp"><img src="./images/index/reports-3.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-4">
               <picture>
-                <source srcset="./images/reports-4.webp" type="image/webp"><img src="./images/reports-4.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-4.webp" type="image/webp"><img src="./images/index/reports-4.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-5">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-5.webp" type="image/webp"><img src="./images/reports-5.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-5.webp" type="image/webp"><img
+                    src="./images/index/reports-5.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-3">
               <picture>
-                <source srcset="./images/reports-6.webp" type="image/webp"><img src="./images/reports-6.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-6.webp" type="image/webp"><img src="./images/index/reports-6.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-2">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-7.webp" type="image/webp"><img src="./images/reports-7.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-7.webp" type="image/webp"><img
+                    src="./images/index/reports-7.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
-                <source srcset="./images/reports-8.webp" type="image/webp"><img src="./images/reports-8.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-8.webp" type="image/webp"><img src="./images/index/reports-8.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card" data-tab-value="reports-list-tab-1 reports-tab-5">
               <picture>
-                <source srcset="./images/reports-9.webp" type="image/webp"><img src="./images/reports-9.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-9.webp" type="image/webp"><img src="./images/index/reports-9.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video" data-tab-value="reports-list-tab-2 reports-tab-1">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-10.webp" type="image/webp"><img src="./images/reports-10.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-10.webp" type="image/webp"><img
+                    src="./images/index/reports-10.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-2">
               <picture>
-                <source srcset="./images/reports-1.webp" type="image/webp"><img src="./images/reports-1.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-1.webp" type="image/webp"><img src="./images/index/reports-1.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-3">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-2.webp" type="image/webp"><img src="./images/reports-2.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-2.webp" type="image/webp"><img
+                    src="./images/index/reports-2.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
-                <source srcset="./images/reports-3.webp" type="image/webp"><img src="./images/reports-3.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-3.webp" type="image/webp"><img src="./images/index/reports-3.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-4">
               <picture>
-                <source srcset="./images/reports-4.webp" type="image/webp"><img src="./images/reports-4.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-4.webp" type="image/webp"><img src="./images/index/reports-4.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-5">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-5.webp" type="image/webp"><img src="./images/reports-5.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-5.webp" type="image/webp"><img
+                    src="./images/index/reports-5.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-3">
               <picture>
-                <source srcset="./images/reports-6.webp" type="image/webp"><img src="./images/reports-6.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-6.webp" type="image/webp"><img src="./images/index/reports-6.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-2">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-7.webp" type="image/webp"><img src="./images/reports-7.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-7.webp" type="image/webp"><img
+                    src="./images/index/reports-7.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-1">
               <picture>
-                <source srcset="./images/reports-8.webp" type="image/webp"><img src="./images/reports-8.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-8.webp" type="image/webp"><img src="./images/index/reports-8.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card none" data-tab-value="reports-list-tab-1 reports-tab-5">
               <picture>
-                <source srcset="./images/reports-9.webp" type="image/webp"><img src="./images/reports-9.jpg"
-                  alt="Дайвинг">
+                <source srcset="./images/index/reports-9.webp" type="image/webp"><img src="./images/index/reports-9.jpg"
+                  alt="Дайвинг" loading="lazy">
               </picture>
             </div>
             <div class="reports__card video none" data-tab-value="reports-list-tab-2 reports-tab-1">
               <div class="video__container">
                 <picture class="video__bg">
-                  <source srcset="./images/reports-10.webp" type="image/webp"><img src="./images/reports-10.jpg"
-                    alt="Дайвинг">
+                  <source srcset="./images/index/reports-10.webp" type="image/webp"><img
+                    src="./images/index/reports-10.jpg" alt="Дайвинг" loading="lazy">
                 </picture>
                 <div class="video__body">
                   <div class="video__content"
                     data-src="https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&amp;showinfo=0&amp;autoplay=1">
                   </div>
-                </div><button class="btn-reset video__play-btn" type="button"><svg>
+                </div><button class="btn-reset video__play-btn" type="button" aria-label="Начать просмотр видео"><svg>
                     <use href="./images/sprite.svg#pleer"></use>
                   </svg></button>
               </div>
             </div>
-          </div><button class="btn-reset transparent-btn reports__more-btn" type="button">Загрузить еще</button>
+          </div><button class="btn-reset transparent-btn reports__more-btn more-btn" type="button">Загрузить
+            еще</button>
         </div>
       </section>
       <section class="section info">
@@ -504,8 +543,8 @@
             <div class="info__card">
               <div class="info__card-img-block">
                 <picture>
-                  <source srcset="./images/info-1.webp" type="image/webp"><img class="info__card-img info__card-img-1"
-                    src="./images/info-1.png" alt="Книги">
+                  <source srcset="./images/index/info-1.webp" type="image/webp"><img
+                    class="info__card-img info__card-img-1" src="./images/index/info-1.png" alt="Книги" loading="lazy">
                 </picture>
               </div>
               <div class="info__card-text">Наши книги не стоит воспринимать как учебные пособия, а скорее, как
@@ -518,8 +557,9 @@
             <div class="info__card">
               <div class="info__card-img-block">
                 <picture>
-                  <source srcset="./images/info-2.webp" type="image/webp"><img class="info__card-img info__card-img-2"
-                    src="./images/info-2.png" alt="Подарки">
+                  <source srcset="./images/index/info-2.webp" type="image/webp"><img
+                    class="info__card-img info__card-img-2" src="./images/index/info-2.png" alt="Подарки"
+                    loading="lazy">
                 </picture>
               </div>
               <div class="info__card-text">Устали дарить ежедневники и конфеты?! Есть яркое и свежее решение! Приезжайте
@@ -532,8 +572,9 @@
             <div class="info__card">
               <div class="info__card-img-block">
                 <picture>
-                  <source srcset="./images/info-3.webp" type="image/webp"><img class="info__card-img info__card-img-3"
-                    src="./images/info-3.png" alt="Снаряжение для дайвинга">
+                  <source srcset="./images/index/info-3.webp" type="image/webp"><img
+                    class="info__card-img info__card-img-3" src="./images/index/info-3.png"
+                    alt="Снаряжение для дайвинга" loading="lazy">
                 </picture>
               </div>
               <div class="info__card-text">Проведите осмотр снаряжения на наличие грязи внутри регулятора, BCD
@@ -576,8 +617,29 @@
                   <div class="reviews__card-bottom">
                     <div class="reviews__card-img-block">
                       <picture>
-                        <source srcset="./images/reviews-1.webp" type="image/webp"><img src="./images/reviews-1.jpg"
-                          alt="Фото">
+                        <source srcset="./images/index/reviews-1.webp" type="image/webp"><img
+                          src="./images/index/reviews-1.jpg" alt="Фото" loading="lazy">
+                      </picture>
+                    </div>
+                    <div class="reviews__card-info"><span class="reviews__card-author">Иван Иванов</span><span
+                        class="reviews__card-section">Направление:&nbsp;</span><span
+                        class="reviews__card-section reviews__card-section-name">Дайвинг-сафари</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide reviews__swiper-slide">
+                <div class="reviews__card">
+                  <div class="reviews__card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing. </div>
+                  <div class="reviews__card-bottom">
+                    <div class="reviews__card-img-block">
+                      <picture>
+                        <source srcset="./images/index/reviews-2.webp" type="image/webp"><img
+                          src="./images/index/reviews-2.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                     <div class="reviews__card-info"><span class="reviews__card-author">Иван Иванов</span><span
@@ -597,29 +659,8 @@
                   <div class="reviews__card-bottom">
                     <div class="reviews__card-img-block">
                       <picture>
-                        <source srcset="./images/reviews-2.webp" type="image/webp"><img src="./images/reviews-2.jpg"
-                          alt="Фото">
-                      </picture>
-                    </div>
-                    <div class="reviews__card-info"><span class="reviews__card-author">Иван Иванов</span><span
-                        class="reviews__card-section">Направление:&nbsp;</span><span
-                        class="reviews__card-section reviews__card-section-name">Дайвинг-сафари</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide reviews__swiper-slide">
-                <div class="reviews__card">
-                  <div class="reviews__card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing.</div>
-                  <div class="reviews__card-bottom">
-                    <div class="reviews__card-img-block">
-                      <picture>
-                        <source srcset="./images/reviews-3.webp" type="image/webp"><img src="./images/reviews-3.jpg"
-                          alt="Фото">
+                        <source srcset="./images/index/reviews-3.webp" type="image/webp"><img
+                          src="./images/index/reviews-3.jpg" alt="Фото" loading="lazy">
                       </picture>
                     </div>
                     <div class="reviews__card-info"><span class="reviews__card-author">Иван Иванов</span><span
@@ -670,7 +711,8 @@
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-1.webp" type="image/webp"><img src="./images/blog-1.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-1.webp" type="image/webp"><img src="./images/index/blog-1.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
@@ -684,21 +726,23 @@
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-2.webp" type="image/webp"><img src="./images/blog-2.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-2.webp" type="image/webp"><img src="./images/index/blog-2.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
                       <use href="./images/sprite.svg#calendar"></use>
                     </svg><span class="blog__card-date">Сегодня 15:25</span></div>
                   <div class="blog__card-title">Летние каникулы заканчиваются: успейте нырнуть с детьми в московских
-                    океанариумах</div><a class="link-btn blog__card-link" href="./#!.html">Читать</a>
+                    океанариумах.</div><a class="link-btn blog__card-link" href="./#!.html">Читать</a>
                 </div>
               </div>
               <div class="swiper-slide blog__swiper-slide">
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-3.webp" type="image/webp"><img src="./images/blog-3.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-3.webp" type="image/webp"><img src="./images/index/blog-3.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
@@ -712,7 +756,8 @@
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-4.webp" type="image/webp"><img src="./images/blog-4.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-4.webp" type="image/webp"><img src="./images/index/blog-4.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
@@ -726,7 +771,8 @@
                 <div class="blog__card">
                   <div class="blog__card-img-block">
                     <picture>
-                      <source srcset="./images/blog-5.webp" type="image/webp"><img src="./images/blog-5.jpg" alt="Фото">
+                      <source srcset="./images/index/blog-5.webp" type="image/webp"><img src="./images/index/blog-5.jpg"
+                        alt="Фото" loading="lazy">
                     </picture>
                   </div>
                   <div class="blog__date-block"><svg class="blog__calendar">
@@ -743,7 +789,7 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__subscribe" style="background-image: url(./images/subscribe-bg.webp);">
+        <div class="footer__subscribe" style="background-image: url(./images/footer/subscribe-bg.webp);">
           <h3 class="third-title footer__subscribe-title">Подписывайтесь на наши социальные сети</h3>
           <div class="footer__subscribe-text">И первым узнавайте о новых турах, акциях, скидках и подарках нашего клуба.
           </div>
@@ -759,21 +805,25 @@
         </div>
         <div class="footer__top">
           <div class="footer__left"><a class="link footer__logo-link" href="./index.html"><img class="logo footer__logo"
-                src="./images/svg/logo.svg" alt="Логотип"></a>
+                src="./images/svg/logo.svg" alt="Логотип" width="103" height="65"></a>
             <div class="footer__text">В основе деятельности группы компаний RuDIVE лежат международные стандарты
               качества. Дайвинг-центры и школы работают по стандартам ISO, PADI и ГОСТ.</div><span
               class="footer__subtitle footer__left-subtitle">Мессенджеры и соц сети</span>
             <ul class="list-reset footer__social-list">
-              <li><a class="link footer__social-link" href="https://wa.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://wa.me" aria-label="whatsapp"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#whatsapp"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://t.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://t.me" aria-label="telegram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#telegram"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://vk.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://vk.com" aria-label="vk"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://instagram.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://instagram.com" aria-label="instagram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#instagram"></use>
                   </svg></a></li>
             </ul>
@@ -823,14 +873,16 @@
           <div class="footer__bottom-links"><a class="link footer__bottom-text" href="#">Политика
               конфиденциальности</a><a class="link footer__bottom-text" href="#">Правила оказания услуг</a></div>
           <div class="footer__payment"><span class="footer__bottom-text">Способы оплаты</span><img
-              class="footer__payment-logos" src="./images/payment-logos.png" alt="Логотип платёжных систем"></div>
+              class="footer__payment-logos" src="./images/footer/payment-logos.png" alt="Логотип платёжных систем">
+          </div>
           <div class="footer__development"><span class="footer__bottom-text">Разработка сайта</span><img
-              class="footer__bottom-logo" src="./images/footer-logo.png" alt="Логотип"></div>
+              class="footer__bottom-logo" src="./images/footer/footer-logo.png" alt="Логотип" width="121" height="20">
+          </div>
         </div>
       </div><button class="btn-reset footer__chat-btn" type="button">
         <picture>
-          <source srcset="./images/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
-            src="./images/chat.png" alt="Чат">
+          <source srcset="./images/footer/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
+            src="./images/footer/chat.png" alt="Чат" width="66" height="66" loading="lazy">
         </picture>
       </button>
     </footer>

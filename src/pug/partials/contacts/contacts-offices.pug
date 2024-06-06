@@ -1,0 +1,92 @@
+include ../../mixins/centers-list-block.pug
+
+-
+  const contactsOffices = [
+    {
+      title: 'Офисы в Москве',
+      list: [
+        {
+          name: 'Центральный офис RuDIVE',
+          address: 'г. Москва, ул. Нижняя Сыромятническая, 10. Центр дизайна ARTPLAY, здание 9, этаж 3, пространство № 335',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.670483%2C55.752708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxMzY3MRJb0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQttC90Y_RjyDQodGL0YDQvtC80Y_RgtC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgMTDQkNGBMSIKDZSuFkIVxgJfQg%2C%2C&z=16.43',
+        },
+        {
+          classItem: 'centers__location-item--active',
+          classBtn: 'centers__location-btn--active',
+          name: 'На Ленинском проспекте',
+          address: 'г. Москва, Ленинский проспект, д. 52, офис 27',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.563189%2C55.698980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MzU5NTU5MzM2EkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JvQtdC90LjQvdGB0LrQuNC5INC_0YDQvtGB0L_QtdC60YIsIDUyIgoNtUAWQhXCy15C&z=16.43',
+        },
+        {
+          name: 'Сервисный центр RuDIVE',
+          address: 'г. Москва, Сиреневый бульвар, дом 14 к. 3, комната 10',
+          src: 'https://yandex.ru/map-widget/v1/?ll=37.785431%2C55.801759&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc1MzAyNxJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LjRgNC10L3QtdCy0YvQuSDQsdGD0LvRjNCy0LDRgCwgMTTQujMiCg1HJBdCFQE1X0I%2C&z=16.43',
+        },
+      ],
+    }
+  ];
+  const contactsAbout = [
+    {
+      route: [
+        {
+          title: 'Выход из ст. м. «Чкаловская», «Курская», станция МЦД-2 "Курская": ',
+          text: 'затем 10-12 минут пешком до центра дизайна ARTPLAY.',
+        },
+      ],
+      time: 'Понедельник — пятница: 10:00-21:00 Суббота и воскресенье — дежурный на телефоне: +7 (495) 925-77-99, вотсап: 8 (916) 805-77-99',
+      phone: '+7 (495) 925-77-99'
+    },
+    {
+      route: [
+        {
+          title: 'От метро «Ленинский проспект»: ',
+          text: '1-й вагон из центра, из метро налево. Дойти до Ленинского проспекта, перейти на противоположную сторону. Далее на любом троллейбусе (кроме № 7) до остановки «Улица Ляпунова». Офис находится слева от остановки.',
+        },
+        {
+          title: 'От метро «Октябрьская» (кольцевая): ',
+          text: 'выходя из метро, поверните направо. Далее нужно доехать на любом троллейбусе или маршрутном такси до остановки «Улица Ляпунова».',
+        },
+      ],
+      time: 'Понедельник — пятница: 10:00-19:00 Суббота и воскресенье — выходные дни',
+      phone: '+7-499-110-90-80',
+      class: 'centers__about-text--active',
+    },
+    {
+      route: [
+        {
+          title: 'От метро «Первомайская»: ',
+          text: 'первый вагон из центра. Выход из метро налево, затем прямо по 9-й Парковой до Сиреневого бульвара. На Сиреневом бульваре налево и далее прямо. Между 5-й и 3-й Парковыми улицами перед домом 14к1 поверните во двор. В торце дома 14к3 вход на цокольный этаж и вывеска «Салон парикмахерская». Вход через салон.',
+        },
+        {
+          title: 'От метро «Щёлковская»: ',
+          text: 'последний вагон из центра. Выход из метро направо, затем прямо по 9-й Парковой до Сиреневого бульвара. Перейти перекрёсток Сиреневого бульвара и 9-й Парковой, сразу повернуть направо и затем идти прямо. Между 5-й и 3-й Парковыми улицами перед домом 14к1 поверните во двор. В торце дома 14к3 вход на цокольный этаж и вывеска «Салон парикмахерская». Вход через салон.',
+        },
+        {
+          title: 'От метро «Черкизовская»: ',
+          text: 'последний вагон из центра. Перейдите Щёлковское шоссе и поднимитесь на эстакаду, к автобусной остановке. На автобусе №230 следуете до остановки «3-я Парковая» (шестая остановка по ходу движения). После выхода из автобуса пройдите немного вперёд по ходу движения автобуса, вдоль дома 14к2. В конце дома поверните во двор направо. В торце дома 14к3 вход на цокольный этаж и вывеска «Салон парикмахерская». Вход через салон.',
+        },
+      ],
+      time: 'Перед приездом обязательно позвоните: +7 (926) 237-75-38',
+      phone: '+7 (926) 237-75-38'
+    },
+  ];
+
+.centers.contacts-offices
+  .centers__block.contacts-offices__block
+    for item in contactsOffices
+      +centersListBlock('contacts-offices', item)
+      .centers__map-block.contacts-offices__map-block
+        .centers__map
+      .centers__about.contacts-offices__about
+        for item, index in contactsAbout
+          .centers__about-text.contacts-offices__about-content(class=item.class data-loc-text=`location-${index + 1}`)
+            for route in item.route
+              .contacts-offices__route
+                span.contacts-offices__about-title= route.title
+                span.contacts-offices__about-text= route.text
+            .contacts-offices__time
+              span.contacts-offices__about-title Часы работы:&nbsp;
+              span.contacts-offices__about-text= item.time
+            .contacts-offices__phone
+              span.contacts-offices__about-title Тел.:&nbsp;
+              span.contacts-offices__about-text= item.phone

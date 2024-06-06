@@ -84,7 +84,7 @@ const centers = () => {
   });
 
   const insertIframe = (map, src) => {
-    map.insertAdjacentHTML('afterbegin', '<iframe class="centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
+    map.insertAdjacentHTML('afterbegin', '<iframe class="centers__map-iframe" title="Яндекс Карта" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
     map.addEventListener('click', () => {
       map.querySelector('.centers__map-iframe').style.pointerEvents = 'all';
     });
@@ -441,6 +441,33 @@ const select = () => {
 
 select();
 
+function showMore() {
+  const moreBtns = document.querySelectorAll('.more-btn');
+  let step;
+
+  if (moreBtns.length > 0) {
+    moreBtns.forEach(moreBtn => {
+      moreBtn.addEventListener('click', (e) => {
+        const moreBtn = e.target;
+        const moreCardsBlock = moreBtn.closest('section').querySelector('.more-cards-block');
+        const invisibleCards = Array.from(moreCardsBlock.querySelectorAll('.none'));
+
+        step = (document.documentElement.clientWidth > 1470) ? 10 : 5;
+
+        invisibleCards.splice(0, step).forEach(card => {
+          card.classList.remove('none');
+        });
+
+        if (invisibleCards.length === 0) {
+          moreBtn.classList.add('none');
+        }
+      });
+    });
+  }
+}
+
+showMore();
+
 // scroll-style
 function outlineReset() {
   const wrapper = document.querySelectorAll('.simplebar-content-wrapper');
@@ -703,10 +730,10 @@ const videoBg = () => {
 
           if (heroVideo.getAttribute('src') === './resources/oceanariums-1.mp4') {
             heroVideo.setAttribute('src', './resources/oceanariums-2.mp4');
-            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-2.webp');
+            heroVideo.setAttribute('poster', './images/oceanariums/oceanariums-hero-bg-2.webp');
           } else {
             heroVideo.setAttribute('src', './resources/oceanariums-1.mp4');
-            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-1.webp');
+            heroVideo.setAttribute('poster', './images/oceanariums/oceanariums-hero-bg-1.webp');
           }
         } else {
           const heroVideo = document.querySelector('.oceanariums-hero__video');

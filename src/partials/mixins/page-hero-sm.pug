@@ -1,7 +1,0 @@
-include ./breadcrumbs.pug
-
-mixin pageHeroSm(links, lastItem, title)
-  section.page-hero-sm(style=`background-image: url(./images/page-hero-bg.webp);`)
-    .container.page-hero-sm__container
-      +breadcrumbs(links, lastItem)
-      h2.second-title.page-hero-sm__title= title

@@ -1,0 +1,10 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'contacts';
+    const lastItem = 'Контакты';
+    const title = 'Контакты';
+
+block append main
+  include ./partials/contacts/contacts-tabs.pug

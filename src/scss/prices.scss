@@ -1,0 +1,25 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+@import "./components/modal/modal-book";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение первого экрана страницы
+@import "./components/page-hero-sm";
+
+// подключение аккордеона
+@import "./components/accordion";
+
+// подключения компонентов страницы "Цены на обучение" (prices.html)
+@import "./components/prices/prices";

@@ -1,0 +1,44 @@
+include ../../mixins/slider-btns.pug
+
+-
+  const reviewsSlides = [
+    {
+      text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.',
+      author: 'Иван Иванов',
+      section: 'Дайвинг-сафари',
+    },
+    {
+      text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing. ',
+      author: 'Иван Иванов',
+      section: 'Дайвинг-сафари',
+    },
+    {
+      text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.',
+      author: 'Иван Иванов',
+      section: 'Дайвинг-сафари',
+    },
+  ];
+
+section.section.reviews
+  .container-fluid
+    h3.third-title.numbered-title.reviews__title Отзывы о нашем клубе
+    .swiper.reviews__swiper
+      .reviews__swiper-top
+        .reviews__text С нами в клубе состоят как любители, так и профессионалы дайвинга России.
+        +sliderBtns('reviews')
+      .swiper-wrapper
+        for slide, index in reviewsSlides
+          .swiper-slide.reviews__swiper-slide
+            .reviews__card
+              .reviews__card-text= slide.text
+              .reviews__card-bottom
+                .reviews__card-img-block
+                  picture
+                    source(srcset=`./images/index/reviews-${index + 1}.webp`, type="image/webp")
+                    img(src=`./images/index/reviews-${index + 1}.jpg`, alt="Фото", loading="lazy")
+                .reviews__card-info
+                  span.reviews__card-author= slide.author
+                  span.reviews__card-section Направление:&nbsp;
+                  span.reviews__card-section.reviews__card-section-name= slide.section
+      .reviews__swiper-bottom
+        +sliderBtns('reviews')

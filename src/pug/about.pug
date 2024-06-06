@@ -1,0 +1,20 @@
+extends ./templates/page-lg.pug
+
+block vars
+  -
+    const name = 'about';
+    const lastItem = 'О нас';
+    const title = 'Мы страстно любим море, дайвинг и людей, обожаем путешествовать и познавать мир';
+    const text = 'Это помогает нам правильно организовывать самые сложные погружения от Антарктиды до Северного полюса, разрабатывать новые программы путешествий в самые дикие уголки земного шара, запускать новые учебные программы.';
+
+block bg
+  .wrapper__bg.wrapper__about-bg(style="background-image: url(./images/bg/about-bg.webp);")
+
+block append main
+  include ./partials/about/about.pug
+  include ./partials/about/office.pug
+  include ./partials/about/history.pug
+  include ./partials/about/spas-kamenka.pug
+  include ./partials/about/moskvarium.pug
+  include ./partials/about/deeds.pug
+  include ./partials/about/about-blog.pug

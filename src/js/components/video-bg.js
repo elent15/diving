@@ -18,10 +18,10 @@ const videoBg = () => {
 
           if (heroVideo.getAttribute('src') === './resources/oceanariums-1.mp4') {
             heroVideo.setAttribute('src', './resources/oceanariums-2.mp4');
-            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-2.webp');
+            heroVideo.setAttribute('poster', './images/oceanariums/oceanariums-hero-bg-2.webp');
           } else {
             heroVideo.setAttribute('src', './resources/oceanariums-1.mp4');
-            heroVideo.setAttribute('poster', './images/oceanariums-hero-bg-1.webp');
+            heroVideo.setAttribute('poster', './images/oceanariums/oceanariums-hero-bg-1.webp');
           }
         } else {
           const heroVideo = document.querySelector('.oceanariums-hero__video');

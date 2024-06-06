@@ -1,0 +1,34 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+@import "./components/modal/modal-book";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключение слайдера с миниатюрами
+@import "./components/diving-center/hero-slider";
+@import "./components/diving-center/hero-slider-min";
+
+// подключение аккордеона
+@import "./components/accordion";
+
+// подключения компонентов страницы "Карточка поездки" (trip-card.html)
+@import "./components/trip-card/trip-hero";
+@import "./components/trip-card/trip-info";
+@import "./components/trip-card/trip-program";
+@import "./components/trip-card/characteristics";
+@import "./components/specialist/schedule-sm";
+@import "./components/trip-card/trip-courses";

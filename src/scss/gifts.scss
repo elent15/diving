@@ -1,0 +1,23 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero-sm";
+
+// подключения компонентов страницы "Подарки" (gifts.html)
+@import "./components/gifts/gifts";
+@import "./components/books/form-block";
+@import "./components/gifts/gifts-form";

@@ -1,0 +1,9 @@
+include ./breadcrumbs.pug
+
+mixin pageHeroLg(name, links, lastItem, title, text)
+  section.page-hero(class=name + '-hero' style=`background-image: url(./images/${name}/${name}-hero-bg.webp);`)
+    .container.page-hero__container
+      +breadcrumbs(links, lastItem)
+      .page-hero__content(class=name + '-hero__content')
+        h2.second-title.page-hero__title= title
+        .page-hero__text= text

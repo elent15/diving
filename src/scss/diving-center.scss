@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключение слайдера с миниатюрами
+@import "./components/diving-center/hero-slider";
+@import "./components/diving-center/hero-slider-min";
+
+// подключения компонентов страницы "Карточка дайвинг-центра" (diving-center.html)
+@import "./components/diving-center/center-hero";
+@import "./components/diving-center/center-location";
+@import "./components/specialist/schedule-sm";
+@import "./components/specialist/form-reg";
+@import "./components/diving-center/center-route";
+@import "./components/diving-center/center-info";

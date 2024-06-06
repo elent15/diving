@@ -1,0 +1,56 @@
+include ../../mixins/img-cards.pug
+
+-
+  const tourismCards = [
+    {
+      title: 'Клубные поездки с турлидером',
+      alt: 'Клубные поездки',
+      href: 'tourism',
+    },
+    {
+      title: 'Индивидуальный туризм',
+      alt: 'Индивидуальный туризм',
+      href: 'tourism',
+    },
+    {
+      title: 'Корпоративные программы',
+      alt: 'Корпоративные программы',
+      href: 'tourism',
+    },
+    {
+      title: 'Дайвинг-сафари',
+      alt: 'Дайвинг-сафари',
+      href: 'tourism',
+    },
+    {
+      title: 'Экотуризм',
+      alt: 'Экотуризм',
+      href: 'tourism',
+    },
+    {
+      title: 'Путешествия к большим животным',
+      alt: 'Путешествия к большим животным',
+      href: 'tourism',
+    },
+    {
+      title: 'Каталог путешествий',
+      alt: 'Каталог путешествий',
+      href: 'tourism',
+    },
+    {
+      title: 'Наши направления',
+      alt: 'Наши направления',
+      href: 'tourism',
+    },
+    {
+      title: 'Каталог яхт и курортов',
+      alt: 'Каталог яхт и курортов',
+      href: 'tourism',
+    },
+  ];
+
+.page-main-section.tourism.section-top
+  .container
+    h3.third-title.page-third-title.tourism__title Выбираем стиль поездки
+    .tourism__text Отдых с группой единомышленников, в хорошей компании с клубным турлидером, или в индивидуальном порядке. Или даже поехать трудовым коллективом и поставить перед туром бизнес-цели.
+    +imgCards('tourism', tourismCards)

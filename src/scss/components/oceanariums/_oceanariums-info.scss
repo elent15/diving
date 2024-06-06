@@ -1,0 +1,145 @@
+.oceanariums-info {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 77px;
+
+    @media (max-width:1470px) {
+      gap: 36px;
+    }
+
+    @media (max-width:1100px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width:720px) {
+      flex-direction: column;
+    }
+  }
+
+  &__cards-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: calc((100% - 154px) / 3);
+
+    @media (max-width:1470px) {
+      width: calc((100% - 72px) / 3);
+    }
+
+    @media (max-width:1100px) {
+      gap: 24px;
+      width: calc((100% - 36px) / 2);
+    }
+
+    @media (max-width:720px) {
+      width: 100%;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 401px;
+    min-height: 64px;
+    padding-left: 80px;
+    font-weight: 800;
+    line-height: 32px;
+
+    @media (max-width:1470px) {
+      min-height: 96px;
+    }
+
+    @media (max-width:1100px) {
+      min-height: 80px;
+      line-height: 26px;
+    }
+
+    @media (max-width:720px) {
+      min-height: 56px;
+    }
+
+    @media (max-width:480px) {
+      min-height: 80px;
+    }
+
+    &::before {
+      content: "0" counter(counter);
+    }
+
+    &::after {
+      left: 0px;
+      width: 60px;
+    }
+
+    &::before {
+      top: -25%;
+      border: 1px solid #dcdcdc;
+      font-size: 14px;
+      font-weight: 400;
+      transform: none;
+
+      @media (max-width:1470px) {
+        top: 0;
+      }
+
+      @media (max-width:720px) {
+        top: -25%;
+      }
+
+      @media (max-width:480px) {
+        top: 0;
+      }
+    }
+  }
+
+  &__card {
+    width: 100%;
+  }
+
+  &__card-img-block {
+    border-radius: 10px;
+    margin-bottom: 47px;
+    width: 100%;
+    aspect-ratio: 428 / 285;
+    background-color: var(--light-gray);
+    overflow: hidden;
+
+    @media (max-width:1470px) {
+      margin-bottom: 36px;
+    }
+
+    @media (max-width:1100px) {
+      margin-bottom: 32px;
+      max-height: 250px;
+    }
+
+    @media (max-width:720px) {
+      aspect-ratio: 690 / 360;
+      max-height: 260px;
+    }
+
+    @media (max-width:480px) {
+      aspect-ratio: 0;
+      margin-bottom: 24px;
+      max-height: 235px;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__card-btn {
+    border-radius: 5px;
+    padding: 12px;
+    width: 178px;
+    min-height: 46px;
+    background: var(--red);
+  }
+}

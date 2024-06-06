@@ -1,0 +1,14 @@
+extends ./templates/page-lg.pug
+
+block vars
+  -
+    const name = 'tourism';
+    const lastItem = 'Туризм';
+    const title = 'Туризм';
+    text = 'Жизнь — это большое приключение, которое состоит из путешествий. Планируя новые поездки, важно сначала решить, зачем, куда, с кем, к кому, когда, в какой компании, и кому доверить организацию нового приключения.';
+
+block append main
+  include ./partials/tourism/tourism.pug
+  include ./partials/tourism/speciality.pug
+  include ./partials/tourism/tourism-registration.pug
+  include ./partials/tourism/tourism-info.pug

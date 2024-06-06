@@ -1,0 +1,12 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'schedule';
+    const lastItem = 'Расписание клубных поездок';
+    const title = 'Расписание клубных поездок';
+
+block append main
+  include ./partials/modal/modal-book.pug
+  include ./partials/schedule/schedule-travel.pug
+  include ./partials/schedule/bonus.pug

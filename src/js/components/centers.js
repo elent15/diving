@@ -7,7 +7,7 @@ const centers = () => {
   });
 
   const insertIframe = (map, src) => {
-    map.insertAdjacentHTML('afterbegin', '<iframe class="centers__map-iframe" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
+    map.insertAdjacentHTML('afterbegin', '<iframe class="centers__map-iframe" title="Яндекс Карта" style="pointer-events: none;" src="' + src + '" allowfullscreen></iframe>');
     map.addEventListener('click', () => {
       map.querySelector('.centers__map-iframe').style.pointerEvents = 'all';
     });

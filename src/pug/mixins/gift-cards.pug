@@ -1,0 +1,13 @@
+mixin giftCards(cards, name, extension)
+  div(class=name + '__cards-block')
+    for card, index in cards
+      button.btn-reset.gift-card(class=card.class class=name + '__card' type='button')
+        picture(class=name + '__card-img-block')
+          source(srcset!=`./images/${name}/${name}-${index + 1}.webp`, type="image/webp")
+          img(src!=`./images/${name}/${name}-${index + 1}.${extension}`, alt='Подарок')
+        span.gift-card__title(class=name + '__card-title')= card.title
+        if name !== 'modal-certificate'
+          span.gift-card__price(class=name + '__card-price')
+            svg
+              use(href="./images/sprite.svg#wallet")
+            =card.price

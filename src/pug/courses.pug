@@ -1,0 +1,12 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'courses';
+    const lastItem = 'Расписание курсов по дайвингу';
+    const title = 'Расписание курсов по дайвингу';
+
+block append main
+  include ./partials/modal/modal-reg-training.pug
+  include ./partials/courses/schedule-courses.pug
+  include ./partials/schedule/bonus.pug

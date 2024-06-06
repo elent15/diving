@@ -1,0 +1,75 @@
+include ../../mixins/schedule-cards.pug
+
+-
+  const tripCoursesCards = [
+    {
+      title: 'Junior Open Water Diver (с 10 лет)', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+    {
+      title: 'Divemaster', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+    {
+      title: 'Enriched Air Diver', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+    },
+    {
+      title: 'Обучение идеальной плавучести', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Вт. 27 февраля 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр на Лодочной',
+      },
+      cardClass: 'none'
+    },
+    {
+      title: 'Ice Diver. Полный курс', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Сб. 2 марта 2024 | 09:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр «Cпас-Каменка»',
+      },
+      cardClass: 'none'
+    },
+    {
+      title: 'Emergency First Response', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Пн. 30 октября 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр "Азовский"',
+      },
+      cardClass: 'none'
+    },
+    {
+      title: 'Обучение идеальной плавучести', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Чт. 7 марта 2024 | 10:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр на Лодочной',
+      },
+      cardClass: 'none'
+    },
+    {
+      title: 'Ice Diver. Полный курс', price: 'от 1 900 $',
+      bottom: {
+        'schedule-calendar' : 'Сб. 9 марта 2024 | 09:00 - 14:00',
+        'water-waves' : 'Дайвинг-центр «Cпас-Каменка»',
+      },
+      cardClass: 'none'
+    },
+  ];
+
+section.section-bottom.trip-courses.schedule-sm
+  .container
+    h3.third-title.schedule-sm__title Курсы PADI в поездках
+    .schedule-sm__block
+      .schedule-sm__cards-block.more-cards-block
+        +scheduleCards('schedule-sm', tripCoursesCards)
+      .trip-courses__empty-block
+    button.btn-reset.transparent-btn.trip-courses__btn.more-btn Показать еще

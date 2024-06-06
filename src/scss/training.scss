@@ -1,0 +1,24 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключения компонентов страницы "Обучение" (training.html)
+@import "./components/training/img-cards";
+@import "./components/training/training-centers";
+@import "./components/training/request";
+@import "./components/training/registration";

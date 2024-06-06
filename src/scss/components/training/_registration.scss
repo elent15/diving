@@ -1,0 +1,163 @@
+.registration {
+  &__title {
+    margin-bottom: 50px;
+    max-width: 635px;
+
+    @media (max-width:1100px) {
+      margin-bottom: 36px;
+    }
+
+    @media (max-width:720px) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width:480px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__cards-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 45px;
+
+    @media (max-width:1470px) {
+      gap: 32px 36px;
+    }
+
+    @media (max-width:1100px) {
+      gap: 24px;
+    }
+
+    @media (max-width:480px) {
+      gap: 16px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 15px;
+    padding: 55px 53px 53px 76px;
+    min-height: 222px;
+    background: rgba(255, 255, 255, 0.10);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc((100% - 45px) / 2);
+    }
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      width: calc((100% - 90px) / 3);
+    }
+
+    @media (max-width:1470px) {
+      padding: 48px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: calc((100% - 36px) / 2);
+      }
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: calc((100% - 72px) / 3);
+      }
+    }
+
+    @media (max-width:1100px) {
+      padding: 36px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: calc((100% - 24px) / 2);
+        min-height: 180px;
+      }
+    }
+
+    @media (max-width:720px) {
+      padding: 36px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: 100%;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width:480px) {
+      padding: 24px;
+    }
+  }
+
+  &__card-title {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+
+    @media (max-width:480px) {
+      align-items: flex-start;
+      line-height: normal;
+    }
+
+    & svg {
+      flex-shrink: 0;
+      fill: var(--white);
+    }
+  }
+
+  &__pin {
+    margin-right: 5px;
+    width: 20px;
+    height: 19px;
+  }
+
+  &__call {
+    margin-right: 6px;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__email {
+    margin-right: 6px;
+    width: 17px;
+    height: 17px;
+  }
+
+  &__press-button {
+    margin-right: 5px;
+    width: 21px;
+    height: 21px;
+  }
+
+  &__smartphone {
+    margin-right: 6px;
+    width: 17px;
+    height: 17px;
+  }
+
+  &__card-text {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    @media (max-width:480px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

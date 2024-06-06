@@ -1,0 +1,15 @@
+extends ./templates/page-main.pug
+
+block vars
+  - const name = 'main';
+
+block bg
+  .wrapper__bg(style="background-image: url(./images/bg/bg.webp);")
+
+block main
+  include ./partials/index/hero.pug
+  include ./partials/index/tours.pug
+  include ./partials/index/reports.pug
+  include ./partials/index/info.pug
+  include ./partials/index/reviews.pug
+  include ./partials/index/blog.pug

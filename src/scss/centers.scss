@@ -1,0 +1,27 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+@import "./components/modal/modal-book";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero";
+
+// подключения компонентов страницы "Дайвинг-центры" (centers.html)
+@import "./components/centers/centers-hero";
+@import "./components/centers/centers";
+@import "./components/centers/diving-centers";
+@import "./components/centers/equipment";
+@import "./components/training/registration";
+@import "./components/centers/centers-registration";

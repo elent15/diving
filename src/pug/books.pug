@@ -1,0 +1,10 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'books';
+    const lastItem = 'Книги RuDIVE';
+    const title = 'Книги RuDIVE';
+
+block append main
+  include ./partials/books/books.pug

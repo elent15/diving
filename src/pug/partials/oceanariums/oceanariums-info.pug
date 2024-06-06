@@ -1,0 +1,26 @@
+-
+  const oceanariumsInfoCards = [
+    { title: 'Купить подарочный сертификат',
+      button: 'Купить',
+    },
+    { title: 'Забронировать погружение в Москвариуме',
+      button: 'Забронировать',
+      class: 'moskvarium'
+    },
+    { title: 'Забронировать погружение в Крокус Сити Океанариуме',
+      button: 'Забронировать',
+      class: 'crocus-city'
+    }
+  ];
+
+section.section.oceanariums-info
+  .container.oceanariums-info__container
+    for card, index in oceanariumsInfoCards
+      .oceanariums-info__cards-block
+        h4.fourth-title.numbered-title.oceanariums-info__title= card.title
+        .oceanariums-info__card
+          .oceanariums-info__card-img-block
+            picture
+              source(srcset=`./images/oceanariums/oceanariums-info-${index + 1}.webp`, type="image/webp")
+              img(src=`./images/oceanariums/oceanariums-info-${index + 1}.jpg`, alt='Фото' loading="lazy")
+          button.btn-reset.btn.oceanariums-info__card-btn(class=card.class, type='button', data-modal=(index === 0) ? "modal-certificate" : "modal-book")= card.button

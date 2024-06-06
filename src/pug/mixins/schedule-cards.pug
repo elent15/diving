@@ -1,0 +1,22 @@
+mixin scheduleCards(name, cards, btn='Записаться', dataModal='modal-reg-training')
+  for card, index in cards
+    div(class=name + '__card' class=card.cardClass)
+      div(class=name + '__card-img-block')
+        picture
+          source(srcset=`./images/schedule/schedule-${index + 1}.webp`, type="image/webp")
+          img(src=`./images/schedule/schedule-${index + 1}.jpg`, alt="Фото" loading="lazy" width="245" height="186")
+      div(class=name + '__card-content')
+        div(class=name + '__card-content-title')= card.title
+        div(class=name + '__card-content-price')
+          svg
+            use(href="./images/sprite.svg#wallet")
+          = card.price
+      div(class=name + '__card-btns')
+        button.btn-reset.btn.white-btn(class=name + '__card-btn' class=card.btnClass, type="button", data-modal=dataModal)= btn
+        a.link-btn(class=name + '__card-link' href="#") Подробнее
+      div(class=name + '__card-bottom')
+        for value, key in card.bottom
+          div(class=name + '__card-bottom-block')
+            svg
+              use(href=`./images/sprite.svg#${key}`)
+            =value

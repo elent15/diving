@@ -1,0 +1,25 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+@import "./components/modal/modal-book";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero-sm";
+
+// подключения компонентов страницы "Описание специалиста" (specialist.html)
+@import "./components/specialist/specialist";
+@import "./components/specialist/specialist-min";
+@import "./components/specialist/schedule-sm";
+@import "./components/specialist/form-reg";

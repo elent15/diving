@@ -1,0 +1,12 @@
+extends ./templates/page-main.pug
+
+block vars
+  - const name = 'diving-center';
+
+block main
+  include ./partials/modal/modal-reg-training.pug
+  include ./partials/diving-center/center-hero.pug
+  include ./partials/diving-center/center-location.pug
+  include ./partials/diving-center/center-courses.pug
+  include ./partials/diving-center/center-route.pug
+  include ./partials/diving-center/center-info.pug

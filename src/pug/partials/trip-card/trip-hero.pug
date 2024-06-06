@@ -1,0 +1,9 @@
+include ../../mixins/hero-slider.pug
+
+-
+  const links = {'tourism' : 'Туризм'};
+  const lastItem = 'Экспедиционный круиз в Антарктиду 31 января — 14 февраля';
+  const heroTitle = 'Экспедиционный круиз в Антарктиду';
+
++heroSlider('trip-card', 'trip-hero', 'trip-hero-min', true, heroTitle)
+  p.trip-hero__text *Для участия в экспедиции необходимо наличие опыта 30 погружений в сухом костюме, а также собственное снаряжение.

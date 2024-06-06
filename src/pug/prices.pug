@@ -1,0 +1,12 @@
+extends ./templates/page-sm.pug
+
+block vars
+  -
+    const name = 'prices';
+    const lastItem = 'Цены на обучение';
+    const title = 'Цены на обучение';
+
+block append main
+  include ./partials/modal/modal-reg-training.pug
+  include ./partials/modal/modal-buy.pug
+  include ./partials/prices/prices.pug

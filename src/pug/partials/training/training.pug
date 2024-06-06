@@ -1,0 +1,15 @@
+include ../../mixins/img-cards.pug
+
+-
+  const trainingCards = [
+    {title: 'Начальное обучение', alt: 'Начальное обучение', href: 'training'},
+    {title: 'Продолжение обучения', alt: 'Продолжение обучения', href: 'training'},
+    {title: 'Обучение инструкторов', alt: 'Обучение инструкторов', href: 'training'},
+    {title: 'Детский дайвинг', alt: 'Детский дайвинг', href: 'training'},
+    {title: 'Дайвинг в океанариумах', alt: 'Дайвинг в океанариумах', href: 'training'},
+    {title: 'Технический дайвинг', alt: 'Технический дайвинг', href: 'training'},
+  ];
+
+.page-main-section.section-top
+  .container
+    +imgCards('training', trainingCards)

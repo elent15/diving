@@ -1,0 +1,11 @@
+extends ./templates/page-main.pug
+
+block vars
+  - const name = 'trip-card';
+
+block main
+  include ./partials/modal/modal-reg-training.pug
+  include ./partials/trip-card/trip-hero.pug
+  include ./partials/trip-card/trip-info.pug
+  include ./partials/trip-card/trip-program.pug
+  include ./partials/trip-card/trip-courses.pug

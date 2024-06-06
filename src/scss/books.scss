@@ -1,0 +1,23 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// общие подключения
+@import "./components/header";
+@import "./components/footer";
+
+// подключение модальных окон
+@import "./components/modal/modal";
+
+// для всех страниц, кроме главной
+@import "./components/breadcrumbs";
+
+// подключение секции hero
+@import "./components/page-hero-sm";
+
+// подключения компонентов страницы "Книги" (books.html)
+@import "./components/books/books";
+@import "./components/books/form-block";
+@import "./components/books/books-form";

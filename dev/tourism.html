@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ruDive</title>
   <link rel="stylesheet" href="./css/vendor.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/tourism.css">
   <script defer src="./js/vendor.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
@@ -14,10 +14,10 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="container header__container"><button class="btn-reset burger" type="button"><span
+      <div class="container header__container"><button class="btn-reset burger" type="button" aria-label="Меню"><span
             class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button><a
-          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg"
-            alt="Логотип"></a>
+          class="link header__logo-link" href="./index.html"><img class="logo" src="./images/svg/logo.svg" alt="Логотип"
+            width="103" height="65"></a>
         <div class="header__menu">
           <div class="header__menu-inner">
             <nav class="header__nav">
@@ -41,7 +41,8 @@
         </div><button class="btn-reset btn header__btn" type="button" data-modal="modal-entrance"><svg
             class="header__btn-icon">
             <use href="./images/sprite.svg#user"></use>
-          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button"><svg class="header__icon">
+          </svg>Войти</button><button class="btn-reset btn header__theme-btn" type="button" aria-label="Тема"><svg
+            class="header__icon">
             <use href="./images/sprite.svg#sun"></use>
           </svg></button>
       </div>
@@ -50,8 +51,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label><label class="modal__form-label"><input
                 class="input modal__form-input" type="password" placeholder="Пароль"></label>
@@ -66,8 +67,8 @@
       <div class="modal__bg">
         <div class="modal__body" data-simplebar><button class="btn-reset modal__close-btn" type="button"><svg>
               <use xlink:href="./images/sprite.svg#close"></use>
-            </svg></button><a class="link modal__logo-link"><img class="logo" src="./images/svg/logo.svg"
-              alt="Логотип"></a>
+            </svg></button><a class="link modal__logo-link" href="#"><img class="logo" src="./images/svg/logo.svg"
+              alt="Логотип" width="103" height="65"></a>
           <form class="modal__form"><label class="modal__form-label"><input class="input modal__form-input focus"
                 type="email" placeholder="E-mail"></label>
             <div class="modal__form-bottom"><button class="btn-reset btn modal__form-btn" type="button"
@@ -76,9 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="wrapper__bg wrapper__page-bg" style="background-image: url(./images/page-bg.webp);"></div>
+    <div class="wrapper__bg wrapper__page-bg" style="background-image: url(./images/bg/page-bg.webp);"></div>
     <main class="main">
-      <section class="page-hero tourism-hero" style="background-image: url(./images/tourism-hero-bg.webp);">
+      <section class="page-hero tourism-hero" style="background-image: url(./images/tourism/tourism-hero-bg.webp);">
         <div class="container page-hero__container">
           <div class="breadcrumbs">
             <ul class="list-reset breadcrumbs__list">
@@ -99,121 +100,119 @@
           <h3 class="third-title page-third-title tourism__title">Выбираем стиль поездки</h3>
           <div class="tourism__text">Отдых с группой единомышленников, в хорошей компании с клубным турлидером, или в
             индивидуальном порядке. Или даже поехать трудовым коллективом и поставить перед туром бизнес-цели.</div>
-          <div class="page-main-section__container">
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+          <div class="img-cards">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-1.webp" type="image/webp"><img src="./images/tourism-1.jpg"
-                    alt="Клубные поездки">
+                  <source srcset="./images/tourism/tourism-1.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-1.jpg" alt="Клубные поездки" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Клубные поездки с
-                  турлидером</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Клубные поездки с турлидером</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-2.webp" type="image/webp"><img src="./images/tourism-2.jpg"
-                    alt="Индивидуальный туризм">
+                  <source srcset="./images/tourism/tourism-2.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-2.jpg" alt="Индивидуальный туризм" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Индивидуальный
-                  туризм</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Индивидуальный туризм</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-3.webp" type="image/webp"><img src="./images/tourism-3.jpg"
-                    alt="Корпоративные программы">
+                  <source srcset="./images/tourism/tourism-3.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-3.jpg" alt="Корпоративные программы" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Корпоративные
-                  программы</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Корпоративные программы</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-4.webp" type="image/webp"><img src="./images/tourism-4.jpg"
-                    alt="Дайвинг-сафари">
+                  <source srcset="./images/tourism/tourism-4.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-4.jpg" alt="Дайвинг-сафари" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Дайвинг-сафари</a><a
-                  class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Дайвинг-сафари</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-5.webp" type="image/webp"><img src="./images/tourism-5.jpg"
-                    alt="Экотуризм">
+                  <source srcset="./images/tourism/tourism-5.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-5.jpg" alt="Экотуризм" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Экотуризм</a><a
-                  class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Экотуризм</a><a class="link img-cards__card-link" href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-6.webp" type="image/webp"><img src="./images/tourism-6.jpg"
-                    alt="Путешествия к большим животным">
+                  <source srcset="./images/tourism/tourism-6.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-6.jpg" alt="Путешествия к большим животным" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Путешествия к
-                  большим животным</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Путешествия к большим животным</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-7.webp" type="image/webp"><img src="./images/tourism-7.jpg"
-                    alt="Каталог путешествий">
+                  <source srcset="./images/tourism/tourism-7.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-7.jpg" alt="Каталог путешествий" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Каталог
-                  путешествий</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Каталог путешествий</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-8.webp" type="image/webp"><img src="./images/tourism-8.jpg"
-                    alt="Наши направления">
+                  <source srcset="./images/tourism/tourism-8.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-8.jpg" alt="Наши направления" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Наши
-                  направления</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link" href="./tourism.html">Наши
+                  направления</a><a class="link img-cards__card-link" href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
-            <div class="page-main-section__card">
-              <div class="page-main-section__card-img-block">
+            <div class="img-cards__card">
+              <div class="img-cards__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-9.webp" type="image/webp"><img src="./images/tourism-9.jpg"
-                    alt="Каталог яхт и курортов">
+                  <source srcset="./images/tourism/tourism-9.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-9.jpg" alt="Каталог яхт и курортов" loading="lazy">
                 </picture>
               </div>
-              <div class="page-main-section__card-bottom"><a
-                  class="link page-main-section__card-title-link tourism__card-title-link" href="#">Каталог яхт и
-                  курортов</a><a class="link page-main-section__card-link" href="#"><svg>
+              <div class="img-cards__card-bottom"><a class="link img-cards__card-title-link"
+                  href="./tourism.html">Каталог яхт и курортов</a><a class="link img-cards__card-link"
+                  href="./tourism.html"><svg>
                     <use href="./images/sprite.svg#link"></use>
                   </svg></a></div>
             </div>
@@ -276,10 +275,10 @@
             <div class="tourism-info__card">
               <div class="tourism-info__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-info-1.webp" type="image/webp"><img src="./images/tourism-info-1.png"
-                    alt="Фото">
+                  <source srcset="./images/tourism/tourism-info-1.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-info-1.png" alt="Фото" loading="lazy">
                 </picture>
-              </div><a class="link-btn tourism-info__card-link" href="./#.html">Смотреть отзывы</a>
+              </div><a class="link-btn tourism-info__card-link" href="./tourism.html">Смотреть отзывы</a>
             </div>
           </div>
           <div class="tourism-info__cards-block">
@@ -287,10 +286,10 @@
             <div class="tourism-info__card">
               <div class="tourism-info__card-img-block">
                 <picture>
-                  <source srcset="./images/tourism-info-2.webp" type="image/webp"><img src="./images/tourism-info-2.png"
-                    alt="Фото">
+                  <source srcset="./images/tourism/tourism-info-2.webp" type="image/webp"><img
+                    src="./images/tourism/tourism-info-2.png" alt="Фото" loading="lazy">
                 </picture>
-              </div><a class="link-btn tourism-info__card-link" href="./#.html">Смотреть фото</a>
+              </div><a class="link-btn tourism-info__card-link" href="./tourism.html">Смотреть фото</a>
             </div>
           </div>
         </div>
@@ -298,7 +297,7 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__subscribe" style="background-image: url(./images/subscribe-bg.webp);">
+        <div class="footer__subscribe" style="background-image: url(./images/footer/subscribe-bg.webp);">
           <h3 class="third-title footer__subscribe-title">Подписывайтесь на наши социальные сети</h3>
           <div class="footer__subscribe-text">И первым узнавайте о новых турах, акциях, скидках и подарках нашего клуба.
           </div>
@@ -314,21 +313,25 @@
         </div>
         <div class="footer__top">
           <div class="footer__left"><a class="link footer__logo-link" href="./index.html"><img class="logo footer__logo"
-                src="./images/svg/logo.svg" alt="Логотип"></a>
+                src="./images/svg/logo.svg" alt="Логотип" width="103" height="65"></a>
             <div class="footer__text">В основе деятельности группы компаний RuDIVE лежат международные стандарты
               качества. Дайвинг-центры и школы работают по стандартам ISO, PADI и ГОСТ.</div><span
               class="footer__subtitle footer__left-subtitle">Мессенджеры и соц сети</span>
             <ul class="list-reset footer__social-list">
-              <li><a class="link footer__social-link" href="https://wa.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://wa.me" aria-label="whatsapp"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#whatsapp"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://t.me"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://t.me" aria-label="telegram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#telegram"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://vk.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://vk.com" aria-label="vk"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li><a class="link footer__social-link" href="https://instagram.com"><svg class="footer__social-icon">
+              <li><a class="link footer__social-link" href="https://instagram.com" aria-label="instagram"><svg
+                    class="footer__social-icon">
                     <use href="./images/sprite.svg#instagram"></use>
                   </svg></a></li>
             </ul>
@@ -378,14 +381,16 @@
           <div class="footer__bottom-links"><a class="link footer__bottom-text" href="#">Политика
               конфиденциальности</a><a class="link footer__bottom-text" href="#">Правила оказания услуг</a></div>
           <div class="footer__payment"><span class="footer__bottom-text">Способы оплаты</span><img
-              class="footer__payment-logos" src="./images/payment-logos.png" alt="Логотип платёжных систем"></div>
+              class="footer__payment-logos" src="./images/footer/payment-logos.png" alt="Логотип платёжных систем">
+          </div>
           <div class="footer__development"><span class="footer__bottom-text">Разработка сайта</span><img
-              class="footer__bottom-logo" src="./images/footer-logo.png" alt="Логотип"></div>
+              class="footer__bottom-logo" src="./images/footer/footer-logo.png" alt="Логотип" width="121" height="20">
+          </div>
         </div>
       </div><button class="btn-reset footer__chat-btn" type="button">
         <picture>
-          <source srcset="./images/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
-            src="./images/chat.png" alt="Чат">
+          <source srcset="./images/footer/chat.webp" type="image/webp"><img class="footer__chat-btn-icon"
+            src="./images/footer/chat.png" alt="Чат" width="66" height="66" loading="lazy">
         </picture>
       </button>
     </footer>

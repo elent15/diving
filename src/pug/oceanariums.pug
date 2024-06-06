@@ -1,0 +1,14 @@
+extends ./templates/page-main.pug
+
+block vars
+  - const name = 'oceanariums';
+
+block main
+  include ./partials/modal/modal-certificate.pug
+  include ./partials/modal/modal-book.pug
+  include ./partials/oceanariums/oceanariums-hero.pug
+  include ./partials/oceanariums/oceanariums-advantages.pug
+  include ./partials/oceanariums/oceanariums-price.pug
+  include ./partials/oceanariums/oceanariums-reports.pug
+  include ./partials/oceanariums/oceanariums-info.pug
+  include ./partials/oceanariums/oceanariums-questions.pug

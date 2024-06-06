@@ -1,0 +1,13 @@
+mixin imgCards(name, cards)
+  .img-cards
+    for card, index in cards
+      .img-cards__card
+        .img-cards__card-img-block
+          picture
+            source(srcset=`./images/${name}/${name}-${index + 1}.webp`, type="image/webp")
+            img(src=`./images/${name}/${name}-${index + 1}.jpg`, alt=card.alt loading="lazy")
+        .img-cards__card-bottom
+          a.link.img-cards__card-title-link(href=`./${card.href}.html`)= card.title
+          a.link.img-cards__card-link(href=`./${card.href}.html`)
+            svg
+              use(href="./images/sprite.svg#link")

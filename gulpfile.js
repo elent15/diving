@@ -28,7 +28,7 @@ const uglify = require('gulp-uglify-es').default;
 // сборка в режиме разработки
 
 function pug() {
-  return src('./src/*.pug')
+  return src('./src/pug/*.pug')
     .pipe(changed('./dev/', { hasChanged: changed.compareContents }))
     .pipe(fileInclude({
       prefix: '@',
@@ -65,17 +65,17 @@ function scripts() {
 }
 
 function images() {
-  return src('./src/images/*')
-    .pipe(changed('./dev/images/'))
+  return src('./src/images/**/*')
+    .pipe(changed('./dev/images/**/*'))
     .pipe(webp())
     .pipe(dest('./dev/images/'))
-    .pipe(src(['./src/images/*', './src/images/svg/*.svg'], { base: './src/images/' }))
+    .pipe(src('./src/images/**/*'))
     .pipe(dest('./dev/images/'))
     .pipe(browserSync.stream())
 }
 
 function svgSprites() {
-  return src('./src/images/svg/sprite/*.svg')
+  return src('./src/svg/sprite/*.svg')
     .pipe(changed('./dev/images/sprite.svg'))
     .pipe(imagemin({ verbose: true }))
     .pipe(svgSprite({
@@ -107,6 +107,12 @@ function copyRes() {
     .pipe(browserSync.stream())
 }
 
+function copySvg() {
+  return src('./src/svg/*.svg')
+    .pipe(dest('./dev/images/svg/'))
+    .pipe(browserSync.stream())
+}
+
 function cleanDev() {
   return src('./dev/')
     .pipe(clean())
@@ -119,18 +125,17 @@ function watching() {
       baseDir: './dev/'
     },
   });
-  watch('./src/*.pug', pug)
-  watch('./src/partials/*.pug', pug)
-  watch('./src/partials/**/*.pug', pug)
+  watch('./src/pug/**/*.pug', pug)
   watch('./src/scss/**/*.scss', styles)
   watch('./src/js/**/*.js', scripts)
-  watch(['./src/images/*', './src/images/svg/*'], images)
+  watch('./src/images/**/*', images)
+  watch('./src/svg/*.svg', copySvg)
   watch('./src/images/svg/sprite/*.svg', svgSprites)
   watch('./src/fonts/**/*', fonts)
   watch('./src/resources/*', copyRes)
 }
 
-exports.default = series(cleanDev, parallel(pug, styles, scripts, images, fonts, svgSprites, copyRes), watching);
+exports.default = series(cleanDev, parallel(pug, styles, scripts, images, fonts, copySvg, svgSprites, copyRes), watching);
 
 // итоговая сборка
 
@@ -141,7 +146,7 @@ function htmlDocs() {
 }
 
 function stylesDocs() {
-  return src('./dev/css/main.css')
+  return src('./dev/css/*.css')
     .pipe(groupMedia())
     .pipe(autoprefixer({
       "overrideBrowserslist": [
@@ -168,13 +173,13 @@ function scriptsDocs() {
 }
 
 function imagesDocs() {
-  return src(['./dev/images/*', '!./dev/images/*.webp', './dev/images/svg/*.svg'], { base: './dev/images/' })
+  return src(['./dev/images/**/*', '!./dev/images/**/*.webp', './dev/images/svg/*.svg'], { base: './dev/images/' })
     .pipe(imagemin({ verbose: true }))
     .pipe(dest('./docs/images/'))
 }
 
 function copyImg() {
-  return src(['./dev/images/sprite.svg', './dev/images/*.webp'])
+  return src(['./dev/images/sprite.svg', './dev/images/**/*.webp'])
     .pipe(dest('./docs/images/'))
 }
 
