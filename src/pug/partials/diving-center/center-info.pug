@@ -19,7 +19,7 @@ section.section-bottom.center-info
   .container.center-info__container
     .center-info__block
       h4.fourth-title.center-info__title Что с собой взять?
-      ul.list-reset.center-info__list
+      ul.list-reset.center-info__list.text
         for item in centerInfoList
           li.center-info__item= item
       p.center-info__paragraph.
@@ -29,4 +29,4 @@ section.section-bottom.center-info
         вещей 5000 рублей за вскрытие. Спасибо за понимание!
     .center-info__block
       h4.fourth-title.center-info__title Часы работы
-      +text('center-info', centerInfoText)
+      +text('center-info', centerInfoText, false)

@@ -1,4 +1,9 @@
+include ../../mixins/text.pug
+
 -
+  const trainingCentersText = [
+    'в разных округах Москвы, в Подмосковье, Карелии, в Крыму и на Сахалине, а также в клубных поездках с турлидером-инструктором по всему миру.',
+  ];
   const trainingCentersCards = [
     {alt: 'Центр "Азовский"', title: 'Азовский', address: 'ул. Азовская 24', href: 'training'},
     {alt: 'Центр "Лодочная"', title: 'Лодочная', address: 'ул. Лодочная 43', href: 'training'},
@@ -14,7 +19,7 @@
 section.section.training-centers
   .container
     h3.third-title.page-third-title.training-centers__title Обучение дайвингу проводится в собственных дайвинг-центрах RuDIVE
-    .training-centers__text в разных округах Москвы, в Подмосковье, Карелии, в Крыму и на Сахалине, а также в клубных поездках с турлидером-инструктором по всему миру.
+    +text('training-centers', trainingCentersText)
     .training-centers__cards-block
       for card, index in trainingCentersCards
           .training-centers__card

@@ -25,7 +25,7 @@ mixin accordion(name, accordion, headerIcon = false)
                 source(srcset=`./images/about/deeds-${index + 1}.webp`, type="image/webp")
                 img(src=`./images/about/deeds-${index + 1}.jpg`, alt="Фото" loading="lazy")
           if ac.text
-            +text(name, ac.text)
+            +text(name, ac.text, false)
             if name == 'oceanariums-questions'
               if ac.buttons
                 for button in ac.buttons

@@ -1,6 +1,6 @@
 :root {
   --white: #fff;
-  --red: #ec0119;
+  --red: #fd0207;
   --light-gray: #d3d3d3;
   --primary: #01577b;
   --dark: #091521;
@@ -291,14 +291,17 @@ p {
   }
 }
 
-.link {
+.transparent-btn, .btn, .link-btn, .link {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: fit-content;
   color: var(--white);
   text-align: center;
+}
+
+.link {
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
@@ -312,14 +315,8 @@ p {
 }
 
 .link-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: fit-content;
-  color: var(--white);
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out, background 0.3s ease-in-out;
@@ -367,12 +364,6 @@ p {
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -398,12 +389,6 @@ p {
 }
 
 .transparent-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
   background: transparent;
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -529,35 +514,49 @@ p {
   transform: translateY(-50%);
 }
 
-.text {
+.text-block {
   margin-bottom: 60px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 }
 @media (max-width: 1470px) {
-  .text {
+  .text-block {
     margin-bottom: 48px;
   }
 }
 @media (max-width: 1100px) {
-  .text {
+  .text-block {
     margin-bottom: 36px;
   }
 }
 @media (max-width: 720px) {
-  .text {
+  .text-block {
     margin-bottom: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .text-block {
+    margin-bottom: 24px;
+  }
+}
+
+.text {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .text {
     line-height: 24px;
   }
 }
 @media (max-width: 480px) {
   .text {
-    margin-bottom: 24px;
     font-size: 14px;
     line-height: 22px;
   }
+}
+.text--transparent {
+  color: rgba(255, 255, 255, 0.7);
 }
 .text__paragraph:not(:last-child) {
   margin-bottom: 26px;
@@ -584,6 +583,17 @@ p {
 .text__link {
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
+}
+@media (max-width: 720px) {
+  .text__link {
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .text__link {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .swiper-btns {
@@ -2449,15 +2459,6 @@ p {
 .oceanariums-advantages__text {
   max-width: 1164px;
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-}
-@media (max-width: 480px) {
-  .oceanariums-advantages__text {
-    font-size: 14px;
-    line-height: 22px;
-  }
 }
 
 .oceanariums-price__title {
@@ -2662,10 +2663,6 @@ p {
 .oceanariums-reports__text {
   margin-bottom: 60px;
   max-width: 1164px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 }
 @media (max-width: 1470px) {
   .oceanariums-reports__text {
@@ -2685,8 +2682,6 @@ p {
 @media (max-width: 480px) {
   .oceanariums-reports__text {
     margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 22px;
   }
 }
 .oceanariums-reports__cards-block {
@@ -3330,10 +3325,6 @@ p {
     padding-left: 16px;
     padding-right: 16px;
   }
-}
-.oceanariums-questions__text {
-  margin-bottom: 0;
-  color: var(--white);
 }
 .oceanariums-questions__btn {
   margin-top: 24px;

@@ -20,19 +20,10 @@
   &__text {
     margin-bottom: 40px;
     padding-left: 106px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
     @media (max-width:720px) {
       margin-bottom: 18px;
       padding-left: 0;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 24px;
     }
   }
 
@@ -79,10 +70,11 @@
 
   &__swiper {
     margin: 0;
-    padding: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 
-    @media (max-width:1470px) {
-      padding-left: 0;
+    @media (max-width:1100px) {
+      width: 100%;
     }
   }
 

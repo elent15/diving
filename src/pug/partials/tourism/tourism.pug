@@ -1,6 +1,10 @@
+include ../../mixins/text.pug
 include ../../mixins/img-cards.pug
 
 -
+  const tourismText = [
+    'Отдых с группой единомышленников, в хорошей компании с клубным турлидером, или в индивидуальном порядке. Или даже поехать трудовым коллективом и поставить перед туром бизнес-цели.',
+  ];
   const tourismCards = [
     {
       title: 'Клубные поездки с турлидером',
@@ -52,5 +56,5 @@ include ../../mixins/img-cards.pug
 .page-main-section.tourism.section-top
   .container
     h3.third-title.page-third-title.tourism__title Выбираем стиль поездки
-    .tourism__text Отдых с группой единомышленников, в хорошей компании с клубным турлидером, или в индивидуальном порядке. Или даже поехать трудовым коллективом и поставить перед туром бизнес-цели.
+    +text('tourism', tourismText)
     +imgCards('tourism', tourismCards)

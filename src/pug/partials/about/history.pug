@@ -33,7 +33,7 @@ section.section.history
               picture
                 source(srcset=`./images/about/history-top-${index}.webp`, type="image/webp")
                 img(src=`./images/about/history-top-${index}.jpg`, alt="Фото" loading="lazy")
-        +text('history', historyTopTextOne)
+        +text('history', historyTopTextOne, false)
           p.history__bold-paragraph В начале девяностых страна претерпевала экономические и политические катаклизмы, российская наука задыхалась в нищете, многие коллеги уехали за рубеж или ушли в бизнес, а группа молодых морских биологов упорно занималась наукой, зарабатывая на хлеб и на подводные экспедиции, кто чем может.
       .history__top-inner
         .history__left-images
@@ -47,12 +47,12 @@ section.section.history
               picture
                 source(srcset=`./images/about/history-top-6.webp`, type="image/webp")
                 img(src=`./images/about/history-top-6.jpg`, alt="Фото" loading="lazy")
-        +text('history', historyTopTextTwo)
+        +text('history', historyTopTextTwo, false)
     .history__middle
       h4.fourth-title.history__block-title В 1997 г. основатели Клуба становятся инструкторами PADI и переходят на обучение по новой системе, зарегистрировав дайв-центр PADI № 3564
       .history__middle-content
-        +text('history', historyMiddleTextOne)
-        +text('history', historyMiddleTextTwo)
+        +text('history', historyMiddleTextOne, false)
+        +text('history', historyMiddleTextTwo, false)
       .history__swiper-container
         .swiper.history__swiper
           .swiper-wrapper
@@ -66,7 +66,7 @@ section.section.history
             img(src="./images/about/history-bottom-1.jpg", alt="Фото" loading="lazy")
         .history__bottom-text
           h4.fourth-title.history__block-title В 2006 году в компанию пришли задорные выпускники Психолого-педагогического университета
-          +text('history', historyBottomText)
+          +text('history', historyBottomText, false)
       .history__bottom-images
         for index in [2, 3, 4, 5]
           .history__bottom-img-block

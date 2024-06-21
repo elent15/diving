@@ -43,18 +43,9 @@
   &__text {
     margin-bottom: 24px;
     max-width: 1200px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
     @media (max-width:720px) {
       margin-bottom: 16px;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 22px;
     }
   }
 
@@ -162,18 +153,9 @@
   &__form-submit {
     margin-top: 8px;
     margin-bottom: 24px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
     @media (max-width:720px) {
       margin-bottom: 16px;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 22px;
     }
   }
 

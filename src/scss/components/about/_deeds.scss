@@ -100,10 +100,8 @@
   }
 
   &__text {
-    margin-bottom: 0;
     padding-top: 35px;
     max-width: 1300px;
-    color: var(--white);
 
     @media (max-width:1470px) {
       padding-top: 0;

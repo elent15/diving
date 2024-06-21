@@ -26,14 +26,11 @@
 
   &__swiper-slide {
     border-radius: 15px;
+    width: auto;
 
     &.swiper-slide-thumb-active {
       outline: 2px solid var(--red);
       outline-offset: -2px;
-    }
-
-    @media (max-width:1470px) {
-      width: auto;
     }
   }
 

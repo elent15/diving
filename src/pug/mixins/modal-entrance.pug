@@ -1,0 +1,17 @@
+mixin modalEntrance(modalId, modalForm, btnData, btnText, isLink=false, linkText="Войти")
+  .modal(id=modalId)
+    .modal__bg
+      .modal__body(data-simplebar)
+        button.btn-reset.modal__close-btn(type="button")
+          svg
+            use(xlink:href="./images/sprite.svg#close")
+        a.link.modal__logo-link(href="#")
+          img.logo(src="./images/svg/logo.svg" alt="Логотип" width="103" height="65")
+        form.modal__form
+          for item, index in modalForm
+            label.modal__form-label
+              input.input.modal__form-input(class=(index === 0) ? "focus" : "", type=item.type, placeholder=item.placeholder)
+          .modal__form-bottom
+            if isLink
+              a.link-btn.modal__form-link.btn-js(href="#")= linkText
+            button.btn-reset.btn.modal__form-btn(type="button", data-modal=btnData)= btnText

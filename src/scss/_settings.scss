@@ -211,15 +211,20 @@ p {
   }
 }
 
-// links
-.link {
+// extends
+%btn {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: fit-content;
   color: var(--white);
   text-align: center;
+}
+
+// links
+.link {
+  @extend %btn;
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
@@ -235,14 +240,9 @@ p {
 }
 
 .link-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: fit-content;
-  color: var(--white);
-  text-align: center;
+  @extend %btn;
   background: rgba(255, 255, 255, 0.20);
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out, background 0.3s ease-in-out;
@@ -297,12 +297,7 @@ p {
 
 // buttons
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
+  @extend %btn;
   background: rgba(255, 255, 255, 0.20);
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -333,12 +328,7 @@ p {
 }
 
 .transparent-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
+  @extend %btn;
   background: transparent;
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -466,12 +456,8 @@ p {
 }
 
 // text
-.text {
+.text-block {
   margin-bottom: 60px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 
   @media (max-width:1470px) {
     margin-bottom: 48px;
@@ -483,13 +469,30 @@ p {
 
   @media (max-width:720px) {
     margin-bottom: 32px;
-    line-height: 24px;
   }
 
   @media (max-width:480px) {
     margin-bottom: 24px;
+  }
+}
+
+.text {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @media (max-width:720px) {
+    line-height: 24px;
+  }
+
+  @media (max-width:480px) {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  &--transparent {
+    color: rgba(255, 255, 255, 0.7);
   }
 
   &__paragraph {
@@ -518,6 +521,15 @@ p {
   &__link {
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
+
+    @media (max-width:720px) {
+      line-height: 24px;
+    }
+
+    @media (max-width:480px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 }
 

@@ -44,18 +44,9 @@
 
   &__list {
     margin-bottom: 26px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
     @media (max-width:720px) {
       margin-bottom: 16px;
-      line-height: 24px;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 22px;
     }
   }
 
@@ -84,8 +75,5 @@
     }
   }
 
-  &__text {
-    margin-bottom: 0;
-    color: var(--white);
-  }
+  &__text {}
 }

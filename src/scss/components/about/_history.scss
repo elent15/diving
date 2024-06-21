@@ -67,9 +67,7 @@
   }
 
   &__text {
-    margin-bottom: 0;
     max-width: 100%;
-    color: var(--white);
     font-size: 15px;
     line-height: 25px;
 
@@ -352,6 +350,18 @@
 
   &__swiper {
     max-width: 1317px;
+
+    @media (max-width:1470px) {
+      max-width: calc(100% - 45px - 78px);
+    }
+
+    @media (max-width:720px) {
+      max-width: calc(100% - 32px - 78px);
+    }
+
+    @media (max-width:480px) {
+      max-width: calc(100% - 16px - 67px);
+    }
   }
 
   &__swiper-slide {

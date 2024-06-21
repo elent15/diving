@@ -18,6 +18,9 @@
 // подключение первого экрана страницы
 @import "./components/page-hero-sm";
 
+// подключение аккордеона
+@import "./components/accordion";
+
 // подключения компонентов страницы "Расписание клубных поездок" (schedule.html)
 @import "./components/schedule/schedule";
 @import "./components/schedule/bonus";

@@ -11,10 +11,6 @@
   &__text {
     margin-bottom: 60px;
     max-width: 1164px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
 
     @media (max-width:1470px) {
       margin-bottom: 36px;
@@ -30,8 +26,6 @@
 
     @media (max-width:480px) {
       margin-bottom: 16px;
-      font-size: 14px;
-      line-height: 22px;
     }
   }
 

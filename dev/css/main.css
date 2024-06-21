@@ -1,6 +1,6 @@
 :root {
   --white: #fff;
-  --red: #ec0119;
+  --red: #fd0207;
   --light-gray: #d3d3d3;
   --primary: #01577b;
   --dark: #091521;
@@ -291,14 +291,17 @@ p {
   }
 }
 
-.link {
+.transparent-btn, .btn, .link-btn, .link {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: fit-content;
   color: var(--white);
   text-align: center;
+}
+
+.link {
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
@@ -312,14 +315,8 @@ p {
 }
 
 .link-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: fit-content;
-  color: var(--white);
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
+  width: fit-content;
   outline-offset: 2px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out, background 0.3s ease-in-out;
@@ -367,12 +364,6 @@ p {
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -398,12 +389,6 @@ p {
 }
 
 .transparent-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: var(--white);
-  text-align: center;
   background: transparent;
   outline-offset: 2px;
   outline: 2px solid transparent;
@@ -529,35 +514,49 @@ p {
   transform: translateY(-50%);
 }
 
-.text {
+.text-block {
   margin-bottom: 60px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 }
 @media (max-width: 1470px) {
-  .text {
+  .text-block {
     margin-bottom: 48px;
   }
 }
 @media (max-width: 1100px) {
-  .text {
+  .text-block {
     margin-bottom: 36px;
   }
 }
 @media (max-width: 720px) {
-  .text {
+  .text-block {
     margin-bottom: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .text-block {
+    margin-bottom: 24px;
+  }
+}
+
+.text {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media (max-width: 720px) {
+  .text {
     line-height: 24px;
   }
 }
 @media (max-width: 480px) {
   .text {
-    margin-bottom: 24px;
     font-size: 14px;
     line-height: 22px;
   }
+}
+.text--transparent {
+  color: rgba(255, 255, 255, 0.7);
 }
 .text__paragraph:not(:last-child) {
   margin-bottom: 26px;
@@ -584,6 +583,17 @@ p {
 .text__link {
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
+}
+@media (max-width: 720px) {
+  .text__link {
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .text__link {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .swiper-btns {
@@ -2237,21 +2247,11 @@ p {
 .reports__text {
   margin-bottom: 40px;
   padding-left: 106px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 }
 @media (max-width: 720px) {
   .reports__text {
     margin-bottom: 18px;
     padding-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  .reports__text {
-    font-size: 14px;
-    line-height: 24px;
   }
 }
 .reports__btns {
@@ -2297,11 +2297,12 @@ p {
 }
 .reports__swiper {
   margin: 0;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
-@media (max-width: 1470px) {
+@media (max-width: 1100px) {
   .reports__swiper {
-    padding-left: 0;
+    width: 100%;
   }
 }
 .reports__swiper-wrapper {
@@ -2727,20 +2728,10 @@ p {
 }
 .reviews__text {
   padding-left: 106px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
 }
 @media (max-width: 720px) {
   .reviews__text {
     padding-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  .reviews__text {
-    font-size: 14px;
-    line-height: 24px;
   }
 }
 .reviews__swiper-slide {
@@ -2836,7 +2827,7 @@ p {
 }
 .reviews__swiper-top {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 61px;
@@ -2914,20 +2905,10 @@ p {
 }
 .blog__text {
   padding-left: 106px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
 }
 @media (max-width: 720px) {
   .blog__text {
     padding-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  .blog__text {
-    font-size: 14px;
-    line-height: 24px;
   }
 }
 .blog__swiper-top-block {

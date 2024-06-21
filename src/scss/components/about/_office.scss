@@ -15,35 +15,25 @@
   }
 
   &__text {
-    margin-bottom: 64px;
     padding-left: 116px;
     max-width: 1355px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-
-    @media (max-width:1470px) {
-      margin-bottom: 48px;
-    }
-
-    @media (max-width:1100px) {
-      margin-bottom: 36px;
-    }
 
     @media (max-width:720px) {
-      margin-bottom: 24px;
       padding-left: 0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+
+    @media (max-width:720px) {
+      line-height: 24px;
     }
 
     @media (max-width:480px) {
       font-size: 14px;
       line-height: 22px;
     }
-  }
-
-  &__link {
-    font-size: 16px;
   }
 
   &__inner {

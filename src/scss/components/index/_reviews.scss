@@ -7,18 +7,9 @@
 
   &__text {
     padding-left: 106px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
 
     @media (max-width:720px) {
       padding-left: 0;
-    }
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 24px;
     }
   }
 
@@ -116,7 +107,7 @@
 
   &__swiper-top {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 61px;

@@ -149,15 +149,5 @@
     height: 17px;
   }
 
-  &__card-text {
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-
-    @media (max-width:480px) {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
+  &__card-text {}
 }
