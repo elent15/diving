@@ -55,7 +55,6 @@
     grid-row: 1 / 3;
     border-radius: 15px;
     height: 577px;
-    background-color: var(--light-gray);
     overflow: hidden;
 
     @media (max-width:1470px) {
@@ -78,7 +77,6 @@
   &__horizontal-img-block {
     border-radius: 15px;
     height: 266px;
-    background-color: var(--light-gray);
     overflow: hidden;
 
     @media (max-width:1470px) {

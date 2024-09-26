@@ -22,8 +22,8 @@ mixin accordion(name, accordion, headerIcon = false)
           if name == 'deeds'
             .deeds__img-block
               picture
-                source(srcset=`./images/about/deeds-${index + 1}.webp`, type="image/webp")
-                img(src=`./images/about/deeds-${index + 1}.jpg`, alt="Фото" loading="lazy")
+                source(srcset=`./images/about/deeds-${index + 1}.webp, ./images/about/deeds-${index + 1}@2x.webp 2x`, type="image/webp")
+                img(src=`./images/about/deeds-${index + 1}.png`, srcset=`./images/about/deeds-${index + 1}@2x.png 2x`, alt="Фото" loading="lazy")
           if ac.text
             +text(name, ac.text, false)
             if name == 'oceanariums-questions'

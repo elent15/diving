@@ -2,46 +2,46 @@
   const reportsCards = [
     {src: "./images/index/reports-1", type: "image", dataValue: "reports-tab-2"},
     {src: "./images/index/reports-2", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/8133f6867de9e1bd5717126b6d617767/?autoplay=1",
       dataValue: "reports-tab-3",
     },
     {src: "./images/index/reports-3", type: "image", dataValue: "reports-tab-1"},
     {src: "./images/index/reports-4", type: "image", dataValue: "reports-tab-4"},
     {src: "./images/index/reports-5", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/20f622affa1c8dcc0eb29085ab83d0d0/?autoplay=1",
       dataValue: "reports-tab-5",
     },
     {src: "./images/index/reports-6", type: "image", dataValue: "reports-tab-3"},
     {src: "./images/index/reports-7", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/68e4650ef9a858eb8019eb9e5d6ad9d7/?autoplay=1",
       dataValue: "reports-tab-2",
     },
     {src: "./images/index/reports-8", type: "image", dataValue: "reports-tab-1"},
     {src: "./images/index/reports-9", type: "image", dataValue: "reports-tab-5"},
     {src: "./images/index/reports-10", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/20f622affa1c8dcc0eb29085ab83d0d0/?autoplay=1",
       dataValue: "reports-tab-1",
     },
     {src: "./images/index/reports-1", type: "image", dataValue: "reports-tab-2"},
     {src: "./images/index/reports-2", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/8133f6867de9e1bd5717126b6d617767/?autoplay=1",
       dataValue: "reports-tab-3",
     },
     {src: "./images/index/reports-3", type: "image", dataValue: "reports-tab-1"},
     {src: "./images/index/reports-4", type: "image", dataValue: "reports-tab-4"},
     {src: "./images/index/reports-5", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/68e4650ef9a858eb8019eb9e5d6ad9d7/?autoplay=1",
       dataValue: "reports-tab-5",
     },
     {src: "./images/index/reports-6", type: "image", dataValue: "reports-tab-3"},
     {src: "./images/index/reports-7", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/8133f6867de9e1bd5717126b6d617767/?autoplay=1",
       dataValue: "reports-tab-2",
     },
     {src: "./images/index/reports-8", type: "image", dataValue: "reports-tab-1"},
     {src: "./images/index/reports-9", type: "image", dataValue: "reports-tab-5"},
     {src: "./images/index/reports-10", type: "video",
-      dataSrc: "https://www.youtube.com/embed/agdEOQiNfkc?si=J17C6Gob5ckhAEA3?rel=0&showinfo=0&autoplay=1",
+      dataSrc: "https://rutube.ru/play/embed/20f622affa1c8dcc0eb29085ab83d0d0/?autoplay=1",
       dataValue: "reports-tab-1",
     }
   ];
@@ -67,14 +67,14 @@ section.section.reports
         if card.type == "image"
           .reports__card(class=(index >= 10) ? 'none' : '', data-tab-value=`reports-list-tab-1 ${card.dataValue}`)
             picture
-              source(srcset=`${card.src}.webp`, type="image/webp")
-              img(src=`${card.src}.jpg`, alt="Дайвинг", loading="lazy")
+              source(srcset=`${card.src}.webp, ${card.src}@2x.webp 2x`, type="image/webp")
+              img(src=`${card.src}.png`, srcset=`${card.src}@2x.png 2x`, alt="Дайвинг", loading="lazy")
         else if card.type == "video"
           .reports__card.video(class=(index >= 10) ? 'none' : '', data-tab-value=`reports-list-tab-2 ${card.dataValue}`)
             .video__container
               picture.video__bg
-                source(srcset=`${card.src}.webp`, type="image/webp")
-                img(src=`${card.src}.jpg`, alt="Дайвинг", loading="lazy")
+                source(srcset=`${card.src}.webp, ${card.src}@2x.webp 2x`, type="image/webp")
+                img(src=`${card.src}.png`, srcset=`${card.src}@2x.png 2x`, alt="Дайвинг", loading="lazy")
               .video__body
                 .video__content(data-src=card.dataSrc)
               button.btn-reset.video__play-btn(type="button", aria-label="Начать просмотр видео")

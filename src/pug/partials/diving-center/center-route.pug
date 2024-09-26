@@ -11,8 +11,8 @@ section.section.center-route
   .container.center-route__container
     .center-route__img-block
       picture
-        source(srcset='./images/diving-center/center-route.webp' type='image/webp')
-        img(src='./images/diving-center/center-route.jpg' alt='Бассейн' loading="lazy")
+        source(srcset='./images/diving-center/center-route.webp, ./images/diving-center/center-route@2x.webp 2x' type='image/webp')
+        img(src='./images/diving-center/center-route.png', srcset='./images/diving-center/center-route@2x.png 2x', alt='Бассейн' loading="lazy")
     .center-route__content
       h4.fourth-title.center-route__title Как доехать
       +text('center-route', centerRouteText, false)

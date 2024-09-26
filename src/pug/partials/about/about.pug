@@ -14,7 +14,7 @@ section.section-top.about
       .about__inner
         .about__img-block
           picture
-            source(srcset='./images/about/about.webp', type="image/webp")
-            img(src='./images/about/about.jpg', alt="Фото" loading="lazy")
+            source(srcset='./images/about/about.webp, ./images/about/about@2x.webp 2x', type="image/webp")
+            img(src='./images/about/about.jpg', srcset='./images/about/about@2x.jpg 2x', alt="Фото" loading="lazy")
         h2.second-title.numbered-title.about__title.about__title--bottom С годами дайвинг становится для нас только интереснее и притягательнее
         +text('about', aboutText, false)

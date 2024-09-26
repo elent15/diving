@@ -4,8 +4,8 @@ mixin tabCards(name, item)
       div(class=name + '__card')
         div(class=name + '__card-img-block')
           picture
-            source(srcset=`./images/${name}/${item.title}-${index + 1}.webp`, type="image/webp")
-            img(src=`./images/${name}/${item.title}-${index + 1}.jpg`, alt='Фото', loading=(index >= 3 || item.title !== 'leaders') ? "lazy" : "")
+            source(srcset=`./images/${name}/${item.title}-${index + 1}.webp, ./images/${name}/${item.title}-${index + 1}@2x.webp 2x`, type="image/webp")
+            img(src=`./images/${name}/${item.title}-${index + 1}.png`, srcset=`./images/${name}/${item.title}-${index + 1}@2x.png 2x`, alt='Фото', loading=(index >= 3 || item.title !== 'leaders') ? "lazy" : "")
         div(class=name + '__card-descr')
           span(class=name + '__card-title')= card.title
           div(class=name + '__card-text')= card.text

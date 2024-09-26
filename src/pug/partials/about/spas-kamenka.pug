@@ -14,5 +14,5 @@ section.section.spas-kamenka
       for value, index in {'1' : 'vertical', '2' : 'horizontal', '3' : 'horizontal'}
         div(class=`spas-kamenka__${value}-img-block`)
           picture
-            source(srcset=`./images/about/spas-kamenka-${index}.webp`, type="image/webp")
-            img(src=`./images/about/spas-kamenka-${index}.jpg`, alt="Фото" loading="lazy")
+            source(srcset=`./images/about/spas-kamenka-${index}.webp, ./images/about/spas-kamenka-${index}@2x.webp 2x`, type="image/webp")
+            img(src=`./images/about/spas-kamenka-${index}.png`, srcset=`./images/about/spas-kamenka-${index}@2x.png 2x`, alt="Фото" loading="lazy")

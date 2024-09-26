@@ -24,7 +24,7 @@
         .trip-info__card
           .trip-info__card-img-block
             picture
-              source(srcset=`./images/trip-card/trip-info-${index + 1}.webp`, type='image/webp')
-              img(src=`./images/trip-card/trip-info-${index + 1}.jpg`, alt="Антарктида" loading="lazy")
+              source(srcset=`./images/trip-card/trip-info-${index + 1}.webp, ./images/trip-card/trip-info-${index + 1}@2x.webp 2x`, type='image/webp')
+              img(src=`./images/trip-card/trip-info-${index + 1}.png`, srcset=`./images/trip-card/trip-info-${index + 1}@2x.png 2x`, alt="Антарктида" loading="lazy")
           .trip-info__card-title= card.title
           p.trip-info__card-text= card.text

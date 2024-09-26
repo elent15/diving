@@ -1167,11 +1167,11 @@ p {
   margin-bottom: 79px;
   padding: 116px 96px 26px;
   width: 100%;
-  min-height: 529px;
+  min-height: 530px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--light-gray);
+  background-color: var(--primary);
   overflow: hidden;
 }
 @media (max-width: 1100px) {
@@ -2295,7 +2295,6 @@ p {
   width: 100%;
   min-height: 200px;
   aspect-ratio: 1728/350;
-  background-color: var(--light-gray);
 }
 @media (max-width: 1470px) {
   .trip-info__map-block {
@@ -2383,7 +2382,6 @@ p {
   margin-bottom: 28px;
   width: 100%;
   aspect-ratio: 438/280;
-  background-color: var(--light-gray);
   overflow: hidden;
 }
 @media (max-width: 1100px) {

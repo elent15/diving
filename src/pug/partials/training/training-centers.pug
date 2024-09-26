@@ -26,8 +26,8 @@ section.section.training-centers
             a.link.training-centers__card-img-link(href=`./${card.href}.html`)
               .training-centers__card-img-block
                 picture
-                  source(srcset=`./images/training/training-centers-${index + 1}.webp`, type="image/webp")
-                  img(src=`./images/training/training-centers-${index + 1}.jpg`, alt=card.alt loading="lazy")
+                  source(srcset=`./images/training/training-centers-${index + 1}.webp, ./images/training/training-centers-${index + 1}@2x.webp 2x`, type="image/webp")
+                  img(src=`./images/training/training-centers-${index + 1}.png`, srcset=`./images/training/training-centers-${index + 1}@2x.png 2x`, alt=card.alt loading="lazy")
             a.link.training-centers__card-title-link(href=`./${card.href}.html`)= card.title
             .training-centers__address-block
               svg

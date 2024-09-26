@@ -31,8 +31,8 @@ section.section.history
           for value, index in {'1': 'vertical', '2': 'horizontal', '3': 'horizontal'}
             div(class=`history__right-${value}-img-block`)
               picture
-                source(srcset=`./images/about/history-top-${index}.webp`, type="image/webp")
-                img(src=`./images/about/history-top-${index}.jpg`, alt="Фото" loading="lazy")
+                source(srcset=`./images/about/history-top-${index}.webp, ./images/about/history-top-${index}@2x.webp 2x`, type="image/webp")
+                img(src=`./images/about/history-top-${index}.png`, srcset=`./images/about/history-top-${index}@2x.png 2x`, alt="Фото" loading="lazy")
         +text('history', historyTopTextOne, false)
           p.history__bold-paragraph В начале девяностых страна претерпевала экономические и политические катаклизмы, российская наука задыхалась в нищете, многие коллеги уехали за рубеж или ушли в бизнес, а группа молодых морских биологов упорно занималась наукой, зарабатывая на хлеб и на подводные экспедиции, кто чем может.
       .history__top-inner
@@ -41,12 +41,12 @@ section.section.history
             for index in [4, 5]
               .history__left-vertical-img-block
                 picture
-                  source(srcset=`./images/about/history-top-${index}.webp`, type="image/webp")
-                  img(src=`./images/about/history-top-${index}.jpg`, alt="Фото" loading="lazy")
+                  source(srcset=`./images/about/history-top-${index}.webp, ./images/about/history-top-${index}@2x.webp 2x`, type="image/webp")
+                  img(src=`./images/about/history-top-${index}.png`, srcset=`./images/about/history-top-${index}@2x.png 2x`, alt="Фото" loading="lazy")
             .history__left-horizontal-img-block
               picture
-                source(srcset=`./images/about/history-top-6.webp`, type="image/webp")
-                img(src=`./images/about/history-top-6.jpg`, alt="Фото" loading="lazy")
+                source(srcset=`./images/about/history-top-6.webp, ./images/about/history-top-6@2x.webp 2x`, type="image/webp")
+                img(src=`./images/about/history-top-6.png`, srcset=`./images/about/history-top-6@2x.png 2x`, alt="Фото" loading="lazy")
         +text('history', historyTopTextTwo, false)
     .history__middle
       h4.fourth-title.history__block-title В 1997 г. основатели Клуба становятся инструкторами PADI и переходят на обучение по новой системе, зарегистрировав дайв-центр PADI № 3564
@@ -62,8 +62,8 @@ section.section.history
       .history__bottom-content
         .history__bottom-content-img-block
           picture
-            source(srcset="./images/about/history-bottom-1.webp", type="image/webp")
-            img(src="./images/about/history-bottom-1.jpg", alt="Фото" loading="lazy")
+            source(srcset="./images/about/history-bottom-1.webp, ./images/about/history-bottom-1@2x.webp 2x", type="image/webp")
+            img(src="./images/about/history-bottom-1.png", srcset="./images/about/history-bottom-1@2x.png 2x", alt="Фото" loading="lazy")
         .history__bottom-text
           h4.fourth-title.history__block-title В 2006 году в компанию пришли задорные выпускники Психолого-педагогического университета
           +text('history', historyBottomText, false)
@@ -71,5 +71,5 @@ section.section.history
         for index in [2, 3, 4, 5]
           .history__bottom-img-block
             picture
-              source(srcset=`./images/about/history-bottom-${index}.webp`, type="image/webp")
-              img(src=`./images/about/history-bottom-${index}.jpg`, alt="Фото" loading="lazy")
+              source(srcset=`./images/about/history-bottom-${index}.webp, ./images/about/history-bottom-${index}@2x.webp 2x`, type="image/webp")
+              img(src=`./images/about/history-bottom-${index}.png`, srcset=`./images/about/history-bottom-${index}@2x.png 2x`, alt="Фото" loading="lazy")

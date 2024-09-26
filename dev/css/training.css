@@ -1167,11 +1167,11 @@ p {
   margin-bottom: 79px;
   padding: 116px 96px 26px;
   width: 100%;
-  min-height: 529px;
+  min-height: 530px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--light-gray);
+  background-color: var(--primary);
   overflow: hidden;
 }
 @media (max-width: 1100px) {
@@ -2036,7 +2036,6 @@ p {
   border-radius: 15px;
   width: 100%;
   min-height: 100%;
-  background-color: var(--light-gray);
   overflow: hidden;
 }
 @media (max-width: 1100px) {
@@ -2206,7 +2205,6 @@ p {
 .training-centers__card-img-block {
   border-radius: 15px;
   width: 100%;
-  background-color: var(--light-gray);
   overflow: hidden;
 }
 .training-centers__card-title-link {
